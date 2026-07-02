@@ -29,10 +29,159 @@
         <div class="sub-title">
             <h2>٥. إنشاء جدول فهرس الكتب</h2>
             <span class="hint">مختبر</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
         <section>
+
+            <h3>قصص المستخدم :</h3>
+
+            <h4>١. يجب عليك إنشاء عنصر جدول <code class="br">table</code> يسرد معلومات الكتاب.</h4>
+            <h4>٢. يجب أن يحتوي جدولك على عنصر رأس الجدول <em>"a table head"</em> مع صف واحد بداخله.</h4>
+            <h4>٣. يجب أن يحتوي الصف <em>"The row"</em> الموجود في عنصر رأس الجدول <em>"table head"</em> على أربعة عناصر رأس جدول، مع نص <code class="br-white">العنوان</code>  و <code class="br-white">المؤلف</code>  و <code class="br-white">النوع</code>  و <code class="br-white">سنة النشر</code> ، بهذا الترتيب.</h4>
+            <h4>٤. يجب أن يحتوي جدولك على عنصر جسم الجدول <em>"a table body"</em> مع خمسة صفوف <em>"rows"</em> على الأقل.</h4>
+            <h4>٥. يجب أن يحتوي كل صف <em>"row"</em> في جسم الجدول <em>"table body"</em> على أربعة عناصر بيانات <em>"data"</em> تعرض عنوان الكتاب ومؤلفه ونوعه وسنة نشره.</h4>
+            <h4>٦. يجب أن يحتوي جدولك على عنصر تذييل <em>"a table footer"</em> يحتوي على صف <em>"row"</em> واحد.</h4>
+            <h4>٧. يجب أن يحتوي الصف <em>"The row"</em> الموجود في عنصر تذييل الجدول <em>"table footer"</em> على عنصر بيانات جدول <em>"a table data"</em> يمتد على أربعة أعمدة <em>"columns"</em> ويحتوي على النص <code class="br-white">إجمالي الكتب: ع</code> حيث يجب استبدال <code class="br-white">ع</code> بعدد الكتب الموجودة في جدولك.</h4>
+
+
+
+
+
+        </section>
+
+
+        <section>
+            <h3>التطبيق :</h3>
+            <div class="preview" role="presentation">
+                <h1>كتالوج الكتاب</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العنوان</th>
+                            <th>المؤلف</th>
+                            <th>النوع</th>
+                            <th>سنة النشر</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>لغة البرمجة سوبرنوفا</td>
+                            <td>محمود فايد</td>
+                            <td>لغات برمجة / تطوير برمجيات</td>
+                            <td>2010</td>
+                        </tr>
+                        <tr>
+                            <td>لغات البرمجة العربية</td>
+                            <td>محمد عادل يس</td>
+                            <td>أساسيات البرمجة / مقارنة لغات</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr>
+                            <td>اللغة البرمجة العربية</td>
+                            <td>معاد مباركي</td>
+                            <td>تطوير لغات برمجة / قواعد بيانات</td>
+                            <td>2015</td>
+                        </tr>
+                        <tr>
+                            <td>عن تصميم لغة البرمجة العربية</td>
+                            <td>وائل حسن</td>
+                            <td>تصميم لغات برمجة</td>
+                            <td>2013</td>
+                        </tr>
+                        <tr>
+                            <td>مقدمة إلى البرمجة</td>
+                            <td>عبد الفتاح عبد الرب المشرقي</td>
+                            <td>أساسيات البرمجة / خوارزميات</td>
+                            <td>2016</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">إجمالي الكتب: 5</td>
+                        </tr>
+                    </tfoot>
+                    
+
+                </table>
+            </div>
+
+        </section>
+
+
+        <section>
+            <h3>الحل :</h3>
+            <div class="code-block">
+			<pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>جدول فهرس الكتب<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span> 
+
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span class="txt">كتالوج الكتاب</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;table&gt;</span>
+   <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">العنوان</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">المؤلف</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">النوع</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">سنة النشر</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/thead&gt;</span>
+
+   <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">لغة البرمجة سوبرنوفا</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">محمود فايد</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">	لغات برمجة / تطوير برمجيات</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">2010</span>&lt;/td&gt;
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">لغات البرمجة العربية</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">محمد عادل يس</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">أساسيات البرمجة / مقارنة لغات</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">2022</span>&lt;/td&gt;
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">اللغة البرمجة العربية</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">معاد مباركي</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">	تطوير لغات برمجة / قواعد بيانات</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">2015</span>&lt;/td&gt;
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">عن تصميم لغة البرمجة العربية</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">وائل حسن</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">تصميم لغات برمجة</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">2013</span>&lt;/td&gt;
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">مقدمة إلى البرمجة</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">عبد الفتاح عبد الرب المشرقي</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">أساسيات البرمجة / خوارزميات</span>&lt;/td&gt;
+     <span class="tag">&lt;td&gt;<span class="txt">2016</span>&lt;/td&gt;
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/tbody&gt;</span>
+
+   <span class="tag">&lt;tfoot&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td <span class="attr"> colspan=</span><span class="value">"4"</span>&gt<span class="txt">إجمالي الكتب: 5</span>&lt;/td&gt;
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/tfoot&gt;</span>              
+  <span class="tag">&lt;/table&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+			</code></pre>
+		</div>
         </section>
         
         
