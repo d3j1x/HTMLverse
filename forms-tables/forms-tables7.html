@@ -29,11 +29,242 @@
         <div class="sub-title">
             <h2>٧. مراجعة جداول ونماذج اتش.تي.إم.إل</h2>
             <span class="hint">مراجعة</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
         <section>
+            <h3>عناصر وسمات نماذج "اتش.تي.ام.ال" <em>HTML Form Elements and Attributes</em> </h3>
+        
+            <ul>
+                <li>عنصر النموذج ( <b><code class="br-white2">form</code> element</b> ) : يُستخدم لإنشاء نموذج "اتش.تي.ام.ال" لإدخال بيانات المستخدم.</li>
+
+                <li>سمة الإجراء ( <b><code class="br-white2">action</code> attribute</b> ) : تُستخدم لتحديد عنوان URL الذي يجب إرسال بيانات النموذج إليه.</li>
+
+                <li>سمة الطريقة ( <b><code class="br-white2">method</code> attribute</b> ) : تُستخدم لتحديد طريقة HTTP المُستخدمة عند إرسال بيانات النموذج. أكثر الطرق شيوعاً هي <code class="br-white">GET</code> و <code class="br-white">POST</code> .</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"توضع القيمة هنا"</span> <span class="attr">action=</span><span class="value">"يوضع الرابط هنا"</span>&gt;</span>
+ <span class="value">&lt;!-- عناصر الإدخال توضع هنا --&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li>عنصر الإدخال ( <b><code class="br-white2">input</code> element</b> ) : يُستخدم لإنشاء حقل لإدخال بيانات المستخدم.</li>
+
+                <li>سمة النوع ( <b><code class="br-white2">type</code> attribute</b> ) : تُستخدم لتحديد نوع حقل الإدخال، مثل: <code class="br-white">text</code> "نص"، و <code class="br-white">email</code> "بريد إلكتروني"، و <code class="br-white">number</code> "رقم"، و <code class="br-white">radio</code> "زر اختيار أحادي"، و <code class="br-white">checkbox</code> "مربع اختيار"، وغيرها.</li>
+
+                <li>سمة النص التوضيحي ( <b><code class="br-white2">placeholder</code> attribute</b> ) : تُستخدم لعرض تلميح للمستخدم لإرشاده إلى ما يجب إدخاله في حقل الإدخال.</li>
+
+                <li>سمة القيمة ( <b><code class="br-white2">value</code> attribute</b> ) : تُستخدم لتحديد قيمة عنصر الإدخال. إذا كان عنصر الإدخال من النوع "زر" <code class="br-white">button</code> ، فيمكن استخدام هذه السمة <code class="br-white">value</code> لتعيين النص الذي يظهر على الزر.</li>
+
+                <li>سمة الاسم ( <b><code class="br-white2">name</code> attribute</b> ) : تُستخدم لتحديد اسم لحقل الإدخال، حيث يعمل هذا الاسم كمفتاح عند إرسال بيانات النموذج. وفي حالة أزرار الاختيار، فإن منحها الاسم نفسه يجمعها معاً، بحيث لا يمكن اختيار سوى خيار واحد فقط من المجموعة في آنٍ واحد.</li>
+
+                <li>سمة الحجم ( <b><code class="br-white2">size</code> attribute</b> ) : تُستخدم لتحديد عدد الأحرف التي ستظهر أثناء كتابة المستخدم في حقل الإدخال.</li>
+
+                <li>سمة الحد الأدنى ( <b><code class="br-white2">min</code> attribute</b> ) : يمكن استخدامها مع أنواع الإدخال مثل "الأرقام" <code class="br-white">number</code> لتحديد الحد الأدنى للقيمة المسموح بها في حقل الإدخال.</li>
+
+                <li>سمة الحد الأقصى ( <b><code class="br-white2">max</code> attribute</b> ) : يمكن استخدامها مع أنواع الإدخال مثل "الأرقام" <code class="br-white">number</code> لتحديد القيمة القصوى المسموح بها في حقل الإدخال.</li>
+
+                <li>سمة الحد الأدنى للطول ( <b><code class="br-white2">minlength</code> attribute</b> ) : تُستخدم لتحديد الحد الأدنى لعدد الأحرف المطلوبة في حقل الإدخال.</li>
+
+                <li>سمة الحد الأقصى للطول ( <b><code class="br-white2">maxlength</code> attribute</b> ) : تُستخدم لتحديد الحد الأقصى لعدد الأحرف المسموح به في حقل الإدخال.</li>
+
+                <li>السمة مطلوب ( <b><code class="br-white2">required</code> attribute</b> ) : تُستخدم لتحديد وجوب ملء حقل الإدخال قبل إرسال النموذج.</li>
+
+                <li>السمة معطل ( <b><code class="br-white2">disabled</code> attribute</b> ) : تُستخدم لتحديد ما إذا كان يجب تعطيل حقل إدخال.</li>
+                
+                <li>السمة للقراءة فقط ( <b><code class="br-white2">readonly</code> attribute</b> ) : تُستخدم لتحديد أن حقل الإدخال للقراءة فقط.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="value">&lt;!-- Text input إدخال النص --&gt;</span>
+<span class="tag">&lt;input 
+    <span class="attr">type=</span><span class="value">"text"</span> 
+    <span class="attr">id=</span><span class="value">"name"</span>
+    <span class="attr">name=</span><span class="value">"name"</span>
+    <span class="attr">placeholder=</span><span class="value">"على سبيل المثال: كوينسي لارسون"</span>
+    <span class="attr">size=</span><span class="value">"20"</span>
+    <span class="attr">minlength=</span><span class="value">"5"</span>
+    <span class="attr">maxlength=</span><span class="value">"30"</span>
+    <span class="attr">required</span>
+/&gt;</span>
+
+<span class="value">&lt;!-- Number input إدخال رقم --&gt;</span>
+<span class="tag">&lt;input 
+    <span class="attr">type=</span><span class="value">"number"</span> 
+    <span class="attr">id=</span><span class="value">"quantity"</span>
+    <span class="attr">name=</span><span class="value">"quantity"</span>
+    <span class="attr">min=</span><span class="value">"2"</span>
+    <span class="attr">max=</span><span class="value">"10"</span>
+    <span class="attr">disabled</span>
+/&gt;</span>
+
+<span class="value">&lt;!-- Button  زر --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">value=</span><span class="value">"Show Alert"</span> /&gt;</span>
+            </code></pre></div>
+        
+            <ul>
+                <li>عنصر التسمية ( <b><code class="br-white2">label</code> element</b> ) : يُستخدم لإنشاء تسمية لحقل إدخال.</li>
+
+                <li>السمة إلى ( <b><code class="br-white2">for</code> attribute</b> ) : تُستخدم لتحديد حقل الإدخال الذي تعود إليه التسمية <i>label</i> .</li>
+                
+                <li><b>الربط الضمني بين الحقل والتسمية Implicit form association :</b> يمكن ربط حقول الإدخال بالتسميات <i>labels</i> عن طريق وضع حقل الإدخال داخل عنصر التسمية <code class="br-white">label</code> .</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label&gt;</span>
+  <span class="txt">:الاسم الكامل</span>
+  <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span> /&gt;</span>
+ <span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><b>الربط الصريح للعناصر Explicit form association :</b> يمكن ربط حقول الإدخال بالتسميات <i>labels</i> باستخدام السمة إلى <code class="br-white">for</code> في عنصر التسمية <code class="br-white">label</code> .</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt"> :عنوان البريد الإلكتروني</span> &lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span></span> /&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li>عنصر الزر ( <b><code class="br-white2">button</code> element</b> ) : يُستخدم لإنشاء زر قابل للنقر. يمكن أن يحتوي الزر أيضاً على سمة النوع <code class="br-white">type</code> ، التي تُستخدم للتحكم في سلوك الزر عند تفعيله، مثل: إرسال <code class="br-white">submit</code> ، وإعادة تعيين <code class="br-white">reset</code>، وزر عادي <code class="br-white">button</code> .</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">type=</span><span class="value">"button"</span>&gt;<span class="txt">إظهار النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="attr">type=</span><span class="value">"reset"</span>&gt;<span class="txt">إعادة تعيين النموذج</span>&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li>عنصر مجموعة الحقول ( <b><code class="br-white2">fieldset</code> element</b> ) : يُستخدم لتجميع المدخلات ذات الصلة معًا.</li>
+                <li>عنصر الشرح ( <b><code class="br-white2">legend</code> element</b> ) : يُستخدم لإضافة شرح لوصف مجموعة المدخلات.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="value">&lt;!-- Radio group  مجموعة أزرار اختيار --&gt;</span>
+<span class="tag">&lt;fieldset&gt;</span>
+ <span class="tag">&lt;legend&gt;<span class="txt">هل كانت هذه زيارتك الأولى لفندقنا؟</span>&lt;/legend&gt;</span>
+
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"yes-option"</span>&gt;<span class="txt">نعم</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">id=<span class="value">"yes-option"</span> type=<span class="value">"radio"</span> name=<span class="value">"hotel-stay"</span> value=<span class="value">"yes"</span></span> /&gt;</span>
+
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"no-option"</span>&gt;<span class="txt">لا</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">id=<span class="value">"no-option"</span> type=<span class="value">"radio"</span> name=<span class="value">"hotel-stay"</span> value=<span class="value">"no"</span></span> /&gt;</span>
+<span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="value">&lt;!-- Checkbox group  مجموعة مربعات اختيار   --&gt;</span>
+<span class="tag">&lt;fieldset&gt;</span>
+ <span class="tag">&lt;legend&gt;</span>
+  <span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>
+ <span class="tag">&lt;/legend&gt;</span>
+
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"location"</span>&gt;<span class="txt">الموقع</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"location"</span> name=<span class="value">"location"</span> value=<span class="value">"location"</span></span> /&gt;</span>
+
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"price"</span>&gt;<span class="txt">السعر</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"price"</span> name=<span class="value">"price"</span> value=<span class="value">"price"</span></span> /&gt;</span>
+<span class="tag">&lt;/fieldset&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><b>حالة التركيز Focused state</b> : هي حالة حقل الإدخال عندما يختاره المستخدم.</li>
+            </ul>
+
+
+            
+
+
+        
         </section>
+
+
+        <section>
+            <h3>التعامل مع عناصر وسمات الجداول في "اتش.تي.ام.ال" <em>Working with HTML Table Elements and Attributes</em></h3>
+
+
+            <ul>
+                <li>عنصر الجدول ( <b>Table element</b> ) : يُستخدم لإنشاء جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر رأس الجدول ( <b>Table Head <code class="br-white2">thead</code> element</b> ) : يُستخدم لتجميع محتوى الرأس في جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر صف الجدول ( <b>Table Row <code class="br-white2">tr</code> element</b> ) : يُستخدم لإنشاء صف في جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر ترويسة الجدول ( <b>Table Header <code class="br-white2">th</code> element</b> ) : يُستخدم لإنشاء خلية ترويسة في جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر جسم الجدول ( <b>Table Body <code class="br-white2">tbody</code> element</b> ) : يُستخدم لتجميع محتوى الجسم في جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر خلية بيانات الجدول ( <b>Table Data Cell <code class="br-white2">td</code> element</b> ) : يُستخدم لإنشاء خلية بيانات في جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر تذييل الجدول ( <b>Table Foot <code class="br-white2">tfoot</code> element</b> ) : يُستخدم لتجميع محتوى التذييل في جدول "اتش.تي.ام.ال".</li>
+
+                <li>عنصر العنوان ( <b><code class="br-white2">caption</code> element</b> ) : يُستخدم لإضافة عنوان لجدول "اتش.تي.ام.ال".</li>
+
+                <li>سمة امتداد العمود ( <b><code class="br-white2">colspan</code> attribute</b> ) : تُستخدم لتحديد عدد الأعمدة التي يجب أن تمتد عليها خلية الجدول.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;caption&gt;<span class="txt">درجات الامتحانات</span>&lt;/caption&gt;</span>
+
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+
+ <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">ديفيس</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">أليكس</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">54</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">دو</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">سامانثا</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">92</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">رودريغيز</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">ماركوس</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">88</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tbody&gt;</span>
+
+ <span class="tag">&lt;tfoot&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"2"</span>&gt;<span class="txt">متوسط ​​الدرجة</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">78</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tfoot&gt;</span>
+<span class="tag">&lt;table&gt;</span>
+            </code></pre></div>
+
+            
+        
+        </section>
+
+
+        <section>
+            <h3>العمل باستخدام أدوات "اتش.تي.ام.ال" <i>Working with HTML Tools</i></h3>
+
+            <ul>
+                <li><b>  أداة التحقق من "اتش.تي.ام.ال" HTML validator </b> : أداة تفحص صياغة كود "اتش.تي.ام.ال" للتأكد من صحته.</li>
+                <li><b>مُفتِّش نموذج كائن المستند DOM inspector </b> : أداة تتيح لك فحص وتعديل بنية "اتش.تي.ام.ال" الخاصة بصفحة ويب.</li>
+                <li><b>أدوات المطور Devtools</b> : مجموعة من الأدوات المخصصة لمطوري الويب، مدمجة مباشرة في المتصفح، تساعدك على تصحيح الأخطاء، وقياس الأداء، وتحليل صفحات الويب.</li>
+            </ul>
+        </section>
+
         
         
 
