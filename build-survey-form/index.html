@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="إنشاء نموذج استبيان"/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | النماذج والجداول</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="../index.html#1">X</a>
+    <h1>إنشاء نموذج استبيان</h1>
+</header>
+
+
+<main>
+
+    <!-- Forms and Tables -->
+    <section class="box">
+        <div class="sub-title">
+            <span class="hint">مشروع الحصول على الشهادة</span>
+            <p>الهدف: تنفيذ قصص المستخدم الموضحة أدناه واجتياز جميع الاختبارات لإتمام المختبر.</p>
+        </div>
+
+        <section>
+            <h2>قصص المستخدم User Stories :</h2>
+
+            <ul>
+                <li><h3>١. يجب أن يكون لديك عنوان للصفحة داخل عنصر <code class="br-white">h1</code> يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">title</code> .</h3></li>
+
+                <li><h3>٢. يجب أن يتوفر لديك شرح موجز داخل عنصر <code class="br-white">p</code> يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">description</code> .</h3></li>
+
+                <li><h3>٣. يجب أن يكون لديك عنصر نموذج <code class="br-white">form</code> يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">survey-form</code> .</h3></li>
+
+                <li><h3>٤. داخل عنصر النموذج <code class="br-white">form</code> ، يجب أن يتوفر حقل إدخال <code class="br-white">input</code> إلزامي <em>required</em> لإدخال اسمك، بحيث يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">name</code> والنوع <code class="br-white">type</code> القيمة <code class="br-white">text</code> .</h3></li>
+
+                <li><h3>٥. داخل عنصر النموذج <code class="br-white">form</code> ، يجب أن يتوفر حقل إدخال <code class="br-white">input</code> إلزامي <em>required</em> لإدخال البريد الإلكتروني <em>email</em> ، بحيث يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">email</code> .</h3></li>
+
+                <li><h3>٦. إذا أدخلت عنوان بريد إلكتروني بتنسيق غير صحيح، فمن المفترض أن تظهر لك رسالة خطأ ناتجة عن التحقق وفق معيار <b>HTML5</b>.</h3></li>
+
+                <li><h3>٧. داخل عنصر النموذج <code class="br-white">form</code> ، يجب أن يتوفر حقل إدخال <code class="br-white">input</code> لإدخال رقم <em>number</em> ، بحيث يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">number</code> .</h3></li>
+
+                <li><h3>٨. يجب ألا يقبل حقل إدخال الأرقام أي قيم غير رقمية، سواء كان ذلك بمنعك من كتابتها أو بإظهار خطأ تحقق خاص بـ <b>HTML5</b>.</h3></li>
+
+                <li><h3>٩. إذا أدخلت أرقاماً تقع خارج النطاق المحدد لمدخل الأرقام ( والمُعرَّف بواسطة السمتين <code class="br-white">min</code> و <code class="br-white">max</code> )، فمن المفترض أن تظهر لك رسالة خطأ في التحقق وفق معيار <b>HTML5</b>.</h3></li>
+
+                <li><h3>١٠. بالنسبة لحقول إدخال الاسم <i>name</i> والبريد الإلكتروني <i>email</i> والرقم <i>number</i> ، يجب توفير عناصر تسمية  <span class="nw">( <code class="br-white">label</code> elements )</span>  مقابلة لها في النموذج <i>form</i> توضح الغرض من كل حقل، مع استخدام المعرفات <b>IDs</b> التالية: <code class="br-white-nw">name-label</code> ، <code class="br-white-nw">email-label</code> ، <code class="br-white-nw">number-label</code> . </h3></li>
+
+                <li><h3>١١. بالنسبة لحقول إدخال الاسم <i>name</i> والبريد الإلكتروني <i>email</i> والرقم <i>number</i> ، ينبغي توفير نص توضيحي <b>placeholder</b> يقدم وصفاً أو تعليمات لكل حقل.</h3></li>
+
+                <li><h3>١٢. داخل عنصر النموذج <i>form</i> ، يجب أن يتوفر لديك عنصر قائمة منسدلة <span class="nw">( <code class="br-white">select</code> dropdown element )</span> يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">dropdown</code> ، مع وجود خيارين <i>two options</i> على الأقل للاختيار من بينهما.</h3></li>
+
+                <li><h3>١٣. داخل عنصر النموذج <i>form</i> ، يمكنك اختيار خيار <i>option</i> من مجموعة تضم ما لا يقل عن زرّي اختيار <em>two radio buttons</em> مُجمَّعين باستخدام السمة <code class="br-white">name</code> .</h3></li>
+
+                <li><h3>١٤. داخل عنصر النموذج <i>form</i> ، يمكنك اختيار عدة حقول من مجموعة من مربعات الاختيار <em>checkboxes</em> ، حيث يجب أن يحتوي كل منها على السمة <code class="br-white">value</code> .</h3></li>
+
+                <li><h3>١٥. داخل عنصر النموذج <i>form</i> ، يجب أن تضع حقل نص <code class="br-white">textarea</code> للتعليقات الإضافية.</h3></li>
+
+                <li><h3>١٦. داخل عنصر النموذج <i>form</i> ، يجب أن يكون لديك زر <em>button</em> يحمل المعرّف <code class="br-white">id</code> القيمة <code class="br-white">submit</code> لإرسال جميع المدخلات.</h3></li>
+            </ul>
+            
+
+        </section>
+
+        <section>
+            <h2>التطبيق Application :</h2>
+
+            <div class="preview">
+                <h1 id="title">استبيان رضا العملاء</h1>
+
+                <p id="description">
+                    يرجى تعبئة هذا الاستبيان لمساعدتنا في تحسين خدماتنا.
+                </p>
+
+                <form id="survey-form">
+
+                    <!-- Name الاسم -->
+                    <label id="name-label" for="name">الاسم</label><br>
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="أدخل اسمك"
+                        required
+                    >
+                    <br><br>
+
+                    <!-- Email البريد الإلكتروني -->
+                    <label id="email-label" for="email">البريد الإلكتروني</label><br>
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="أدخل بريدك الإلكتروني"
+                        required
+                    >
+                    <br><br>
+
+                    <!-- Number رقم -->
+                    <label id="number-label" for="number">العمر</label><br>
+                    <input
+                        id="number"
+                        type="number"
+                        placeholder="أدخل عمرك"
+                        min="10"
+                        max="100"
+                    >
+                    <br><br>
+
+                    <!-- Dropdown قائمة منسدلة -->
+                    <label for="dropdown">كيف سمعت عنا؟</label><br>
+                    <select id="dropdown">
+                        <option value="">اختر خياراً</option>
+                        <option value="friend">صديق</option>
+                        <option value="internet">إنترنت</option>
+                    </select>
+
+                    <br><br>
+
+                    <!-- Radio Buttons أزرار الاختيار -->
+                    <p>هل توصي بنا؟</p>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="recommend"
+                            value="yes"
+                        >
+                        نعم
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="recommend"
+                            value="no"
+                        >
+                        لا
+                    </label>
+
+                    <br><br>
+
+                    <!-- Checkboxes مربعات الاختيار -->
+                    <p>ما هي الخدمات التي تستخدمها؟</p>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="internet"
+                        >
+                        إنترنت
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="tv"
+                        >
+                        تلفزيون
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="phone"
+                        >
+                        هاتف
+                    </label>
+
+                    <br><br>
+
+                    <!-- Textarea مربع نص -->
+                    <label for="comments">تعليقات إضافية</label><br>
+                    <textarea
+                        id="comments"
+                        rows="5"
+                        cols="40"
+                        placeholder="اكتب تعليقاتك هنا..."
+                    ></textarea>
+
+                    <br><br>
+
+                    <!-- Submit يُقدِّم -->
+                    <button id="submit" type="submit">
+                        إرسال
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>الحل Solution :</h2>
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>نموذج استبيان<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1 <span class="attr">id=</span><span class="value">"title"</span>&gt;<span class="txt">استبيان رضا العملاء</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;p <span class="attr">id=</span><span class="value">"description"</span>&gt;
+   <span class="txt">.يرجى تعبئة هذا الاستبيان لمساعدتنا في تحسين خدماتنا</span>
+  &lt;/p&gt;</span>
+
+  <span class="tag">&lt;form <span class="attr">id=</span><span class="value">"survey-form"</span>&gt;
+   
+   <span class="value">&lt;!-- Name الاسم --&gt;</span>
+   <span class="tag">&lt;label <span class="attr">id=<span class="value">"name-label"</span> for=<span class="value">"name"</span></span>&gt;<span class="txt">الاسم</span>&lt;/label&gt;&lt;br&gt;</span>
+   <span class="tag">&lt;input
+    <span class="attr">id=<span class="value">"name"</span>
+    type=<span class="value">"text"</span>
+    placeholder=<span class="value">"أدخل اسمك"</span>
+    required</span>
+   &gt;</span>
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Email البريد الإلكتروني --&gt;</span>
+   <span class="tag">&lt;label <span class="attr">id=<span class="value">"email-label"</span> for=<span class="value">"email"</span></span>&gt;<span class="txt">البريد الإلكتروني</span>&lt;/label&gt;&lt;br&gt;</span>
+   <span class="tag">&lt;input
+    <span class="attr">id=<span class="value">"email"</span>
+    type=<span class="value">"email"</span>
+    placeholder=<span class="value">"أدخل بريدك الإلكتروني"</span>
+    required</span>
+   &gt;</span>
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Number رقم --&gt;</span>
+   <span class="tag">&lt;label <span class="attr">id=<span class="value">"number-label"</span> for=<span class="value">"number"</span></span>&gt;<span class="txt">العمر</span>&lt;/label&gt;&lt;br&gt;</span>
+   <span class="tag">&lt;input
+    <span class="attr">id=<span class="value">"number"</span>
+    type=<span class="value">"number"</span>
+    placeholder=<span class="value">"أدخل عمرك"</span>
+    min=<span class="value">"10"</span>
+    max=<span class="value">"100"</span></span>
+   &gt;</span>
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Dropdown قائمة منسدلة --&gt;</span>
+   <span class="tag">&lt;label <span class="attr">for=<span class="value">"dropdown"</span></span>&gt;<span class="txt">كيف سمعت عنا؟</span>&lt;/label&gt;&lt;br&gt;</span>
+   <span class="tag">&lt;select <span class="attr">id=<span class="value">"dropdown"</span></span>&gt;
+    &lt;option <span class="attr">value=<span class="value">""</span></span>&gt;<span class="txt">اختر خياراً</span>&lt;/option&gt;
+    &lt;option <span class="attr">value=<span class="value">"friend"</span></span>&gt;<span class="txt">إنترنت</span>&lt;/option&gt;
+    &lt;option <span class="attr">value=<span class="value">"internet"</span></span>&gt;<span class="txt">صديق</span>&lt;/option&gt;
+   &lt;/select&gt;</span>
+
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Radio Buttons أزرار الاختيار --&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="txt">هل توصي بنا؟</span>&lt;/p&gt;</span>
+
+   <span class="tag">&lt;label&gt;
+    &lt;input
+     <span class="attr">type=<span class="value">"radio"</span>
+     name=<span class="value">"recommend"</span>
+     value=<span class="value">"yes"</span></span>
+    &gt;
+    <span class="txt">نعم</span>
+   &lt;/label&gt;</span>
+
+   <span class="tag">&lt;label&gt;
+    &lt;input
+     <span class="attr">type=<span class="value">"radio"</span>
+     name=<span class="value">"recommend"</span>
+     value=<span class="value">"no"</span></span>
+    &gt;
+    <span class="txt">لا</span>
+   &lt;/label&gt;</span>
+
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Checkboxes مربعات الاختيار --&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="txt">ما هي الخدمات التي تستخدمها؟</span>&lt;/p&gt;</span>
+
+   <span class="tag">&lt;label&gt;
+    &lt;input
+     <span class="attr">type=<span class="value">"checkbox"</span>
+     value=<span class="value">"internet"</span></span>
+    &gt;
+    <span class="txt">إنترنت</span>
+   &lt;/label&gt;</span>
+
+   <span class="tag">&lt;label&gt;
+    &lt;input
+     <span class="attr">type=<span class="value">"checkbox"</span>
+     value=<span class="value">"tv"</span></span>
+    &gt;
+    <span class="txt">تلفزيون</span>
+   &lt;/label&gt;</span>
+
+   <span class="tag">&lt;label&gt;
+    &lt;input
+     <span class="attr">type=<span class="value">"checkbox"</span>
+     value=<span class="value">"tv"</span></span>
+    &gt;
+    <span class="txt">هاتف</span>
+   &lt;/label&gt;</span>
+
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Textarea مربع نص --&gt;</span>
+   <span class="tag">&lt;label <span class="attr">for=<span class="value">"comments"</span></span>&gt;<span class="txt">تعليقات إضافية</span>&lt;/label&gt;&lt;br&gt;</span>
+   <span class="tag">&lt;textarea
+    <span class="attr">id=<span class="value">"comments"</span>
+    rows=<span class="value">"5"</span>
+    cols=<span class="value">"40"</span>
+    placeholder=<span class="value" dir="rtl">"اكتب تعليقاتك هنا..."</span></span>
+   &gt;&lt;/textarea&gt;</span>
+
+   <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+   <span class="value">&lt;!-- Submit إرسال --&gt;</span>
+   <span class="tag">&lt;button <span class="attr">id=<span class="value">"submit"</span> type=<span class="value">"submit"</span></span>&gt;
+    <span class="txt">إرسال</span>
+   &lt;/button&gt;</span>
+
+  &lt;/form&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+        </section>
+
+        
+        
+
+    </section>
+
+    <!-- Pages -->
+    <div class="page-nav">
+        <a class="prev" href="../index.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </div>
+
+</main>
+
+
+
+
+</body>
+</html>
