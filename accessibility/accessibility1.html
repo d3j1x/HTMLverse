@@ -24,66 +24,711 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!--  -->
     <section class="box">
         <div class="sub-title">
             <h2>١. أهمية إمكانية الوصول Accessibility وهيكلية اتش.تي.ام.ال HTML Structure الجيدة</h2>
             <span class="hint">نظري</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
+        <!-- أ -->
         <section id="1">
 
             <h3>أ. ما هي إمكانية الوصول Accessibility ؟</h3>
 
+            <p>تُعنى إتاحة الوصول <em>Accessibility</em> بابتكار منتجات وخدمات يمكن للجميع استخدامها. وفي سياق تطوير الويب <i>web development</i> ، يعني ذلك إنشاء مواقع إلكترونية يمكن للجميع فهمها والتفاعل معها، بما في ذلك الأشخاص ذوو الإعاقات البصرية والسمعية والحركية والإدراكية.</p>
+
+            <h4>تشمل بعض الأمثلة على الإعاقات التي يمكن أن تؤثر <i>impact</i> على تجربة المستخدمين <em>users experience</em> عبر الإنترنت ما يلي:</h4>
+
+            <ul>
+                <li><p class="hinty">العمى <em>Blindness</em> .</p></li>
+                <li><p class="hinty">ضعف البصر <em>Low vision</em> .</p></li>
+                <li><p class="hinty">عمى الألوان <em>Color blindness</em> .</p></li>
+                <li><p class="hinty">الصمم <em>Deafness</em> .</p></li>
+                <li><p class="hinty">صعوبة استخدام لوحات المفاتيح <i>keyboards</i> أو الفئران <i>mice</i> أو شاشات اللمس <i>touchscreens</i> .</p></li>
+                <li><p class="hinty">اضطرابات الانتباه <em>Attention disorders</em> .</p></li>
+                <li><p class="hinty">مشاكل الذاكرة <em>Memory issues</em> .</p></li>
+                <li><p class="hinty">صعوبة التحدث <i>speaking</i> أو فهم اللغة المنطوقة <i>understanding spoken language</i> .</p></li>
+                <li><p class="hinty">الحساسية <i>Sensitivity</i> تجاه الأضواء الوامضة <i>flashing lights</i> .</p></li>
+            </ul>
+
+            <p>هذه مجرد أمثلة قليلة على العديد من الحالات التي يمكن أن تؤثر على المستخدمين في جميع أنحاء العالم.</p>
+
+            <p>لمساعدتك في إنشاء مواقع ويب متاحة للجميع، طوّر "اتحاد شبكة الويب العالمية" <em>World Wide Web Consortium</em> ( المعروف اختصاراً بـ <b>W3C</b> ) مجموعة من المعايير الدولية <em>international standards</em> التي يمكنك اتباعها لجعل مواقعك أكثر إتاحةً <em>accessible</em> وسهولةً <i>easier</i> في الاستخدام للأشخاص ذوي الإعاقة <em>people with disabilities</em> .</p>
+
+            <p>تُعرف هذه المعايير باسم "إرشادات إتاحة محتوى الويب" <em>Web Content Accessibility Guidelines</em> ، إختصارها ( <b>WCAG</b> ) .</p>
+
+            <h4>صُممت هذه المبادئ التوجيهية <i>guidelines</i> مع مراعاة أربعة مبادئ أساسية تُعرف اختصاراً بـ ( <b>POUR</b> ) :</h4>
+
+            <ul>
+                <li><p class="hinty"><code class="br-white2">P</code> يرمز  إلى "قابل للإدراك" ( <em>Perceivable</em> ) . يجب أن يكون المستخدمون قادرين على إدراك المعلومات <i>perceive the information</i> التي تعرضها، فعلى سبيل المثال، يمكنك توفير نصوص بديلة <em>alternative text</em> للصور حتى يتمكن المستخدمون الذين يتصفحون موقعك باستخدام قارئ الشاشة <em>screen reader</em> من فهم محتواها.</p></li>
+                <li><p class="hinty"><code class="br-white2">O</code> يرمز إلى "قابل للتشغيل" ( <em>Operable</em> ) ، إذ يجب أن يكون المستخدمون قادرين على التفاعل <i>interact</i> مع واجهة المستخدم <i>user interface</i> . على سبيل المثال، يمكنك التأكد من إمكانية الوصول <em>accessibility</em> إلى جميع الوظائف <i>functionality</i> عبر لوحة المفاتيح <i>keyboard</i> أيضاً، وليس فقط باستخدام الفأرة <i>mouse</i> .</p></li>
+                <li><p class="hinty"><code class="br-white2">U</code> يرمز إلى "قابل للفهم" ( <em>Understandable</em> ) ، إذ يجب أن يكون المستخدمون قادرين على فهم المعلومات <i>understand the information</i> . على سبيل المثال، يمكنك تجنب الجمل المعقدة <i>complex sentences</i> واستخدام لغة بسيطة <i>simple language</i> قدر الإمكان.</p></li>
+                <li><p class="hinty"><code class="br-white2">R</code> يرمز إلى "قوي" ( <em>Robust</em> ) ، إذ يجب أن تكون مجموعة واسعة من المتصفحات والأدوات الأخرى ء بما في ذلك التقنيات المساعدة <i>assistive technologies</i> ، قادرة على تفسير المحتوى <i>interpret the content</i> .</p></li>
+            </ul>
+
+            <p>يُعد استخدام "اتش.تي.ام.ال الدلالي" <em>semantic HTML</em> مفيداً للغاية لجعل موقعك الإلكتروني متوافقاً <i>compatible</i> مع مختلف المتصفحات والتقنيات المساعدة.</p>
+
+            <p>إذا لم يلتزم المحتوى الخاص بك بأيٍّ من هذه المبادئ الأساسية <em>core principles</em> ، فلن يتمكن الجميع من استخدام موقعك الإلكتروني.</p>
+
+            <p>للتحقق مما إذا كنت تتبع هذه الإرشادات <i>guidelines</i> بشكل صحيح، يمكنك الاطلاع على "المرجع السريع" <em>Quick Reference</em> الصادر عن "اتحاد شبكة الويب العالمية" <b>W3C</b> ، حيث ستجد قائمة شاملة بالمعايير والأساليب.</p>
+
+            <p>تُعد إمكانية الوصول <em>Accessibility</em> عنصراً جوهرياً <i>essential</i>  في تطوير الويب web development ، فمن خلال مراعاة مبادئ الشمولية <i>inclusivity</i> أثناء التطوير، يمكنك ضمان قدرة الجميع على الوصول إلى المحتوى والتفاعل معه، وتعزيز المساواة، وتوفير تجربة مستخدم أفضل للجميع حول العالم.</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الهدف الأساسي من إتاحة الويب <em>web accessibility</em> ؟</h5>
+
+			
+			<p> ١. لجعل المواقع الإلكترونية تبدو بمظهر أفضل. ❌</p>
+			<p><mark> <b>٢. لضمان إمكانية استخدام المواقع الإلكترونية من قِبَل الجميع.</b> ✅</mark></p>
+			<p> ٣. لتحسين أداء المواقع الإلكترونية. ❌</p>
+			<p> ٤. لزيادة حركة الزوار إلى المواقع الإلكترونية. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هي إرشادات إتاحة محتوى الويب ( WCAG ) ؟</h5>
+
+			
+			<p> ١. لغة برمجة لتطوير مواقع الويب. ❌</p>
+			<p><mark> <b>٢. مجموعة من الإرشادات لجعل مواقع الويب متاحة للجميع.</b> ✅</mark></p>
+			<p> ٣. اتجاه تصميمي جديد لمواقع الويب. ❌</p>
+			<p> ٤. أداة لاختبار أداء مواقع الويب. ❌</p>
+			
+				
+			<br>
+
+			<h5>أيٌّ مما يلي لا يُعد مبدأً أساسياً من مبادئ إرشادات إتاحة محتوى الويب ( WCAG ) ؟</h5>
+
+			
+			<p> ١. قابل للإدراك Perceivable . ❌</p>
+			<p> ٢. قابل للتشغيل Operable . ❌</p>
+			<p> ٣. قابل للفهم Understandable . ❌</p>
+            <p><mark> <b>٤. متوافق Compatible .</b> ✅</mark></p>
+			
+				
+			
+
+		</div>
+
         </section>
         
 
+        <!-- ب -->
         <section id="2">
 
             <h3>ب. ما هي قارئات الشاشة Screen Readers ، ومن يستخدمها؟</h3>
 
+            <p>تُعد برامج "قراءة الشاشة" <em>Screen readers</em> "تقنيات مساعدة" <i>assistive technology</i> تساعد "المكفوفين" <i>blind</i> و"ضعاف البصر" <i>visually impaired</i> على استخدام أجهزة الكمبيوتر والأجهزة المحمولة.</p>
+
+            <p>برامج "قراءة الشاشة" <em>Screen readers</em> ليست مجرد "أدوات" <i>tools</i> تتيح للمكفوفين وضعاف البصر استخدام أجهزة الكمبيوتر والأجهزة المحمولة.</p>
+
+            <p>إنها تُمكّن هؤلاء الأفراد من الوصول إلى "التعليم" <i>education</i> و"فرص العمل" <i>work opportunities</i> و"وسائل التواصل الاجتماعي" <i>social media</i> ، مما يضمن "الشمول الرقمي" <em>digital inclusion</em> ويعزز قدرتهم على المشاركة الكاملة في المجتمع.</p>
+
+            <p>هناك "اعتقاد خاطئ شائع" <i>common misconception</i> بأن برامج "قراءة الشاشة" <em>screen readers</em> هي أجهزة لتحويل النص إلى كلام.</p>
+
+            <p>ومع ذلك، تُعد ميزة "تحويل النص إلى كلام" <em>text-to-speech</em> مجرد واحدة من خصائص "قارئ الشاشة" <em>screen reader</em> ، إذ تقوم بعض قارئات الشاشة بتحويل النص إلى مخرجات بطريقة "برايل" <em>braille</em> بدلاً من الكلام.</p>
+
+            <p>إلى جانب تحويل "النص إلى كلام" <em>text-to-speech</em> و"مخرجات برايل" <em>braille output</em> ، تشمل الميزات البارزة الأخرى لبرامج "قراءة الشاشة" <em>screen readers</em> أدوات المساعدة في "التنقل" <em>navigation</em> و"المساعدة في تصفح الويب" <em>web browsing assistance</em> .</p>
+
+            <p>لا تقتصر برامج "قراءة الشاشة" <em>Screen reader</em> على المكفوفين وضعاف البصر فحسب، إذ يستخدمها أيضاً الأشخاص المصابون "بعُسر القراءة" <em>Dyslexic individuals</em> وذوو "الإعاقات الإدراكية" <em>Cognitive disabilities</em> . وتتضمن "جميع أنظمة التشغيل الشائعة" <i>All the popular operating systems</i> حالياً أدوات "مدمجة" <em>built</em> لقراءة الشاشة.</p>
+
+            <p>تتضمن كل من أنظمة macOS و iOS ميزة VoiceOver بشكل مدمج، إذ يمكنك تفعيلها على جهاز الكمبيوتر بالضغط على المفتاحين <code class="br-white">CMD + F5</code> ، كما يمكنك الوصول إليها على أجهزة iPhones من خلال "الإعدادات" <i>Settings</i> .</p>
+
+            <p>تتضمن أجهزة الكمبيوتر التي تعمل بنظام Windows ميزة Narrator  بشكل مدمج، ويمكنك تشغيلها بالضغط على المفاتيح <code class="br-white">WIN + CTRL + ENTER</code> . كما تتوفر أيضًا برامج أخرى لأجهزة Windows ، مثل NonVisual Desktop Access ( المعروف اختصاراً بـ  <b>NVDA</b> ) و Job Access With Speech ( المعروف اختصاراً بـ <b>JAWS</b> ) ، حيث يُعد برنامج NVDA مجانياً و"مفتوح المصدر" <em>open-source</em> ، بينما يُعد برنامج JAWS برنامجاً مدفوعاً.</p>
+
+            <p>يحتوي نظام Linux على <b>Orca</b> لبيئة "سطح المكتب" <i>desktop</i> و <b>Speakup</b> "للطرفية" <i>terminal</i> .</p>
+
+            <p>تتضمن هواتف "أندرويد" <i>Android</i> ميزة <b>TalkBack</b> بشكل مدمج. ويمكنك تفعيلها من خلال الانتقال إلى "الإعدادات"  > "الوظائف الخاصة" > "إمكانية الوصول"  > Talkback .</p>
+
+            <p>تتضمن بعض أجهزة "أندرويد" <i>Android</i> أيضاً ميزتي <b>Ella</b> و <b>Select to Speak</b> بشكل مدمج.</p>
+
+            <p>تتمثل إحدى "التحديات الرئيسية" <i>major challenge</i> التي تواجه مستخدمي برامج "قراءة الشاشة" <em>screen reader</em> في أن العديد من "مطوري البرمجيات" <em>software developers</em> لا يضعون في اعتبارهم عند تصميم منتجاتهم "سهولة الاستخدام" <em>friendliness</em> مع هذه البرامج أو معايير "إتاحة الوصول" <em>accessibility</em> .</p>
+
+            <p>على الرغم من أن "إتاحة الوصول" <em>accessibility</em> تُعد موضوعاً "واسع النطاق" <i>broad topic</i> ، إلا أنه يتعين على كل "مطور" <i>developer</i> تعلم كيفية جعل تطبيقات الويب الخاصة به متاحة للمكفوفين وضعاف البصر، وكذلك للفئات الأخرى من ذوي الإعاقة.</p>
+
+            <p>يُظهر هذا التعاطف والالتزام بـ"الشمولية" <em>inclusivity</em> ، مما يضمن استفادة جميع المستخدمين من عملهم.</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>أي مما يلي هو "قارئ الشاشة" <em>screen reader</em> المدمج في أجهزة macOS و iOS ؟</h5>
+
+			
+			<p> ١. Ella ❌</p>
+			<p> ٢. Speakup ❌</p>
+			<p> ٣. VoiceBox ❌</p>
+            <p><mark> <b>٤. VoiceOver</b> ✅</mark></p>
+			
+				
+			<br>
+
+
+			<h5>ما الذي لم تُصمَّم برامج "قراءة الشاشة" <em>screen reader</em> من أجله؟</h5>
+
+			
+			<p> ١. المكفوفون <i>The blind</i> . ❌</p>
+			<p> ٢. ضعاف البصر <i>Visually impaired people</i> . ❌</p>
+			<p><mark> <b>٣. الصم <i>The deaf</i> .</b> ✅</mark></p>
+            <p> ٤. المصابون بعُسر القراءة <i>Dyslexic people</i> . ❌</p>
+			
+				
+			<br>
+
+			<h5>أي مما يلي لا يُعد من ميزات "قارئات الشاشة" <em>screen readers</em> ؟</h5>
+
+			<p><mark> <b>١. تحويل الكلام إلى نص <i>Speech-to-text</i> .</b> ✅</mark></p>
+			<p> ٢. تحويل النص إلى كلام <i>Text-to-speech</i> . ❌</p>
+			<p> ٣. مخرجات بطريقة "برايل" <i>Braille output</i> . ❌</p>
+			<p> ٤. دعم تصفح الويب <i>Web browsing support</i> . ❌</p>
+			
+				
+			
+
+		</div>
+
+
         </section>
 
 
+        <!-- ت -->
         <section id="3">
 
             <h3>ت. ما هي لوحات المفاتيح Keyboards ذات الأحرف الكبيرة Large Text أو طريقة "برايل" Braille ، ومن يستخدمها؟</h3>
 
+            <p>صُممت لوحات المفاتيح ذات "الأحرف الكبيرة" <em>Large text</em> وتلك المجهزة بنظام "برايل" <em>braille</em> لتلائم المستخدمين من ذوي "الإعاقات البصرية" <em>visual disabilities</em> . وتتميز لوحات المفاتيح ذات الأحرف الكبيرة ( أو ما يُعرف بـ"لوحات المفاتيح ذات الطباعة الكبيرة" <em>Large Print Keyboards</em> ) بأن أحرفها وأرقامها ورموزها أكبر حجماً مقارنةً بـ"لوحات المفاتيح القياسية" <i>Standard keyboards</i> ، مما يجعلها مفيدة للأشخاص الذين يجدون صعوبة في رؤية النصوص الصغيرة المطبوعة على المفاتيح. كما تتمتع معظم هذه اللوحات بـ"تباين وسطوع مُحسَّنين" <em>enhanced contrast and brightness</em> .</p>
+
+            <p>تتميز لوحة المفاتيح ذات الأحرف الكبيرة، التي تنتجها العلامة التجارية <b>MaxiAids</b> ، بمفاتيح صفراء تحمل أحرفاً وأرقاماً ورموزاً سوداء كبيرة وبارزة، مما يجعلها مفيدة للأشخاص الذين يعانون من "ضعف البصر" <em>low vision</em> .</p>
+
+            <p>هناك لوحة مفاتيح أخرى تتميز بلونها الأسود وطباعة كبيرة الحجم باللون الأبيض على المفاتيح. وتتميز هذه اللوحة أيضاً بوجود "إضاءة خلفية" <em>backlit</em> ، مما يتيح للمستخدمين تعديل مستوى "السطوع" <em>brightness</em> ليتناسب مع ظروف الإضاءة المختلفة.</p>
+
+            <p>في حين توفر لوحات المفاتيح ذات الأحرف الكبيرة "مؤشرات بصرية" <em>visual cues</em> للمستخدمين ذوي الرؤية المحدودة، توفر لوحات مفاتيح "برايل" <em>braille</em> تجربة تعتمد كلياً على حاسة اللمس للأشخاص الذين يعانون من إعاقات بصرية أكثر شدة، بما في ذلك "المكفوفين" <em>blind</em> .</p>
+
+            <p>طريقة "برايل" <em>Braille</em>  هي "نظام للقراءة والكتابة يعتمد على حاسة اللمس" <em>Tactile reading and writing system</em> ، إذ تتكون من "نقاط بارزة مرتبة" <i>raised dots arranged</i> في "أنماط محددة" <i>specific patterns</i> لتمثيل الحروف والأرقام وعلامات الترقيم.</p>
+
+            <p>تستخدم "لوحات مفاتيح برايل" <em>Braille keyboards</em> هذا النظام لمساعدة المستخدمين في العثور على "المفاتيح الصحيحة" <i>the right keys</i> عن طريق "تحسس هذه الأنماط" <i>feeling these patterns</i> بأصابعهم، إذ تحتوي المفاتيح على نقاط بارزة تشكّل أنماطاً تُمثّل الحروف والأرقام والرموز.</p>
+
+            <p>وتجمع بعض لوحات المفاتيح بين كلا الأسلوبين: "الخطوط الكبيرة" <em>large fonts</em> و "أنماط برايل" <em>braille patterns</em> على المفاتيح، مما يُعد مفيداً للأشخاص ذوي الإعاقة البصرية وللأشخاص الذين يتعلمون طريقة "برايل" <em>braille</em> .</p>
+
+            <p>تُعد لوحات المفاتيح ذات "النصوص الكبيرة" <em>Large text</em> وتلك المخصصة لطريقة "برايل" <em>braille</em> أدواتٍ تُمكّن الأشخاص ذوي الإعاقة البصرية، فمن خلال توفير "وسائل بديلة لإدخال البيانات" <em>alternative input methods</em> ، تضمن هذه "التقنيات المساعدة" <em>assistive technologies</em> مشاركة الجميع في "العالم الرقمي" <i>the digital world</i> .</p>
+
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هي إحدى فوائد استخدام "لوحات المفاتيح ذات النصوص الكبيرة" Large text keyboards ؟</h5>
+
+			<p> ١. تحسّن سرعة الكتابة Improved typing speed . ❌</p>
+			<p> ٢. أداء مُعزَّز Enhanced performance . ❌</p>
+            <p><mark> <b>٣. وضوح أفضل للمفاتيح Improved readability of the keys .</b> ✅</mark></p>
+			<p> ٤. انخفاض مستويات الضجيج Reduced noise levels . ❌</p>
+
+		
+			
+				
+			<br>
+
+
+			<h5>من المستفيد الأول من استخدام لوحات المفاتيح ذات "الخطوط الكبيرة" large text وتلك المخصصة لطريقة "برايل" braille ؟</h5>
+
+			
+			<p> ١. الأشخاص ذوو الإعاقات السمعية People with hearing disabilities . ❌</p>
+			<p> ٢. الأشخاص ذوو الإعاقات الإدراكية People with cognitive disabilities . ❌</p>
+            <p><mark> <b>٣. الأشخاص ذوو الإعاقات البصرية People with visual disabilities .</b> ✅</mark></p>
+			<p> ٤. الأشخاص ذوو الإعاقات الحركية People with motor disabilities . ❌</p>
+			
+				
+			<br>
+
+			<h5>كيف يتعرف الأشخاص على الحروف والأرقام والرموز في "لوحات مفاتيح برايل" braille keyboards ؟</h5>
+
+			<p><mark> <b>١. عن طريق لمس أنماط النقاط البارزة بأصابعهم By feeling patterns of raised dots with their fingers .</b> ✅</mark></p>
+			<p> ٢. عن طريق التحدث إلى لوحة المفاتيح By speaking into the keyboard . ❌</p>
+			<p> ٣. عن طريق استخدام قلم اللمس By using a stylus . ❌</p>
+			<p> ٤. عن طريق قراءة المفاتيح By reading the keys . ❌</p>
+			
+				
+			
+
+		</div>
+
+            
+
         </section>
 
 
+        <!-- ث -->
         <section id="4">
 
             <h3>ث. فيما تُستخدم أجهزة التأشير البديلة Alternative Pointing Devices مثل كرات التتبع Trackballs ، وعصي التحكم Joysticks ، ولوحات اللمس Touchpads ؟</h3>
 
+            <p>تُعد "أجهزة التأشير البديلة" <em>Alternative pointing devices</em> "وسائط إدخال" <i>input devices</i> تشكل بدائل ممتازة لـ"لفأرة التقليدية" <i>the traditional mouse</i> ، فهي ضرورية لتعزيز إمكانية استخدام الحاسوب للأشخاص ذوي "الإعاقة" <em>disabilities</em> ، أو من يعانون من "اعتلالات في الأطراف العلوية" <em>forelimb impairments</em> أو "محدودية في القدرة على الحركة" <em>limited mobility</em> .</p>
+
+            <p>من الأمثلة الشائعة على أجهزة التأشير البديلة: "كرات التتبع" <em>trackballs</em> ، و"عصي التحكم" <em>joysticks</em> ، و"لوحات اللمس" <em>touchpads</em> .</p>
+
+            <p>"كرة التتبع" <em>Trackball</em> هي "جهاز تأشير ثابت" <i>stationary pointing device</i> يتكون من كرة كبيرة قابلة للتحريك داخل "تجويف" <i>socket</i> ، وتتضمن أيضاً "أزراراً إضافية" <i>additional buttons</i> للنقر وتنفيذ وظائف أخرى.</p>
+
+            <p>على عكس "الفأرة التقليدية" <i>the traditional mouse</i> التي تتطلب تحريكها على سطح ما للتحكم في "المؤشر" <i>the cursor</i> ، تظل "كرة التتبع" <em>Trackball</em> ثابتة في مكانها، إذ يقوم المستخدمون بتحريك الكرة مباشرةً باستخدام أصابعهم أو إبهامهم أو راحة اليد لتحريك المؤشر على "الشاشة" <i>the screen</i> .</p>
+
+            <p>تتضمن بعض "الفارات التقليدية" <i>traditional mice</i> أيضاً "كرة تتبع" <em>Trackball</em> في الجزء العلوي أو الجانبي، ويمكن أن تشكل هذه الفارات نقطة انطلاق جيدة إذا كنت ترغب في الانتقال تدريجياً إلى استخدام "كرة التتبع" <em>Trackball</em> .</p>
+
+            <p>تقلل أجهزة "كرة التتبع" <em>Trackball</em> من حجم "الحركة الجسدية" <i>the physical movement</i> التي يحتاجها المستخدم لـ"التنقل" navigation ، مما يجعلها خياراً مثالياً لمن يعانون من مشكلات في الحركة. وعلاوة على ذلك، إذا كنت بحاجة إلى "دقة عالية" <i>high precision</i> ومساحة مكتبية محدودة، فإن "كرة التتبع" <em>Trackball</em> تُعد خياراً أفضل من الفأرة التقليدية.</p>
+
+            <p>"عصا التحكم" <em>Joystick</em> هي "جهاز تأشير" <i>pointing device</i> صُمم في المقام الأول للألعاب ولبعض "التطبيقات الصناعية" <i>industrial applications</i> ، مثل "التحكم في الآلات" <i>machinery control</i> . وهي تتكون من "ذراع" <i>lever</i> تتحرك في اتجاهات متعددة (لأعلى ولأسفل ولليسار ولليمين)، وغالباً ما تتضمن أزراراً إضافية لتنفيذ وظائف متنوعة.</p>
+
+            <p>تتيح "أذرع التحكم" <em>Joystick</em> "تحكماً دقيقاً" <i>precise control</i> في "الحركة" <i>movement</i> و"الإجراءات" <i>actions</i> داخل "البيئات الرقمية" <i>digital environments</i> ، مما يجعلها شائعة الاستخدام في أجهزة "محاكاة الطيران" <i>flight simulators</i> ، و"الرافعات" <i>cranes</i> ، و"ألعاب القيادة" <i>driving games</i> ، وغيرها من التطبيقات التي تتطلب "دقة في توجيه المدخلات" <i>precise directional input</i>.</p>
+
+            <p>نظراً لأن "عصي التحكم" <em>Joystick</em> تتيح القيام بـ"حركات أكبر وأكثر تأنياً" <i>larger and more deliberate movements</i> ، فهي مفيدة للأشخاص الذين يعانون من "الرعاش وعدم ثبات اليدين" <i>tremors and unsteady hands</i> .</p>
+
+            <p>كما أنها تخفف من "الإجهاد والألم" <i>the strain and pain</i> الناجمين عن الحركات المتكررة، مما يجعلها مثالية للأشخاص الذين يعانون من "التهاب المفاصل" <i>arthritis</i> و"متلازمة النفق الرسغي" <i>carpal tunnel syndrome</i> .</p>
+
+            <p>"لوحة اللمس" <em>Touchpad</em> هي جهاز مسطح "حساس للمس" <i>touch-sensitive</i> مدمج في أجهزة "الكمبيوتر المحمولة" <i>laptops</i> وبعض "لوحات المفاتيح" <i>keyboards</i> ، وتتيح للمستخدمين "التحكم في المؤشر" <i>control the cursor</i> على "الشاشة" <i>the screen</i> عن طريق تحريك أصابعهم على "سطحها" <i>its surface</i> .</p>
+
+            <p>إلى جانب السطح المخصص للتحكم في المؤشر، تشتمل "لوحات اللمس" <em>Touchpads</em> أيضاً على "أزرار" <i>buttons</i> تحاكي وظائف "الفأرة التقليدية" <i>traditional mouse</i> ، مثل "النقر بزر الفأرة الأيمن" <i>right-click</i> و"النقر بزر الفأرة الأيسر" <i>left-click</i> .</p>
+
+            <p>يرى معظم الناس أن "لوحات اللمس" <em>Touchpads</em> تُعد "بديلاً أفضل" <i>better alternative</i> للفأرة، إذ إنها تعزز تجربة "التنقل" <i>navigation</i> بشكل كبير من خلال دعم "إيماءات اللمس المتعدد" <i>multi-touch gestures</i> ، مثل "القرص للتكبير والتصغير" <i>pinch-to-zoom</i> ، و"التمرير بإصبعين" <i>two-finger scrolling</i> ، و"النقر للتحديد" <i>tap-to-click</i> ، و"السحب بثلاثة أصابع" <i>three-finger swipes</i> .</p>
+
+            <p>تُعد "لوحة اللمس" <em>Touchpad</em> خياراً مثالياً للأشخاص الذين يعانون من "محدودية حركة الذراع أو اليد" <i>low arm or hand movement</i> ، نظراً لأن "الساعد" <i>the forelimb</i> يظل ثابتاً في الغالب أثناء استخدامها. كما أنها مناسبة للأشخاص المصابين "بالتهاب المفاصل وآلام المفاصل" <i>arthritis and joint pain</i> ، إذ لا تتطلب منهم تحريك أذرعهم بشكل مفرط.</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما نوع الأجهزة التي تُصنَّف ضمنها "كرة التتبع" (trackball) ، و"عصا التحكم" (joystick) ، و"لوحة اللمس" (touchpad) ؟</h5>
+
+			
+			<p> ١. أجهزة الإخراج Output devices . ❌</p>
+			<p> ٢. أجهزة الإدخال والإخراج Input/output devices . ❌</p>
+            <p><mark> <b>٣. أجهزة التأشير Pointing devices .</b> ✅</mark></p>
+			<p> ٤. أجهزة العرض المرئي VDU devices . ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو الجهاز الذي يدعم "إيماءات اللمس المتعدد" (multi-touch gestures) ، مثل "القرص للتكبير" (pinch-to-zoom) ، و'التمرير بإصبعين" (two-finger scrolling) ، و"النقر للتحديد" (tap-to-click) ، و"السحب بثلاثة أصابع" (three-finger swipes) ؟</h5>
+
+			
+			<p> ١. الفأرة التقليدية The traditional mouse . ❌</p>
+            <p><mark> <b>٢. لوحة اللمس Touchpad .</b> ✅</mark></p>
+			<p> ٣. عصا التحكم Joystick . ❌</p>
+			<p> ٤. كرات التتبع Trackballs . ❌</p>
+			
+			
+				
+			<br>
+
+			<h5>ما هو "جهاز التأشير" (pointing device) المصمم في المقام الأول للألعاب و"التطبيقات الصناعية المحددة" (specific industrial applications) ؟</h5>
+
+			<p><mark> <b>١. عصا التحكم Joystick .</b> ✅</mark></p>
+			<p> ٢. كرة التتبع Trackball . ❌</p>
+			<p> ٣. الفأرة Mouse . ❌</p>
+			<p> ٤. لوحة التتبع Trackpad or touchpad . ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
         </section>
 
 
+        <!-- ج -->
         <section id="5">
 
             <h3>ج. فيمَ تُستخدم مكبِّرات الشاشة Screen Magnifiers ؟</h3>
 
+            <p>تُعد "أدوات تكبير الشاشة" <em>Screen magnifiers</em> وسائل تساعد الأشخاص ذوي "الرؤية المحدودة" <i>low vision</i> وغيرهم ممن يعانون من "إعاقات بصرية" <i>visual impairments</i> على الوصول بشكل أفضل إلى "المحتوى الرقمي" <i>digital content</i> وشبكة الإنترنت.</p>
+
+            <p>لنتعمق أكثر في ماهية هذه الأدوات والدور الذي تؤديه في "إتاحة المحتوى الرقمي" <em>digital content accessibility</em> .</p>
+
+            <p>تعمل "برامج تكبير الشاشة" <em>Screen magnifiers</em> عن طريق تكبير "النصوص" <i>texts</i> و"الرسومات" <i>graphics</i> والعناصر الأخرى المعروضة على شاشة الحاسوب أو الجهاز المحمول. وتتيح العديد من هذه البرامج للمستخدمين تكبير "العرض" <i>the display</i> بنسبة تتجاوز 200%، مما يمكنهم من تصفح الصفحة باستخدام "جهاز التأشير" <em>pointing device</em>  أو "لوحة المفاتيح" <em>keyboard</em> . وعلاوة على ذلك، توفر معظم هذه البرامج إمكانية تخصيص "نسب التكبير" <i>customizable zoom</i> وميزات أخرى ضمن"الإعدادات" <i>settings</i> .</p>
+
+            <p>تساعد "برامج تكبير الشاشة" <em>Screen magnifiers</em> الأشخاص ذوي "الرؤية المحدودة" <i>low vision</i> بشكل أساسي على قراءة النصوص، إذ قد تشكل "الخطوط الصغيرة" <i>small fonts</i> في المستندات أو التطبيقات تحدياً لهم. ومن خلال "تكبير النص" <i>enlarging the text</i> ، يصبح بإمكانهم قراءة رسائل البريد الإلكتروني والمقالات وغيرها من المحتويات دون إجهاد أعينهم. كما تساهم هذه البرامج في تسهيل "تصفح الويب" <i>web browsing</i> ، فهي تساعد المستخدمين في تحديد مواقع "الأزرار" <i>buttons</i> و"الروابط" <i>links</i> و"العناصر التفاعلية" <i>interactive elements</i> الأخرى و"النقر" <i>click</i> عليها، وهي عناصر قد يصعب رؤيتها بوضوح. وتضمن هذه "الرؤية المحسّنة" <i>improved visibility</i> قدرة المستخدمين على تصفح المواقع الإلكترونية، وتعبئة "النماذج" <i>forms</i> ، والمشاركة في الأنشطة عبر الإنترنت دون صعوبة.</p>
+
+            <h4>لذا، يتعين على "مطوري البرمجيات" <i>software developers</i> جعل "منتجاتهم الرقمية" <i>their digital products</i> "متاحة" <em>accessible</em> للأشخاص ذوي "الرؤية المحدودة" <i>low vision</i> . وتشمل بعض الاعتبارات ما يلي:</h4>
+
+            <ul>
+                <li><p class="hinty">استخدام "خطوط قابلة لتغيير الحجم" <em>scalable fonts</em> ، بحيث يتمكن المستخدم من "تغيير حجم الصفحة" <i>resize the page</i> دون "اختلال التخطيط" <i>the layout breaking</i> .</p></li>
+                <li><p class="hinty">ضمان "تكيف واجهة المستخدم" <em>the user interface adapts</em> مع "أحجام الشاشات" screen sizes المختلفة من خلال "التصميم المتجاوب" <em>responsive design</em> .</p></li>
+                <li><p class="hinty">استخدام أنظمة ألوان عالية التباين" <em>high-contrast color schemes</em> و"ألوان قابلة للتخصيص" <em>customizable colors</em>.</p></li>
+                <li><p class="hinty">تنفيذ "شريط تنقل" <em>navbar</em> صغير و"غير مُثبَّت" <em>non-sticky</em> ، لضمان بقاء "المحتوى" <i>content</i> "مرئياً" <i>visible</i> للمستخدمين عند استخدام "أدوات التكبير" <em>magnifiers</em>.</p></li>
+                <li><p class="hinty">استخدام "نص اتش.تي.ام.ال عادي" <em>regular HTML text</em> بدلاً من "صور للنصوص" <i>images of text</i> .</p></li>
+                <li><p class="hinty">تقديم "الملاحظات" <em>feedback</em> مباشرةً بجوار "العنصر" <i>the element</i> المُسبِّب لها، والمزيد.</p></li>
+            </ul>
+
+            <h4>تتضمن جميع "أنظمة التشغيل الرئيسية" <i>the mainstay Operating Systems</i> أداة واحدة على الأقل لـ"التكبير" <em>magnifier</em> ، توفرها الشركات المصنعة لها:</h4>
+
+            <ul>
+                <li>
+                    <p class="hinty">يتوفر تطبيق "التكبير/التصغير" <em>Zoom</em> في كل من نظامي <i>macOS</i> و <i>iOS</i> . يمكنك تفعيله على نظام <i>macOS</i> بالانتقال إلى "الإعدادات" <i>Settings</i> ، ثم "تصفية" <i>filter</i> النتائج حسب "إمكانية الوصول" <em>Accessibility</em> ، ثم النقر على "التكبير/التصغير" <em>Zoom</em> . فعّل خيار "استخدام اختصارات لوحة المفاتيح للتكبير/التصغير" <em>Use keyboard shortcuts to zoom</em> لتفعيله.</p>
+                    <ul><li><p class="hinty">يمكنك تفعيله على <i>iPhone</i> من خلال "الإعدادات > إمكانية الوصول > التكبير" <em>Settings > Accessibility > Zoom</em> .</p></li></ul>
+                </li>
+
+
+                <li><p class="hinty">تتضمن أجهزة "أندرويد" <i>Android</i> ميزة "التكبير" <em>Magnification</em> . لتفعيلها، انتقل إلى "الإعدادات > الوظائف الخاصة > إمكانية الوصول > التكبير" <i>Settings > Special Function > Accessibility > Magnification</i> . ونظراً لاختلاف المسار من جهاز لآخر، يمكنك البحث عن كلمة 3 في الصفحة الرئيسية للإعدادات للوصول إليها.</p></li>
+                <li><p class="hinty">يحتوي نظام <i>Windows</i> على أداة "المكبر" <em>Magnifier</em> . يمكنك استخدامها بالانتقال إلى "الإعدادات > إمكانية الوصول > المكبر" <em>Settings > Ease of Access > Magnifier</em> .</p></li>
+                <li><p class="hinty">تتنوع أدوات "التكبير" <em>Magnifiers</em> في أنظمة تشغيل <i>Linux</i> ، فهي إما <em>Zoom</em> أو <em>Magnifier</em> .</p></li>
+            </ul>
+
+            <h4>بخلاف تلك "المدمجة في أنظمة التشغيل" <i>built into operating systems</i> ، إليك بعض "برامج تكبير الشاشة المفيدة" <em>useful screen magnifiers</em> من "جهات خارجية" <i>third-party</i> :</h4>
+
+            <ul>
+                <li><p class="hinty"><b>ZoomText</b> لنظام <i>Windows</i> .</p></li>
+                <li><p class="hinty"><b>ClaroView</b> لنظامي <i>macOS</i> و <i>Windows</i> .</p></li>
+                <li><p class="hinty"><b>iZoom</b> لنظام <i>Windows</i>.</p></li>
+                <li><p class="hinty"><b>Zoomify - Screen Magnifier</b> لنظام <i>macOS</i> .</p></li>
+                <li><p class="hinty"><b>LunarPlus</b> لنظام <i>Windows</i> .</p></li>
+                <li><p class="hinty"><b>Loupe</b> لنظام <i>macOS</i> .</p></li>
+            </ul>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>كيف تعمل معظم "برامج تكبير الشاشة" Screen magnifiers ؟</h5>
+
+
+            <p> ١. من خلال توفير خاصية "تحويل النص إلى كلام" <i>text-to-speech</i> . ❌</p>
+            <p><mark> <b>٢. من خلال تكبير "النصوص" <i>the texts</i>  و"الرسومات" <i>graphics</i> والعناصر الأخرى على شاشة الكمبيوتر أو الجهاز المحمول.</b> ✅</mark></p>
+			<p> ٣. من خلال توفير "مسطرة" <i>ruler</i> حول كل "عنصر" <i>element</i> في الصفحة. ❌</p>
+			<p> ٤. من خلال تكبير "النصوص" <i>the texts</i> فقط على الشاشة "لتحسين الرؤية" <i>for better visibility</i>. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما الذي ينبغي لـ"المطور" Developer القيام به لجعل "منتجاته الرقمية" their digital products متوافقة مع "برامج تكبير الشاشة" Screen magnifiers ؟</h5>
+
+
+            <p> ١. استخدم "خطوطًا كبيرة" <i>big fonts</i> فقط. ❌</p>
+			<p> ٢. عطّل خاصية "التكبير/التصغير" <i>zooming</i> للحفاظ على "تصميم الصفحة" <i>layout</i> . ❌</p>
+			<p> ٣. اعتمد على "الصور" <i>images</i> فقط لنقل المعلومات. ❌</p>
+			<p><mark> <b>٤. اجعل صفحاتهم متوافقة مع "أحجام الشاشات المختلفة" <i>different screen sizes</i> .</b> ✅</mark></p>
+			
+				
+			<br>
+
+			<h5>أي مما يلي يُعد "برنامجاً خارجياً لتكبير الشاشة" Third-party screen magnifier ؟</h5>
+
+			<p> ١. Zoom ❌</p>
+			<p> ٢. Loops ❌</p>
+            <p><mark> <b>٣. ZoomText</b> ✅</mark></p>
+			<p> ٤. Loup ❌</p>
+		
+				
+		</div>
+
+
         </section>
 
 
+        <!-- ح -->
         <section id="6">
 
             <h3>ح. فيمَ تُستخدم برمجيات التعرف على الصوت Voice Recognition Software ؟</h3>
 
+            <p>تساعد "برمجيات التعرف على الصوت" <em>Voice recognition software</em> الأشخاص ذوي "الإعاقة على التفاعل" <i>disabilities interact</i> مع أجهزة الكمبيوتر والأجهزة الرقمية الأخرى. دعونا نناقش ماهية هذه "البرمجيات" <i>softwares</i> والدور الذي تؤديه في تعزيز "الشمول الرقمي" <em>Digital inclusion</em> .</p>
+
+            <p>في سياق "إمكانية الوصول" <em>Accessibility</em> ، تتيح "أدوات التعرف على الصوت" <em>voice recognition tools</em> للأشخاص ذوي "الإعاقة" <i>disabilities</i> استخدام "أصواتهم" <i>their voice</i> "لإصدار أوامر" <i>to pass commands</i> بتنفيذ مهام متنوعة، وذلك بدلاً من استخدام "أجهزة الإدخال التقليدية" <i>traditional input devices</i> مثل "لوحات المفاتيح" <i>keyboards</i> و"فأرة الحاسوب" <i>mice</i> ، ويشمل ذلك كتابة رسائل البريد الإلكتروني والمستندات الأخرى، و"تصفح الإنترنت" <i>surfing the net</i> ، والتحكم في "أجهزة المنزل الذكي" <i>smart home devices</i>.</p>
+
+            <p>نظراً لأن أدوات "برمجيات التعرف على الصوت" <em>Voice recognition software</em> تلغي الحاجة إلى "التفاعل المادي" <i>physical interaction</i> ، فإنها تمنح الأشخاص ذوي "الإعاقة" <i>disabilities</i> قدراً كبيراً من "الاستقلالية" <em>independence</em> والقدرة على التحكم في "بيئتهم" <i>their environment</i> .</p>
+
+            <h4>إليك فئات محددة من الأشخاص الذين قد يجدون "برمجيات التعرف على الصوت" <em>Voice recognition software</em> مفيدة للغاية:</h4>
+
+            <ul>
+                <li><p class="hinty">الأشخاص ذوو "الإعاقة البصرية" <i>visual impairments</i> ، بمن فيهم ذوو "الرؤية المحدودة" <i>low-vision</i> أو "المكفوفون" <i>blindness</i> .</p></li>
+                <li><p class="hinty">الأشخاص الذين يعانون من "إعاقات حركية" <i>mobility impairments</i> ، مثل "محدودية استخدام اليدين والذراعين" <i>limited use of hands and arms</i> ، أو حالات صحية كـ"التهاب المفاصل" <i>arthritis</i> و"متلازمة النفق الرسغي" <i>carpal tunnel syndrome</i> .</p></li>
+                <li><p class="hinty">الأشخاص الذين يتعافون من "إصابات في اليد أو الذراع" <i>hand or arm injuries</i> .</p></li>
+                <li><p class="hinty">الأفراد الذين يعانون من "اضطرابات معرفية" <i>cognitive disorders</i> ، مثل "مشاكل الذاكرة" <i>memory issues</i> أو "اضطرابات نقص الانتباه" <i>attention deficit disorders</i> .</p></li>
+                <li><p class="hinty">كبار السن الذين قد يجدون استخدام "الأوامر الصوتية" <em>voice commands</em> أسهل.</p></li>
+            </ul>
+
+            <p>تجدر الإشارة إلى أن الأشخاص ذوي "الإعاقة" <i>disabilities</i> ليسوا الوحيدين الذين يستخدمون "تقنية التعرف على الصوت" <em>Voice recognition technology</em> ، إذ تستخدم أيضاً "وكالات إنفاذ القانون" <i>Law enforcement agencies</i> ، واللاعبون، والسائقون، والمهنيون المنشغلون بأعمالهم "أدوات التعرف على الصوت" <em>voice recognition tools</em>.</p>
+
+            <p>من الأمثلة على "برمجيات التعرف على الصوت" <em>Voice recognition software</em> التي تتيح للمستخدمين التفاعل مع أجهزة الكمبيوتر: <b>Voice Control</b> لنظامي التشغيل <i>macOS</i> و <i>iOS</i> ، و <b>Voice Access</b> لنظام <i>Android</i> ، و <b>Windows Speech Recognition</b> لنظام <i>Windows</i> ( والذي يُشار إليه باسم <b>Voice Access</b> في أحدث إصدارات <i>Windows</i> ). وتُعد <b>Dragon</b> من شركة <i>Nuance</i> برمجيةً شهيرةً للتعرف على الصوت لنظام <i>Windows</i> ، وهي من تطوير "جهة خارجية" <i>third-party</i> .</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+			
+
+			<h5>ما هي "أجهزة الإدخال الرئيسية" <i>the main input devices</i> التي تحل محلها "برمجيات التعرف على الصوت" <em>Voice recognition software</em> ؟</h5>
+
+			<p> ١. أجهزة قراءة بصمات الأصابع Fingerprint readers . ❌</p>
+			<p> ٢. الماسحات الضوئية Image scanners . ❌</p>
+            <p><mark> <b>٣. لوحات المفاتيح وفأرات الحاسوب Keyboards and mice .</b> ✅</mark></p>
+			<p> ٤. كاميرات الويب Webcams . ❌</p>
+
+
+            <br>
+
+			<h5>أيٌّ مما يلي يُعد الأقل احتمالاً للاستفادة من "برمجيات التعرف على الصوت" <em>Voice recognition software</em> ؟</h5>
+
+			<p> ١. كبار السن Elderly people . ❌</p>
+			<p> ٢. ذوو الإعاقات الحركية People with mobility impairments . ❌</p>
+            <p><mark> <b>٣. الأشخاص الذين يعانون من محدودية حركة الساقين People with low leg movement .</b> ✅</mark></p>
+			<p> ٤. ذوو الإعاقات البصرية People with visual impairments . ❌</p>
+
+
+            <br>
+
+
+			<h5>أي مما يلي لا يُعد "برنامجاً للتعرف على الصوت" <em>Voice recognition software</em> ؟</h5>
+
+			
+			<p> ١. Dragon ❌</p>
+            <p><mark> <b>٢. Audacity</b> ✅</mark></p>
+			<p> ٣. Voice Control ❌</p>
+			<p> ٤. Voice Access ❌</p>
+
+			
+
+		</div>
+
+
+
         </section>
 
 
+        <!-- خ -->
         <section id="7">
 
             <h3>خ. ما هي بعض أدوات تدقيق إمكانية الوصول الشائعة Common Accessibility Auditing Tools التي يمكن استخدامها؟</h3>
 
+            <p>تُعد "إمكانية الوصول" <em>Accessibility</em> جانباً بالغ الأهمية وغالباً ما يتم تجاهله من جوانب "المحتوى الرقمي" <i>digital content</i> . لذا، عند العمل على جعل المحتوى الرقمي "متاحاً" <em>accessible</em> للجميع، من الضروري التأكد من استيفائه "لمعايير إمكانية الوصول" <em>accessibility standards</em> .</p>
+
+            <p>تُعد "أداة تدقيق إمكانية الوصول" <em>An accessibility auditing tool</em> "تطبيقاً" <i>an application</i> يساعدك على "تحسين إمكانية الوصول" <em>improve the accessibility</em> إلى "محتواك الرقمي" <i>your digital content</i> ، وذلك من خلال "الإبلاغ" <i>reporting</i> عن "<em>accessibility issues</em>" 5 التي يمكن رصدها بسهولة عبر "الاختبارات الآلية" <em>automated testing</em> . ويشمل هذا المحتوى "مواقع الويب" <i>websites</i> ، و"تطبيقات الويب" <i>web applications</i> ، و"تطبيقات الأجهزة المحمولة" <i>mobile apps</i>.</p>
+
+            <p>من المهم الإشارة إلى أنه على الرغم من دور "أدوات إتاحة الوصول الآلية" <em>Automated accessibility tools</em> في "تحسين مستوى الإتاحة" <em>improving accessibility</em> ، إلا أنها عادةً ما تكتشف فقط حوالي ثلث "مشكلات الإتاحة المحتملة" <em>possible accessibility issues</em> . ولذلك، لا ينبغي الاعتماد عليها كلياً لتقييم مدى "إتاحة" <em>the accessibility</em> المحتوى الخاص بك، إذ تظل هناك حاجة دائمة لإجراء "اختبارات يدوية" <em>Manual testing</em>  ، ويفضل أن يقوم بها أشخاص من ذوي "الإعاقة" <i>disabilities</i> ، لضمان توفير المحتوى بأقصى درجات "الإتاحة الممكنة" <em>accessible as possible</em> .</p>
+
+            <p>لنلقِ نظرة على بعض "الأدوات المجانية" <i>free tools</i> التي يمكن أن تساعدك في "تحسين إتاحة محتواك الرقمي" <em>improve the accessibility of your digital content</em> .</p>
+
+            <p>يُعدّ <b>Google Lighthouse</b> أداةً شائعةً لـ"فحص مقاييس الويب" <em>Web metric checker</em> ، ويمكنك استخدامها مباشرةً من خلال "أدوات المطوّر" <em>DevTools</em> في <em>Chrome</em> أو "عبر الإنترنت" <i>online</i> . وهذا يعني أنه يمكنك فحص ليس فقط "المواقع الإلكترونية المباشرة" <i>live websites</i> ، بل أيضًا "المواقع المطوّرة محليًا" <i>locally-developed ones</i> .</p>
+
+            <p>تشمل "المقاييس" <i>The metrics</i> التي يمكنك التحقق منها: "إمكانية الوصول" <em>accessibility</em> ، و"تحسين محركات البحث" <em>SEO</em> ، و"أفضل الممارسات" <em>best practices</em> ، و"الأداء" <em>performance</em> .</p>
+
+            <p>لاستخدام <b>Lighthouse</b> ، افتح "أدوات المطور" <em>DevTools</em> بالضغط على المفتاح <code class="br-white2">F12</code> وانتقل إلى علامة التبويب <em>Lighthouse tab</em> . حدد "المقاييس" <em>the metrics</em> التي تود فحصها، واختر الجهاز الذي ترغب في إجراء الاختبار عليه، ثم انقر على زر <em>Analyze page load</em> .</p>
+            
+            <p>ستظهر "درجة سهولة الوصول" <em>accessibility score</em> بعد اكتمال الفحص، إلى جانب قائمة بأي "مشكلات" <i>issues</i> تتطلب المعالجة.</p>
+
+            <p>إذا كنت ترغب في الحصول على "مقاييس أكثر موثوقية" <em>more reliable metrics</em> ، ففكر في استخدام "إصدار الويب" <i>the web version</i> . أما الجانب السلبي فهو أن هذا الإصدار لا يدعم اختبار "المواقع المحلية" <i>local websites</i> . يمكنك الوصول إلى إصدار الويب عبر الرابط: <code dir="ltr" class="br-white nw">pagespeed.web.dev</code> </p>
+
+            <p>تُعد أداة <b>WAVE</b> خياراً موثوقاً آخر لـ"التحقق من إمكانية الوصول" <em>accessibility checker</em>  ، حيث يمكنك استخدامها كـ "إضافة لمتصفح كروم" <em>Chrome extension</em> أو عبر الويب. فما عليك سوى إدخال عنوان URL الخاص بموقعك الإلكتروني، ليتم إنشاء "تقرير شامل حول إمكانية الوصول" <em>a comprehensive accessibility report</em> ، ويتضمن هذا التقرير تفاصيل حول "ميزات إمكانية الوصول المطبقة" <em>accessibility features implemented</em> ، ومعايير ARIA ، و"مستويات التباين" <em>contrasts</em> .</p>
+
+            <p>تُعد أداة <b>The IBM Equal Access Accessibility Checker</b> أداةً قويةً أخرى لـ"تحسين إتاحة المحتوى الرقمي" <em>improving digital content accessibility</em> ، إذ تتيح لك "فحص مواقع الويب" <i>scan websites</i> للكشف عن "مشكلات الإتاحة" <em>accessibility issues</em> وإعداد "تقرير مفصل" <em>detailed report</em> عنها.</p>
+
+            <p>يمكنك استخدامه كـ"إضافة" <em>extension</em> لمتصفح Chrome أو Firefox .</p>
+
+            <p>لاستخدام أداة <b>The IBM Accessibility Checker</b> كإضافة لمتصفح Chrome ، قم بتنزيلها من "متجر كروم الإلكتروني" <em>The Chrome web store</em> . افتح "أدوات المطور" <em>Devtools</em> بالضغط على المفتاح <code class="br-white2">F12</code> واختر علامة التبويب Accessibility Checker الموجودة في "لوحة العناصر" <em>Elements panel</em> . انقر فوق زر "الفحص" <i>scan</i> لبدء عملية "التحقق" <em>the check</em> ، وسيتم إنشاء "تقرير" <i>a report</i> خاص بك، كما يمكنك "تصدير" <em>export</em> التقرير في هيئة "جدول بيانات" <em>a spreadsheet</em> و"ملف اتش.تي.ام.ال" <em>HTML file</em> بالنقر على زر Export XLS .</p>
+
+            <p>يرجى الأخذ في الاعتبار أنه على الرغم من أن هذه "الأدوات الآلية" <em>Automated tools</em> تساعدك في جعل محتواك "أكثر سهولة في الوصول إليه" <em>more accessible</em> ، إلا أن الحصول على "درجة كاملة" <i>a perfect score</i> من أي منها لا يعني أن المحتوى "متاح بالكامل للجميع" <em>entirely accessible</em> ، إذ تقتصر هذه الأدوات على فحص نطاق محدود من "المشكلات" <i>issues</i> ، وستظل هناك حاجة دائمة إلى إجراء "اختبارات يدوية" <em>manual testing</em> لضمان توفير "تجربة أكثر سهولة في الوصول" <em>a more accessible experience</em> للجميع.</p>
+
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>أي مما يلي يصف بشكل أفضل "أداة تدقيق إمكانية الوصول" <em>an accessibility auditing tool</em> ؟</h5>
+
+			
+			<p> ١. يُصلح "تلقائيًا" <i>automatically</i> جميع "مشاكل إمكانية الوصول" <em>accessibility issues</em> . ❌</p>
+            <p><mark> <b>٢. يُقيّم مدى "سهولة الوصول" <em>accessibility</em> إلى محتواك الرقمي.</b> ✅</mark></p>
+			<p> ٣. يقتصر فحصه على "تطبيقات الجوال" <i>mobile apps</i> فقط ❌</p>
+			<p> ٤. لا يتطلب أي "تدخل يدوي" <i>manual input</i> . ❌</p>
+			
+				
+			<br>
+
+
+			<h5>أي مما يلي يصف كيفية استخدام أداة The IBM Equal Access Accessibility Checker ؟</h5>
+
+			<p> ١. يمكن استخدامه كـ"تطبيق سطح مكتب" <i>desktop application</i> فقط. ❌</p>
+			<p> ٢. يمكن استخدامه دون الحاجة إلى أي "تكامل برمجي" <em>development integration</em> . ❌</p>
+			<p> ٣. إنه مخصص حصرياً لـ"تطبيقات الأجهزة المحمولة" <i>mobile apps</i> . ❌</p>
+			<p><mark> <b>٤. يمكن استخدامه كإضافة لمتصفح Chrome ، أو إضافة لمتصفح Firefox ، أو كحزمة NPM package .</b> ✅</mark></p>
+			
+			
+				
+			<br>
+
+
+
+			<h5>أي مما يلي يُعد "قيداً" <i>a limitation</i> لاستخدام "إصدار الويب" <i>web version</i> من أداة Google Lighthouse ؟</h5>
+
+			<p> ١. يوفر "مقاييس غير موثوقة" <i>unreliable metrics</i> . ❌</p>
+			<p> ٢. يمكنه اختبار "المواقع المحلية" <i>local websites</i> فقط. ❌</p>
+            <p><mark> <b>٣. لا يمكنه اختبار "المواقع المحلية" <i>local websites</i> .</b> ✅</mark></p>
+			<p> ٤. لا يدعم "اختبار تطبيقات الأجهزة المحمولة" <i>mobile testing</i> . ❌</p>
+
+
+
+		</div>
+
+
+
+
         </section>
 
 
+        <!-- د -->
         <section id="8">
 
             <h3>د. كيف يؤثر الهيكل السليم لمستويات العناوين Proper Heading Level Structure على إمكانية الوصول Accessibility ؟</h3>
+
+            <p>لقد تعرفت سابقاً على "البنية الصحيحة لمستويات العناوين" <em>Proper heading level structure</em> . والآن، ستتعرف على كيفية "تأثير" <i>affects</i> البنية الجيدة للعناوين على "إمكانية الوصول" <em>accessibility</em> .</p>
+
+            <p>يساهم "الاستخدام السليم للعناوين" <em>Proper use of headings</em> في إنشاء "تسلسل هرمي مرئي" <em>visual hierarchy</em> يسهّل على المستخدمين تصفح صفحة الويب وفهمها. إذ يتيح استخدام "تسلسل هرمي منطقي للعناوين" <em>a logical heading hierarchy</em> لمستخدمي "برامج قراءة الشاشة" <em>screen reader</em> فهم "هيكلية المحتوى" <em>the structure of content</em> والتنقل فيه بسرعة. كما أن صياغة "عناوين مناسبة" <em>appropriate heading</em> تصف بدقة المحتوى اللاحق تساعد جميع المستخدمين في العثور على المعلومات التي يحتاجونها في موقعك. وفضلاً عن ذلك، قد تؤدي العناوين المُصاغة بشكل جيد إلى "تحسين ترتيب موقعك في محركات البحث" <em>improve the SEO of your site</em> .</p>
+
+            <h4>إليك مثال بسيط:</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;h1&gt;<span class="txt">صفحة متجر الموسيقى</span>&lt;/h1&gt;</span>
+
+<span class="tag">&lt;h2&gt;<span class="txt">ألبومات مميزة</span>&lt;/h2&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">اطلع على ألبوماتنا المميزة أدناه:</span>&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p>اعتبر "العناوين" <em>The headings</em> بمثابة "الأساس" <em>the foundation</em> لموقعك ، فبدون أساس متين، ستتأثر "إمكانية الوصول" <em>the accessibility</em> إلى المحتوى الخاص بك "سلبًا" <i>will suffer</i> .</p>
+
+            <p>لنستعرض كيف يمكنك جعل "مشاريع الويب" <i>web projects</i> الخاصة بك "ملائمة" <i>friendly</i> لمستخدمي "التقنيات المساعدة" <em>assistive technologies</em> من خلال "الاستخدام الصحيح للعناوين" <em>using headings correctly</em> .</p>
+
+            <p>
+                تُنشئ "العناوين" <em>Headings</em> ،التي تتراوح من <code class="br-white2">h1</code> إلى <code class="br-white2">h2</code> هيكلاً للتنقل يخدم مستخدمي "برامج قراءة الشاشة" <em>screen reader</em> ، 
+إذ تتيح هذه البرامج "سرد جميع العناوين" <i>list all headings</i> الموجودة في الصفحة، مما يُمكّن المستخدمين من الانتقال مباشرةً إلى "الأقسام" <em>the sections</em> التي يحتاجون إليها. 
+ولذا، يُعد "الترتيب الصحيح للعناوين" <em>correctly arranging headings</em> أمراً مهماً لمساعدة هؤلاء المستخدمين على تجنب "المحتوى غير الضروري" <i>unnecessary content</i> والعثور بسرعة على المعلومات التي يبحثون عنها.
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">أنا عنوان من المستوى الأول (h1)</span>&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;<span dir="rtl" class="txt">أنا عنوان من المستوى الثاني (h2)</span>&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;<span dir="rtl" class="txt">أنا عنوان من المستوى الثالث (h3)</span>&lt;/h3&gt;</span>
+<span class="tag">&lt;h4&gt;<span dir="rtl" class="txt">أنا عنوان من المستوى الرابع (h4)</span>&lt;/h4&gt;</span>
+<span class="tag">&lt;h5&gt;<span dir="rtl" class="txt">أنا عنوان من المستوى الخامس (h5)</span>&lt;/h5&gt;</span>
+<span class="tag">&lt;h6&gt;<span dir="rtl" class="txt">أنا عنوان من المستوى السادس (h6)</span>&lt;/h6&gt;</span>
+            </code></pre></div>
+
+            <p>يحتاج الأشخاص ذوو "الإعاقات البصرية الجزئية" <i>partial sight disabilities</i> أو "الإعاقات الإدراكية" <i>cognitive disabilities</i> إلى "معالجة المعلومات" <em>process information</em> بسرعة وسهولة للحد من "العبء الإدراكي" <em>cognitive load</em> .</p>
+
+            <p>على الرغم من أهمية "الترتيب السليم للعناوين" <em>Proper arrangement of headings</em> ، فمن الضروري أيضاً جعل "نصوص العناوين" <em>heading texts</em> واضحة و"معبّرة" <em>descriptive</em> عن المحتوى.</p>
+
+            <h4>إليك بعض "الممارسات الأساسية" <em>key practices</em> التي يجب اتباعها لاستخدام "العناوين" <em>headings</em> بشكل صحيح:</h4>
+
+            <ul>
+                <li><p class="hinty">
+                    استخدام "العناوين" <em>Headings</em> وفق "تسلسل هرمي" <em>a hierarchy</em> يعكس "تنظيماً واضحاً" <em>clear organization</em> ، 
+                    فعلى سبيل المثال، يجب أن يكون "عنوان الصفحة" <em>the page title</em> من المستوى الأول <code class="br-white2">h1</code> ، 
+                    وتُستهل "الأقسام الرئيسية" <em>major sections</em> بعناوين <code class="br-white2">h2</code> ، و"الأقسام الفرعية" <em>subsections</em> بعناوين <code class="br-white2">h3</code> ، 
+                    وهكذا دواليك وصولاً إلى <code class="br-white2">h6</code> .
+                </p></li>
+                
+                <li><p class="hinty">"لا تتخطَّ"  <i>D'ont skip</i> الانتقال من <code class="br-white2">h1</code> إلى <code class="br-white2">h3</code> ، أو من <code class="br-white2">h2</code> إلى <code class="br-white2">h4</code> ، وما إلى ذلك.</p></li>
+
+                <li><p class="hinty">استخدم "نصاً واضحاً وواصفاً" <em>clear and descriptive text</em> يلخص المحتوى الذي يلي "كل عنوان" <em>each heading</em> .</p></li>
+
+                <li><p class="hinty">لا تستخدم عنواناً "بمفرده" <i>in isolation</i> ، إذ يجب أن يتبع "العنوانَ" <em>the heading</em> محتوىً ما.</p></li>
+
+                <li><p class="hinty">استخدم "العناوين المناسبة" <em>appropriate headings</em> عند الضرورة، بدلاً من "تنسيق النص" <i>formatting text</i> ليبدو وكأنه "عناوين" <i>headings</i> .</p></li>
+
+                <li><p class="hinty">يجب أن تحتوي "كل صفحة" <i>each page</i> على عنصر <code class="br-white2">h1</code> واحد يمثل "الموضوع الرئيسي" <em>The main topic</em>  أو "العنوان" <em>Title</em> .</p></li>
+            </ul>
+
+            <h4>إليك "نموذج ترميز أساسي" <em>a basic markup</em> يوضح كيفية استخدام "العناوين" <em>headings</em> في الصفحة:</h4>
+
+
+            <div class="code-block"><pre><code>
+<span class="value">&lt;!-- Page title عنوان الصفحة --&gt;</span>
+<span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">ما هي لغة HTML ؟</span>&lt;/h1&gt;</span>
+
+<span class="value">&lt;!-- First section القسم الأول --&gt;</span>
+<span class="tag">&lt;section&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">مقدمة في HTML</span>&lt;/h2&gt;
+ &lt;p&gt;
+  <span dir="rtl" class="txt">يرمز الاختصار HTML إلى "لغة ترميز النص التشعبي" (HyperText Markup Language)، وهي اللغة القياسية لإنشاء صفحات الويب.</span>
+ &lt;/p&gt;
+&lt;/section&gt;</span>
+
+<span class="value">&lt;!-- Second section القسم الثاني --&gt;</span>
+<span class="tag">&lt;section&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">تاريخ لغة HTML</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">بدأت لغة HTML تتشكل في أوائل التسعينيات.</span>&lt;/p&gt;
+ &lt;h3&gt;<span dir="rtl" class="txt">الأصول</span>&lt;/h3&gt;
+ &lt;p&gt;
+  <span dir="rtl" class="txt">ابتكر تيم بيرنرز لي Tim Berners-Lee لغة HTML في عام 1991، وقد شهدت تطوراً كبيراً على مر السنين.</span>
+ &lt;/p&gt;
+&lt;/section&gt;</span>
+            </code></pre></div>
+
+
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>كيف تساعد "بنية العناوين السليمة" <em>Proper heading structure</em> مستخدمي "قارئات الشاشة" <em>screen readers</em> ؟</h5>
+
+			
+			<p> ١. يُضفي هذا العنصر "لمسة جمالية" <i>visual styling</i> على المحتوى. ❌</p>
+			<p> ٢. يُساعد "قارئات الشاشة" <em>screen readers</em> على إنشاء "ملخص" <i>summary</i> للمحتوى. ❌</p>
+            <p><mark> <b>٣. يُمكّن "قارئات الشاشة" <em>screen readers</em> من التنقل بين "الأقسام" <i>sections</i> المختلفة بسهولة.</b> ✅</mark></p>
+			<p> ٤. يُحسّن "سرعة تحميل" <i>the loading speed</i> صفحة الويب. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>لماذا يُعد "الاستخدام الصحيح للعناوين" <em>Use headings properly</em> أمراً مهماً للمستخدمين الذين يعتمدون على "لوحة المفاتيح" <i>keyboards</i> ؟</h5>
+
+			
+			<p> ١. يعزز "المظهر البصري" <i>the visual appeal</i> لصفحة الويب. ❌</p>
+			<p> ٢. يتيح للمستخدمين "طباعة" <i>print</i> صفحة الويب بسهولة أكبر. ❌</p>
+            <p><mark> <b>٣. يسمح للمستخدمين بالتنقل بين "الأقسام" <i>sections</i> دون الحاجة إلى المرور عبر "كل رابط" <i>every link</i> على حدة.</b> ✅</mark></p>
+			<p> ٤. يساعد المستخدمين على "تنزيل" <i>download</i> صفحة الويب بشكل أسرع. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>أيٌّ مما يلي يُعد من "أفضل الممارسات" <i>the best practices</i> لاستخدام "العناوين" <em>headings</em> في صفحة الويب؟</h5>
+
+			<p> ١. الانتقال مباشرةً من العنوان الرئيسي <code class="br-white2">h1</code> إلى العنوان الفرعي <code class="br-white2">h3</code> لتوفير الوقت. ❌</p>
+            <p><mark> <b>٢. استخدام "نصوص واضحة وموجزة" <em>clear and descriptive texts</em> تلخص المحتوى التالي.</b> ✅</mark></p>
+			<p> ٣. استخدام أي مستوى من "العناوين" <em>headings</em> بشكل منفرد دون أي محتوى لاحق. ❌</p>
+			<p> ٤. استخدام عدة عناوين رئيسية <code class="br-white2">h1</code> في صفحة واحدة للتأكيد. ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
+
 
         </section>
 
