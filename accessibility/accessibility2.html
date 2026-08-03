@@ -24,17 +24,403 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    
     <section class="box">
         <div class="sub-title">
             <h2>٢. تصحيح أخطاء Debug صفحة "مدونة رحلة البرمجة"</h2>
             <span class="hint">ورشة عمل</span>
-            <p>قريبًا</p>
+            <p>أنشأ Camperbot صفحة مدونة توثق رحلته في تعلم "البرمجة" <em>The programming</em> ، ولكن يبدو أن الصفحة تعاني من بعض المشكلات المتعلقة بـ"إمكانية الوصول" <em>Accessibility</em> وتتضمن ممارسات برمجية سيئة. وتتمثل مهمتك في هذه الورشة في "معالجة" <em>fix</em> هذه المشكلات نيابةً عن Camperbot .</p>
         </div>
 
+        <!-- Camperbot كود -->
+        <section>
+            <h3>كود Camperbot</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">مدونة Camperbot</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">مرحبًا بكم في مدونة Camperbot</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;h2&gt;<span dir="rtl" class="txt">التنقل</span>&lt;/h2&gt;</span>
+  <span class="tag">&lt;ul&gt;</span>
+   <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#poste1"</span>&gt;<span class="txt">رحلتي</span>&lt;/a&gt;&lt;/li&gt;</span>
+   <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#poste2"</span>&gt;<span class="txt">إمكانية الوصول</span>&lt;/a&gt;&lt;/li&gt;</span>
+   <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#poste3"</span>&gt;<span class="txt">الخطوات التالية</span>&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;/ul&gt;</span>
+
+  <span class="tag">&lt;div&gt;</span>
+   <span class="tag">&lt;h1 <span class="attr">id=</span><span class="value">"post1"</span>&gt;<span class="txt">رحلتي في تعلم البرمجة</span>&lt;/h1&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">بدأتُ تعلُّم البرمجة قبل بضعة أشهر، وكانت تجربةً مليئةً بالإثارة والتقلبات!</span>
+   <span class="tag">&lt;/p&gt;</span>
+
+   <span class="tag">&lt;h4&gt;<span class="txt">تحديات مبكرة</span>&lt;/h4&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">في البداية، كان النحو مربكاً للغاية.</span>
+   <span class="tag">&lt;/p&gt;</span>
+
+   <span class="tag">&lt;h4&gt;<span class="txt">إنجازات نوعية</span>&lt;/h4&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">وفي النهاية، بدأت الأمور تسير على ما يرام.</span>
+   <span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div&gt;</span>
+   <span class="tag">&lt;h1 <span class="attr">id=</span><span class="value">"post2"</span>&gt;<span class="txt">إتاحة الوصول أمرٌ مهم</span>&lt;/h1&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">تعلمتُ اليوم أن ليس الجميع يستخدمون شبكة الويب بالطريقة نفسها التي أستخدمها بها.</span>
+   <span class="tag">&lt;/p&gt;</span>
+
+   <span class="tag">&lt;h5&gt;<span class="txt">قارئات الشاشة</span>&lt;/h5&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">تساعد هذه الأدوات المستخدمين ضعاف البصر على تصفح المواقع الإلكترونية.</span>
+   <span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div&gt;</span>
+   <span class="tag">&lt;h1 <span class="attr">id=</span><span class="value">"post3"</span>&gt;<span class="txt">ما الخطوة التالية؟</span>&lt;/h1&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">أنا متحمس للتعمق في لغة JavaScript وبناء ميزات تفاعلية!</span>
+   <span class="tag">&lt;/p&gt;</span>
+
+   <span class="tag">&lt;h3&gt;<span dir="rtl" class="txt">قريباً: مشروعي الأول بلغة JavaScript !</span>&lt;/h3&gt;</span>
+   <span class="tag">&lt;p&gt;</span>
+    <span dir="rtl" class="txt">قريباً: ترقبوا بعض الميزات التفاعلية المثيرة في المدونة، بالإضافة إلى مشروعي الأول بلغة JavaScript !</span>
+   <span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;h3&gt;<span class="txt">تواصل معي</span>&lt;/h3&gt;</span>
+  <span class="tag">&lt;p&gt;<span dir="rtl" class="txt">راسلني عبر البريد الإلكتروني camperbot@blog.io</span>&lt;/p&gt;</span>
+  
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+            
+        </section>
+
+
+
+        <!-- Step 1 الخطوة -->
         <section >
 
-            <h3></h3>
+            <h3>الخطوة 1</h3>
+
+            <p class="hinty">تتعلق المجموعة الأولى من "الأخطاء" <em>errors</em>  باستخدام "العناوين" <em>headings</em> . ففي درس سابق، تعلمت أن الممارسة المُثلى تقتضي استخدام وسم عنوان واحد فقط من نوع <code class="br-white2">h1</code> في كل صفحة، ولكن يبدو أن Camperbot يستخدم أكثر من وسم <code class="br-white2">h1</code> .</p>
+
+            <p class="hinty">اترك العنصر <code dir="ltr" class="br-white">&lt;h1&gt;<span dir="rtl">مرحبًا بكم في مدونة Camperbot</span>&lt;/h1&gt;</code> كما هو، وغيّر عناصر <code class="br-white2">h1</code> الأخرى إلى عناصر <code class="br-white2">h2</code> .</p>
+
+        </section>
+
+
+        <!-- Step 2 الخطوة -->
+        <section >
+
+            <h3>الخطوة 2</h3>
+
+            <p class="hinty">
+                يبدو أن هناك بعض "المشكلات" <i>issues</i> المتعلقة باستخدام "العناوين" <em>headings</em> في الصفحة، 
+فإذا نظرت إلى عنصر <code class="br-white2">div</code> الأول، ستجد استخداماً لعنصري <code class="br-white2">h4</code> كـ"عناوين فرعية" <em>subheadings</em> . 
+ومن الأفضل استخدام عناصر <code class="br-white2">h3</code> لهذه العناوين الفرعية، نظراً لأنها تقع في "مستوى أدنى" <em>a level below</em> من عنصر <code class="br-white2">h2</code> .
+            </p>
+
+            <p class="hinty">
+                غيّر عنصري <code class="br-white2">h4</code> إلى عنصري <code class="br-white2">h3</code> .
+            </p>
+
+
+        </section>
+
+
+        <!-- Step 3 الخطوة -->
+        <section >
+
+            <h3>الخطوة 3</h3>
+
+            <p class="hinty">
+                في "قسم المنشور الثاني" <i>The second post section</i> ، يُستخدم عنصر <code class="br-white2">h5</code> ، وسيكون "من الأنسب" <i>more appropriate</i> استخدام عنصر <code class="br-white2">h3</code> هنا.
+            </p>
+
+            <p class="hinty">
+                غيّر عنصر <code class="br-white2">h5</code> إلى عنصر <code class="br-white2">h3</code> .
+            </p>
+
+
+        </section>
+
+
+        <!-- Step 4 الخطوة -->
+        <section >
+
+            <h3>الخطوة 4</h3>
+
+            <p class="hinty">
+                أسفل "العنوان الرئيسي" <i>The main title</i> للصفحة، يوجد "قسم للتنقل" <em>navigation section</em> يحتوي على "روابط" <em>links</em> لكل تدوينة.
+            </p>
+
+            <p class="hinty">
+                ينبغي إحاطة هذا "القسم" <em>section</em> بعنصر <code class="br-white2">nav</code> للإشارة إلى الغرض منه كـ"علامة تنقل" <i>navigation landmark</i> .
+            </p>
+
+
+        </section>
+
+
+        <!-- Step 5 الخطوة -->
+        <section >
+
+            <h3>الخطوة 5</h3>
+
+            <p class="hinty">
+                تتضمن صفحة المدونة ما مجموعه ثلاث تدوينات موضوعة داخل عناصر <code class="br-white2">div</code> عامة، ولكن سيكون من الأفضل استخدام "عناصر دلالية" <em>semantic elements</em> لاحتواء كل تدوينة.
+            </p>
+
+            <p class="hinty">
+                قم بتغيير كل عنصر <code class="br-white2">div</code> يحيط بكل تدوينة إلى عنصر <code class="br-white2">article</code> .
+            </p>
+
+
+        </section>
+
+
+
+        <!-- Step 6 الخطوة -->
+        <section >
+
+            <h3>الخطوة 6</h3>
+
+            <p class="hinty">
+                بما أن "القسم بأكمله" <i>The entire section</i> الذي يحتوي على تدوينات المدونة يمثل "المحتوى الرئيسي" <i>The main content</i> للصفحة، فينبغي وضعه داخل عنصر رئيسي <code class="br-white2">main</code> . ويساعد ذلك "قارئات الشاشة" <em>screen readers</em> وغيرها من "التقنيات المساعدة" <em>assistive technologies</em> على فهم "هيكلية الصفحة" <em>structure of the page</em> بشكل أفضل.
+            </p>
+
+
+        </section>
+
+
+
+        <!-- Step 7 الخطوة -->
+        <section >
+
+            <h3>الخطوة 7</h3>
+
+            <p class="hinty">
+                بالنسبة للجزء الأخير من "ورشة العمل" <em>workshop</em> ، هناك بعض "التعديلات" <i>changes</i> المطلوبة على "قسم الاتصال" <em>contact section</em> الموجود في الأسفل.
+            </p>
+
+            <p class="hinty">
+                يتمثل التغيير الأول في وضع "قسم الاتصال" <em>contact section</em> داخل عنصر التذييل <code class="br-white2">footer</code> . وسيساعد ذلك "برمجيات قراءة الشاشة" <em>screen readers</em> على تحديد هذا القسم باعتباره "تذييل الصفحة" <i>the footer of the page</i> .
+            </p>
+
+
+        </section>
+
+
+        <!-- Step 8 الخطوة -->
+        <section >
+
+            <h3>الخطوة 8</h3>
+
+            <p class="hinty">
+                يحتوي "قسم التذييل" <code class="br-white2">footer</code> حالياً على عنوان من المستوى <code class="br-white2">h3</code> ، ولكن ينبغي أن يكون العنوان من المستوى <code class="br-white2">h2</code> للحفاظ على "التسلسل الهرمي السليم للعناوين" <em>a proper heading hierarchy</em> .
+            </p>
+
+            <p class="hinty">
+                غيّر <code class="br-white2">h3</code> إلى <code class="br-white2">h2</code> .
+            </p>
+
+
+        </section>
+
+
+        <!-- Step 9 الخطوة -->
+        <section >
+
+            <h3>الخطوة 9</h3>
+
+            <p class="hinty">
+                سيتمثل التغيير الأخير في نص البريد الإلكتروني الموجود داخل "التذييل" <i>the footer</i> . ففي الدروس و"ورش العمل" <i>workshops</i> السابقة، تعلمت كيفية التعامل مع رابط <code class="br-white2">mailto</code> على النحو التالي:
+            </p>
+
+            <h4>نموذج للكود</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span class="txt">راسلني عبر البريد الإلكتروني </span>&lt;a <span class="attr">href=</span><span class="value">"mailto:janedoe@email.com"</span>&gt;<span class="txt">janedoe@email.com</span>&lt;/a&gt;&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">
+                ابدأ بوضع عنوان البريد الإلكتروني <code class="br-white">camperbot@blog.io</code> داخل "عنصر الرابط" <em>anchor element</em> . ثم أضف السمة <code class="br-white2">href</code> إلى هذا العنصر واضبط قيمتها لتكون <code class="br-white">mailto:camperbot@blog.io</code> .
+            </p>
+
+            <p class="hinty">
+                بهذا التغيير الأخير، تكون قد "عالجت بنجاح" <i>successfully resolved</i> جميع "المشكلات" <em>the issues</em> الموجودة في صفحة المدونة!
+            </p>
+
+
+        </section>
+
+
+
+
+
+
+        <!-- The Solution الحل -->
+        <section >
+
+            <h3>الحل The Solution</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">مدونة Camperbot</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">مرحبًا بكم في مدونة Camperbot</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;main&gt;</span>
+   <span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;h2&gt;<span dir="rtl" class="txt">التنقل</span>&lt;/h2&gt;</span>
+    <span class="tag">&lt;ul&gt;</span>
+     <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#post1"</span>&gt;<span class="txt">رحلتي</span>&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#post2"</span>&gt;<span class="txt">إمكانية الوصول</span>&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#post3"</span>&gt;<span class="txt">الخطوات التالية</span>&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+   <span class="tag">&lt;/nav&gt;</span>
+ 
+   <span class="tag">&lt;article&gt;</span>
+    <span class="tag">&lt;h2 <span class="attr">id=</span><span class="value">"post1"</span>&gt;<span class="txt">رحلتي في تعلم البرمجة</span>&lt;/h2&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">بدأتُ تعلُّم البرمجة قبل بضعة أشهر، وكانت تجربةً مليئةً بالإثارة والتقلبات!</span>
+    <span class="tag">&lt;/p&gt;</span>
+ 
+    <span class="tag">&lt;h3&gt;<span class="txt">تحديات مبكرة</span>&lt;/h3&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">في البداية، كان النحو مربكاً للغاية.</span>
+    <span class="tag">&lt;/p&gt;</span>
+ 
+    <span class="tag">&lt;h3&gt;<span class="txt">إنجازات نوعية</span>&lt;/h3&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">وفي النهاية، بدأت الأمور تسير على ما يرام.</span>
+    <span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/article&gt;</span>
+ 
+   <span class="tag">&lt;article&gt;</span>
+    <span class="tag">&lt;h2 <span class="attr">id=</span><span class="value">"post2"</span>&gt;<span class="txt">إتاحة الوصول أمرٌ مهم</span>&lt;/h2&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">تعلمتُ اليوم أن ليس الجميع يستخدمون شبكة الويب بالطريقة نفسها التي أستخدمها بها.</span>
+    <span class="tag">&lt;/p&gt;</span>
+ 
+    <span class="tag">&lt;h3&gt;<span class="txt">قارئات الشاشة</span>&lt;/h3&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">تساعد هذه الأدوات المستخدمين ضعاف البصر على تصفح المواقع الإلكترونية.</span>
+    <span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/article&gt;</span>
+ 
+   <span class="tag">&lt;article&gt;</span>
+    <span class="tag">&lt;h2 <span class="attr">id=</span><span class="value">"post3"</span>&gt;<span class="txt">ما الخطوة التالية؟</span>&lt;/h2&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">أنا متحمس للتعمق في لغة JavaScript وبناء ميزات تفاعلية!</span>
+    <span class="tag">&lt;/p&gt;</span>
+ 
+    <span class="tag">&lt;h3&gt;<span dir="rtl" class="txt">قريباً: مشروعي الأول بلغة JavaScript !</span>&lt;/h3&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
+     <span dir="rtl" class="txt">قريباً: ترقبوا بعض الميزات التفاعلية المثيرة في المدونة، بالإضافة إلى مشروعي الأول بلغة JavaScript !</span>
+    <span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/article&gt;</span>
+  <span class="tag">&lt;/main&gt;</span>
+
+  <span class="tag">&lt;footer&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تواصل معي</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="txt">راسلني عبر البريد الإلكتروني </span>&lt;a <span class="attr">href=</span><span class="value">"mailto:camperbot@blog.io"</span>&gt;<span class="txt">camperbot@blog.io</span>&lt;/a&gt;&lt;/p&gt;</span>
+  <span class="tag">&lt;/footer&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+
+        <!-- The Application التطبيق -->
+        <section >
+
+            <h3>التطبيق The Application</h3>
+
+            <div class="preview">
+                <h1>مرحبًا بكم في مدونة Camperbot</h1>
+
+                
+                <nav>
+                <h2>التنقل</h2>
+                <ul>
+                    <li><a href="#post1">رحلتي</a></li>
+                    <li><a href="#post2">إمكانية الوصول</a></li>
+                    <li><a href="#post3">الخطوات التالية</a></li>
+                </ul>
+                </nav>
+
+                <main class="presentation-main">
+                    <article>
+                        <h2 id="post1">رحلتي في تعلم البرمجة</h2>
+                        <p>
+                            بدأتُ تعلُّم البرمجة قبل بضعة أشهر، وكانت تجربةً مليئةً بالإثارة والتقلبات!
+                        </p>
+
+                        <h3>تحديات مبكرة</h3>
+                        <p>
+                            في البداية، كان النحو مربكاً للغاية.
+                        </p>
+
+                        <h3>إنجازات نوعية</h3>
+                        <p>
+                            وفي النهاية، بدأت الأمور تسير على ما يرام.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h2 id="post2">إتاحة الوصول أمرٌ مهم</h2>
+                        <p>
+                            تعلمتُ اليوم أن ليس الجميع يستخدمون شبكة الويب بالطريقة نفسها التي أستخدمها بها.
+                        </p>
+
+                        <h3>قارئات الشاشة</h3>
+                        <p>
+                            تساعد هذه الأدوات المستخدمين ضعاف البصر على تصفح المواقع الإلكترونية.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h2 id="post3">ما الخطوة التالية؟</h2>
+                        <p>
+                            أنا متحمس للتعمق في لغة JavaScript وبناء ميزات تفاعلية!
+                        </p>
+
+                        <h3>قريباً: مشروعي الأول بلغة JavaScript !</h3>
+                        <p>
+                            قريباً: ترقبوا بعض الميزات التفاعلية المثيرة في المدونة، بالإضافة إلى مشروعي الأول بلغة JavaScript !
+                        </p>
+                    </article>
+                </main>
+
+                <footer class="presentation-footer">
+                    <h2>تواصل معي</h2>
+                    <p>راسلني عبر البريد الإلكتروني <a href="mailto:camperbot@blog.io">camperbot@blog.io</a></p>
+                </footer>
+                
+            </div>
+
+
 
         </section>
         

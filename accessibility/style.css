@@ -36,6 +36,10 @@ main {
   margin: 0 auto; /* centers horizontally */
 }
 
+.presentation-main {
+
+}
+
 .navbar {
   background-color:  #0b1220;
   margin-top: 5vh;
@@ -95,6 +99,11 @@ main {
 footer {
   text-align: center;
   color: whitesmoke;
+}
+
+.presentation-footer {
+  text-align: right;
+  color: black;
 }
 
 .box {
