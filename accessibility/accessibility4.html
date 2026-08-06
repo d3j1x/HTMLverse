@@ -24,20 +24,372 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!--    -->
     <section class="box">
         <div class="sub-title">
             <h2>٤. إعداد جدول زمني لمؤتمر تقني Tech Conference Schedule Table</h2>
             <span class="hint">ورشة عمل</span>
-            <p>قريبًا</p>
+            <p>في هذه الورشة، ستتعلم كيفية إنشاء "عناصر جداول تراعي معايير سهولة الوصول" <em>Accessible table elements</em> ، وذلك من خلال إعداد "جدول زمني لمؤتمر تقني" <i>a schedule for a tech conference</i> .</p>
         </div>
 
+        <!-- Step 1 الخطوة -->
         <section >
 
-            <h3></h3>
+            <h3>الخطوة 1</h3>
+
+            <p class="hinty">ابدأ بإضافة عنصر <code class="br-white2">h1</code> يحتوي على النص <code class="br-white">جدول مؤتمر التكنولوجيا لعام 2025</code> .</p>
+
+        </section>
+
+
+        <!-- Step 2 الخطوة -->
+        <section >
+
+            <h3>الخطوة 2</h3>
+
+            <p class="hinty">حان الآن وقت البدء في بناء "الجدول" <em>the table</em> .</p>
+
+            <p class="hinty">ابدأ بإضافة عنصر "جدول" <code class="br-white2">table</code> أسفل عنصر "العنوان" <code class="br-white2">h1</code> . وداخل عنصر "الجدول" <code class="br-white2">table</code> ، أضف عنصر "تسمية توضيحية" <code class="br-white2">caption</code> يحتوي على النص <code class="br-white">الجدول الزمني حسب المسار والوقت</code> .</p>
+
+        </section>
+
+
+        <!-- Step 3 الخطوة -->
+        <section >
+
+            <h3>الخطوة 3</h3>
+
+            <p class="hinty">الخطوة التالية هي إضافة "رأس الجدول" <em>The table head</em> .</p>
+
+            <p class="hinty">ابدأ بإضافة عنصر <code class="br-white2">thead</code> أسفل عنصر <code class="br-white2">caption</code> . وداخل عنصر <code class="br-white2">thead</code> ، أضف عنصر <code class="br-white2">tr</code> .</p>
+
+        </section>
+
+
+
+        <!-- Step 4 الخطوة -->
+        <section >
+
+            <h3>الخطوة 4</h3>
+
+            <p class="hinty">داخل عنصر <code class="br-white2">tr</code> الخاص بك، أضف أربعة عناصر <code class="br-white2">th</code> . يجب أن يحتوي العنصر <code class="br-white2">th</code> الأول على النص <code class="br-white">الوقت</code> ، والثاني على النص <code class="br-white">المسار أ</code> ، والثالث على النص <code class="br-white">المسار ب</code> ، والرابع على النص <code class="br-white">المسار ت</code> .</p>
+
+
+        </section>
+
+
+        <!-- Step 5 الخطوة -->
+        <section >
+
+            <h3>الخطوة 5</h3>
+
+            <p class="hinty">تُستخدم السمة <code class="br-white2">scope</code> لتحديد ما إذا كانت "خلية العنوان" <em>a header cell</em> تمثّل عنواناً لـ"صف" <em>row</em> ، أو "عمود" <em>column</em> ، أو مجموعة من الصفوف أو الأعمدة.</p>
+            
+            <p class="hinty">إليك مثال:</p>
+
+            <h4>نموذج للكود</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">مثال على العنوان</span>&lt;/th&gt;</span>
+            </code></pre></div>
+
+
+            <p class="hinty">يساعد هذا "برامج قراءة الشاشة" <em>screen readers</em> على فهم "العلاقة" <i>The relationship</i> بين "خلايا الرأس وخلايا البيانات" <em>header and data cells</em> .</p>
+
+            <p class="hinty">بالنسبة لجميع عناصر <code class="br-white2">th</code> ، أضف السمة <code class="br-white2">scope</code> بقيمة <code class="br-white">col</code> .</p>
+
+
+        </section>
+
+
+        <!-- Step 6 الخطوة -->
+        <section >
+
+            <h3>الخطوة 6</h3>
+
+            <p class="hinty">في الخطوات القليلة التالية، ستقوم بإنشاء "جسم الجدول" <em>The body of the table</em>.</p>
+            <p class="hinty">ابدأ بإضافة عنصر <code class="br-white2">tbody</code> أسفل عنصر <code class="br-white2">thead</code> . ثم أضف عنصر <code class="br-white2">tr</code> داخل عنصر <code class="br-white2">tbody</code> .</p>
+
+        </section>
+
+
+        <!-- Step 7 الخطوة -->
+        <section >
+
+            <h3>الخطوة 7</h3>
+
+            <p class="hinty">
+                داخل عنصر <code class="br-white2">tr</code> الخاص بك، أضف عنصر <code class="br-white2">th</code> يحتوي على النص <code class="br-white">9:00 صباحاً</code> . ثم أسفل عنصر <code class="br-white2">th</code> هذا،
+ أضف ثلاثة عناصر <code class="br-white2">td</code> تحتوي على النصوص التالية: <code class="br-white">الكلمة الرئيسية: مستقبل التكنولوجيا</code> و <code class="br-white">مقدمة في تطوير الويب</code> و <code class="br-white">تجربة المستخدم للجميع</code> .
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 8 الخطوة -->
+        <section >
+
+            <h3>الخطوة 8</h3>
+
+            <p class="hinty">هناك قيمة أخرى للسمة <code class="br-white2">scope</code> وهي <code class="br-white">row</code> ، والتي تشير إلى أن "خلية العنوان" <em>a header cell</em> تُعد عنواناً للصف بأكمله.</p>
+
+            <p class="hinty">داخل عنصر <code class="br-white2">th</code> الخاص بك، أضف سمة <code class="br-white2">scope</code> بقيمة <code class="br-white">row</code> .</p>
+
+        </section>
+
+
+        <!-- Step 9 الخطوة -->
+        <section >
+
+            <h3>الخطوة 9</h3>
+
+            <p class="hinty">حان الآن وقت إضافة "صف" <em>row</em> آخر إلى "الجدول" <em>The table</em> .</p>
+
+            <p class="hinty">ابدأ بإضافة عنصر <code class="br-white2">tr</code> آخر. وداخل عنصر <code class="br-white2">tr</code> هذا، أضف عنصر <code class="br-white2">th</code> مع تعيين السمة <code class="br-white2">scope</code> والقيمة <code class="br-white">row</code> ، واجعل محتواه النصي <code dir="rtl" class="br-white">10:00 صباحاً</code> .</p>
+
+            <p class="hinty">ثم أضف ثلاثة عناصر <code class="br-white2">td</code> تحتوي على النصوص التالية:</p>
+
+            <ul>
+                <li><p class="hinty"><code dir="rtl" class="br-white">دراسة متعمقة في إمكانية الوصول</code></p></li>
+                <li><p class="hinty"><code dir="rtl" class="br-white">لغة CSS للمبتدئين</code></p></li>
+                <li><p class="hinty"><code dir="rtl" class="br-white">مبادئ التصميم الشامل</code></p></li>
+            </ul>
+
+
+        </section>
+
+
+        <!-- Step 10 الخطوة -->
+        <section >
+
+            <h3>الخطوة 10</h3>
+
+            <p class="hinty">
+                بعد ذلك، أضف "صفاً ثالثاً" <em>a third row</em> إلى الجدول. 
+ابدأ بإضافة عنصر <code class="br-white2">tr</code> آخر. 
+وداخل عنصر <code class="br-white2">tr</code> هذا، أضف عنصر <code class="br-white2">th</code> مع ضبط السمة <code class="br-white2">scope</code> على القيمة <code class="br-white">row</code> وتعيين النص <code dir="rtl" class="br-white">11:00 صباحاً</code> كمحتوى له. 
+ثم أسفل عنصر <code class="br-white2">th</code> هذا، أضف عنصر <code class="br-white2">td</code> يحتوي على النص <code class="br-white">استراحة</code> .
+            </p>
+
+
+        </section>
+
+
+         <!-- Step 11 الخطوة -->
+        <section >
+
+            <h3>الخطوة 11</h3>
+
+            <p class="hinty">في الوقت الحالي، يشغل عنصر <code class="br-white2">td</code> الذي يحتوي على النص <code class="br-white">استراحة</code> عموداً واحداً فقط، ولكن سيكون من الجيد لو كان "يمتد" <em>spanned</em> ليشمل الأعمدة الثلاثة جميعها.</p>
+
+            <p class="hinty">كما تتذكر من ورش العمل والدروس السابقة، يمكنك استخدام السمة <code class="br-white2">colspan</code> لجعل "خلية الجدول تمتد عبر عدة أعمدة" <i>a table cell span multiple columns</i> .</p>
+
+            <h4>نموذج للكود</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;tr&gt;</span>
+ <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"3"</span>&gt;<span class="txt">إجمالي النقاط</span>&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">أضف السمة <code class="br-white2">colspan</code> إلى العنصر <code class="br-white2">td</code> واضبط قيمتها على <code class="br-white">3</code> .</p>
+
+
+        </section>
+
+
+        <!-- Step 12 الخطوة -->
+        <section >
+
+            <h3>الخطوة 12</h3>
+
+            <p class="hinty">حان الآن وقت إضافة "صف آخر" <i>another row</i> إلى الجدول.</p>
+
+            <p class="hinty">ابدأ بإضافة عنصر <code class="br-white2">tr</code> آخر. وداخل عنصر <code class="br-white2">tr</code> هذا، أضف عنصر <code class="br-white2">th</code> مع ضبط السمة <code class="br-white2">scope</code> على القيمة <code class="br-white">row</code> وتعيين النص <code dir="rtl" class="br-white">11:30 صباحاً</code> كمحتوى له.</p>
+
+            <p class="hinty">ثم أضف ثلاثة عناصر <code class="br-white2">td</code> تحتوي على النصوص التالية:</p>
+
+            <ul>
+                <li><p class="hinty"><code dir="rtl" class="br-white">AR/VR في التعليم</code></p></li>
+                <li><p class="hinty"><code dir="rtl" class="br-white">أساسيات JavaScript</code></p></li>
+                <li><p class="hinty"><code dir="rtl" class="br-white">أنظمة التصميم على نطاق واسع</code></p></li>
+            </ul>
+
+        </section>
+
+
+        <!-- Step 13 الخطوة -->
+        <section >
+
+            <h3>الخطوة 13</h3>
+
+            <p class="hinty">
+                بعد ذلك، أضف "صفاً خامساً" <i>a fifth row</i> إلى الجدول. ابدأ بإضافة عنصر <code class="br-white2">tr</code> آخر. 
+وداخل عنصر <code class="br-white2">tr</code> هذا، أضف عنصر <code class="br-white2">th</code> مع ضبط السمة <code class="br-white2">scope</code> على القيمة <code class="br-white">row</code> وتعيين النص <code dir="rtl" class="br-white">12:30 مساءً</code> كمحتوى له. 
+ثم أسفل عنصر <code class="br-white2">th</code> هذا، أضف عنصر <code class="br-white2">td</code> يحتوي على النص <code dir="rtl" class="br-white">استراحة الغداء</code> .
+يجب أن يتضمن عنصر <code class="br-white2">td</code> أيضاً السمة <code class="br-white2">colspan</code> مضبوطة على القيمة <code class="br-white">3</code> ، بحيث يمتد العنصر ليشمل المسارات الثلاثة جميعها.
+            </p>
+
+        </section>
+
+
+        <!-- Step 14 الخطوة -->
+        <section >
+
+            <h3>الخطوة 14</h3>
+
+            <p class="hinty">الخطوة الأخيرة هي إضافة "صف" <em>row</em> آخر إلى الجدول.</p>
+            
+            <p class="hinty">ابدأ بإضافة عنصر <code class="br-white2">tr</code> آخر. وداخل عنصر <code class="br-white2">tr</code> هذا، 
+أضف عنصر <code class="br-white2">th</code> مع ضبط السمة <code class="br-white2">scope</code> على القيمة <code class="br-white">row</code> وتعيين النص <code dir="rtl" class="br-white">2:00 مساءً</code> كمحتوى له.</p>
+            
+            <p class="hinty">ثم أضف ثلاثة عناصر <code class="br-white2">td</code> تحتوي على النصوص التالية:</p>
+
+            <ul>
+                <li><p class="hinty"></p><code dir="rtl" class="br-white">ورشة عمل واجهة المستخدم الصوتية</code></li>
+                <li><p class="hinty"></p><code dir="rtl" class="br-white">أساسيات Git وGitHub</code></li>
+                <li><p class="hinty"></p><code dir="rtl" class="br-white">الألوان والتباين في واجهة المستخدم</code></li>
+            </ul>
+            <p class="hinty">مع هذه المجموعة الأخيرة من التعديلات، أصبح جدولك مكتملاً الآن!</p>
+
+        </section>
+
+
+
+        <!-- The Solution الحل -->
+        <section >
+
+            <h3>الحل The Solution</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">جدول مؤتمر التكنولوجيا لعام 2025</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">جدول مؤتمر التكنولوجيا لعام 2025</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;table&gt;</span>
+   <span class="tag">&lt;caption&gt;<span class="txt">الجدول الزمني حسب المسار والوقت</span>&lt;/caption&gt;</span>
+   <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">الوقت</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">المسار أ</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">المسار ب</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">المسار ت</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/thead&gt;</span>
+   <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span dir="rtl" class="txt">9:00 صباحاً</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">الكلمة الرئيسية: مستقبل التكنولوجيا</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">مقدمة في تطوير الويب</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">تجربة المستخدم للجميع</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span dir="rtl" class="txt">10:00 صباحاً</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">دراسة متعمقة في إمكانية الوصول</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">لغة CSS للمبتدئين</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">مبادئ التصميم الشامل</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span dir="rtl" class="txt">11:00 صباحاً</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"3"</span>&gt;<span dir="rtl" class="txt">استراحة</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span dir="rtl" class="txt">11:30 صباحاً</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">AR/VR في التعليم</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">أساسيات JavaScript</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">أنظمة التصميم على نطاق واسع</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span dir="rtl" class="txt">12:30 مساءً</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"3"</span>&gt;<span dir="rtl" class="txt">استراحة الغداء</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span dir="rtl" class="txt">2:00 مساءً</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">ورشة عمل واجهة المستخدم الصوتية</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">أساسيات Git وGitHub</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span dir="rtl" class="txt">الألوان والتباين في واجهة المستخدم</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/tbody&gt;</span>
+  <span class="tag">&lt;/table&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+
+        <!-- The Application التطبيق -->
+        <section >
+
+            <h3>التطبيق The Application</h3>
+
+            <div class="preview">
+
+                <h1>جدول مؤتمر التكنولوجيا لعام 2025</h1>
+
+                <table>
+                    <caption>الجدول الزمني حسب المسار والوقت</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">الوقت</th>
+                            <th scope="col">المسار أ</th>
+                            <th scope="col">المسار ب</th>
+                            <th scope="col">المسار ت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">9:00 صباحاً</th>
+                            <td>الكلمة الرئيسية: مستقبل التكنولوجيا</td>
+                            <td>مقدمة في تطوير الويب</td>
+                            <td>تجربة المستخدم للجميع</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10:00 صباحاً</th>
+                            <td>دراسة متعمقة في إمكانية الوصول</td>
+                            <td>لغة CSS للمبتدئين</td>
+                            <td>مبادئ التصميم الشامل</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">11:00 صباحاً</th>
+                            <td colspan="3">استراحة</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11:30 صباحاً</th>
+                            <td>AR/VR في التعليم</td>
+                            <td>أساسيات JavaScript</td>
+                            <td>أنظمة التصميم على نطاق واسع</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12:30 مساءً</th>
+                            <td colspan="3">استراحة الغداء</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2:00 مساءً</th>
+                            <td>ورشة عمل واجهة المستخدم الصوتية</td>
+                            <td>أساسيات Git وGitHub</td>
+                            <td>الألوان والتباين في واجهة المستخدم</td>
+                        </tr>
+                    </tbody>                    
+                </table>
+                
+            </div>
+
+
 
         </section>
         
+
 
 
     

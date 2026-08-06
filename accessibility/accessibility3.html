@@ -123,11 +123,11 @@
 وتُعد أسماء الحيوانات الأليفة بمثابة "عناوين للصفوف" <em>the row headers</em> لأنها موضوعة داخل عناصر "رأس الخلية" <code class="br-white2">th</code> .
             </p>
 
-            <p>يُعد ربط "خلايا البيانات" <em>the data cells</em> بالعناوين المقابلة لها أمراً بالغ الأهمية أيضاً بالنسبة لـ"قارئات الشاشة" <em>screen readers</em> ، إذ تحدد السمة <code class="br-white2">scoop</code> ما إذا كان العنوان خاصاً بصفٍ أم بعمود. ورغم أن "قارئات الشاشة" <em>screen readers</em> قد تستنتج ذلك بشكل صحيح بناءً على "بنية الجدول" <em>the table's structure</em> ، إلا أنه يُنصح عادةً بتحديد النطاق <code class="br-white2">scoop</code> صراحةً لضمان "الوضوح" <em>clarity</em> .</p>
+            <p>يُعد ربط "خلايا البيانات" <em>the data cells</em> بالعناوين المقابلة لها أمراً بالغ الأهمية أيضاً بالنسبة لـ"قارئات الشاشة" <em>screen readers</em> ، إذ تحدد السمة <code class="br-white2">scope</code> ما إذا كان العنوان خاصاً بصفٍ أم بعمود. ورغم أن "قارئات الشاشة" <em>screen readers</em> قد تستنتج ذلك بشكل صحيح بناءً على "بنية الجدول" <em>the table's structure</em> ، إلا أنه يُنصح عادةً بتحديد النطاق <code class="br-white2">scoop</code> صراحةً لضمان "الوضوح" <em>clarity</em> .</p>
 
-            <p>توجد أربع "قيم" <em>values</em> محتملة للسمة <code class="br-white2">scoop</code> ، والقيمتان اللتان ستستخدمهما بكثرة هما <code class="br-white">col</code> ( للعمود <em>column</em> ) و <code class="br-white">row</code> ( للصف <em>row</em> ). في الكود أدناه، نلاحظ إضافة السمة <code class="br-white2">scoop</code> إلى ترويسات الأعمدة والصفوف، حيث تم تعيين القيمة <code class="br-white">col</code> لترويسات الأعمدة الثلاثة ( <code class="br-white">الاسم</code> و <code class="br-white">العمر</code> و <code class="br-white">النوع</code> ).</p>
+            <p>توجد أربع "قيم" <em>values</em> محتملة للسمة <code class="br-white2">scope</code> ، والقيمتان اللتان ستستخدمهما بكثرة هما <code class="br-white">col</code> ( للعمود <em>column</em> ) و <code class="br-white">row</code> ( للصف <em>row</em> ). في الكود أدناه، نلاحظ إضافة السمة <code class="br-white2">scope</code> إلى ترويسات الأعمدة والصفوف، حيث تم تعيين القيمة <code class="br-white">col</code> لترويسات الأعمدة الثلاثة ( <code class="br-white">الاسم</code> و <code class="br-white">العمر</code> و <code class="br-white">النوع</code> ).</p>
 
-            <p>يتمتع عنوانا الصفين ( <code class="br-white">جينو</code> و <code class="br-white">نورا</code> ) بـ"النطاق" <code class="br-white2">scoop</code> و"القيمة" <code class="br-white">col</code> .</p>
+            <p>يتمتع عنوانا الصفين ( <code class="br-white">جينو</code> و <code class="br-white">نورا</code> ) بـ"النطاق" <code class="br-white2">scope</code> و"القيمة" <code class="br-white">col</code> .</p>
 
 
             <div class="code-block"><pre><code>
@@ -184,7 +184,7 @@
                 </table>
             </div>
 
-            <p>إذا كان "رأس العمود أو الصف" <em>a column or row header</em> "يمتد" <em>spans</em> ليشمل "خلايا متعددة" <em>multiple cells</em> ، فسيتم تطبيق "النطاق" <code class="br-white2">scoop</code> على كل "خلية" <em>cell</em> منها على حدة. وإليك مثال على ذلك:</p>
+            <p>إذا كان "رأس العمود أو الصف" <em>a column or row header</em> "يمتد" <em>spans</em> ليشمل "خلايا متعددة" <em>multiple cells</em> ، فسيتم تطبيق "النطاق" <code class="br-white2">scope</code> على كل "خلية" <em>cell</em> منها على حدة. وإليك مثال على ذلك:</p>
 
             <div class="code-block"><pre><code>
 <span class="tag">&lt;table&gt;</span>
@@ -294,7 +294,7 @@
 			<br>
 
 
-			<h5>ما هو الغرض من السمة <code class="br-white2">scoop</code> في خلية ترويسة الجدول <code class="br-white2">th</code> ؟</h5>
+			<h5>ما هو الغرض من السمة <code class="br-white2">scope</code> في خلية ترويسة الجدول <code class="br-white2">th</code> ؟</h5>
 
 			
 			<p> ١. لتحديد عدد الأعمدة <code class="br-white2">colspan</code> وعدد الصفوف <code class="br-white2">rowspan</code> التي تشغلها الخلية. ❌</p>
