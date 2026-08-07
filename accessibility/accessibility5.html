@@ -24,17 +24,145 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!--    -->
     <section class="box">
         <div class="sub-title">
             <h2>٥. تصحيح أخطاء Debug نموذج التبرع Donation Form</h2>
             <span class="hint">مختبر</span>
-            <p>قريبًا</p>
+            <p>أنشأت مؤسسة خيرية محلية "موقعاً إلكترونياً" <em>Website</em> يتضمن "نموذجاً للتبرع" <em>a Donation Form</em> ، ولكن هناك عدة مشكلات تتطلب المعالجة،  فالنموذج يفتقر إلى "إمكانية الوصول" <em>Accessibility</em> ويحتوي على بعض الأخطاء في صياغة "كود اتش.تي.ام.ال" <em>HTML syntax</em> .</p>
+            <p>تتمثل مهمتك في "إصلاح" <i>fix</i> جميع "الأخطاء" <i>errors</i> لضمان عمل "النموذج" <em>the form</em> بشكل صحيح و"إتاحته لجميع المستخدمين" <em>is accessible to all users</em> . أكمل المهام الموضحة في "قصص المستخدم" <em>User Stories</em> أدناه.</p>
         </div>
 
+
+        <!-- Website code كود الموقع  -->
         <section >
 
-            <h3></h3>
+            <h3>كود الموقع</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">نموذج التبرع Donation Form</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">نموذج التبرع</span>&lt;/h1&gt;</span>
+  
+  <span class="tag">&lt;form&gt;</span>
+   <span dir="rtl" class="txt">الاسم الكامل:</span>
+   <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> name=<span class="value">"name"</span></span>&gt;&lt;/input&gt;</span>
+
+   <span dir="rtl" class="txt">عنوان البريد الإلكتروني:</span>
+   <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> name=<span class="value">"email"</span></span>&gt;&lt;/input&gt;</span>
+
+   <span dir="rtl" class="txt">مبلغ التبرع ($):</span>
+   <span class="tag">&lt;input <span class="attr">type=<span class="value">"number"</span> name=<span class="value">"amount"</span></span>&gt;&lt;/input&gt;</span>
+
+   <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> name=<span class="value">"newsletter"</span></span>&gt;&lt;/input&gt;</span>
+   <span dir="rtl" class="txt">إشتراك</span>
+
+   <span class="tag">&lt;input <span class="attr">type=<span class="value">"submit"</span> name=<span class="value">"Send"</span></span>&gt;&lt;/input&gt;</span>
+  <span class="tag">&lt;/form&gt;</span>
+  
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <!-- User Stories قصص المستخدم -->
+        <section>
+
+            <h2>قصص المستخدم User Stories :</h2>
+
+            <ul>
+                <li><p class="userstory">١. تُعد عناصر <code class="br-white2">input</code> "عناصر فارغة" <em>void elements</em> ولا ينبغي أن تحتوي على وسوم إغلاق، لذا قم بإزالة جميع وسوم الإغلاق <code dir="ltr" class="br">&lt;/input&gt;</code> من النموذج.</p></li>
+
+                <li><p class="userstory">٢. أضف عناصر تسمية <code class="br-white2">label</code> لكل حقل إدخال في النموذج ليعرف المستخدمون الغرض من كل حقل. يجب أن يطابق "نص التسمية" <em>The label text</em> النص الموجود حالياً بجوار كل "حقل إدخال" <em>Input</em> .</p></li>
+
+                <li><p class="userstory">٣.  <code dir="rtl" class="br-white">عنوان البريد الإلكتروني:</code> يجب أن يكون نوع حقل الإدخال <code class="br">email</code> بدلاً من <code class="br">text</code> .</p></li>
+
+                <li><p class="userstory">٤. يجب عليك ربط كل عنصر <code class="br-white2">label</code> بعنصر <code class="br-white2">input</code> المقابل له باستخدام السمة <code class="br-white">for</code> في عنصر <code class="br-white2">label</code> والسمة <code class="br-white">id</code> المطابقة لها في عنصر <code class="br-white2">input</code> .</p></li>
+
+                <li><p class="userstory">٥. أضف السمة <code class="br-white">required</code> إلى حقول إدخال "النصوص" <em>text</em> و"البريد الإلكتروني" <em>email</em> و"الأرقام" <em>number</em> (وليس إلى خانة الاختيار أو زر الإرسال) لضمان قيام المستخدمين بتعبئة 'المعلومات المطلوبة" <em>The required information</em> .</p></li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- The Solution الحل -->
+        <section >
+
+            <h3>الحل The Solution</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">نموذج التبرع Donation Form</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">نموذج التبرع</span>&lt;/h1&gt;</span>
+  
+  <span class="tag">&lt;form&gt;</span>
+   <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"name"</span>&gt;<span dir="rtl" class="txt">الاسم الكامل:</span>&lt;/label&gt;</span>
+   <span class="tag">&lt;input <span class="attr">id=</span><span class="value">"name"</span> <span class="attr">type=<span class="value">"text"</span> name=<span class="value">"name"</span> required</span> &gt;</span>
+
+   <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span dir="rtl" class="txt">عنوان البريد الإلكتروني:</span>&lt;/label&gt;</span>
+   <span class="tag">&lt;input <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">type=<span class="value">"email"</span> name=<span class="value">"email"</span> required</span> &gt;</span>
+
+   <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"amount"</span>&gt;<span dir="rtl" class="txt">مبلغ التبرع ($):</span>&lt;/label&gt;</span>
+   <span class="tag">&lt;input <span class="attr">id=</span><span class="value">"amount"</span> <span class="attr">type=<span class="value">"number"</span> name=<span class="value">"amount"</span> required</span> &gt;</span>
+
+   <span class="tag">&lt;input <span class="attr">id=</span><span class="value">"newsletter"</span> <span class="attr">type=<span class="value">"checkbox"</span> name=<span class="value">"newsletter"</span></span> &gt;</span>
+   <span class="tag">&lt;label <span class="attr">for=<span class="value">"newsletter"</span></span>&gt;<span dir="rtl" class="txt">إشتراك</span>&lt;/label&gt;</span>
+
+   <span class="tag">&lt;input <span class="attr">type=<span class="value">"submit"</span> name=<span class="value">"Send"</span></span> &gt;</span>
+  <span class="tag">&lt;/form&gt;</span>
+  
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+
+        <!-- The Application التطبيق -->
+        <section >
+
+            <h3>التطبيق The Application</h3>
+
+            <div class="preview">
+                <h1>نموذج التبرع</h1>
+  
+                <form>
+                    <label for="name">الاسم الكامل:</label>
+                    <input id="name" type="text" name="name" required >
+
+                    <label for="email">عنوان البريد الإلكتروني:</label>
+                    <input id="email" type="email" name="email" required >
+
+                    <label for="amount">مبلغ التبرع ($):</label>
+                    <input id="amount" type="number" name="amount" required >
+
+                    <input id="newsletter" type="checkbox" name="newsletter" >
+                    <label for="newsletter">إشتراك</label>
+
+                    <input type="submit" name="Send" >
+                </form>
+                
+            </div>
+
+
 
         </section>
         
