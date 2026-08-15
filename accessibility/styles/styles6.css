@@ -1,0 +1,211 @@
+#custom-btn-6 {
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: buttontext;
+  background-color: buttonface;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+#custom-btn-6:focus {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+#custom-btn-6:active {
+  background-color: #ddd;
+}
+
+
+.alert6 {
+ background-color: #fff3cd;
+ border: 1px solid #ffeeba;
+ color: #856404; 
+ padding: 1em;
+ margin-top: 1em;
+ border-radius: 4px;  
+ font-weight: bold;    
+}
+
+.alert6 span {
+ display: inline-block; 
+}
+
+.math-expression6 {
+ font-family: "Times New Roman", serif;
+ font-size: 1.2rem;
+ background-color: #f4f4f4; 
+ border-right: 4px solid #007acc;
+ padding: 0.75em 1em;
+ margin-top: 1em;
+ display: inline-block;  
+}
+
+.math-expression6 sup {
+ font-size: 0.8em; 
+}
+
+
+
+
+
+
+.search-container6 {
+ display: flex;
+ align-items: center;
+ gap: 0.5em; 
+ margin-top: 1em;
+}
+
+.searchbox6 {
+ flex: 1;
+ padding: 0.5em;
+ border: 1px solid #ccc; 
+ border-radius: 4px;
+ font-size: 1em;
+ min-height: 1.5em;
+}
+
+.searchbox6:focus {
+ border-color: #007acc;
+ outline: none;
+ box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.3); 
+}
+
+.button-box6 {
+ padding: 0.5em 1em;
+ background-color: #007acc;
+ color: #fff; 
+ border: none;
+ border-radius: 4px;
+ cursor:pointer;
+}
+
+.button-box6:hover {
+ background-color: #005fa3;
+}
+
+/* Hide visually but keep for screen readers */
+/* الإخفاء بصرياً مع الإبقاء عليه متاحاً لقارئات الشاشة */
+.visually-hidden6 {
+ position: absolute;
+ left: 9999px; 
+}
+
+
+
+.site-banner6 {
+ background-color: #007acc;
+ color: #fff;
+ padding: 1em 1.5em; 
+ border-radius: 4px; 
+}
+
+.site-banner6 h1 {
+ margin: 0 0 0.5em;
+ font-size: 1.5em;
+}
+
+.site-banner6 nav ul {
+ list-style: none;
+ margin: 0;
+ padding: 0; 
+ display: flex;
+ gap: 1em; 
+}
+
+.site-banner6 nav a {
+ color: #fff;
+ text-decoration: none;
+ font-weight: 500; 
+}
+
+.site-banner6 nav a:hover {
+ text-decoration: underline;
+}
+
+
+
+
+.status-demo6 {
+ margin-top: 1em; 
+}
+
+.button6-2 {
+ padding: 0.5em 1em;
+ background-color: #007acc;  
+ color: #fff;  
+ border: none;  
+ border-radius: 4px;  
+ cursor: pointer;    
+}
+
+.button6-2:hover {
+ background-color: #005fa3;  
+}
+
+.status-message6 {
+ margin-top: 0.75em;
+ padding: 0.75em;  
+ background-color: #e8f4ff;  
+ border: 1px solid #b3d8ff;  
+ border-radius: 4px;  
+ font-weight: 500;    
+}
+
+
+
+
+
+.button6-2b {
+ padding: 0.5em 1em;
+ border: none;  
+ border-radius: 4px;  
+ cursor: pointer;  
+ background-color: #007acc;  
+ color: white;  
+ font-size: 1em;   
+}
+
+.button6-2b:hover {
+ background-color: #005fa3;  
+}
+
+.dialog6-2  {
+ display: none;
+ position: fixed;  
+ top: 0;  
+ left: 0;  
+ width: 100%;  
+ height: 100%;  
+ background-color: rgba(0, 0, 0, 0.5);  
+ justify-content: center;  
+ align-items: center;  
+ z-index: 500;    
+}
+
+.dialog-content6-2  {
+ background-color: white;
+ padding: 1.5em;  
+ border-radius: 8px;  
+ width: 90%;  
+ max-width: 400px;  
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);    
+}
+
+.dialog-actions6-2  {
+ display: flex;
+ justify-content: flex-end;  
+ gap: 0.5em;  
+ margin-top: 1em;    
+}
+
+
+#password-help-6-5 {
+ color: red;   
+}

@@ -6,11 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Accessibility إمكانية الوصول | مقدمة إلى ARIA تطبيقات الإنترنت الغنية سهلة الوصول"/>
     <link rel="stylesheet" href="style.css">
+    <link href="styles/styles6.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | إمكانية الوصول</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"/>
 
 </head>
 
@@ -24,45 +26,1358 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!--    -->
     <section class="box">
         <div class="sub-title">
             <h2>٦. مقدمة إلى ARIA (تطبيقات الإنترنت الغنية سهلة الوصول)</h2>
             <span class="hint">نظري</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
+
+        <!--  أ  -->
         <section id="1">
 
             <h3>أ. ما هو الغرض من WAI-ARIA وكيف يعمل؟</h3>
 
+            <p>قد يكون جعل "المحتوى الثابت متاحاً" <em>Static content accessible</em> أمراً بسيطاً نسبياً، إلا أن "المحتوى الديناميكي" <em>The dynamic content</em> قد يطرح تحديات أكبر، وهنا يأتي دور معيار <b>WAI-ARIA</b> .</p>
+
+            <p>لنلقِ نظرةً على ماهية <b>WAI-ARIA</b> ، والغرض منها، وآلية عملها، وبعض الأمثلة عليها.</p>
+
+            <p> يرمز الاختصار <b>WAI-ARIA</b> إلى <em>Web Accessibility Initiative - Accessible Rich Internet Applications</em> "مبادرة إتاحة الويب - تطبيقات الإنترنت الغنية القابلة للإتاحة"، وهي مواصفة تقنية تعزز "إمكانية الوصول" <em>Accessibility</em> إلى "المحتوى الديناميكي" <em>dynamic content</em> ومكونات "واجهة المستخدم" <em>UI (User Interface)</em> .</p>
+
+            <p>
+                تجدر الإشارة إلى أن <b>WCAG</b> و <b>WAI-ARIA</b> ليسا متطابقين، إذ توفر معايير <b>WCAG</b> "إرشادات عامة لإتاحة الوصول إلى الويب" <em>General guidelines for web accessibility</em> ، 
+بينما تقدم مواصفات <b>WAI-ARIA</b> "قواعد محددة" <em>Specific Rules</em> لجعل "المحتوى الديناميكي والتفاعلي" <em>Dynamic and interactive content</em> "متاحاً لمستخدمي التقنيات المساعدة" <em>accessible for users of assistive technologies</em> .
+            </p>
+
+            <p>إذن، يتمثل الغرض الأساسي من <b>WAI-ARIA</b> في تحسين "إمكانية الوصول" <em>Accessibility</em> إلى "المحتوى الديناميكي" <em>Dynamic content</em> ومكونات "واجهة المستخدم" <em>UI</em> التي لا تتوفر لها نظائر أصلية في لغة "اتش.تي.ام.ال" <em>HTML</em> .</p>
+
+            <p>
+                تعمل تقنية <b>WAI-ARIA</b> من خلال تقديم مجموعة من "السمات" <em>Attributes</em> التي يمكنك إضافتها إلى عناصر "اتش.تي.ام.ال" <em>HTML</em> لتوفير "معلومات دلالية إضافية" <em>additional semantic information</em> ،
+ وتُصنَّف هذه "السمات" <em>Attributes</em> إلى "أدوار" (<em>roles</em>) ، و"حالات" (<em>states</em>) ، و"خصائص" (<em>properties</em>).
+            </p>
+
+
+            <p class="hinty">يُحدِّد دور <b>ARIA</b> الغرض من عنصر ما داخل موقع إلكتروني أو تطبيق ويب. إليك مثال على تعيين "الدور" <code class="br-white">role</code> ليكون "زرًا" <code class="br">button</code> لعنصر <code class="br-white2">div</code> .</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">role=</span><span class="value">"button"</span>&gt;<span class="txt">اضغط هنا</span>&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <p>
+                من خلال القيام بذلك، فإنك تشير إلى "التقنيات المساعدة" <em>Assistive technology</em> بأن هذا العنصر عبارة عن "زر" <em>Button</em> . 
+ومع ذلك، فإن "الأدوار" (<em>Roles</em>) لا توفر أي "وظائف" <em>Functionality</em> بحد ذاتها، 
+فمجرد تعيين "دور" <code class="br-white">role</code> "زر" <code class="br">button</code> للعنصر <code class="br-white2">div</code> لن يجعله يعمل كزر فعلي. 
+ولجعله يبدو ويتصرف كزر، ستحتاج إلى استخدام "سي.اس.اس" <em>CSS</em> و "جافاسكريبت" <em>JavaScript</em> لتحقيق النتيجة المطلوبة.
+            </p>
+
+            <p class="hinty">إليك مثال على استخدام HTML و CSS و JavaScript لإنشاء عنصر "زر" <code class="br-white2">button</code> مخصص.</p>
+
+            <p class="hinty"><b>ملاحظة:</b> لا تقلق بشأن محاولة فهم أكواد CSS و JavaScript ، فستتعلم هذه اللغات في وحدات تعليمية قادمة.</p>
+
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">id=<span class="value">"custom-btn"</span> role=</span><span class="value">"button"</span>&gt;<span class="txt">اضغط هنا</span>&lt;/div&gt;</span>
+
+<span class="tag">&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">#custom-btn {
+ <span class="attr">display: <span class="value">inline-block</span><span class="txt">;</span>
+ padding: <span class="value">0.4em 1em</span><span class="txt">;</span>  
+ font-size: <span class="value">1rem</span><span class="txt">;</span>  
+ font-family: <span class="value">sans-serif</span><span class="txt">;</span>  
+ color: <span class="value">buttontext</span><span class="txt">;</span>  
+ background-color: <span class="value">buttonface</span><span class="txt">;</span>  
+ border: <span class="value">4px solid #ccc</span><span class="txt">;</span>  
+ border-radius: <span class="value">4px</span><span class="txt">;</span>  
+ cursor: <span class="value">pointer</span><span class="txt">;</span>  
+ user-select: <span class="value">none</span><span class="txt">;</span>  
+ text-align: <span class="value">center</span><span class="txt">;</span></span>    
+}</span>
+
+<span class="tag">#custom-btn:focus {
+ <span class="attr">outline: <span class="value">2px solid Highlight</span><span class="txt">;</span> 
+ <span class="attr">outline-offset: <span class="value">2px</span></span><span class="txt">;</span></span> 
+}</span>
+
+<span class="tag">#custom-btn:active {
+ <span class="attr">background-color: <span class="value">#ddd</span><span class="txt">;</span></span> 
+}</span>
+            </code></pre></div>
+
+            <h4>index.js</h4>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const</span> button = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"custom-btn"</span>)</span>;
+
+button.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"click"</span>, <span class="tag">()</span> => <span class="tag">{</span>
+ <span class="tag-b">alert</span><span class="attr">(<span dir="rtl" class="value">"تم النقر على الزر!"</span>)</span>;
+<span class="tag">}</span><span class="attr">)</span>;
+
+button.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"keydown"</span>, <span class="tag">(<span class="txt">e</span>)</span> => <span class="tag">{</span>
+  <span class="attr"><span class="tag-b">if</span> (<span class="txt">e.key === <span class="value">"Enter"</span> || e.key === <span class="value">" "</span></span>) {</span>
+    e.<span class="tag-b">preventDefault</span><span class="attr">()</span>; 
+    button.<span class="tag-b">click</span><span class="attr">()</span>;
+  <span class="attr">}</span>
+<span class="tag">}<span class="attr">)</span></span>;
+            </code></pre></div>
+            </div>
+
+            <br>
+            <h4>معاينة:</h4>
+            <div class="preview">
+               <div id="custom-btn-6" role="button">اضغط هنا</div> 
+            </div>
+
+            <p>من الأفضل دائمًا استخدام "الزر الأصلي" ( <span dir="ltr" class="nw">Native <code class="br-white2">button</code></span> ) أو عنصر الإدخال <code class="br-white2">input</code> مع الخاصية <code dir="ltr" class="br-white">type="button"</code> بدلاً من ذلك.</p>
+
+            <p class="hinty">
+                توفر خصائص <b>ARIA</b> تفاصيل إضافية حول العناصر. 
+على سبيل المثال، تتيح لك الخاصية <code dir="ltr" class="br-white nw">aria-labelledby</code> "ربط عنصر بتسمية محددة" ( <em>connect an element to a specific label</em> ) :
+            </p>
+
+            
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;h2 <span class="attr">id=</span><span class="value">"header-id"</span>&gt;<span dir="rtl" class="txt">نبذة عن HTMLverse</span>&lt;/h2&gt;</span>
+<span class="tag">&lt;button <span class="attr">id=<span class="value">"button-id"</span> aria-labelledby=<span class="value">"header-id button-id"</span></span>&gt;<span class="txt">أعرف أكثر</span>&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <p>سيجعل هذا العناصر "مفهومة" <em>understandable</em> وقابلة للتصفح لمستخدمي "التقنيات المساعدة" <em>assistive technologies</em> .</p>
+
+            <p>
+                لتحقيق أقصى استفادة من <b>WAI-ARIA</b> ، حاول الالتزام باستخدام عناصر "اتش.تي.ام.ال الأصلية"  <em>native HTML</em>  كلما أمكن ذلك، 
+فهي توفر عادةً مستوى أفضل من "إمكانية الوصول" <em>Accessibility</em> بشكل مباشر ودون الحاجة إلى إعدادات إضافية.
+            </p>
+
+            <p>
+                استخدم <b>WAI-ARIA</b> فقط عندما تعجز "عناصر اتش.تي.ام.ال" <em>HTML elements</em> عن تلبية الاحتياجات المطلوبة، 
+ولا تنسَ اختبار عملك باستخدام "التقنيات المساعدة" <em>assistive technologies</em> مثل "قارئات الشاشة" <em>screen readers</em>  أو الاستعانة بأشخاص من ذوي "الإعاقة" <em>disabilities</em> لاختباره. 
+كذلك، احرص على تحديث حالات وخصائص <b>WAI-ARIA</b> بالتزامن مع تحديث المحتوى بشكل فوري، وتجنب الإفراط في استخدام <b>ARIA</b> ، 
+إذ قد يؤدي ذلك غالباً إلى حدوث ارتباك.
+            </p>
+
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض الأساسي من سمات WAI-ARIA في لغة HTML ؟</h5>
+
+			
+			<p> ١. لتغيير "المظهر المرئي" <em>The visual appearance</em> للعناصر. ❌</p>
+            <p><mark> <b>٢. لتوفير "معلومات دلالية إضافية" <em>additional semantic information</em> لتحسين "إمكانية الوصول" <em>Accessibility</em> .</b> ✅</mark></p>
+			<p> ٣. لعرض "تلميحات الأدوات" <em>tooltips</em> على العناصر. ❌</p>
+			<p> ٤. لإضافة "تأثيرات حركية" <em>animations</em> للعناصر. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>كيف تعمل تقنية WAI-ARIA على تعزيز "إمكانية الوصول إلى الويب" <em>Web Accessibility</em> ؟</h5>
+
+			
+			<p> ١. عن طريق تحسين "سرعة تحميل الصفحة" <i>page load speed</i> . ❌</p>
+            <p><mark> <b>٢. عن طريق إضافة خصائص توفر "معلومات دلالية إضافية" <i>additional semantic information</i> .</b> ✅</mark></p>
+			<p> ٣. عن طريق "تشفير البيانات" <i>encrypting data</i> . ❌</p>
+			<p> ٤. عن طريق إنشاء "تأثيرات بصرية" <i>visual effects</i> للعناصر. ❌</p>
+			
+				
+			<br>
+
+			<h5>ماذا تعني عبارة WAI-ARIA ؟</h5>
+
+			<p> ١. مبادرة إتاحة الويب - تطبيقات الإنترنت المتجاوبة والمتقدمة <i>Web Accessibility Initiative - Advanced Responsive Internet Applications</i> . ❌</p>
+			<p> ٢. واجهة إتاحة الويب - تطبيقات الإنترنت ذات الموارد المتاحة <i>Web Accessibility Interface - Accessible Resource Internet Applications</i> . ❌</p>
+            <p><mark> <b>٣. مبادرة إتاحة الويب - تطبيقات الإنترنت الغنية والمتاحة <em>Web Accessibility Initiative - Accessible Rich Internet Applications</em> .</b> ✅</mark></p>
+			<p> ٤. واجهة تطبيقات الويب - الإتاحة والغنى <i>Web Application Interface - Accessibility and Richness</i> . ❌</p>
+
+
+
+
+		</div>
+
         </section>
         
 
+
+        <!--  ب  -->
         <section id="2">
 
             <h3>ب. ما هي أدوار ARIA ؟</h3>
 
+            <p>
+                <b>ملاحظة:</b> قد تتضمن بعض هذه الأمثلة التفاعلية أكواد CSS و JavaScript . 
+لا داعي للقلق بشأن محاولة فهم هذه الأكواد، فالغرض من "المعاينات" <em>previews</em> هو المساعدة في توضيح بعض النقاط الرئيسية التي تمت مناقشتها في الدرس.
+            </p>
+
+            <p><b>ARIA</b> اختصار لـ Accessible Rich Internet Applications .</p>
+
+            <p>تُحدِّد "أدوار" <span dir="rtl" class="hinty"><b>ARIA </b>roles</span> "الدلالة المعنوية" <em>The semantic meaning</em> لعناصر HTML ، وهي ضرورية لجعل محتوى الويب "متاحاً" <em>Accessible</em> للأشخاص الذين يستخدمون "التقنيات المساعدة" <em>assistive technologies</em> ، مثل "قارئات الشاشة" <em>screen readers</em> .</p>
+
+            <p>تتضمن لغة HTML عناصر "دلالية" <em>semantic</em> وعناصر "غير دلالية" <em>non-semantic</em> ، وذلك بناءً على ما إذا كانت تنقل معنىً يتعلق بمحتواها.</p>
+
+            <p class="hinty">
+                تحتوي العديد من عناصر اتش.تي.ام.ال الدلالية ( <em>semantic HTML elements</em> ) بالفعل على "دور" <span><b>ARIA</b> role</span> مُعيَّن افتراضياً،  فعلى سبيل المثال، يمتلك عنصر الزر <code class="br-white2">button</code> دور <span><b>ARIA</b> role</span> افتراضياً هو <code class="br">button</code> .
+            </p>
+
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button&gt;<span class="txt">زر نموذجي</span>&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <br>
+
+            <div class="preview">
+                <button>زر نموذجي</button>
+            </div>
+
+            <p class="hinty">
+                لكن "العناصر غير الدلالية" ( <em>non-semantic elements</em> ) لا تمتلك "دوراً محدداً" <em>a role</em> ، فعلى سبيل المثال، لن تعرف "قارئات الشاشة" <em>screen readers</em> كيفية تفسير الغرض من عنصر <code class="br-white2">div</code> إذا لم تحدد "دوره" <em>its role</em> بشكل صريح.
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;div&gt;
+ <span class="value">&lt;!-- more elements go here توضع هنا عناصر إضافية --&gt;</span>
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <p>
+                لتحديد "دور إيريا" <span><b>ARIA</b> role</span> لعنصر ما، ما عليك سوى إضافة السمة <code class="br-white">role</code> ، على النحو التالي: <code dir="ltr" class="br-white nw">role="ARIA role"</code> ، حيث تمثل القيمة اسم الدور كما هو محدد في مواصفات <b>ARIA</b> .
+            </p>
+
+            <p class="hinty">
+                إليك مثال على استخدام السمة <code class="br-white">role</code> بقيمة <code class="br">"alert"</code> :
+            </p>
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"alert"</span> id=<span class="value">"exp-warning"</span> role=</span><span class="value">"alert"</span>&gt;
+ &lt;span <span class="attr">class=<span class="value">"hidden"</span></span>&gt;<span dir="rtl" class="txt">ستنتهي صلاحية جلسة تسجيل الدخول الخاصة بك خلال 3 دقائق.</span>&lt;/span&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">.alert {
+ <span class="attr">background-color: <span class="value">#fff3cd</span><span class="txt">;</span>
+ border: <span class="value">1px solid #ffeeba</span><span class="txt">;</span>
+ color: <span class="value">#856404</span><span class="txt">;</span> 
+ padding: <span class="value">1em</span><span class="txt">;</span>
+ margin-top: <span class="value">1em</span><span class="txt">;</span>
+ border-radius: <span class="value">4px</span><span class="txt">;</span>  
+ font-weight: <span class="value">bold</span><span class="txt">;</span> </span>   
+}</span>
+
+<span class="tag">.alert span {
+ <span class="attr">display: <span class="value">inline-block</span><span class="txt">;</span></span> 
+}</span>
+            </code></pre></div>
+            </div>
+
+            <h4>معاينة:</h4>
+
+            <div class="preview">
+                <div class="alert6" id="exp-warning" role="alert">
+                    <span class="hidden">ستنتهي صلاحية جلسة تسجيل الدخول الخاصة بك خلال 3 دقائق.</span>
+                </div>
+            </div>
+
+            <p>
+                من المهم ملاحظة أن تحديد "الدور" <em>a role</em> لعنصر ما يؤدي وظيفة واحدة فقط: 
+وهي إعلام "التقنيات المساعدة" <em>assistive technology</em> بالغرض من هذا العنصر، 
+إذ لا يضيف هذا الإجراء أي وظيفة أو سلوك فعلي للعنصر. 
+فإذا كان المستخدمون يتوقعون سلوكاً معيناً مرتبطاً بهذا "الدور" <em>a role</em> ، 
+فإن مسؤولية إضافة ذلك السلوك المتوقع تقع على عاتقك بصفتك "المطور" <em>the developer</em> .
+            </p>
+
+            <p>
+                على سبيل المثال، فإن تعيين "دور زر" <code dir="ltr" class="br-white nw">role="button"</code> لعنصر <code class="br-white2">div</code> لا يجعله قابلاً للنقر بالفأرة أو الاستخدام عبر لوحة المفاتيح تلقائياً، 
+إذ تقع على عاتق "المطور" <em>the developer</em> مسؤولية إضافة السلوكيات اللازمة التي تتيح لهذا العنصر العمل كـ"زر" <code class="br">button</code> ، 
+وفي معظم الحالات، يُفضل ببساطة استخدام عنصر <code class="br-white2">button</code> الأصلي.
+            </p>
+
+            <p class="hinty">هناك ست فئات رئيسية لـ <span dir="ltr" class="nw"><b>ARIA</b> role</span> :</p>
+
+            <ul>
+                <li><p class="hinty">أدوار بنية المستند <em>Document structure roles</em> .</p></li>
+
+                <li><p class="hinty">أدوار عناصر الواجهة <em>Widget roles</em> .</p></li>
+
+                <li><p class="hinty">أدوار المعالم <em>Landmark roles</em> .</p></li>
+
+                <li><p class="hinty">أدوار المناطق الحية <em>Live region roles</em> .</p></li>
+
+                <li><p class="hinty">أدوار النوافذ <em>Window roles</em> .</p></li>
+
+                <li><p class="hinty">الأدوار التجريدية <em>Abstract roles</em> .</p></li>
+            </ul>
+
+            <p>لِنُلقِ نظرةً عليها بمزيدٍ من التفصيل.</p>
+
+            <p class="hinty">
+                تُحدد "أدوار بنية المستند" <em>Document structure roles</em>  "الهيكل العام لصفحة الويب"  <em>The overall structure of the web page</em>  ، 
+فبفضل هذه "الأدوار" <em>roles</em> ، 
+تتمكن "التقنيات المساعدة" <em>assistive technologies</em> من فهم "العلاقات بين الأقسام المختلفة" <i>the relationships between different sections</i> ومساعدة المستخدمين على تصفح المحتوى.
+            </p>
+
+            <p>
+                ومع ذلك، فإن معظم "أدوار هيكلة المستندات" <em>The document structure roles</em> لا تُستخدم في "تطوير الويب الحديث" <i>modern web development</i> ، 
+لأن المتصفحات تدعم بالفعل عناصر اتش.تي.ام.ال "الدلالية" <em>Semantic</em> مكافئة، 
+وينبغي إعطاء الأولوية لاستخدام هذه العناصر كلما أمكن ذلك.
+            </p>
+
+            <p>
+                عليك تحديد "الأدوار" <em>the roles</em> التي ليس لها عنصر دلالي مكافئ. 
+على سبيل المثال: شريط الأدوات ( <code class="br">"toolbar"</code> ) ، وتلميح الأداة ( <code class="br">"tooltip"</code> ) ، والخلاصة ( <code class="br">"feed"</code> ) ، والصيغة الرياضية ( <code class="br">"math"</code> ) ، والعرض التقديمي ( <code class="br">"presentation"</code> ) ، و"لا شيء" ( <code class="br">"none"</code> ) ، والملاحظة ( <code class="br">"note"</code> ) .
+            </p>
+
+            <p class="hinty">
+                توجد "أدوار أخرى مماثلة" <i>other similar roles</i> ، ولكن هذه هي الأكثر شيوعاً واستخداماً. 
+هذا مثال على عنصر <code class="br-white2">div</code> يحمل <span dir="ltr" class="nw"><b>ARIA</b> role</span> المسمى <code class="br">"math"</code> ، 
+حيث يحتوي هذا العنصر على "معادلة رياضية" <em>a mathematical equation</em> .
+            </p>
+
+
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"math-expression"</span> role=<span class="value">"math"</span> aria-label=<span class="value">"س squared + ص squared = 3"</span></span>&gt;
+ <p dir="rtl" class="txt">س<span dir="ltr" class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span> + ص<span dir="ltr" class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span> = 3</p>
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">.math-expression {
+ <span class="attr">font-family: <span class="value">"Times New Roman", serif</span><span class="txt">;</span>
+ font-size: <span class="value">1.2rem</span><span class="txt">;</span>
+ background-color: <span class="value">#f4f4f4</span><span class="txt">;</span> 
+ border-right: <span class="value">4px solid #007acc</span><span class="txt">;</span>
+ padding: <span class="value">0.75em 1em</span><span class="txt">;</span>
+ margin-top: <span class="value">1em</span><span class="txt">;</span>
+ display: <span class="value">inline-block</span><span class="txt">;</span></span> 
+}</span>
+
+<span class="tag">.math-expression sup {
+ <span class="attr">font-size: <span class="value">0.8em</span></span><span class="txt">;</span> 
+}</span>
+            </code></pre></div>
+            </div>
+
+            <h4>معاينة:</h4>
+
+            <div class="preview">
+                <div class="math-expression6" role="math" aria-label="س squared + ص squared = 3">
+                  س<sup>2</sup> + ص<sup>2</sup> = 3
+                </div>
+            </div>
+
+            <p>ستلاحظ أيضًا أن عنصر <code class="br-white2">div</code> يحتوي على السمة <code dir="ltr" class="br-white">aria-label</code> . يجب أن تكون قيمة هذه السمة عبارة عن "سلسلة نصية تمثّل التعبير" <i>a string that represents the expression</i> .</p>
+
+            <p class="hinty">تُحدِّد "أدوار عناصر الواجهة" <em>Widget roles</em> الغرض من العناصر التفاعلية ووظيفتها، مثل "أشرطة التمرير" <em>scrollbars</em> .</p>
+
+            <p>
+                تتضمن أمثلة "أدوار الأدوات" <em>Widget roles</em> : 
+شريط التمرير ( <code class="br">"scrollbar"</code> ) ، ومربع البحث ( <code class="br">"searchbox"</code> ) ، 
+والفاصل"عند التركيز عليه" ( <span dir="ltr" class="nw"><code class="br">"separator"</code> (when focusable)</span> ) ، شريط التمرير / المنزلق ( <code class="br">"slider"</code> ) ، 
+وزر التدوير ( <code class="br">"spinbutton"</code> ) ، والمفتاح ( <code class="br">"switch"</code> ) ، 
+وعلامة التبويب ( <code class="br">"tab"</code> ) ، ولوحة علامات التبويب ( <code class="br">"tabpanel"</code> ) ، 
+وعنصر الشجرة ( <code class="br">"treeitem"</code> ) .
+            </p>
+
+            <p class="hinty">إليك مثال على "مربع بحث" <em>a searchbox</em> :</p>
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"search-container"</span> role=<span class="value">"search"</span></span>&gt;
+ &lt;label <span class="attr">for=<span class="value">"searchbox"</span> class=<span class="value">"visually-hidden"</span></span>&gt;<span class="txt">بحث</span>&lt;/label&gt;
+
+ &lt;div
+  <span class="attr">id=<span class="value">"searchbox"</span>
+  class=<span class="value">"searchbox"</span>
+  role=<span class="value">"searchbox"</span>
+  aria-label=<span class="value">"ابحث في الموقع"</span>
+  tabindex=<span class="value">"0"</span>
+  contenteditable=<span class="value">"true"</span></span>&gt;
+ &lt;/div&gt;
+
+ &lt;button <span class="attr">type=<span class="value">"button"</span> aria-label=<span class="value">"إرسال البحث"</span></span>&gt;<span class="txt">بحث</span>&lt;/button&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">.search-container {
+ <span class="attr">display: <span class="value">flex</span><span class="txt">;</span>
+ align-items: <span class="value">center</span><span class="txt">;</span>
+ gap: <span class="value">0.5em</span><span class="txt">;</span> 
+ margin-top: <span class="value">1em</span><span class="txt">;</span></span>
+}</span>
+
+<span class="tag">.searchbox {
+ <span class="attr">flex: <span class="value">1</span><span class="txt">;</span>
+ padding: <span class="value">0.5em</span><span class="txt">;</span>
+ border: <span class="value">1px solid #ccc</span><span class="txt">;</span> 
+ border-radius: <span class="value">4px</span><span class="txt">;</span>
+ font-size: <span class="value">1em</span><span class="txt">;</span>
+ min-height: <span class="value">1.5em</span><span class="txt">;</span></span>
+}</span>
+
+<span class="tag">.searchbox:focus {
+ <span class="attr">border-color: <span class="value">#007acc</span><span class="txt">;</span>
+ outline: <span class="value">none</span><span class="txt">;</span>
+ box-shadow: <span class="value">0 0 0 2px rgba(0, 122, 204, 0.3)</span><span class="txt">;</span></span> 
+}</span>
+
+<span class="tag">.button {
+ <span class="attr">padding: <span class="value">0.5em 1em</span><span class="txt">;</span>
+ background-color: <span class="value">#007acc</span><span class="txt">;</span>
+ color: <span class="value">#fff</span><span class="txt">;</span> 
+ border: <span class="value">none</span><span class="txt">;</span>
+ border-radius: <span class="value">4px</span><span class="txt">;</span>
+ cursor:<span class="value">pointer</span><span class="txt">;</span></span>
+}</span>
+
+<span class="tag">.button:hover {
+ <span class="attr">background-color: <span class="value">#005fa3</span><span class="txt">;</span></span>
+}</span>
+
+<span class="tag-g">/* Hide visually but keep for screen readers */</span>
+<span class="tag-g">/* الإخفاء بصرياً مع الإبقاء عليه متاحاً لقارئات الشاشة */</span>
+<span class="tag">.visually-hidden {
+ <span class="attr">position: <span class="value">absolute</span><span class="txt">;</span>
+ background-color: <span class="value">#007acc</span><span class="txt">;</span>
+ left: <span class="value">9999px</span><span class="txt">;</span></span> 
+}</span>
+            </code></pre></div>
+            </div>
+
+            <h4>معاينة:</h4>
+
+            <div class="preview">
+                <div class="search-container6" role="search">
+                    <label for="searchbox6" class="visually-hidden6">بحث</label>
+
+                    <div
+                        id="searchbox6"
+                        class="searchbox6"
+                        role="searchbox"
+                        aria-label="ابحث في الموقع"
+                        tabindex="0"
+                        contenteditable="true">
+                    </div>
+
+                    <button class="button-box6" type="button" aria-label="إرسال البحث">بحث</button>
+                </div>
+            </div>
+
+
+            <p>
+                تحتوي بعض هذه "الأدوار" <em>roles</em> على "عناصر دلالية" <em>Semantic elements</em> مكافئة لها. 
+وعليك إعطاء الأولوية للعنصر الدلالي على الدور إذا كان ذلك متاحاً، 
+فعلى سبيل المثال، يُفضل استخدام عنصر "الزر" <code class="br-white2">button</code> في اتش.تي.ام.ال  بدلاً من إضافة <code dir="ltr" class="br-white nw">role="button"</code> إلى عنصر <code class="br-white2">div</code> .
+            </p>
+
+
+            <p class="hinty">
+                تُستخدم "أدوار المعالم" <em>Landmark roles</em> لتصنيف وتحديد "الأقسام الرئيسية" <em>The primary sections</em> في صفحة الويب، 
+حيث تعتمد عليها "برمجيات قراءة الشاشة" <em>Screen readers</em> لتوفير وسيلة مريحة للتنقل بين الأقسام الهامة في الصفحة. 
+ويُستحسن استخدام هذه "الأدوار" <em>Roles</em> باعتدال للحفاظ على "بساطة التخطيط العام" <i>The overall layout simple</i> وسهولة فهمه. 
+ومن أمثلة "أدوار المعالم" <em>Landmark roles</em> : 
+<code class="br">"banner"</code> و <code class="br">"complementary"</code> و <code class="br">"contentinfo"</code> و <code class="br">"form"</code> و <code class="br">"main"</code> <code class="br">"navigation"</code> و <code class="br">"region"</code> و <code class="br">"search"</code> . 
+ولكل دور من هذه الأدوار ما يقابله في لغة اتش.تي.ام.ال، 
+مثل "العناصر" <em>Elements</em> : 
+<code class="br-white2">header</code> و <code class="br-white2">footer</code> و <code class="br-white2">aside</code> و <code class="br-white2">form</code> و <code class="br-white2">main</code> و <code class="br-white2">nav</code> و <code class="br-white2">section</code> و <code class="br-white2">search</code> . 
+لذا، إذا استخدمت عناصر اتش.تي.ام.ال المناسبة لتحديد أقسام الصفحة، 
+فلن تكون هناك حاجة لإضافة "سمة الدور" <span dir="ltr" class="nw"><code class="br-white">role</code> attribute</span> بشكل صريح إلى تلك العناصر.
+            </p>
+
+            <p class="hinty">إليك مثال على "لافتة" <em>a banner</em> :</p>
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"site-banner"</span> role=<span class="value">"banner"</span></span>&gt;
+ &lt;h1&gt;<span class="txt">تصميم ويب مُتاح للجميع</span>&lt;/h1&gt;
+
+ &lt;nav&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">الرئيسية</span>&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">المقالات</span>&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">نبذة عنا</span>&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">اتصل بنا</span>&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/nav&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">.site-banner {
+ <span class="attr">background-color: <span class="value">#007acc</span><span class="txt">;</span>
+ color: <span class="value">#fff</span><span class="txt">;</span>
+ padding: <span class="value">1em 1.5em</span><span class="txt">;</span> 
+ border-radius: <span class="value">4px</span><span class="txt">;</span></span> 
+}</span>
+
+<span class="tag">.site-banner h1 {
+ <span class="attr">margin: <span class="value">0 0 0.5em</span><span class="txt">;</span>
+ font-size: <span class="value">1.5em</span><span class="txt">;</span></span>
+}</span>
+
+<span class="tag">.site-banner nav ul {
+ <span class="attr">list-style: <span class="value">none</span><span class="txt">;</span>
+ margin: <span class="value">0</span><span class="txt">;</span>
+ padding: <span class="value">0</span><span class="txt">;</span> 
+ display: <span class="value">flex</span><span class="txt">;</span>
+ gap: <span class="value">1em</span><span class="txt">;</span></span> 
+}</span>
+
+<span class="tag">.site-banner nav a {
+ <span class="attr">color: <span class="value">#fff</span><span class="txt">;</span>
+ text-decoration: <span class="value">none</span><span class="txt">;</span>
+ font-weight: <span class="value">500</span><span class="txt">;</span></span> 
+}</span>
+
+<span class="tag">.site-banner nav a:hover {
+ <span class="attr">text-decoration: <span class="value">underline</span><span class="txt">;</span></span>
+}</span>
+            </code></pre></div>
+            </div>
+
+            <h4>معاينة:</h4>
+
+            <div class="preview" role="presentation">
+                
+
+                <div class="site-banner6" role="banner">
+                    <h1>تصميم ويب مُتاح للجميع</h1>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">الرئيسية</a></li>
+                            <li><a href="#">المقالات</a></li>
+                            <li><a href="#">نبذة عنا</a></li>
+                            <li><a href="#">اتصل بنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+            <p class="hinty">
+                تُحدد "أدوار المنطقة الحية" <em>Live region roles</em> العناصر التي يتغير محتواها ديناميكيًا. 
+وبهذه الطريقة، تستطيع "برامج قراءة الشاشة" <em>screen readers</em> وغيرها من "التقنيات المساعدة" <em>assistive technologies</em> إبلاغ المستخدمين ذوي "الإعاقة البصرية" <em>visual disabilities</em> بـ"التغييرات" <i>changes</i> . 
+وتشمل هذه "الأدوار" <em>roles</em> : 
+"التنبيه" <code class="br">alert</code> ، و"السجل" <code class="br">log</code> ، و"الشريط المتحرك" <code class="br">marquee</code> ، و"الحالة" <code class="br">status</code> ، و"المؤقت" <code class="br">timer</code> .
+            </p>
+
+            <p class="hinty">إليك مثال على "حالة" <em>status</em> :</p>
+
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"status-demo"</span></span>&gt;
+ &lt;button <span class="attr">id=<span class="value">"update-status-btn"</span></span>&gt;<span class="txt">التحقق من الحالة</span>&lt;/button&gt;
+ &lt;div <span class="attr">id=<span class="value">"status-msg"</span> role=<span class="value">"status"</span> class=<span class="value">"status-message"</span></span>&gt;
+  <span dir="rtl" class="txt">لا توجد تحديثات بعد.</span>
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+
+<span class="tag">&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+
+<span class="tag">.status-demo {
+ <span class="attr">margin-top: <span class="value">1em</span><span class="txt">;</span> 
+}</span>
+
+<span class="tag">button {
+ <span class="attr">padding: <span class="value">0.5em 1em</span><span class="txt">;</span>
+ background-color: <span class="value">#007acc</span><span class="txt">;</span>  
+ color: <span class="value">#fff</span><span class="txt">;</span>  
+ border: <span class="value">none</span><span class="txt">;</span>  
+ border-radius: <span class="value">4px</span><span class="txt">;</span>  
+ cursor: <span class="value">pointer</span><span class="txt">;</span></span>    
+}</span>
+
+<span class="tag">button:hover {
+ <span class="attr">background-color: <span class="value">#005fa3</span></span><span class="txt">;</span>  
+}</span>
+
+<span class="tag">.status-message {
+ <span class="attr">margin-top: <span class="value">0.75em</span><span class="txt">;</span>
+ padding: <span class="value">0.75em</span><span class="txt">;</span>  
+ background-color: <span class="value">#e8f4ff</span><span class="txt">;</span>  
+ border: <span class="value">1px solid #b3d8ff</span><span class="txt">;</span>  
+ border-radius: <span class="value">4px</span><span class="txt">;</span>  
+ font-weight: <span class="value">500</span><span class="txt">;</span></span>    
+}</span>
+            </code></pre></div>
+
+            <h4>index.js</h4>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const</span> button = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"update-status-btn"</span>)</span>;
+<span class="tag-b">const</span> statusMessage = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"status-msg"</span>)</span>;
+
+button.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"click"</span>, <span class="tag">()</span> => <span class="tag">{</span>
+ statusMessage.textContent <span class="value">=</span> <span dir="rtl" class="value">"اكتمل الرفع بنجاح."</span>;
+<span class="tag">}</span><span class="attr">)</span>;
+            </code></pre></div>
+            </div>
+
+            <h4>معاينة:</h4>
+            <div class="preview" role="presentation">
+                <div class="status-demo6">
+                    <button id="update-status-btn6" class="button6-2">التحقق من الحالة</button>
+                    <div id="status-msg6" role="status" class="status-message6">
+                      لا توجد تحديثات بعد.
+                    </div>
+                </div>
+            </div>
+
+            <p class="hinty">
+               تُحدد "أدوار النافذة" <em>Window roles</em> "النوافذ الفرعية" <em>sub-windows</em> ، 
+مثل "مربعات الحوار المنبثقة المشروطة" <em>pop-up modal dialogs</em> . 
+وتشمل هذه الأدوار <code class="br">alertdialog</code> و <code class="br">dialog</code> . 
+يرجى ملاحظة أنه يُعد الآن من الممارسات الفضلى استخدام عنصر <code class="br-white2">dialog</code> في اتش.تي.ام.ال و"الأساليب" <em>methods</em> المرتبطة به في JavaScript ، 
+بدلاً من إنشاء "مربع حوار" <em>a dialog</em> يدوياً. 
+            </p>
+
+            <p class="hinty">إليك مثال على استخدام "دور حوار" <span dir="ltr" class="nw">(a <code class="br">dialog</code> role)</span> لـ"حوار مخصص" <em>a custom dialog</em> :</p>
+
+
+
+                        <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;button <span class="attr">id=<span class="value">"open-dialog"</span></span>&gt;<span class="txt">فتح مربع الحوار</span>&lt;/button&gt;
+
+&lt;div <span class="attr">id=<span class="value">"custom-dialog"</span> role=<span class="value">"dialog"</span> aria-model=<span class="value">"true"</span> aria-labelledby=<span class="value">"dialog-title"</span> class=<span class="value">"dialog"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"dialog-content"</span></span>&gt;
+  &lt;h3 <span class="attr">id=</span><span class="value">"dialog-title"</span>&gt;<span class="txt">تأكيد الإجراء</span>&lt;/h3&gt;
+  &lt;p&gt;<span class="txt">هل أنت متأكد من أنك تريد حذف هذا الملف؟</span>&lt;/p&gt;
+  &lt;div <span class="attr">class=</span><span class="value">"dialog-actions"</span>&gt;
+   <span class="tag">&lt;button <span class="attr">id=<span class="value">"confirm-btn"</span></span>&gt;<span class="txt">نعم</span>&lt;/button&gt;
+   <span class="tag">&lt;button <span class="attr">id=<span class="value">"close-dialog"</span></span>&gt;<span class="txt">إلغاء</span>&lt;/button&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+
+<span class="tag">&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+
+<span class="tag">body {
+ <span class="attr">font-family: <span class="value">Arial, sans-serif</span><span class="txt">;</span> 
+ <span class="attr">margin: <span class="value">2em</span><span class="txt">;</span> 
+}</span>
+
+<span class="tag">button {
+ <span class="attr">padding: <span class="value">0.5em 1em</span><span class="txt">;</span>
+ border: <span class="value">none</span><span class="txt">;</span>  
+ border-radius: <span class="value">4px</span><span class="txt">;</span>  
+ cursor: <span class="value">pointer</span><span class="txt">;</span>  
+ background-color: <span class="value">#007acc</span><span class="txt">;</span>  
+ color: <span class="value">white</span><span class="txt">;</span>  
+ font-size: <span class="value">1em</span><span class="txt">;</span></span>    
+}</span>
+
+<span class="tag">button:hover {
+ <span class="attr">background-color: <span class="value">#005fa3</span></span><span class="txt">;</span>  
+}</span>
+
+<span class="tag">.dialog  {
+ <span class="attr">display: <span class="value">none</span><span class="txt">;</span>
+ position: <span class="value">fixed</span><span class="txt">;</span>  
+ top: <span class="value">0</span><span class="txt">;</span>  
+ left: <span class="value">0</span><span class="txt">;</span>  
+ width: <span class="value">100%</span><span class="txt">;</span>  
+ height: <span class="value">100%</span><span class="txt">;</span>  
+ background-color: <span class="value">rgba(0, 0, 0, 0.5)</span><span class="txt">;</span>  
+ justify-content: <span class="value">center</span><span class="txt">;</span>  
+ align-items: <span class="value">center</span><span class="txt">;</span>  
+ z-index: <span class="value">500</span><span class="txt">;</span></span>    
+}</span>
+
+<span class="tag">.dialog-content  {
+ <span class="attr">background-color: <span class="value">white</span><span class="txt">;</span>
+ padding: <span class="value">1.5em</span><span class="txt">;</span>  
+ border-radius: <span class="value">8px</span><span class="txt">;</span>  
+ width: <span class="value">90%</span><span class="txt">;</span>  
+ max-width: <span class="value">400px</span><span class="txt">;</span>  
+ box-shadow: <span class="value">0 4px 12px rgba(0, 0, 0, 0.3)</span><span class="txt">;</span></span>    
+}</span>
+
+<span class="tag">.dialog-actions  {
+ <span class="attr">display: <span class="value">flex</span><span class="txt">;</span>
+ justify-content: <span class="value">flex-end</span><span class="txt">;</span>  
+ gap: <span class="value">0.5em</span><span class="txt">;</span>  
+ margin-top: <span class="value">1em</span><span class="txt">;</span></span>    
+}</span>
+            </code></pre></div>
+
+            <h4>index.js</h4>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const</span> dialog = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"custom-dialog"</span>)</span>;
+<span class="tag-b">const</span> openBtn = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"open-dialog"</span>)</span>;
+<span class="tag-b">const</span> closeBtn = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"close-dialog"</span>)</span>;
+<span class="tag-b">const</span> confirmBtn = document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"confirm-btn"</span>)</span>;
+
+openBtn.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"click"</span>, <span class="tag">()</span> => <span class="tag">{</span>
+ dialog.style.display <span class="value">=</span> <span class="value">"flex"</span>;
+<span class="tag">}</span><span class="attr">)</span>;
+
+closeBtn.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"click"</span>, <span class="tag">()</span> => <span class="tag">{</span>
+ dialog.style.display <span class="value">=</span> <span class="value">"none"</span>;
+<span class="tag">}</span><span class="attr">)</span>;
+
+confirmBtn.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"click"</span>, <span class="tag">()</span> => <span class="tag">{</span>
+ <span class="tag-b">alert</span><span class="attr">(<span dir="rtl" class="value">"تم حذف الملف."</span>)</span>;
+ dialog.style.display <span class="value">=</span> <span class="value">"none"</span>;
+<span class="tag">}</span><span class="attr">)</span>;
+            </code></pre></div>
+            </div>
+
+            <h4>معاينة:</h4>
+            <div class="preview" role="presentation">
+                <button class="button6-2b" id="open-dialog6-2">فتح مربع الحوار</button>
+
+                <div id="custom-dialog6-2" role="dialog" aria-model="true" aria-labelledby="dialog-title6-2" class="dialog6-2">
+                    <div class="dialog-content6-2">
+                        <h3 id="dialog-title6-2">تأكيد الإجراء</h3>
+                        <p>هل أنت متأكد من أنك تريد حذف هذا الملف؟</p>
+                        <div class="dialog-actions6-2">
+                            <button class="button6-2b" id="confirm-btn6-2">نعم</button>
+                            <button class="button6-2b" id="close-dialog6-2">إلغاء</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                وأخيراً، لدينا "الأدوار التجريدية" <em>Abstract roles</em> . تساعد هذه "الأدوار" <em>roles</em> في "تنظيم المستند" <i>organize the document</i> ، 
+وهي مخصصة لـ"الاستخدام الداخلي من قِبَل المتصفح فقط" <i>used internally by the browser</i> وليس من قِبَل "المطورين" <em>developers</em> ، 
+لذا ينبغي عليك معرفة وجودها، ولكن لا يجب عليك استخدامها في مواقعك أو تطبيقاتك على الويب.
+            </p>
+
+            <p>
+                تتيح لك <span dir="ltr" class="hinty"><b>ARIA </b>roles</span> إنشاء مواقع ويب وتطبيقات ويب "شاملة" <em>inclusive</em> و"متاحة" <em>accessible</em> للجميع  ، 
+فهي توفر "معلومات دلالية" <em>Semantic information</em> حول الغرض من عناصر اتش.تي.ام.ال ووظيفتها.
+            </p>
+
+            <p>تستخدم "برامج قراءة الشاشة" <em>Screen readers</em> وغيرها من "التقنيات المساعدة" <em>assistive technologies</em> هذه المعلومات لمساعدة المستخدمين على فهم محتوى صفحتك وتكوين "تصور مسبق" <em>expectations</em> حول كيفية استخدامها، مما يساهم في ضمان حصول الجميع على "تجربة مستخدم ممتازة" <em>a great user experience</em> .</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض الأساسي من <span dir="ltr"><b>ARIA </b>roles</span> ؟</h5>
+
+			
+			<p> ١. لتحديد "المظهر المرئي" <i>the visual appearance</i> للعناصر. ❌</p>
+			<p> ٢. لتحسين "أداء الموقع الإلكتروني" <i>website performance</i> . ❌</p>
+            <p><mark> <b>٣. لتوفير "معلومات دلالية" <i>semantic information</i> حول الغرض من العناصر.</b> ✅</mark></p>
+			<p> ٤. لتعزيز "التوافق" <i>compatibility</i> مع المتصفحات. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>أي فئة من <span dir="ltr"><b>ARIA </b>roles</span> تُستخدم لتحديد الغرض والسلوك الخاص بـ"النوافذ الفرعية" <em>sub-windows</em> ، مثل "مربعات الحوار المنبثقة المشروطة" <em>pop-up modal dialogs</em> ؟</h5>
+
+			
+			<p> ١. أدوار عناصر الواجهة <em>Widget roles</em> . ❌</p>
+			<p> ٢. أدوار بنية المستند <em>Document structure roles</em> . ❌</p>
+			<p> ٣. أدوار المعالم <em>Landmark roles</em> . ❌</p>
+			<p><mark> <b>٤. أدوار النوافذ <em>Window roles</em> .</b> ✅</mark></p>
+			
+				
+			<br>
+
+			<h5>أي فئة من <span dir="ltr"><b>ARIA </b>roles</span> تُستخدم للإشارة إلى "المحتوى الديناميكي" <em>dynamic content</em> الذي يجب الإعلان عنه للمستخدمين؟</h5>
+
+			<p> ١. أدوار عناصر الواجهة <em>Widget roles</em> . ❌</p>
+			<p> ٢. أدوار بنية المستند <em>Document structure roles</em> . ❌</p>
+			<p> ٣. أدوار المعالم <em>Landmark roles</em> . ❌</p>
+			<p><mark> <b>٤. أدوار المناطق الحية <em>Live region roles</em> </b> ✅</mark></p>
+
+				
+			
+
+		</div>
+
+
+
+
+
         </section>
 
 
+
+        <!--  ت  -->
         <section id="3">
 
             <h3>ت. ما هي أدوار السمتين aria-label و labelledby ؟</h3>
 
+            <p>من المهم التأكد من أن جميع المستخدمين، بمن فيهم الأشخاص ذوو "الإعاقة" <i>disabilities</i> ، يمكنهم الوصول إلى المواقع الإلكترونية "دون مشكلات" <i>without issues</i> .</p>
+
+            <p class="hinty">بالنسبة لمستخدمي "قارئات الشاشة" <em>screen readers</em> ، توفر السمتان <code class="br-white nw">aria-label</code> و <code class="br-white nw">aria-labelledby</code> معلومات بالغة الأهمية حول عناصر الصفحة التي قد تكون "غير واضحة" <i>unclear</i> أو "غير مرئية" <i>invisible</i> .</p>
+
+            <p>لنلقِ نظرةً على ماهية السمتين <code class="br-white nw">aria-label</code> و <code class="br-white nw">aria-labelledby</code> والدور الذي تؤديانه في جعل الويب "متاحاً" <em>accessible</em> للأشخاص ذوي "الإعاقات البصرية" <i>visual impairments</i> وما يتصل بها من إعاقات.</p>
+
+            <p>
+                ستلاحظ أن كلاً من <code class="br-white nw">aria-label</code> و <code class="br-white nw">aria-labelledby</code> يبدآن بالبادئة <code dir="ltr" class="br-white nw">aria-</code> . 
+فماذا يعني ذلك؟ يرمز اختصار <b>ARIA</b> إلى "تطبيقات الإنترنت الغنية القابلة للوصول" <em>Accessible Rich Internet Applications</em> ، 
+وهو عبارة عن مجموعة من السمات التي تبدأ بالبادئة <code dir="ltr" class="br-white nw">aria-</code> وتتيح للمطورين توضيح الغرض من العناصر لـ"التقنيات المساعدة" <i>assistive technologies</i> . 
+وتُعد السمة <code class="br-white nw">aria-label</code> بمثابة تسمية غير مرئية للعناصر التفاعلية، 
+إذ تضيف "نصاً تعريفياً" <i>a text label</i> للعنصر يمكن لـ"برامج قراءة الشاشة" <i>screen readers</i> قراءته.
+            </p>
+
+            <p>
+                تُعد السمة <code class="br-white nw">aria-label</code> مفيدة بشكل خاص للعناصر التي لا تحتوي على نص مرئي ولكنها تتطلب وصفاً لكي تتعرف عليها "قارئات الشاشة" <i>screen readers</i> ، 
+فعلى سبيل المثال، غالباً ما تحتاج "الأزرار" <em>buttons</em> التي تقتصر على "الأيقونات" <em>icons</em> إلى هذه السمة <code class="br-white nw">aria-label</code> لتوضيح الغرض منها.
+            </p>
+
+            <p class="hinty">إليك مثال:</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">arial-label=<span class="value">"Search بحث"</span></span>&gt;
+ &lt;i <span class="attr">class</span><span class="value">"fa-solid fa-magnifying-glass"</span>&gt;&lt;/i&gt;
+&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <p>
+                في هذه الحالة، قد يعلن "قارئ الشاشة" <i>screen reader</i> عن هذا "الزر" <em>button</em> بعبارة <span class="hinty">"زر بحث"</span> ( <code dir="ltr" class="br-white nw">Search, button</code> ) ، 
+رغم أن الزر لا يحتوي إلا على "أيقونة" <em>an icon</em> ، 
+إذ تُعلِم السمة <code dir="ltr" class="br-white nw">aria-label</code> "قارئات الشاشة" <em>screen readers</em> بالنص الذي يجب استخدامه بدلاً من الأيقونة.
+            </p>
+
+            <p>
+                إذا كان "الزر" <em>button</em> يحتوي على النص "بحث" <em>Search</em> بدلاً من "أيقونة" <em>an icon</em> ، 
+فلن تكون هناك حاجة لاستخدام السمة <code dir="ltr" class="br-white nw">aria-label</code> ، إذ سيوفر النص "التسمية الخاصة بالزر" <em>The label for the button</em> .
+            </p>
+            
+            <p>بالنسبة لعناصر "الإدخال" <em>input</em> ، توفر السمة <code dir="ltr" class="br-white nw">aria-label</code> "تسميةً مباشرةً" <em>a label directly</em> في حال عدم وجود "تسمية مرئية" <i>a visible label</i> مرتبطة بعنصر "الإدخال" <em>input</em> .</p>
+
+
+            <p class="hinty">
+                تؤدي السمة <code dir="ltr" class="br-white nw">aria-labelledby</code> الوظيفة ذاتها التي تؤديها السمة <code dir="ltr" class="br-white nw">aria-label</code> تماماً، 
+ولكن بدلاً من تحديد النص مباشرةً داخل السمة، 
+فإنك تستخدم "مرجعاً" <em>a reference</em> لنص موجود بالفعل في الصفحة، 
+ويجب أن يمتلك هذا النص الموجود سمة <code dir="ltr" class="br-white2">id</code> تُستخدم كـ"قيمة مرجعية" <em>The reference value</em> داخل السمة <code dir="ltr" class="br-white nw">aria-labelledby</code> .
+            </p>
+
+            <p class="hinty">إليك مثال:</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> aria-labelledby=<span class="value">"search-btn"</span></span>&gt;</span>
+<span class="tag">&lt;button <span class="attr">type=<span class="value">"button"</span> id=<span class="value">"search-btn"</span></span>&gt;<span class="txt">بحث</span>&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <input type="text" aria-labelledby="search-btn-6-3">
+                <button type="button" id="search-btn-6-3">بحث</button>
+            </div>
+
+            <p>
+                في هذه الحالة، يُستخدم "نص الزر" <em>The text for the button</em> بمثابة "التسمية لحقل إدخال البحث" <em>the label for the search input</em> ، 
+حيث ستقوم "برمجيات قراءة الشاشة" <em>Screen readers</em> بالإعلان عن الحقل بعبارة مثل "بحث، تعديل" <code dir="ltr" class="br-white nw">Search, edit</code> . 
+وإذا قررت لاحقاً تغيير نص الزر إلى "عثور" <code dir="ltr" class="br-white nw">Find</code> ، فسيتم تحديث تسمية حقل الإدخال تلقائياً لتصبح النص الجديد، 
+نظراً لأنها تعتمد في "تعريفها" <em>it is referencing</em> على "نص الزر" <em>The button text</em> .
+            </p>
+
+
+            <p class="hinty">
+                من الممكن أيضاً "دمج" <em>Combining</em> قيم مُعرِّفات <code dir="ltr" class="br-white2">IDs</code> متعددة في قيمة واحدة لسمة <code dir="ltr" class="br-white nw">aria-labelledby</code> . وإليك كيفية عمل ذلك:
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;div&gt;
+ &lt;span <span class="attr">id=<span class="value">"volume-label"</span></span>&gt;<span class="txt">المستوى</span>&lt;/span&gt;
+ &lt;span <span class="attr">id=<span class="value">"volume-details"</span></span>&gt;<span class="txt">اضبط مستوى الصوت</span>&lt;/span&gt;
+ &lt;input
+  <span class="attr">type=<span class="value">"range"</span>
+  min=<span class="value">"0"</span>
+  max=<span class="value">"100"</span>
+  value=<span class="value">"30"</span>
+  aria-labelledby=<span class="value">"volume-label volume-details"</span></span>&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div>
+                    <span id="volume-label-6-3">مستوى الصوت</span>
+                    <span id="volume-details-6-3">ضبط مستوى الصوت</span>
+                    <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="30"
+                    aria-labelledby="volume-label-6-3 volume-details-6-3">
+                </div>
+            </div>
+
+            <p>
+                بالنسبة لـ"شريط التمرير" <em>The slider</em> ، سيبحث "قارئ الشاشة" <em>The screen reader</em> عن محتوى عنصري <code dir="ltr" class="br-white nw">volume-label</code> و <code dir="ltr" class="br-white nw">volume-details</code> ، 
+وسيعلن عن  (مستوى الصوت) و  (ضبط مستوى الصوت).
+            </p>
+
+            <p class="hinty">
+                لقد رأيت أن كلاً من السمتين <code dir="ltr" class="br-white nw">aria-label</code> و <code dir="ltr" class="br-white nw">aria-labelledby</code> تساعدان "قارئات الشاشة" <em>screen readers</em> على فهم وظيفة العناصر. 
+إذن، أيهما ينبغي عليك استخدامه؟ بما أن كلتيهما تؤديان الوظيفة نفسها، 
+فيمكن استخدام أي منهما، إلا أن هناك بعض المزايا لاستخدام <code dir="ltr" class="br-white nw">aria-labelledby</code> مقارنةً بـ <code dir="ltr" class="br-white nw">aria-label</code> :
+            </p>
+
+            <ul>
+                <li><p class="hinty">إذا كان أحدهم يستخدم "خدمة ترجمة" <em>a translation service</em> لترجمة المحتوى الموجود على صفحتك، فقد لا تتم ترجمة النص الوارد في سمة <code dir="ltr" class="br-white nw">aria-label</code> دائمًا.</p></li>
+
+                <li><p class="hinty">
+                    يمكن أن يساعد استخدام السمة <code dir="ltr" class="br-white nw">aria-labelledby</code> أيضاً في منع حدوث "تعارض" <em>mismatch</em> بين "نص التسمية المرئي" <em>the visible label text</em> و"التسمية غير المرئية" <em>the invisible label</em> لمستخدمي "قارئات الشاشة" <em>screen reader</em> ، 
+إذ أن تحديث النص المرئي سيؤدي "تلقائياً" <em>automatically</em> إلى تحديث التسمية غير المرئية.
+                </p></li>
+
+                <li><p class="hinty">يمكن لسمة <code dir="ltr" class="br-white nw">aria-labelledby</code> أن تسهّل إلى حد كبير "عملية الإنشاء البرمجي" <em>programmatically</em> لتسميات معقدة وغير مرئية تتألف من مصادر نصية متعددة.</p></li>
+            </ul>
+
+            <p class="hinty">
+                ملاحظة أخيرة: لا تستخدم الخاصيتين <code dir="ltr" class="br-white nw">aria-label</code> و <code dir="ltr" class="br-white nw">aria-labelledby</code> معاً على العنصر نفسه، 
+ففي هذه الحالة، سيتم تحديد التسمية غير المرئية (التي تستخدمها قارئات الشاشة) دائماً بواسطة <code dir="ltr" class="br-white nw">aria-labelledby</code> ، 
+بينما سيتم تجاهل <code dir="ltr" class="br-white nw">aria-label</code> تماماً.
+            </p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ماذا تعني اختصار <b>ARIA</b> ؟</h5>
+
+			
+			<p><mark> <b>١. تطبيقات الإنترنت الغنية المُيسَّرة <em>Accessible Rich Internet Applications</em> .</b> ✅</mark></p>
+			<p> ٢. إمكانية الوصول عبر التكامل المتقدم للموارد <em>Advanced Resource Integration Accessibility</em> . ❌</p>
+			<p> ٣. الوصول الآلي إلى تطبيقات الإنترنت الغنية <em>Automated Rich Internet Access</em> . ❌</p>
+			<p> ٤. تطبيقات تفاعلية ومتجاوبة ومُيسَّرة <em>Accessible Responsive Interactive Applications</em> . ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هي وظيفة كل من <code dir="ltr" class="br-white nw">aria-label</code> و <code dir="ltr" class="br-white nw">aria-labelledby</code> ؟</h5>
+
+			
+			<p> ١. تُعدّل هذه الأدوات "المظهر المرئي" <i>the visual appearance</i> للعناصر. ❌</p>
+            <p><mark> <b>٢. تُضيف تسميات للعناصر لتحسين "إمكانية الوصول" <em>accessibility</em> إليها بواسطة "برامج قراءة الشاشة" <i>screen readers</i> .</b> ✅</mark></p>
+			<p> ٣. تُغيّر هذه الأدوات "وظائف حقول إدخال النماذج" <em>the functionality of form inputs</em> . ❌</p>
+			<p> ٤. تُضيف هذه الأدوات "تأثيرات حركية" <i>animation effects</i> للعناصر. ❌</p>
+			
+				
+			<br>
+
+			<h5>متى ينبغي استخدام <code dir="ltr" class="br-white nw">aria-labelledby</code> بدلاً من <code dir="ltr" class="br-white nw">aria-label</code> ؟</h5>
+
+			<p> ١. عندما تحتاج إلى توفير "تلميح" <i>a tooltip</i> لعنصر ما. ❌</p>
+			<p> ٢. عندما ترغب في تغيير "لون عنصر ما" <i>the color of an element</i> . ❌</p>
+			<p> ٣. عندما تحتاج إلى "إخفاء عنصر" <i>hide an element</i> عن "قارئات الشاشة" <em>screen readers</em> . ❌</p>
+			<p><mark> <b>٤. عندما يوجد "نص مرئي" <i>visible text</i> على الصفحة يمكن استخدامه كـ"تسمية" <em>a label</em> .</b> ✅</mark></p>
+
+			
+				
+			
+
+		</div>
+
+
+
         </section>
 
 
+        <!--  ث  -->
         <section id="4">
 
             <h3>ث. ما هي السمة aria-hidden وكيف تعمل؟</h3>
+
+            <p>إذا احتجت في أي وقت إلى عرض محتوى مع إخفائه في الوقت نفسه عن مستخدمي "التقنيات المساعدة" <em>assistive technology</em> ،مثل "قارئات الشاشة" <em>screen readers</em> ، فيمكنك استخدام السمة <code dir="ltr" class="br-white nw">aria-hidden</code> .</p>
         
+            <p>ما عليك سوى إضافته إلى عنصر اتش.تي.ام.ال <em>HTML</em> الذي تريد إخفاءه وضبط قيمته على <code class="br">"true"</code> ، كما ترى هنا: <code dir="ltr" class="br-white nw">aria-hidden="true"</code> .</p>
+
+            <p class="hinty">
+                تُخفي هذه السمة العنصر وجميع "عناصره الفرعية" <i>its children</i> عن "شجرة إمكانية الوصول" <em>The accessibility tree</em> ، 
+مع إبقائها "مرئية" <i>visible</i> على الصفحة. وتشمل حالات الاستخدام الشائعة ما يلي:
+            </p>
+
+            <ul>
+                <li><p class="hinty">"الأيقونات" <em>Icons</em> والصور ذات الغرض "الزخرفي" <em>decorative</em> فقط.</p></li>
+
+                <li><p class="hinty">"المحتوى المكرر" <em>Duplicated content</em> .</p></li>
+            </ul>
+
+            <p>
+                من المهم تذكر أن السمة <code dir="ltr" class="br-white nw">aria-hidden</code> تخفي المحتوى فقط عن "التقنيات المساعدة" <em>assistive technology</em> ، مثل "قارئات الشاشة" <em>screen readers</em> . 
+أما إذا كان ينبغي إخفاء المحتوى عن الجميع، فلا ينبغي استخدام <code dir="ltr" class="br-white nw">aria-hidden</code> لهذا الغرض. 
+على سبيل المثال، يجب إخفاء "قائمة الهامبرغر" <i>hamburger menu</i> ، 
+عندما تكون "مطوية" <em>collapsed</em> عن جميع مستخدمي "لوحة المفاتيح" <i>keyboard users</i> ، 
+وليس فقط عن مستخدمي "قارئات الشاشة" <em>screen reader</em> ، 
+وفي هذه الحالة، يمكنك ضبط خاصية "سي.اس.اس" <b>CSS</b> المسماة <code dir="ltr" class="br-white">display</code> على القيمة <code class="br">none</code> لإزالة القائمة من الصفحة المعروضة ومن "شجرة إمكانية الوصول" <em>The accessibility tree</em> أثناء طيها.
+            </p>
+
+            <p>
+                لا ينبغي مطلقاً استخدام السمة <code dir="ltr" class="br-white nw">aria-hidden</code> لإخفاء عنصر "قابل للتركيز عليه" <em>is focusable</em> باستخدام "لوحة المفاتيح" <em>the keyboard</em> ، 
+فهذه السمة تزيل العنصر من "شجرة إمكانية الوصول" <em>The accessibility tree</em> فقط، 
+ولا تزيله من "نموذج كائن المستند" <b>DOM</b> . 
+ونتيجة لذلك، سيظل بإمكان مستخدمي "قارئات الشاشة" <em>screen reader</em> الانتقال إلى العنصر باستخدام "مفتاح طاب" <em>tab</em>، 
+لكن "قارئ الشاشة" <em>screen reader</em> لن ​​يعلن عن وجوده، مما يجعلهم "يركزون" <em>focus</em> فعلياً على "لاشيء" <em>"nothing"</em> .
+            </p>
+
+            <p class="hinty">
+                إليك مثال نقوم فيه بإخفاء "أيقونة" <em>an icon</em> من "شجرة إمكانية الوصول" <em>The accessibility tree</em> عن طريق إضافة السمة <code dir="ltr" class="br-white nw">aria-hidden</code> بقيمة <code class="br">"true"</code> .
+            </p>
+
+            <p class="hinty">
+                نُبقي النص متاحاً فقط لـ"التقنيات المساعدة" <em>assistive technologies</em> ، وذلك لتجنب "أي لبس" <i>any confusion</i> قد ينشأ عن "التكرار" <i>the redundancy</i> الناتج عن وجود كل من "الأيقونة" <em>an icon</em> والنص "للغرض نفسه" <i>for the same purpose</i> .
+            </p>
+
+            <p class="hinty">
+                <b>ملاحظة:</b> يتضمن هذا المثال التفاعلي "شبكة توصيل المحتوى" <b>CDN</b> الخاصة بـ <em>Font Awesome</em> ، 
+مما يتيح لك رؤية "أيقونة الترس" <em>The gear icon</em> معروضة في نافذة المعاينة.
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ <span class="tag-g">&lt;!-- Font Awesome CDN --&gt;</span>
+ &lt;link
+  <span class="attr">rel=<span class="value">"stylesheet"</span>
+  href=<span class="value">"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"</span></span>
+ /&gt;
+&lt;/head&gt;
+
+&lt;button&gt;
+ &lt;i <span class="attr">class=<span class="value">"fa-solid fa-gear"</span> aria-hidden=<span class="value">"true"</span></span>&gt;&lt;i&gt;
+ &lt;span <span class="attr">class=</span><span class="value">"label"</span>&gt;<span class="txt">إعدادات</span>&lt;span&gt;
+&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <button>
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span class="label">إعدادات</span>
+                </button>
+            </div>
+
+            <br>
+
+            <p class="hinty">لا تحتاج إلى استخدام <code dir="ltr" class="br-white nw">aria-hidden</code> في الحالات التالية:</p>
+
+            <ul>
+                <li><p class="hinty">يحتوي عنصر اتش.تي.ام.ال بالفعل على سمة <code dir="ltr" class="br-white">hidden</code> .</p></li>
+
+                <li><p class="hinty">"العنصر" <em>The element</em> أو "العنصر السلف له" <em>The element's ancestor</em> مخفي بالفعل باستخدام <code dir="ltr" class="br-white nw">display: none</code> .</p></li>
+                
+                <li><p class="hinty">"العنصر" <em>The element</em> أو "العنصر السلف له" <em>The element's ancestor</em> مخفي بالفعل باستخدام <code dir="ltr" class="br-white nw">visibility: hidden</code> .</p></li>
+            </ul>
+
+            <p class="hinty">في هذه الحالات الثلاث، يكون العنصر "مخفياً" <em>hidden</em> بالفعل عن "شجرة إمكانية الوصول" <em>The accessibility tree</em> ، ولذلك فإن السمة <code dir="ltr" class="br-white nw">aria-hidden</code> ليست ضرورية.</p>
+
+            <p>
+                كما هو الحال عند استخدام أي من سمات <b>ARIA</b> ، 
+ينبغي عليك دائمًا إجراء اختبارات باستخدام "التقنيات المساعدة" <em>assistive technologies</em> — 
+ويفضل أن يتولى أشخاص من ذوي "الإعاقة" <em>disabilities</em> اختبار عملك — 
+للتأكد من سهولة فهمه، حتى مع وجود هذه "العناصر المخفية" <em>hidden elements</em> .
+            </p>
+
+            <p>
+                عليك أيضًا أن تدرك أن ضبط السمة <code dir="ltr" class="br-white nw">aria-hidden</code> على القيمة <code class="br">"false"</code> لن يجعل العنصر مرئيًا لـ"تقنيات المساعدة" <em>assistive technologies</em> إذا كان أي من "العناصر الأب له" <em>its parents</em> يمتلك هذه السمة مضبوطة على القيمة <code class="br">"true"</code> .
+            </p>
+
+            <p>
+                تُستخدم السمة <code dir="ltr" class="br-white nw">aria-hidden</code> لإخفاء العناصر عن الأشخاص الذين يستخدمون "التقنيات المساعدة" <em>assistive technology</em> ، مثل مستخدمي "قارئات الشاشة" <em>screen reader</em> .
+            </p>
+
+            <p>
+                على الرغم من أن هذه الطريقة قد تكون مفيدة لإخفاء "العناصر الزخرفية البحتة" <em>purely decorative elements</em> و "المحتوى المكرر" <em>duplicated content</em> ، إلا أنه ينبغي استخدامها باعتدال "لتجنب إعاقة إمكانية الوصول" <em>to avoid hindering accessibility</em> .
+            </p>
+
+            <p>
+                بشكل عام، يجب أن يكون "كل المحتوى والوظائف المتاحة" <i>all content and functionality available</i> على الصفحة متاحة أيضاً للأشخاص الذين يستخدمون "التقنيات المساعدة" <em>assistive technology</em>. 
+إن حالات استخدام السمة <code dir="ltr" class="br-white nw">aria-hidden</code> محدودة للغاية، 
+ويجب أن تقتصر في المقام الأول على جعل التجربة أكثر "سلاسة" <i>cleaner</i> لمستخدمي "قارئات الشاشة" <em>screen reader</em> من خلال "إزالة المعلومات الزخرفية البحتة أو المكررة" <i>removing purely decorative or duplicate information</i> . 
+لا تستخدم <code dir="ltr" class="br-white nw">aria-hidden</code> لإخفاء محتوى تعتقد أن مستخدمي "قارئات الشاشة" <em>screen reader</em> لن ​​يهتموا به ، 
+فمن حق هؤلاء المستخدمين الوصول إلى "جميع المعلومات" <i>all information</i> الموجودة على الصفحة.
+            </p>
+
+            <p>من خلال اتباع "أفضل الممارسات هذه" <i>these best practices</i> و"اختبار تجربة المستخدم" <em>testing the user experience</em> ، يمكنك إنشاء "تجارب رقمية شاملة للجميع" <em>inclusive online experiences for everyone</em> .</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض الأساسي من السمة <code dir="ltr" class="br-white nw">aria-hidden</code> ؟</h5>
+
+			
+			<p> ١. لتحديد "المظهر المرئي" <i>the visual appearance</i> لعنصر ما. ❌</p>
+			<p> ٢. لتحسين "أداء الموقع الإلكتروني" <i>website performance</i> . ❌</p>
+            <p><mark> <b>٣. لإخفاء العناصر عن "التقنيات المساعدة" <em>assistive technologies</em> .</b> ✅</mark></p>
+			<p> ٤. لتحسين "توافق المتصفحات" <i>browser compatibility</i> . ❌</p>
+			
+				
+			<br>
+
+
+			<h5>متى ينبغي استخدام السمة <code dir="ltr" class="br-white nw">aria-hidden</code> ؟</h5>
+
+			
+			<p> ١. لـ"جميع العناصر" <i>all elements</i> الموجودة في صفحة الويب. ❌</p>
+			<p> ٢. لـ"العناصر المخفية بصرياً" <i>elements that are visually hidden</i> ولكنها تظل مهمة "لتجربة المستخدم" <i>the user experience</i> . ❌</p>
+            <p><mark> <b>٣. لـ"العناصر الزخرفية" <em>decorative elements</em> التي لا تساهم في "المحتوى الرئيسي" <i>the main content</i> .</b> ✅</mark></p>
+			<p> ٤. للعناصر التي تتم إضافتها أو إزالتها "ديناميكياً" <i>dynamically</i> . ❌</p>
+			
+				
+			<br>
+
+			<h5>ما هي المخاطر المحتملة للإفراط في استخدام السمة <code dir="ltr" class="br-white nw">aria-hidden</code> ؟</h5>
+
+			<p> ١. انخفاض "أداء الموقع الإلكتروني" <i>website performance</i> . ❌</p>
+			<p> ٢. "عدم التوافق" <i>Incompatibility</i> مع المتصفحات القديمة. ❌</p>
+            <p><mark> <b>٣. إعاقة "إمكانية الوصول" <em>accessibility</em> للمستخدمين ذوي "الإعاقة" <i>disabilities</i> .</b> ✅</mark></p>
+			<p> ٤. زيادة "حجم الملف" <i>file size</i> . ❌</p>
+
+			
+
+		</div>
+
+
         </section>
 
 
+        <!--  ج  -->
         <section id="5">
 
             <h3>ج. ما هي السمة aria-describedby وكيف تعمل؟</h3>
+
+            <p>
+                تُستخدم السمة <code dir="ltr" class="br-white nw">aria-describedby</code> لتوفير معلومات إضافية حول عنصر ما لمستخدمي "قارئات الشاشة" <em>screen reader</em> ، 
+وذلك من خلال الإشارة إلى محتوى موجود بالفعل في الصفحة. 
+وتُنشئ هذه السمة "رابطاً برمجياً" <em>a programmatic association</em> بين العنصر والمحتوى ( وهو ما يُعرف تقنياً بـ "الوصف المُتاح" أو <em>an accessible description</em> )، 
+مما يتيح لـ"قارئات الشاشة" <em>screen readers</em> إطلاع المستخدمين على تلك المعلومات الإضافية عند تفاعلهم مع العنصر.
+            </p>
+
+            <p>
+                يتمثل الاستخدام الأكثر شيوعاً للسمة <code dir="ltr" class="br-white nw">aria-describedby</code> في ربط التعليمات ورسائل الخطأ بحقول الإدخال في النماذج. 
+ونظراً لتعدد الطرق التي يستخدمها مستخدمو "قارئات الشاشة" <em>screen reader</em> للتنقل داخل الصفحة، فقد تفوتهم هذه الرسائل أثناء التنقل بين حقول الإدخال، 
+لذا فإن استخدام <code dir="ltr" class="br-white nw">aria-describedby</code> يضمن سماعهم لتلك الرسائل.
+            </p>
+
+            <p class="hinty">لنلقِ نظرةً على بعض الأمثلة لفهم كيفية عمل ذلك. في هذا المثال الأول، لدينا عنصر "نموذج" <code dir="ltr" class="br-white2">form</code> يقبل "كلمة مرور" <em>a password</em> .</p>
+
+            <p class="hinty">
+                اكتب "بضعة أحرف" <i>a few characters</i> في "حقل إدخال كلمة المرور" <em>the password input field</em> . 
+ستلاحظ أن "كلمة المرور" <em>the password</em> تظهر مموهة ( "مخفية" <em>masked</em> ) في نافذة المعاينة. 
+كما ستلاحظ أن "النص الإرشادي الخاص بكلمة المرور" <em>the password-help text</em> يظل باللون الأحمر إلى أن تقوم بإدخال 8 أحرف أو أكثر.
+            </p>
+
+            <p class="hinty">
+                <b>ملاحظة:</b> يستخدم هذا المثال التفاعلي لغتي <b>CSS</b> و <b>JavaScript</b> لتحديث لون النص المساعد الخاص بكلمة المرور بشكل "ديناميكي" <em>dynamically</em> .
+            </p>
+
+
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"password"</span></span>&gt;<span dir="rtl" class="txt">كلمة المرور:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"password"</span> id=<span class="value">"password"</span> aria-describedby=<span class="value">"password-help"</span></span> /&gt;
+ &lt;p <span class="attr">id=<span class="value">"password-help"</span></span>&gt;<span dir="rtl" class="txt">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</span>&lt;/p&gt;
+&lt;/form&gt;</span>
+
+<span class="tag">&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">#password-help {
+ <span class="attr">color: <span class="value">red</span><span class="txt">;</span></span>   
+}</span>
+            </code></pre></div>
+
+            <h4>index.js</h4>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const</span> passwordEl <span class="tag-b">=</span> document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"password"</span>)</span>;
+<span class="tag-b">const</span> passwordHelpText <span class="tag-b">=</span> document.<span class="tag-b">getElementById</span><span class="attr">(<span class="value">"password-help"</span>)</span>;
+
+passwordEl.<span class="tag-b">addEventListener</span><span class="attr">(</span><span class="value">"input"</span>, <span class="tag">(<span class="tag-b">e</span>)</span> => <span class="tag">{</span>
+ <span class="tag-b">const</span> userInput <span class="tag-b">=</span> <span class="tag-b">e</span>.target.value;
+ passwordHelpText.style.color <span class="tag-b">=</span> userInput.lenght <span class="tag-b">&gt;= 8</span> <span class="value">? "green" <span class="tag-b">:</span> "red"</span>;
+<span class="tag">}</span><span class="attr">)</span>;
+            </code></pre></div>
+            </div>
+
+            
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <form>
+                    <label for="password-6-5">كلمة المرور:</label>
+                    <input type="password" id="password-6-5" aria-describedby="password-help-6-5" />
+                    <p id="password-help-6-5">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</p>
+                </form>
+            </div>
+
+            <p>نستخدم عنصر التسمية <code class="br-white2">label</code> لنص "كلمة المرور" <code class="br-white">Password</code> ونربطه بـ"حقل إدخال كلمة المرور" <span dir="ltr" class="nw">The password <code class="br-white2">input</code> field</span> .</p>
+
+            <p>
+                لدينا أيضاً عنصر "فقرة" <em>paragraph</em> يوضح "متطلبات كلمة المرور" <em>the password requirements</em> . 
+ونستخدم السمة <code dir="ltr" class="br-white nw">aria-describedby</code> لربط "حقل إدخال كلمة المرور" <span dir="ltr" class="nw">The password <code class="br-white2">input</code> field</span> بمتطلبات كلمة المرور الواردة في عنصر "الفقرة" <em>The paragraph</em> . 
+فعندما يتفاعل مستخدم يعتمد على "قارئ الشاشة" <em>screen reader</em> مع حقل "الإدخال" <code class="br-white2">input</code> هذا، 
+سيقوم "قارئ الشاشة" <em>screen reader</em> بالإعلان عن اسم الحقل <code class="br-white2">input</code> ( "كلمة المرور" <code class="br-white">Password</code> )، 
+وقد يعلن أيضاً عن متطلبات كلمة المرور. 
+ومع ذلك، لا يُعد هذا "ضماناً مطلقاً" <em>an absolute guarantee</em> ، 
+إذ قد لا تعلن "بعض برامج قراءة الشاشة" <em>some screen readers</em> عن "المحتوى الإضافي" <i>the additional content</i> تلقائياً، 
+أو قد تعلن عنه في ظروف محددة فقط. وهذا أمر شائع، 
+فكل "قارئ شاشة" <em>screen reader</em> يختلف عن الآخر ويتعامل مع سمات <b>ARIA</b> بطريقته الخاصة. 
+ورغم ذلك، لا يقلل هذا من أهمية استخدام السمة <code dir="ltr" class="br-white nw">aria-describedby</code> ، 
+فهي ستظل مفيدة لمستخدمي "برامج قراءة الشاشة" <em>screen reader</em> بشكل عام.
+            </p>
+
+            <p class="hinty">
+                من حالات الاستخدام الجيدة الأخرى لسمة <code dir="ltr" class="br-white nw">aria-describedby</code> وجود زر للحذف. إليك مثال على "زر حذف" <span dir="ltr" class="nw">delete <code class="br-white2">button</code></span> متبوع بـ"رسالة تصف ما سيحدث عند النقر على الزر" <i>a message describing what will happen when the button is clicked</i> :
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">aria-describedby=</span><span class="value">"delete-message"</span><span class="attr"></span>&gt;<span class="txt">حذف</span>&lt;/button&gt;</span>
+
+<span class="tag">&lt;p <span class="attr">id=<span class="value">"delete-message"</span></span>&gt;<span dir="rtl" class="txt">تحذير! جميع عمليات الحذف نهائية.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <button aria-describedby="delete-message-6-5">حذف</button>
+
+                <p id="delete-message-6-5">تحذير! جميع عمليات الحذف نهائية.</p>
+            </div>
+
+            <p>
+                تماماً كما في المثال السابق، "نربط زر الحذف بالرسالة" <em>we associate the delete button with the message</em> باستخدام السمة <code dir="ltr" class="br-white nw">aria-describedby</code> ، 
+إذ يجب أن تتطابق قيمة "المعرِّف" <code class="br-white2">id</code> مع قيمة السمة <code dir="ltr" class="br-white nw">aria-describedby</code> .
+            </p>
+
+            <p class="hinty">
+                تُعد السمة <code dir="ltr" class="br-white nw">aria-describedby</code> "سمةً قويةً" <em>a powerful attribute</em> يمكن استخدامها لضمان توفير "معلومات إضافية" <i>additional information</i> حول عنصر ما لـ"مستخدمي قارئات الشاشة" <i>screen reader users</i> عند تفاعلهم معه، 
+إذ تُستخدم غالباً لربط "التعليمات ورسائل الخطأ" <em>instructions and error messages</em> بـ"حقول الإدخال في النماذج" <em>form inputs</em> ، 
+وذلك للحد من احتمالية تفويت المستخدمين لهذه الرسائل أثناء تنقلهم داخل "النموذج" <em>the form</em> .
+            </p>
+
+        
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض من السمة <code dir="ltr" class="br-white nw">aria-describedby</code> في HTML ؟</h5>
+
+			
+			<p> ١. لتحديد "مُعرّف فريد" <i>a unique identifier</i> لعنصر ما. ❌</p>
+            <p><mark> <b>٢. لتوفير "معلومات إضافية" <i>additional information</i> حول عنصر ما لـ"تقنيات المساعدة" <em>assistive technologies</em> .</b> ✅</mark></p>
+			<p> ٣. لتحديد "لغة مستند اتش.تي.ام.ال" <em>The language of an HTML document</em> . ❌</p>
+			<p> ٤. للتحكم في ظهور "عنصر اتش.تي.ام.ال" <em>an HTML element</em>. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>في الأمثلة المقدمة، كيف تعزز السمة <code dir="ltr" class="br-white nw">aria-describedby</code> "تجربة المستخدم" <em>the user experience</em> لـ"حقول النماذج" <em>form fields</em> ؟</h5>
+
+			
+			<p> ١. يُغيّر هذا الإجراء "المظهر المرئي" <i>the visual appearance</i> لـ"حقول النموذج" <i>the form fields</i> . ❌</p>
+            <p><mark> <b>٢. يُضيف "نصًا وصفيًا إضافيًا" <em>additional descriptive text</em> لـ"حقول النموذج" <em>form fields</em> لتوفير سياق أو تعليمات أكثر تفصيلًا.</b> ✅</mark></p>
+			<p> ٣. يتحقق من صحة "قيم الإدخال" <em>input values</em> في "حقول النموذج" <em>form fields</em> . ❌</p>
+			<p> ٤. يملأ "حقول النموذج" <em>form fields</em> تلقائيًا بـ"القيم الافتراضية" <i>default values</i> . ❌</p>
+			
+				
+			<br>
+
+			<h5>أي مما يلي يمثل الطريقة الصحيحة لاستخدام السمة <code dir="ltr" class="br-white nw">aria-describedby</code> "داخل نموذج" <em>inside of a form</em> ؟</h5>
+
+			<p><mark> <b>١.             <div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"password"</span></span>&gt;<span dir="rtl" class="txt">كلمة المرور:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"password"</span> id=<span class="value">"password"</span> aria-describedby=<span class="value">"password-help"</span></span> /&gt;
+ &lt;p <span class="attr">id=<span class="value">"password-help"</span></span>&gt;<span dir="rtl" class="txt">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</span>&lt;/p&gt;
+&lt;/form&gt;</span>
+            </code></pre></div></b> ✅</mark></p>
+
+			<p> ٢. <div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"password"</span></span>&gt;<span dir="rtl" class="txt">كلمة المرور:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"password"</span> id=<span class="value">"password"</span> aria-describedby=<span class="value">"password"</span></span> /&gt;
+ &lt;p <span class="attr">id=<span class="value">"password-help"</span></span>&gt;<span dir="rtl" class="txt">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</span>&lt;/p&gt;
+&lt;/form&gt;</span>
+            </code></pre></div> ❌</p>
+
+			<p> ٣. <div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"password"</span></span>&gt;<span dir="rtl" class="txt">كلمة المرور:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"password"</span> id=<span class="value">"password"</span> aria-describedby=<span class="value">"password-help"</span></span> /&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</span>&lt;/p&gt;
+&lt;/form&gt;</span>
+            </code></pre></div> ❌</p>
+
+			<p> ٤. <div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"password"</span></span>&gt;<span dir="rtl" class="txt">كلمة المرور:</span>&lt;/label&gt;
+ &lt;input 
+  <span class="attr">type=<span class="value">"password"</span> 
+  id=<span class="value">"password"</span> 
+  aria-describedby=<span dir="rtl" class="value">"يجب أن تتكون كلمة المرور من 8 أحرف على الأقل."</span></span> 
+/&gt;
+&lt;/form&gt;</span>
+            </code></pre></div> ❌</p>
+
+
+
+			
+
+		</div>
 
         </section>
 
@@ -84,6 +1399,6 @@
 
 
 
-
+<script src="scripts/index6.js"></script>
 </body>
 </html>

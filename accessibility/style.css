@@ -266,6 +266,13 @@ section {
   overflow-x: auto;
 }
 
+.preview button {
+
+  font-size: 1rem;
+}
+  
+
+
 
 
 
@@ -393,7 +400,7 @@ section {
 .code-block code {
   color: #fff;
   line-height: 1.8;
-  
+  font-size: 1.1rem;
   
 }
 
@@ -419,6 +426,14 @@ section {
 
 .code-block code .tag {
   color: #ff6b6b;
+}
+
+.code-block code .tag-b {
+  color: rgb(79, 164, 250);
+}
+
+.code-block code .tag-g {
+  color: rgb(179, 177, 177);
 }
 
 .code-block code .attr {
@@ -490,3 +505,18 @@ form {
   font-size: large;
 }
 
+.codeFiles {
+  background-color: #2a2a72;
+  border-radius: 8px;
+  direction: ltr;
+  padding: 8px;
+}
+
+.codeFiles h4 {
+  color: #dcdcdc;
+}
+
+
+.nw {
+  white-space: nowrap;
+}
