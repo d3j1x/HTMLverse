@@ -24,19 +24,243 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!--  -->
     <section class="box">
         <div class="sub-title">
             <h2>٧. إنشاء وحدة تحكم صوتية مُيسَّرة الاستخدام Accessible Audio Controller</h2>
             <span class="hint">ورشة عمل</span>
-            <p>قريبًا</p>
+            <p>في هذه الورشة، ستتدرب على استخدام <b>ARIA</b> من خلال بناء "وحدة تحكم صوتية" <em>Audio controller</em> مُهيَّأة لتكون "متاحة للجميع" <em>Accessible</em> .</p>
         </div>
 
+
+        <!-- النموذج -->
         <section >
 
-            <h3></h3>
+            <h3>النموذج</h3>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>عناصر تحكم يسهل الوصول إليها<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
 
         </section>
+
+
+
+        <!-- Steps الخطوات -->
+        <section >
+
+            <h3>الخطوات</h3>
+
+            <section>
+                <h4>الخطوة ١:</h4>
+                <ul>
+                    <li><p class="hinty">للبدء، أضف عنصر <code class="br-white2">h1</code> يحتوي على النص <code dir="rtl" class="br-white">عناصر التحكم في الصوت</code> .</p></li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٢:</h4>
+                <ul>
+                    <li><p class="hinty">بعد ذلك، أضف عنصر "زر" <code dir="ltr" class="br-white2">button</code> مع ضبط السمة <code dir="ltr" class="br-white nw">type</code> على القيمة <code dir="ltr" class="br">"button"</code> .</p></li>
+
+                    <li><p class="hinty">يجب أن يكون "نص عنصر الزر" <span dir="ltr" class="nw">(The <code class="br-white2">button</code> element's text)</span> هو <code dir="rtl" class="br-white">تشغيل</code> .</p></li>
+                </ul>
+            </section>
+
+            <section>
+            
+                <h4>الخطوة ٣:</h4>
+                <ul>
+                    <li><p class="hinty">بعد ذلك، أضف عنصر <code dir="ltr" class="br-white2">div</code> لاحتواء "جميع عناصر التحكم في مستوى الصوت" <em>all the elements for the volume control</em> .</p></li>
+
+                    <li>
+                        <p class="hinty">
+                            يُعد عنصر <code class="br-white2">span</code> "حاويةً عامةً ومُضمَّنة" <em>a generic inline container</em> للمحتوى، 
+إذ يُستخدم عادةً "لتطبيق تنسيق مختلف على جزء من النص" <i>used to style a piece of text differently</i> مقارنةً بالنص المحيط به، 
+أو "لتغليف النص" <i>to wrap text</i> ومنحه مُعرِّفاً <code class="br-white">id</code> يمكن للعناصر الأخرى ( مثل سمات <b>ARIA</b> ) الرجوع إليه.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">
+                            داخل عنصر <code class="br-white2">div</code> ، 
+قم بتضمين عنصر <code class="br-white2">span</code> مع تعيين السمة <code class="br-white">id</code> بالقيمة <code class="br nw">"volume-label"</code> ، 
+كما يجب أن يكون نص عنصر <code class="br-white2">span</code> هو <code class="br-white">مستوى الصوت</code> .
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <p class="hinty">
+                            ستتم الإشارة لاحقاً إلى المعرّف <code class="br-white">id</code> بواسطة سمات <b>ARIA</b> ، 
+وذلك لتمكين "التقنيات المساعدة" <em>assistive technologies</em> من تحديد هذا النص باعتباره "التسمية الخاصة بعنصر التحكم في مستوى الصوت" <em>the label for the volume control</em> .
+                        </p>
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٤:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">الآن حان الوقت لإضافة عنصر <code class="br-white2">span</code> آخر.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">
+                            يجب أن يحتوي عنصر <code class="br-white2">span</code> هذا على سمة <code class="br-white">id</code> مضبوطة على القيمة <code dir="ltr" class="br nw">"volume-description"</code> ، 
+كما يجب أن يكون النص الخاص به هو <code class="br-white">ضبط مستوى الصوت</code> .
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <p class="hinty">
+                            على غرار عنصر <code class="br-white2">span</code> السابق، ستتم لاحقاً الإشارة إلى مُعرِّف <code class="br-white">id</code> هذا العنصر بواسطة سمات <b>ARIA</b> ، 
+وذلك لتمكين "التقنيات المساعدة" <em>assistive technologies</em> من تحديد هذا النص "بوصفٍ لعنصر التحكم في مستوى الصوت" <em>the description for the volume control</em> .
+                        </p>
+                    </li>
+                </ul>                
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٥:</h4>
+                <ul>
+                    <li><p class="hinty">
+                        بعد ذلك، تحتاج إلى إضافة عنصر "إدخال" <code class="br-white2">input</code> وتعيين السمة <code class="br-white">type</code> إلى <code class="br">"range"</code> لإنشاء "شريط تمرير مستوى الصوت" <em>The volume slider</em> . 
+                        قم بتعيين السمة <code class="br-white">min</code> إلى <code class="br">"0"</code> ، 
+                        والسمة <code class="br-white">max</code> إلى <code class="br">"100"</code> ، 
+                        والسمة <code class="br-white">value</code> إلى <code class="br">"50"</code> لتحديد "مستوى الصوت الافتراضي" <em>the default volume level</em> .
+                    </p>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٦:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">
+                            كما تتذكر من الدروس السابقة، تُستخدم السمة <code class="br-white nw">aria-labelledby</code> عندما يكون هناك نص موجود بالفعل في الصفحة يمكن استخدامه "كتسمية" <em>as a label</em> ، 
+                            وفي هذه الحالة، قمتَ بإضافة السمة <code class="br-white nw">id</code> إلى عناصر <code class="br-white2">span</code> الخاصة بك، وهي السمة التي سيتم استخدامها هنا.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">
+                            أضف السمة <code class="br-white nw">aria-labelledby</code> إلى عنصر "الإدخال" <code class="br-white2">input</code> واضبط قيمتها لتكون <code dir ltr class="br nw">"volume-label volume-description"</code> .
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٧:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">
+                            أصبحت "وحدة التحكم في الصوت المتاحة للجميع" <em>accessible audio controller</em> شبه جاهزة، ولكن يتبقى شيء أخير يجب إضافته.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">
+                            أضف عنصر "زر" <code class="br-white2">button</code> أسفل عنصر <code class="br-white2">div</code> ، 
+                            بحيث تكون السمة <code class="br-white nw">type</code> مضبوطة على القيمة <code dir ltr class="br nw">"button"</code> ، 
+                            ويكون النص الظاهر عليه هو <code class="br-white">صامت</code> .
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">
+                            وبهذا التغيير، تكون قد أتممت هذه الورشة!
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            
+            
+            
+
+        </section>
+
+
+
+
+        <!-- Solution الحل -->
+        <section >
+
+            <h3>الحل</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>عناصر تحكم يسهل الوصول إليها<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span class="txt">عناصر التحكم في الصوت</span>&lt;/h1&gt;</span>
+  <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"button"</span>&gt;<span class="txt">تشغيل</span>&lt;/button&gt;</span>
+
+  <span class="tag">&lt;div&gt;
+   &lt;span <span class="attr">id=<span class="value">"volume-label"</span></span>&gt;<span class="txt">مستوى الصوت</span>&lt;/span&gt;
+   &lt;span <span class="attr">id=<span class="value">"volume-description"</span></span>&gt;<span class="txt">ضبط مستوى الصوت</span>&lt;/span&gt;
+   &lt;input <span class="attr">type=<span class="value">"range"</span> min=<span class="value">"0"</span> max=<span class="value">"100"</span> value=<span class="value">"50"</span> aria-labelledby=<span class="value">"volume-label volume-description"</span></span> /&gt;
+  &lt;/div&gt;</span>
+
+  <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"button"</span>&gt;<span class="txt">صامت</span>&lt;/button&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- Application التطبيق -->
+        <section >
+
+            <h3>التطبيق</h3>
+
+             <div class="preview" role="presentation">
+                <h1>عناصر التحكم في الصوت</h1>
+                <button type="button">تشغيل</button>
+
+                <div>
+                    <span id="volume-label-7">مستوى الصوت</span>
+                    <span id="volume-description-7">ضبط مستوى الصوت</span>
+                    <input type="range" min="0" max="100" value="50" aria-labelledby="volume-label volume-description" />
+                </div>
+
+                <button type="button">صامت</button>
+
+             </div>
+            
+
+        </section>
+
+
         
 
 
