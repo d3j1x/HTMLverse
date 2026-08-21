@@ -24,17 +24,150 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- Checkout Page إنشاء صفحة إتمام الشراء -->
     <section class="box">
         <div class="sub-title">
             <h2>٩. إنشاء صفحة إتمام الشراء Checkout Page</h2>
             <span class="hint">مختبر</span>
-            <p>قريبًا</p>
+            <p>الهدف: تنفيذ قصص المستخدم الموضحة أدناه.</p>
         </div>
 
+         <!-- Website code كود الموقع  -->
         <section >
 
-            <h3></h3>
+            <h3>نموذج HTML</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">صفحة إتمام الشراء Checkout Page</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+  
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <!-- User Stories قصص المستخدم -->
+        <section>
+
+            <h2>قصص المستخدم User Stories :</h2>
+
+            <ul>
+                <li><p class="userstory">١. يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">h1</code> يحتوي على النص <code dir="rtl" class="br-white">الدفع</code> .</p></li>
+
+                <li><p class="userstory">٢. يجب أن يكون لديك عنصران من نوع <code dir="ltr" class="br-white2">section</code> مباشرةً بعد عنصر <code dir="ltr" class="br-white2">h1</code> .</p></li>
+
+                <li><p class="userstory">٣. يجب أن يحتوي "القسم الأول" (the first section) على عنصر <code dir="ltr" class="br-white2">h2</code> يتضمن النص <code dir="rtl" class="br-white">عربة التسوق الخاصة بك</code> .</p></li>
+
+                <li><p class="userstory">٤. يجب أن يتضمن القسم الأول "صورة" (an image) لعنصر ما مع "نص بديل مناسب" (appropriate alternate text) . يمكنك استخدام هذه الصورة إذا أردت: <code dir="ltr" class="br-white nw">https://cdn.freecodecamp.org/curriculum/labs/cube.jpg</code></p></li>
+
+                <li><p class="userstory">٥. يجب أن يحتوي "القسم الثاني" (the second section) على عنصر <code dir="ltr" class="br-white2">h2</code> يتضمن النص <code dir="rtl" class="br-white">معلومات الدفع</code> .</p></li>
+
+                <li><p class="userstory">٦. يجب أن يكون لديك عنصر "نموذج" <code dir="ltr" class="br-white2">form</code> داخل "القسم الثاني" (the second section) .</p></li>
+
+                <li><p class="userstory">
+                    ٧. يجب أن يحتوي "النموذج" (the form) الخاص بك على "حقل إدخال" <code dir="ltr" class="br-white2">input</code> من النوع <code dir="ltr" class="br-white nw">type="text"</code> ، 
+يحمل "المعرف" <code dir="ltr" class="br-white nw">id</code> و"الاسم" <code dir="ltr" class="br-white nw">name</code> بالقيمة <code dir="ltr" class="br">"card-name"</code> ، 
+بالإضافة إلى "تسمية" <code dir="ltr" class="br-white nw">label</code> مرتبطة به.
+                </p></li>
+
+                <li><p class="userstory">
+                    ٨. يجب أن يحتوي "النموذج" (the form) الخاص بك على "حقل إدخال" <code dir="ltr" class="br-white2">input</code> من النوع <code dir="ltr" class="br-white nw">type="text"</code> ، 
+يحمل "المعرف" <code dir="ltr" class="br-white nw">id</code> و"الاسم" <code dir="ltr" class="br-white nw">name</code> بالقيمة <code dir="ltr" class="br">"card-number"</code> ، 
+بالإضافة إلى "تسمية" <code dir="ltr" class="br-white nw">label</code> مرتبطة به.
+                </p></li>
+
+                <li><p class="userstory">٩. يجب أن يكون لديك "عنصرَا إدخال" <span dir="ltr" class="nw">(two <code class="br-white2">input</code> elements)</span> على الأقل يحتويان على السمة <code dir="ltr" class="br-white nw">required</code> .</p></li>
+
+                <li><p class="userstory">
+                    ١٠. يجب عليك تضمين عنصر <code dir="ltr" class="br-white2">span</code> يحتوي على النص <code class="br-white">*</code> وضبط السمة <code dir="ltr" class="br-white nw">aria-hidden</code> على القيمة <code dir="ltr" class="br">"true"</code> داخل عنصر <code dir="ltr" class="br-white2">label</code> لكل "حقل إدخال إلزامي" (required input) ، 
+وذلك للإشارة بصرياً إلى "الحقول الإلزامية" 5 .
+                </p></li>
+                
+                <li><p class="userstory">
+                    ١١. يجب توفير عنصر <code dir="ltr" class="br-white2">p</code> يحتوي على "نص إرشادي" (a help text)  يوضح "التنسيق المطلوب لرقم البطاقة" (the required card number format) ، 
+بحيث يوضع مباشرةً بعد" حقل إدخال" (input) رقم البطاقة، 
+كما يجب أن يحمل هذا العنصر "المعرِّف" <code dir="ltr" class="br-white nw">id="card-number-help"</code> وأن تتم الإشارة إليه من قِبل "حقل إدخال رقم البطاقة" (the card number input) باستخدام السمة <code dir="ltr" class="br-white nw">aria-describedby</code> .
+                </p></li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- The Solution الحل -->
+        <section >
+
+            <h3>الحل The Solution</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">صفحة إتمام الشراء Checkout Page</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+  
+  <span class="tag">&lt;h1&gt;<span class="txt">الدفع</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;section&gt;
+   <span class="tag">&lt;h2&gt;<span dir="rtl" class="txt">عربة التسوق الخاصة بك</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;img <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/cube.jpg"</span> alt=<span class="value">"مكعب"</span></span> /&gt;</span>
+  &lt;/section&gt;</span>
+
+  <span class="tag">&lt;section&gt;
+   <span class="tag">&lt;h2&gt;<span dir="rtl" class="txt">معلومات الدفع</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;form&gt;
+    &lt;label <span class="attr">for=<span class="value">"card-name"</span></span>&gt;<span dir="rtl" class="txt">اسم صاحب البطاقة<span class="tag">&lt;span <span class="attr">aria-hidden=<span class="value">"true"</span></span>&gt;<span class="txt">*</span>&lt;/span&gt;</span></span>&lt;/label&gt;
+    &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"card-name"</span> name=<span class="value">"card-name"</span> required</span>&gt;
+    &lt;label <span class="attr">for=<span class="value">"card-number"</span></span>&gt;<span dir="rtl" class="txt">رقم البطاقة<span class="tag">&lt;span <span class="attr">aria-hidden=<span class="value">"true"</span></span>&gt;<span class="txt">*</span>&lt;/span&gt;</span></span>&lt;/label&gt;
+    &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"card-number"</span> name=<span class="value">"card-number"</span> aria-describedby=<span class="value">"card-number-help"</span> required</span>&gt;
+    &lt;p <span class="attr">id=<span class="value">"card-number-help"</span></span>&gt;<span dir="rtl" class="txt">يجب ان يتكون رقم البطاقة من 14 رقم.</span>&lt;/p&gt;
+   &lt;/form&gt;</span>
+  &lt;/section&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <!-- The Application التطبيق -->
+        <section >
+
+            <h3>التطبيق The Application</h3>
+
+            <div class="preview" role="presentation">
+                <h1>الدفع</h1>
+
+                    <section>
+                        <h2>عربة التسوق الخاصة بك</h2>
+                        <img src="./images/cube.png" alt="مكعب" />
+                    </section>
+
+                    <section>
+                    <h2>معلومات الدفع</h2>
+                    <form>
+                        <label for="card-name-9">اسم صاحب البطاقة<span aria-hidden="true">*</span></label>
+                        <input type="text" id="card-name-9" name="card-name-9" required>
+                        <label for="card-number-9">رقم البطاقة<span aria-hidden="true">*</span></label>
+                        <input type="text" id="card-number-9" name="card-number-9" aria-describedby="card-number-help-9" required>
+                        <p id="card-number-help-9">يجب ان يتكون رقم البطاقة من 14 رقم.</p>
+                    </form>
+                    </section>
+            </div>
+
+
 
         </section>
         
