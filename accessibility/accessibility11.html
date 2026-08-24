@@ -24,17 +24,204 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- Multimedia Player مشغل وسائط متعدد -->
     <section class="box">
         <div class="sub-title">
             <h2>١١. بناء مشغل وسائط متعددة Multimedia Player</h2>
             <span class="hint">مختبر</span>
-            <p>قريبًا</p>
+            <p>
+                في الدروس السابقة، تعرفت على كيفية التعامل مع "عناصر الصوت والفيديو" <span dir="ltr" class="nw"><code class="br-white2">audio</code> and <code class="br-white2">video</code> elements</span> . 
+وفي هذا المختبر، ستقوم بإنشاء "مشغل وسائط متعددة" (a multimedia player) يعرض مقطعاً صوتياً وفيديو مصحوباً بـ"نص مكتوب للمحتوى الصوتي" (a transcript) .
+            </p>
+            <p>
+                بالنسبة لـ"عنصر الصوت" <code dir="ltr" class="br-white2">audio</code> ، ستحتاج إلى تضمين "عنصر مصدر" <code dir="ltr" class="br-white2">source</code> يُستخدم لتحديد "الوسائط المُستخدَمة" (the media being used) .
+            </p>
+            <p>إليك مثال:</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;audio <span class="attr">controls aria-label=<span class="value">"هنا توضع التسمية الوصفية"</span></span>&gt;
+ &lt;source <span class="attr">src=<span dir="rtl" class="value">"ضع—الرابط—الصوتي—هنا"</span> type=<span class="value">"audio/mpeg"</span></span>&gt;
+&lt;/audio&gt;</span>
+            </code></pre></div>
+            <p>يمكن أيضاً استخدام "عنصر المصدر" <code dir="ltr" class="br-white2">source</code> داخل "عنصر الفيديو" <code dir="ltr" class="br-white2">video</code> على النحو التالي:</p>
+        
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;video <span class="attr">controls width=<span class="value">"600"</span> aria-label=<span class="value">"هنا توضع التسمية الوصفية"</span></span>&gt;
+ &lt;source <span class="attr">src=<span dir="rtl" class="value">"هنا—ضع—الرابط—المؤدي—إلى—ملف—MP4"</span> type=<span class="value">"video/mp4"</span></span>&gt;
+ <span class="value">&lt;!-- Remaining code goes here يتم وضع بقية الكود هنا --&gt;</span>
+&lt;/video&gt;</span>
+            </code></pre></div>
+
+            <p>الهدف: تنفيذ "قصص المستخدم" (the user stories) الموضحة أدناه.</p>
+
         </div>
 
+               <!-- HTML نموذج -->
         <section >
 
-            <h3></h3>
+            <h3>نموذج HTML</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">مشغل وسائط متعددة Multimedia Player</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+  
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <!-- User Stories قصص المستخدم -->
+        <section>
+
+            <h2>قصص المستخدم User Stories :</h2>
+
+            <ul>
+                <li><p class="userstory">١. يجب أن يكون لديك عنصر <code class="br-white2">h1</code> للعنوان الرئيسي للصفحة.</p></li>
+                
+                <li><p class="userstory">٢. يجب أن يكون لديك ثلاثة عناصر من نوع <code class="br-white2">section</code> .</p></li>
+
+                <li><p class="userstory">٣. داخل عنصر القسم <code class="br-white2">section</code> الأول، يجب أن يكون لديك عنصر <code class="br-white2">h2</code> لعنوان الأغنية التي يتم تشغيلها.</p></li>
+
+                <li><p class="userstory">٤. أسفل عنصر <code class="br-white2">h2</code> ، يجب أن تضع عنصر صوت <code class="br-white2">audio</code> يحتوي على السمة <code class="br-white nw">controls</code> والسمة <code class="br-white nw">aria-label</code> .</p></li>
+
+                <li><p class="userstory">
+                    ٥. داخل "عنصر الصوت" <code class="br-white2">audio</code> ، 
+ يجب أن يتوفر لديك "عنصر مصدر" <code class="br-white2">source</code> يحتوي على السمة <code class="br-white nw">src</code> التي تشير إلى "ملف صوتي" (an audio file) ، 
+بالإضافة إلى السمة <code class="br-white nw">type</code> . 
+يمكنك استخدام رابط الملف الصوتي هذا إذا أردت: <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3</code>
+                </p></li>
+
+                <li><p class="userstory">٦. داخل عنصر "القسم" <code dir="ltr" class="br-white2">section</code> الثاني، يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">h2</code> لعنوان الفيديو الذي يتم تشغيله.</p></li>
+
+                <li><p class="userstory">
+                    ٧. أسفل عنصر <code dir="ltr" class="br-white2">h2</code> ، يجب أن تضع "عنصر فيديو" <code dir="ltr" class="br-white2">video</code> يحتوي على "عناصر تحكم" <code dir="ltr" class="br-white nw">controls</code> ، 
+وسمات للعرض <code dir="ltr" class="br-white nw">width</code> ، وسمة <code dir="ltr" class="br-white nw">aria-label</code> .
+                </p></li>
+
+                <li><p class="userstory">
+                    ٨. داخل "عنصر الفيديو" <code class="br-white2">video</code> ، 
+ يجب أن يتوفر لديك "عنصر مصدر" <code class="br-white2">source</code> يحتوي على السمة <code class="br-white nw">src</code> التي تشير إلى "ملف فيديو" (a video file) ، 
+بالإضافة إلى السمة <code class="br-white nw">type</code> . 
+يمكنك استخدام رابط الفيديو هذا إذا أردت: <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4</code>
+                </p></li>
+
+                <li><p class="userstory">
+                    ٩. أسفل "عنصر المصدر" <code dir="ltr" class="br-white2">source</code> ، ينبغي أن تضع "عنصر المسار" <code dir="ltr" class="br-white2">track</code> مزوداً بالسمات التالية: 
+السمة <code dir="ltr" class="br-white nw">src</code> التي تشير إلى "ملف الترجمة" (a subtitles file) ، 
+والسمات <code dir="ltr" class="br-white nw">kind</code> و <code dir="ltr" class="br-white nw">srclang</code> و <code dir="ltr" class="br-white nw">label</code> . 
+يمكنك استخدام "رابط ملف الترجمة" (subtitles URL) هذا إذا أردت: <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt</code>
+                </p></li>
+
+                <li><p class="userstory">
+                    ١٠. داخل عنصر "القسم" <code dir="ltr" class="br-white2">section</code> الثالث، 
+يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">h2</code> لعنوان القسم، مثل "النص" (Transcript) .
+                </p></li>
+
+                <li><p class="userstory">
+                    ١١. أسفل عنصر <code dir="ltr" class="br-white2">h2</code> ، يجب أن تضع عنصر <code dir="ltr" class="br-white2">p</code> يحتوي على "النص المفرّغ" (the transcript) للفيديو.
+                </p></li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- The Solution الحل -->
+        <section >
+
+            <h3>الحل The Solution</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">مشغل وسائط متعددة Multimedia Player</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span class="txt">مشغل وسائط متعددة</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;section&gt;
+   &lt;h2&gt;<span class="txt">يُعرض الآن: الإبحار بعيداً</span>&lt;/h2&gt;
+   &lt;audio <span class="attr">controls aria-label=<span class="value">"الإبحار بعيداً"</span></span>&gt;
+    &lt;source <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"</span> type=<span class="value">"audio/mpeg"</span></span>&gt;
+   &lt;/audio&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+   &lt;h2&gt;<span dir="rtl" class="txt">ما هي دالة map وكيف تعمل؟</span>&lt;/h2&gt;
+   &lt;video <span class="attr">controls width=<span class="value">"600"</span> aria-label=<span dir="rtl" class="value">"ما هي دالة map وكيف تعمل؟"</span></span>&gt;
+    &lt;source <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"</span> type=<span class="value">"video/mp4"</span></span>&gt;
+    &lt;track
+     <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt"</span>
+     kind=<span class="value">"subtitles"</span>
+     srclang=<span class="value">"en"</span>
+     label=<span class="value">"What is a map method and how does it work?"</span></span>
+    /&gt;
+   &lt;/video&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+   &lt;h2&gt;<span class="txt">النص</span>&lt;/h2&gt;
+   &lt;p&gt;
+    <span dir="rtl" class="txt">ما هي دالة map وكيف تعمل؟ تُعد map دالةً قويةً وشائعة الاستخدام في لغة JavaScript ، وهي مخصصة للتعامل مع المصفوفات. صُممت هذه الدالة لإنشاء مصفوفة جديدة من خلال تطبيق دالة محددة على كل عنصر من عناصر المصفوفة الأصلية، فهي لا تُعدّل المصفوفة الأصلية، بل تُعيد مصفوفة جديدة تحتوي على نتائج تطبيق تلك الدالة على كل عنصر.</span>
+   &lt;/p&gt;
+  &lt;/section&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <!-- The Application التطبيق -->
+        <section >
+
+            <h3>التطبيق The Application</h3>
+
+            <div class="preview" role="presentation">
+                <h1>مشغل وسائط متعددة</h1>
+
+                <section>
+                    <h2>يُعرض الآن: الإبحار بعيداً</h2>
+                    <audio controls aria-label="الإبحار بعيداً">
+                            <source src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" type="audio/mpeg">
+                    </audio>
+                </section>
+
+                <section>
+                    <h2>ما هي دالة map وكيف تعمل؟</h2>
+                    <video controls width="600" aria-label="ما هي دالة map وكيف تعمل؟">
+                        <source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" type="video/mp4">
+                        <track
+                        src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt"
+                        kind="subtitles"
+                        srclang="en"
+                        label="What is a map method and how does it work?"
+                        />
+                    </video>
+                </section>
+
+                <section>
+                    <h2>النص</h2>
+                    <p>
+                        ما هي دالة map وكيف تعمل؟ تُعد map دالةً قويةً وشائعة الاستخدام في لغة JavaScript ، وهي مخصصة للتعامل مع المصفوفات. صُممت هذه الدالة لإنشاء مصفوفة جديدة من خلال تطبيق دالة محددة على كل عنصر من عناصر المصفوفة الأصلية، فهي لا تُعدّل المصفوفة الأصلية، بل تُعيد مصفوفة جديدة تحتوي على نتائج تطبيق تلك الدالة على كل عنصر.                    
+                    </p>
+                </section>
+
+
+            </div>
+
+
 
         </section>
         
