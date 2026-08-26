@@ -24,17 +24,277 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- HTML Accessibility Review مراجعة إمكانية الوصول اتش.تي.ام.ال -->
     <section class="box">
         <div class="sub-title">
             <h2>١٢. مراجعة إمكانية الوصول اتش.تي.ام.ال HTML Accessibility Review</h2>
             <span class="hint">مراجعة</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
+        <!-- Introduction to Accessibility مقدمة في إمكانية الوصول -->
         <section >
 
-            <h3></h3>
+            <h3>مقدمة في إمكانية الوصول Introduction to Accessibility</h3>
+
+            <ul>
+                <li>
+                    <p class="hinty">
+                        <b>إرشادات إمكانية الوصول إلى محتوى الويب (Web Content Accessibility Guidelines)</b> : تُعدّ إرشادات إمكانية الوصول إلى محتوى الويب <b>(WCAG)</b> مجموعة من الإرشادات لجعل محتوى الويب أكثر سهولة في الوصول إليه للأشخاص ذوي الإعاقة. 
+وتتمثل المبادئ الأربعة لإرشادات <b>WCAG</b> في: 
+<b><mark>POUR</mark></b> ، والتي ترمز إلى: "قابلية الإدراك" <span dir="ltr" class="nw">(<b>P</b>erceivable)</span> ، و"قابلية التشغيل" <span dir="ltr" class="nw">(<b>O</b>perable)</span> ، و"قابلية الفهم" <span dir="ltr" class="nw">(<b>U</b>nderstandable)</span> ، و"المتانة" <span dir="ltr" class="nw">(<b>R</b>obust)</span> .
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Assistive Technology for Accessibility التكنولوجيا المساعدة لتعزيز إمكانية الوصول   -->
+        <section >
+
+            <h3>التكنولوجيا المساعدة لتعزيز إمكانية الوصول Assistive Technology for Accessibility</h3>
+
+            <ul>
+                <li>
+                    <p class="hinty">
+                        <b>برامج قراءة الشاشة (Screen readers)</b> : "برمجيات" (Software programs) تقرأ "محتوى شاشة الحاسوب" (the content of a computer screen) بصوت مسموع، ويستخدمها المكفوفون أو ضعاف البصر للوصول إلى شبكة الويب.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>لوحات المفاتيح ذات النصوص الكبيرة أو نظام "برايل" Large text or braille keyboards</b> : يستخدمها الأشخاص ذوو الإعاقة البصرية للوصول إلى شبكة الويب.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>برامج تكبير الشاشة Screen magnifiers</b> : برمجيات تعمل على تكبير "محتوى شاشة الحاسوب" (the content of a computer screen) ، ويستخدمها الأشخاص ذوو الرؤية المحدودة للوصول إلى شبكة الويب.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>أجهزة التأشير البديلة Alternative pointing devices</b> : يستخدمها الأشخاص ذوو الإعاقات الحركية للوصول إلى الويب. وتشمل هذه الأجهزة "عصا التحكم" (joysticks) ، و"كرة التتبع" (trackballs) ، و"لوحة اللمس" (touchpads) .
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>التعرف على الصوت Voice recognition</b> : يُستخدم من قِبَل الأشخاص ذوي الإعاقات الحركية للوصول إلى شبكة الويب، إذ يتيح للمستخدمين التحكم في الحاسوب باستخدام أصواتهم.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Accessibility Auditing Tools أدوات تدقيق إمكانية الوصول -->
+        <section >
+
+            <h3>أدوات تدقيق إمكانية الوصول Accessibility Auditing Tools</h3>
+
+            <ul>
+                <li>
+                    <p class="hinty">
+                        <b>أدوات إتاحة الوصول الشائعة Common Accessibility Tools</b> : تُعد كل من (Google Lighthouse) و (Wave) و (IBM Equal Accessibility Checker) و (axe DevTools) من الأدوات الشائعة المستخدمة لتدقيق مدى توفر إتاحة الوصول في المواقع الإلكترونية.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Accessibility Best Practices أفضل الممارسات لإمكانية الوصول -->
+        <section >
+
+            <h3>أفضل الممارسات لإمكانية الوصول Accessibility Best Practices</h3>
+
+            <ul>
+                <li>
+                    <p class="hinty">
+                        <b>الهيكلية السليمة لمستويات العناوين Proper heading level structure</b> : ينبغي استخدام مستويات العناوين بشكل صحيح لإنشاء هيكلية منطقية للمحتوى، إذ يساعد ذلك مستخدمي التقنيات المساعدة على فهم محتوى موقعك الإلكتروني.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>إمكانية الوصول والجداول Accessibility and Tables</b> : عند استخدام الجداول، ينبغي استخدام العنصر <code class="br-white2">th</code> لتحديد خلايا العنوان والعنصر <code class="br-white2">td</code> لتحديد خلايا البيانات، 
+إذ يساعد ذلك مستخدمي التقنيات المساعدة على فهم بنية الجدول. 
+كما يتيح لك العنصر <code class="br-white2">caption</code> كتابة تسمية توضيحية (أو عنوان) للجدول، 
+مما يُمكّن المستخدمين ء ولا سيما مستخدمي التقنيات المساعدة — من استيعاب الغرض من الجدول ومحتواه بسرعة. 
+ويُستحسن وضع العنصر <code class="br-white2">caption</code> مباشرةً بعد وسم البداية للعنصر <code class="br-white2">table</code> ، 
+فبهذه الطريقة، تتمكن برامج قراءة الشاشة وغيرها من التقنيات المساعدة من توفير سياق أوضح من خلال الإعلان عن "التسمية التوضيحية" (the caption) قبل قراءة المحتوى.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>أهمية ربط حقول الإدخال بتسميات Importance for inputs to have an associated label</b> : ينبغي استخدام عنصر "التسمية" <code class="br-white2">label</code> لربط التسميات بحقول الإدخال في النماذج، إذ يساعد ذلك مستخدمي التقنيات المساعدة على فهم الغرض من حقل الإدخال.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>عنصر <code class="br-white2">span</code> وإمكانية الوصول <span dir="ltr"><code class="br-white2">span</code> element for accessibility</span></b> : يُعد عنصر <code class="br-white2">span</code> حاويةً عامةً ومُضمّنة (inline) للمحتوى. 
+ويُستخدم عادةً لتطبيق تنسيق مختلف على جزء من النص مقارنةً بالنص المحيط به، 
+أو لتغليف النص ومنحه "مُعرِّفاً" <code class="br-white">id</code> يمكن للعناصر الأخرى (مثل سمات <b>ARIA</b>) الرجوع إليه.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>أهمية <code class="br-white">alt</code> "النص البديل" الجيد <span dir="ltr">Importance of good <code class="br-white">alt</code> text</span></b> : ينبغي عليك استخدام سمة "النص البديل" <code class="br-white">alt</code> لتوفير بديل نصي للصور، إذ يساعد ذلك مستخدمي التقنيات المساعدة على فهم محتوى الصورة.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>أهمية نص الرابط الجيد Importance of good link text</b> : ينبغي استخدام "نص وصفي للرابط" (descriptive link text) لمساعدة المستخدمين على فهم الغرض منه، إذ يساعد ذلك الأشخاص الذين يستخدمون التقنيات المساعدة على فهم الغرض من "الرابط" (the link) .
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>أفضل الممارسات لجعل المحتوى الصوتي والمرئي متاحاً للجميع Best practices for making audio and video content accessible</b> : ينبغي توفير نصوص مصاحبة "ترجمة نصية ونصوص مكتوبة" (captions and transcripts) للمحتوى الصوتي والمرئي لجعله متاحاً للأشخاص الذين يعانون من ضعف السمع. كما ينبغي توفير "وصف صوتي" (audio descriptions) للمحتوى المرئي لجعله متاحاً للأشخاص الذين يعانون من ضعف البصر.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>السمة <code class="br-white">tabindex</code> <span dir="ltr"><code class="br-white">tabindex</code> attribute</span></b> : تُستخدم لجعل العناصر "قابلة لتلقي التركيز" (focusable) وتحديد الترتيب النسبي للتنقل بينها باستخدام "لوحة المفاتيح" (the keyboard) . 
+من المهم عدم استخدام قيمة للسمة <code class="br-white">tabindex</code> تزيد عن (0) ، وبدلاً من ذلك، ينبغي استخدام القيمة (0 أو 1-).
+                    </p>
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">tabindex=<span class="value">"-1"</span></span>&gt;<span dir="rtl" class="txt">عذراً، حدث خطأ أثناء إرسال طلبك.</span>&lt;/p&gt;</span>
+                    </code></pre></div>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>السمة <code class="br-white">accesskey</code> <span dir="ltr"><code class="br-white">accesskey</code> attribute</span></b> : تُستخدم لتحديد "اختصار لوحة مفاتيح" (a keyboard shortcut) لعنصر ما، مما يساعد المستخدمين الذين يعانون من إعاقات حركية على تصفح الموقع الإلكتروني بسهولة أكبر.
+                    </p>
+                    
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">accesskey=<span class="value">"s"</span></span>&gt;<span class="txt">حفظ</span>&lt;/button&gt;
+<span class="tag">&lt;button <span class="attr">accesskey=<span class="value">"c"</span></span>&gt;<span class="txt">إلغاء</span>&lt;/button&gt;
+&lt;a <span class="attr">href=<span class="value">"index.html"</span> accesskey=<span class="value">"h"</span></span>&gt;<span class="txt">الصفحة الرئيسية</span>&lt;/a&gt;</span>
+                    </code></pre></div>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- WAI-ARIA, Roles, and Attributes | WAI-ARIA والأدوار والسمات -->
+        <section >
+
+            <h3>WAI-ARIA والأدوار والسمات WAI-ARIA, Roles, and Attributes</h3>
+
+            <ul>
+                <li>
+                    <p class="hinty">
+                        <b>WAI-ARIA</b> : هو اختصار لـ "مبادرة إتاحة الويب - تطبيقات الإنترنت الغنية القابلة للإتاحة" (Web Accessibility Initiative - Accessible Rich Internet Applications) . 
+وهي مجموعة من السمات التي يمكن إضافتها إلى عناصر HTML لتحسين الإتاحة، حيث توفر معلومات إضافية للتقنيات المساعدة حول الغرض من المحتوى وبنيته.
+                    </p>
+                </li>
+
+                <li>
+                    <p class="hinty">
+                        <b>أدوار ARIA ARIA roles</b> : مجموعة من الأدوار المحددة مسبقاً التي يمكن إضافتها إلى عناصر HTML لتحديد الغرض منها، 
+مما يساعد مستخدمي التقنيات المساعدة على فهم محتوى الموقع الإلكتروني. 
+ومن الأمثلة على ذلك: <code dir="ltr" class="br-white nw">role="tab"</code> و <code dir="ltr" class="br-white nw">role="menu"</code> و <code dir="ltr" class="br-white nw">role="alert"</code> .
+                    </p>
+                    <p class="hinty">هناك ست فئات رئيسية لأدوار ARIA:</p>
+                    <ul>
+                        <li>
+                            <p class="hinty">
+                                <b>أدوار هيكلية المستند Document structure roles</b> : تُحدد هذه الأدوار البنية العامة لصفحة الويب، فبفضلها، تتمكن التقنيات المساعدة من فهم العلاقات بين الأقسام المختلفة ومساعدة المستخدمين على تصفح المحتوى.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>أدوار عناصر الواجهة Widget roles</b> : تُحدِّد هذه الأدوار الغرض من العناصر التفاعلية ووظيفتها، مثل "أشرطة التمرير" (scrollbars) .
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>أدوار المعالم Landmark roles</b> : تُصنِّف هذه الأدوار الأقسام الرئيسية لصفحة الويب وتُحدِّدها، حيث تستخدمها برمجيات قراءة الشاشة لتوفير إمكانية التنقل المريح إلى الأقسام المهمة في الصفحة.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>أدوار المناطق الحية Live region roles</b> : تُحدِّد هذه الأدوار العناصر التي تحتوي على محتوى سيتغير ديناميكياً، وبذلك، تتمكن قارئات الشاشة وغيرها من التقنيات المساعدة من الإعلان عن هذه التغييرات للمستخدمين ذوي الإعاقة البصرية.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>أدوار النافذة Window roles</b> : تُحدِّد هذه الأدوار "النوافذ الفرعية" (sub-windows) ، 
+مثل "مربعات الحوار المشروطة المنبثقة" (pop up modal dialogues) . 
+وتشمل هذه الأدوار <code class="br-white">alertdialog</code> و <code class="br-white">dialog</code> .
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>الأدوار التجريدية Abstract roles</b> : تساعد هذه الأدوار في تنظيم المستند. 
+وهي مخصصة للاستخدام الداخلي من قِبَل المتصفح فقط وليس من قِبَل المطورين، 
+لذا ينبغي عليك معرفة وجودها، ولكن لا يجب عليك استخدامها في مواقعك أو تطبيقاتك الويب.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>السمتان <code class="br-white">aria-label</code> و <code class="br-white">aria-labelledby</code></b> : تُستخدم هاتان السمتان لمنح العنصر اسماً برمجياً (أو اسماً متاحاً لتقنيات الوصول)، 
+مما يساعد مستخدمي التقنيات المساعدة (مثل قارئات الشاشة) على فهم الغرض من العنصر. 
+وغالباً ما يُلجأ إليهما عندما تكون التسمية المرئية للعنصر عبارة عن صورة أو رمز بدلاً من نص، 
+حيث تتيح السمة <code class="br-white nw">aria-label</code> تحديد الاسم مباشرةً داخل السمة نفسها، 
+بينما تتيح السمة <code class="br-white nw">aria-labelledby</code> الإشارة إلى نص موجود بالفعل في الصفحة.
+                            </p>
+
+                            <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">aria-label=<span class="value">"بحث"</span></span>&gt;
+ &lt;i <span class="attr">class=<span class="value">"fas fa-search"</span></span>&gt;&lt;/i&gt;
+&lt;/button&gt;</span>
+                            </code></pre></div>
+                            <br>
+                            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> aria-labelledby=<span class="value">"search-btn"</span></span>&gt;
+&lt;button <span class="attr">type=<span class="value">"button"</span> id=<span class="value">"search-btn"</span></span>&gt;<span class="txt">بحث</span>&lt;/button&gt;</span>
+                            </code></pre></div>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>السمة <code class="br-white">aria-hidden</code></b> : تُستخدم لإخفاء عنصر ما عن التقنيات المساعدة، مثل قارئات الشاشة. على سبيل المثال، يمكن استخدامها لإخفاء الصور الزخرفية التي لا تقدم أي محتوى ذي مغزى.
+                            </p>
+                            <div class="code-block"><pre><code>
+<span class="tag">&lt;button&gt;
+ &lt;i <span class="attr">class=<span class="value">"fa-solid fa-gear"</span> aria-hidden=<span class="value">"true"</span></span>&gt;&lt;/i&gt;
+ &lt;span <span class="attr">class=<span class="value">"label"</span></span>&gt;<span class="txt">الإعدادات</span>&lt;/span&gt;
+&lt;/button&gt;</span>
+                            </code></pre></div>
+                        </li>
+
+                        <li>
+                            <p class="hinty">
+                                <b>السمة <code class="br-white">aria-describedby</code></b> : تُستخدم لتوفير معلومات إضافية حول عنصر ما من خلال ربطه بعنصر آخر يحتوي على تلك المعلومات. 
+يتيح ذلك لمستخدمي قارئات الشاشة الوصول الفوري إلى المعلومات الإضافية عند الانتقال إلى العنصر المعني. 
+وتشمل حالات الاستخدام الشائعة ربط تعليمات التنسيق بحقل إدخال نصي، 
+أو ربط رسالة خطأ بحقل إدخال معين بعد إرسال نموذج ببيانات غير صالحة.
+                            </p>
+                            <div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"password"</span></span>&gt;<span dir="rtl" class="txt">كلمة المرور:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"password"</span> id=<span class="value">"password"</span> aria-describedby=<span class="value">"password-help"</span></span>&gt;
+ &lt;p <span class="attr">id=<span class="value">"password-help"</span></span>&gt;<span dir="rtl" class="txt">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</span>&lt;/p&gt;
+&lt;/form&gt;</span>
+                            </code></pre></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
         </section>
         

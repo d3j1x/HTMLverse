@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Accessibility إمكانية الوصول | العمل مع عناصر الوسائط المُيسَّرة Accessible Media Elements"/>
     <link rel="stylesheet" href="style.css">
+    <link href="styles/styles8.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | إمكانية الوصول</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,39 +25,782 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- Working with Accessible Media Elements العمل مع عناصر الوسائط المُيسَّرة -->
     <section class="box">
         <div class="sub-title">
             <h2>٨. العمل مع عناصر الوسائط المُيسَّرة Accessible Media Elements</h2>
             <span class="hint">نظري</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
+        <!-- أ -->
         <section id="1">
 
             <h3>أ. متى تكون سمة "النص البديل" alt ضرورية، وما هي بعض الأمثلة على النصوص البديلة الجيدة Good Alt Text ؟</h3>
 
+            <p>
+                النص البديل الذي يُشار إليه غالباً بالاختصار <span dir="ltr" class="nw"><code class="br-white">alt</code> text</span> هو "وصف نصي موجز للصورة" <em>a brief text description of an image</em> . 
+وهو يوفر معلومات جوهرية حول الصورة للمستخدمين الذين لا يستطيعون رؤيتها، مثل الأشخاص الذين يستخدمون "برامج قراءة الشاشة" <em>screen readers</em> وغيرها من "التقنيات المساعدة" <em>assistive technologies</em> .
+            </p>
+
+            <p>يُعد ذلك أمراً ضرورياً لجعل "المواقع الإلكترونية متاحة" <em>websites accessible</em> للأشخاص ذوي "الإعاقة البصرية" <em>visual disabilities</em> .</p>
+
+            <p>
+                تستخدم "محركات البحث" <em>Search engines</em> أيضاً "النص البديل" <em>Alternative text</em> لفهم الصور، 
+كما قد تعرضه بعض المتصفحات في حال عدم تحميل الصورة بشكل صحيح، 
+إذ قد يحدث ذلك عند فقدان ملف الصورة أو مواجهة المستخدم لمشكلات في الاتصال، مما يجعله مفيداً لأغراض متعددة.
+            </p>
+
+            <p class="hinty">
+                لن يتمكن الشخص ذو "الإعاقة البصرية" <em>a visual disability</em> من معرفة محتوى الصورة ما لم يتم وصفه في "النص البديل" <em>the alt text</em> . 
+                ومن الأمثلة على "النص البديل السيئ" <i>bad alt text</i> لصورة جرو عبارة "جرو لطيف" <i>(A cute puppy)</i> . 
+            </p>
+
+            <img src="./images/puppy.webp" alt="A cute puppy جرو لطيف"  />
+
+            <p>هذا النص "ليس محدداً بما يكفي" <em>is not specific enough</em> لنقل "التفاصيل المهمة" <em>the important details</em> في الصورة، مثل: كيف يبدو الجرو؟ وأين يوجد؟ وهل توجد أي أجسام مهمة حوله؟</p>
+
+            <p class="hinty">
+                لِنُحسِّن هذا، فمن الأمثلة على "النص البديل الجيد" <em>good alternative text</em> : 
+"جرو أبيض وأسود يرتدي طوقاً برتقالياً يستلقي على بطنه فوق الرمال، ناظراً إلى الجانب، وتوجد كرة برتقالية زاهية بالقرب من مخلبيه ​​الأماميين."
+            </p>
+
+            <p class="hinty">يمكنك هنا رؤية ذلك بصيغة HTML ، متضمناً "عنصر الصورة" image element ، وسمة "النص البديل" <code class="br-white nw">alt</code> ، ووصفاً أكثر تفصيلاً:</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"puppy.png"</span> alt=<span dir="rtl" class="value">"جرو أبيض وأسود يرتدي طوقاً برتقالياً يستلقي على بطنه فوق الرمال، ناظراً إلى الجانب، وتوجد كرة برتقالية زاهية بالقرب من مخلبيه ​​الأماميين."</span></span> /&gt;</span>
+                </code></pre>
+            </div>
+
+            <p>
+                من المهم الإشارة إلى أنه لا توجد طريقة واحدة صحيحة لكتابة "النص البديل" <em>alt text</em> للصورة، 
+إذ يعتمد ما تدرجه في "الوصف" <em>description</em> على السياق الذي تُستخدم فيه الصورة. 
+على سبيل المثال، إذا كانت صورة الجرو معروضة على موقع إلكتروني يتناول سلالات الكلاب، فقد ترغب في "تضمين تفاصيل أكثر دقة" <em>include more specifics</em> حول المظهر الجسدي للجرو، 
+وربما تتجاهل حقيقة وجوده على الشاطئ وهو يلعب بكرة برتقالية. 
+وفي النهاية، ينبغي لـ"النص البديل" <code class="br-white nw">alt</code> أن يعكس "الغرض الأساسي" <em>the primary purpose</em> من إدراج الصورة في الصفحة، 
+وأن توفر المعلومات الواردة فيه "التفاصيل اللازمة" <em>the necessary details</em> للأشخاص الذين لا يستطيعون رؤية الصورة لكي يدركوا ذلك الغرض.
+            </p>
+
+            <p class="hinty">لدينا هنا مثال آخر لـ"منتجع استوائي جميل" <em>a beautiful tropical resort</em> . دعونا نصفه.</p>
+
+            <img src="./images/resort.jpg" alt="Resort منتجع "  />
+
+            <p>من الأمثلة على "النص البديل السيئ" <em>bad alt text</em> لهذه الصورة كلمة "منتجع" <em>Resort</em> .</p>
+
+            <p>هذا الوصف "قصير للغاية" <em>too short</em> ولا يوفر "معلومات كافية" <em>enough information</em> عن الصورة. ولتحسينه، يمكنك توسيعه ليشمل أهم عناصر الصورة:</p>
+
+            <p class="hinty">"منتجع استوائي يضم مسبحاً تحيط به أشجار النخيل والأكواخ."</p>
+
+            <p class="hinty">يمكنك استخدام السمة alt في HTML على النحو التالي</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"resort.png"</span> alt=<span dir="rtl" class="value">"منتجع استوائي يضم مسبحاً تحيط به أشجار النخيل والأكواخ."</span></span> /&gt;</span>
+                </code></pre>
+            </div>
+
+            <p class="hinty">الآن بعد أن عرفت ما الذي يجعل "النص البديل" <code class="br-white nw">alt</code> جيداً أو سيئاً، دعنا نلقي نظرة على بعض "أفضل الممارسات" <em>the best practices</em> .</p>
+
+            <ul>
+                <li><p class="hinty">عليك محاولة إبقاء "النص البديل" <code class="br-white nw">alt</code> موجزاً، إذ ينبغي أن يكون "مفصلاً بما يكفي" <em>detailed enough</em> لفهم الصورة، ولكن دون إطالة قد تؤدي إلى "الارتباك" <i>confusing</i> .</p></li>
+
+                <li><p class="hinty">لا ينبغي لك محاولة وصف كل تفصيل صغير، بل ركّز على "الجوانب الأكثر أهمية" <em>the most important aspects</em> في الصورة.</p></li>
+
+                <li><p class="hinty">بشكل عام، لا داعي للبدء بعبارة "صورة لـ" ( <i>"image of" or "picture of"</i> ) ، إذ يمكنك البدء في الوصف مباشرةً.</p></li>
+
+                <li><p class="hinty">أيضاً، إذا كان هناك "نص مشابه" <i>similar text</i> حول الصورة، فلن تحتاج إلى كتابته مرة أخرى.</p></li>
+
+                <li><p class="hinty">عادةً ما يُنصح بإنهاء "النص البديل" <em>the alt text</em> بنقطة لضمان الاتساق.</p></li>
+
+                <li><p class="hinty">إذا كانت الصورة تمثل "رابطاً لصفحة أخرى" <em>a link to another page</em> ، فيجب أن يصف "النص البديل" <code class="br-white nw">alt</code> ما سيحدث عند "النقر عليها" <em>click on it</em> ، بدلاً من وصف الصورة نفسها.</p></li>
+            </ul>
+
+            <p class="hinty">
+                على سبيل المثال، إذا كان موقعك الإلكتروني يحتوي على "أيقونة سهم متجه لليمين" <em>a right arrow icon</em> تنقل المستخدم إلى الصفحة التالية، 
+فبدلاً من كتابة "نص بديل" <em>an alt text</em> يكتفي بعبارة "سهم لليمين" <em>right arrow</em> — كما هو الحال في هذا المثال الذي يظهر فيه "سمة النص البديل" <em>the alt attribute</em> بهذا الوصف:
+            </p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"arrow-right.png"</span> alt=<span dir="rtl" class="value">"سهم لليمين."</span></span> /&gt;</span>
+                </code></pre>
+            </div>
+
+            <p class="hinty">
+                عليك كتابة شيء كهذا بدلاً من ذلك، بحيث يصف "النص البديل" <code class="br-white nw">alt</code> ما سيحدث إذا نقر المستخدمون على الصورة، إذ سينتقلون إلى الصفحة التالية.
+            </p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"arrow-right.png"</span> alt=<span dir="rtl" class="value">"انتقل إلى الصفحة التالية."</span></span> /&gt;</span>
+                </code></pre>
+            </div>
+
+            <p class="hinty">
+                يجب توفير "نص بديل" <span dir="ltr" class="nw"><code class="br-white">alt</code> text</span> فقط للصور التي تنقل "معلومات مهمة" <em>important information</em> . 
+أما إذا كانت الصورة "تُستخدم لأغراض تزيينية بحتة" <i>only used for decorative purposes</i> ، 
+فينبغي أن يكون "النص البديل" <span dir="ltr" class="nw"><code class="br-white">alt</code> text</span> الخاص بها "فارغاً" ( <span dir="ltr" class="nw"><code class="br-white">null</code> "empty"</span> ) ، 
+وذلك لكي تتجاهلها "برمجيات قراءة الشاشة" <em>screen readers</em> وغيرها من "التقنيات المساعدة" <em>assistive technologies</em> .
+            </p>
+
+            <p class="hinty">إليك مثال على سمة <code class="br-white">alt</code> "فارغة" <em>empty</em> :</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"decorative_image.jpg"</span> alt=<span dir="rtl" class="value">""</span></span> /&gt;</span>
+                </code></pre>
+            </div>
+            
+            <p class="hinty">
+                يجب أن تحتوي "كل صورة" <em>Every image</em> على موقعك الإلكتروني على "سمة نص بديل" ( <span dir="ltr" class="nw"><code class="br-white">alt</code> attribute</span> ) ، 
+حتى وإن كانت فارغة. فإذا أغفلت هذه السمة تماماً، 
+قد تقوم "بعض برامج قراءة الشاشة" <em>some screen readers</em> بقراءة "اسم الملف" <em>the file name</em> بدلاً منها، 
+مما قد يسبب "تشتتاً" <em>distracting</em> لمستخدمي "التقنيات المساعدة" <em>assistive technologies</em> ، ولذلك، لا يُنصح بهذا الإجراء.
+            </p>
+
+            <p class="hinty">وأخيراً، وقبل إطلاق موقعك الإلكتروني، ينبغي عليك اختبار ما إذا كانت "برامج قراءة الشاشة" <em>screen readers</em> قادرة على قراءة "النص البديل" <span dir="ltr" class="nw"><code class="br-white">alt</code> text</span> بشكل صحيح.</p>
+
+            <p class="hinty">
+                تُعد كتابة "النص البديل" ( <span dir="ltr" class="nw"><code class="br-white">alt</code> text</span> ) بفعالية أمراً جوهرياً لإنشاء "محتوى ويب يسهل الوصول إليه" <em>accessible web content</em> ، 
+فبصفتك "مطور ويب" <em>a web developer</em> ، 
+يمكنك من خلال تقديم "أوصاف واضحة" <em>clear descriptions</em> للصور  ضمان قدرة الجميع على التفاعل مع موقعك الإلكتروني ضمن "تجربة رقمية شاملة" <em>an inclusive online experience</em> للجميع.
+            </p>
+
+
+
+        <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما الغرض من "النص البديل" <b>alt text</b> للصورة؟</h5>
+
+			
+			<p> ١. لتحسين "مظهر" <i>the appearance</i> الصورة. ❌</p>
+			<p> ٢. لإضافة "عنصر زخرفي" <i>a decorative element</i> إلى صفحة الويب. ❌</p>
+            <p><mark> <b>٣. لشرح الصورة للأشخاص ذوي "الإعاقة البصرية" <i>visual disabilities</i> .</b> ✅</mark></p>
+			<p> ٤. لزيادة "سرعة تحميل الموقع الإلكتروني" <i>website loading speed</i> . ❌</p>
+			
+				
+			<br>
+
+
+			<h5>متى يكون من المناسب ترك "النص البديل" <b>alt text</b> للصورة "فارغاً" <i>empty</i> ؟</h5>
+
+			
+			<p><mark> <b>١. عندما تكون الصورة ذات "غرض تزييني" <i>purely decorative</i> بحت.</b> ✅</mark></p>
+			<p> ٢. عندما تكون الصورة "مهمة لفهم المحتوى" <i>important to understand the content</i> . ❌</p>
+			<p> ٣. عندما تكون الصورة "صغيرة الحجم" <i>small</i> . ❌</p>
+			<p> ٤. دائماً، لتحسين "أداء الموقع الإلكتروني" <i>website performance</i> . ❌</p>
+			
+				
+			<br>
+
+			<h5>ما الذي ينبغي أن يكون محور التركيز الأساسي لـ"النص البديل" <b>alt text</b> الخاص بصورة تعمل "كرابط" <em>as a link</em> ؟</h5>
+
+			<p> ١. وصف الصورة "بصرياً" <i>visually</i> . ❌</p>
+            <p><mark> <b>٢. توضيح "وجهة الرابط" <i>the link's destination</i> .</b> ✅</mark></p>
+			<p> ٣. الجمع بين وصف الصورة ووجهة الرابط. ❌</p>
+			<p> ٤. "النص البديل" <em>The alt text</em> ليس مهماً للصور التي تعمل "كرابط" <i>are links</i> . ❌</p>
+							
+
+		</div>
+
+
+
+
+
+
         </section>
         
 
+        <!-- ب -->
         <section id="2">
 
             <h3>ب. ما هي فوائد نصوص الروابط الجيدة فيما يتعلق بإمكانية الوصول Accessibility Benefits for Good Link Text ، وما هي الأمثلة على نصوص الروابط الجيدة Good Link Text ؟</h3>
 
+            <p>لنلقِ نظرةً على فوائد كتابة "نصوص روابط جيدة" <em>good link texts</em> من منظور "إتاحة الوصول" <em>Accessibility</em> ، وكذلك على بعض الأمثلة لنصوص روابط جيدة.</p>
+
+            <p>
+                تتمثل الفائدة الملموسة الأولى لـ"نص الرابط الجيد" <em>a good link text</em> في أنه يسهّل على الجميع العثور على المعلومات بسرعة، 
+إذ تساعد "الروابط الوصفية" <em>Descriptive links</em> المستخدمين على معرفة وجهتهم وما سيصلون إليه، 
+مما يجنبهم الشعور بالضياع ويُحسّن "تجربة المستخدم الشاملة" <i>the overall user experience</i> .
+            </p>
+
+            <p>
+                بالنسبة لمستخدمي "برامج قراءة الشاشة" <em>screen readers</em> ، 
+يُعد استخدام "نص رابط واضح ووصفي" <em>a clear and descriptive link text</em> أمراً ضرورياً، 
+إذ تقوم هذه البرامج بقراءة "نص الرابط" <em>the link text</em> بصوت مسموع، 
+ولذا فإن عبارة مثل ("اقرأ دليل إمكانية الوصول الخاص بنا") تُعد أفضل بكثير من عبارة ("اضغط هنا").
+            </p>
+
+            <p>
+                إن جعل "نص الرابط" <em>link text</em> واضحاً وواصفاً لا يقتصر نفعه على ذوي "الإعاقات البصرية" <i>visual impairments</i> فحسب، 
+فـ"الروابط الواصفة" <em>Descriptive links</em> تساعد أيضاً الأشخاص ذوي "الإعاقات الإدراكية" <em>cognitive disabilities</em> من خلال توفير "سياق واضح" <i>clear context</i> .
+            </p>
+
+            <p class="hinty">إليك "بعض أفضل الممارسات" <em>some best practices</em> التي يجب وضعها في الاعتبار عند كتابة "نصوص الروابط" <em>link texts</em> :</p>
+
+            <ul>
+                <li><p class="hinty">احرص على جعل "الروابط" <em>links</em> متميزة بصرياً باستخدام "التسطير" <em>underlining</em> و"علامات بصرية أخرى" <em>other visual cues</em> ، ليتسنى للمستخدمين تمييزها والتنقل عبرها بسهولة.</p></li>
+
+                <li><p class="hinty">تجنب "نصوص الروابط العامة" <em>generic link texts</em> مثل "هنا" و"اضغط هنا" و"مزيد من المعلومات"، فهي لا تقدم أي معلومات مفيدة.</p></li>
+
+                <li><p class="hinty">احرص على أن تكون "نصوص الروابط" <em>link texts</em> موجزة وواصفة — بحيث تتراوح مثاليًا بين كلمتين و5 كلمات — وتُعبّر بوضوح عن "الغرض من الرابط" <em>the link's purpose</em> .</p></li>
+
+                <li><p class="hinty">تجنب "المصطلحات المتخصصة والاختصارات" <em>jargon and abbreviations</em> التي قد لا يفهمها المستخدمون.</p></li>
+
+                <li><p class="hinty">ركّز على "الوجهة" <em>the destination</em> لا على "الإجراء" <em>the action</em> ، على سبيل المثال: "نتائج سلوك المستخدم" بدلاً من "اضغط هنا لقراءة المزيد".</p></li>
+
+                <li><p class="hinty">لا تكرر "نص الرابط نفسه" <em>same link text</em> لـ"وجهات مختلفة" <em>different destinations</em> .</p></li>
+
+                <li><p class="hinty">ضع "الروابط" <em>links</em> بحيث تكون ملائمة للسياق المحيط بها، على سبيل المثال، استخدم عبارة "لمزيد من التفاصيل، تفضل بزيارة صفحة الفعاليات" بدلاً من "اضغط هنا للمزيد".</p></li>
+            </ul>
+
+            <p class="hinty">إليك بعض الأمثلة على "نصوص روابط جيدة" <em>good link texts</em> لحالات استخدام محددة، مقارنةً بأخرى أقل فائدة. لنفترض أنك تريد وضع "رابط" <em>link</em> لصفحة تقدم تفاصيل حول حدث ما، على النحو التالي:</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"webinar-details-link"</span></span>&gt;<span dir="rtl" class="txt">التفاصيل</span>&lt;/a&gt;</span>
+                </code></pre>
+            </div>
+
+            <p>
+                <code class="br-white">التفاصيل</code> "غامضة" <em>is vague</em> ولا تقدم معلومات محددة عما سيجده المستخدم عند النقر على "الرابط" <em>the link</em> . 
+وفي غياب "سياق إضافي" <em>additional context</em> ، 
+قد لا يدرك المستخدمون ما إذا كان "الرابط" <em>the link</em> يؤدي إلى تفاصيل حول ندوة عبر الإنترنت، أو منتج، أو سياسة، أو أي شيء آخر.
+            </p>
+
+            <p class="hinty">إليك الآن مثال على "نص رابط جيد" <em>good link text</em> :</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"webinar-details-link"</span></span>&gt;
+ <span dir="rtl" class="txt">احصل على تفاصيل حول ندوتنا الإلكترونية القادمة</span>
+&lt;/a&gt;</span>
+                </code></pre>
+            </div>  
+            
+            <p>
+                يُزوِّد "نص الرابط هذا" <em>This link text</em> المستخدمين بسياقٍ حول المحتوى الذي سيجدونه، مما يسهِّل عليهم اتخاذ قرار بشأن النقر عليه. 
+كما أنه يزيل "الغموض" <em>ambiguity</em> من خلال توضيح أن "الرابط" <em>the link</em> يتعلق بندوة عبر الإنترنت.
+            </p>
+
+            <p class="hinty">إليك مثال آخر "يربط" <em>linking</em> بـ"منشور" <em>a post</em> في مدونة:</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"/blog-post-link"</span></span>&gt;<span dir="rtl" class="txt">اقرأ المزيد</span>&lt;/a&gt;</span>
+                </code></pre>
+            </div>            
+
+            <p>لا يُعد "نص الرابط" <em>The link text</em> "اقرأ المزيد" مثالياً من حيث "إمكانية الوصول" <em>Accessibility</em> ، لأنه يفتقر إلى السياق.</p>
+
+            <p class="hinty">إليك مثال أفضل لـ"نص الرابط" <em>link text</em> :</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"/blog-post-link"</span></span>&gt;
+ <span dir="rtl" class="txt">اقرأ أحدث تدويناتنا حول إمكانية الوصول إلى الويب</span>
+&lt;/a&gt;</span>
+                </code></pre>
+            </div>
+            
+            <p>
+                يمنح "نص الرابط المُحدَّث هذا" <em>This updated link text</em> المستخدمين فكرةً أوضح عما يمكن توقعه وسبب رغبتهم في النقر على "الرابط" <em>the link</em> ، 
+وهو أمر بالغ الأهمية لا سيما لمستخدمي "برامج قراءة الشاشة" <em>screen readers</em> .
+            </p>
+
+            <p class="hinty">لنلقِ نظرةً على مثالٍ آخر. لنفترض أنك ترغب في تقديم المزيد من المعلومات حول موضوعٍ معين:</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"/link-to-topic"</span></span>&gt;<span dir="rtl" class="txt">مزيد من المعلومات</span>&lt;/a&gt;</span>
+                </code></pre>
+            </div> 
+
+            <p>
+                كما أن عبارة <code dir="rtl" class="br-white nw">مزيد من المعلومات</code> تتسم بـ"الغموض" <em>Ambiguity</em> وقد "تسبب مشكلات" <em>be problematic</em> تتعلق بـ"إمكانية الوصول" <em>Accessibility</em> ، 
+فهي لا تقدم تفاصيل محددة حول "وجهة الرابط" <em>the link's destination</em> ، 
+مما قد يربك المستخدمين الذين يعتمدون على "قارئات الشاشة" <em>screen readers</em> أو أولئك الذين يتصفحون الموقع بـ"أسلوب غير خطي" <em>non-linear way</em> .
+            </p>
+
+            <p class="hinty">إليك مثال أفضل لـ"نص الرابط" <em>link text</em> :</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"/link-to-topic"</span></span>&gt;
+ <span dir="rtl" class="txt">تعرّف على المزيد حول جهودنا في مجال إتاحة الوصول</span>
+&lt;/a&gt;</span>
+                </code></pre>
+            </div>
+            
+            <p>
+                يُعد "نص الرابط المُحدَّث هذا" <em>This updated link text</em> أفضل، 
+لأنه يوضح بوضوح ما سيجده المستخدم عند النقر على "الرابط" <em>the link</em> . 
+إذ يمكن للمستخدمين إدراك أن "الرابط" <em>the link</em> يؤدي إلى معلومات حول جهودك المتعلقة بـ"إتاحة الوصول" <em>Accessibility</em> على الفور.
+            </p>
+
+
+        <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>لماذا يُعد "نص الرابط الواضح والوصفي" <em>clear and descriptive link text</em> أمراً ضرورياً لمستخدمي "قارئات الشاشة" <em>screen readers</em> ؟</h5>
+
+			
+			<p> ١. يعزز "الجاذبية البصرية" <i>the visual appeal</i> للموقع الإلكتروني. ❌</p>
+            <p><mark> <b>٢. يساعد المستخدمين على فهم "الغرض من الرابط" <em>the purpose of the link</em> عند التصفح باستخدام "قارئ الشاشة" <em>a screen reader</em> .</b> ✅</mark></p>
+			<p> ٣. يزيد من "سرعة تحميل" <i>loading speed</i> الموقع الإلكتروني. ❌</p>
+			<p> ٤. يقلل من عدد "الروابط" <i>links</i> الموجودة في الصفحة. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هي الفائدة الملموسة الأولى لـ"نص الرابط الجيد" <em>a good link text</em> ؟</h5>
+
+			
+			<p><mark> <b>١. يساعد المستخدمين على معرفة "وجهتهم" <i>they're headed</i> وما سيصلون إليه.</b> ✅</mark></p>
+			<p> ٢. يحسّن "المظهر الجمالي" <em>the aesthetics</em> لصفحة الويب. ❌</p>
+			<p> ٣. يزيد من "سرعة تحميل" <em>the loading speed</em> الصفحة. ❌</p>
+			<p> ٤. يقلل من عدد "الروابط" <em>links</em> في الصفحة. ❌</p>
+			
+				
+			<br>
+
+			<h5>أي مما يلي يُعد من "أفضل الممارسات" <i>best practice</i> لكتابة "نصوص الروابط" <em>link texts</em> ؟</h5>
+
+			<p> ١. استخدم "نصوصًا عامة" <i>generic texts</i> مثل "انقر هنا" لتبسيط الأمر. ❌</p>
+			<p> ٢. كرر "نص الرابط نفسه" <i>same link text</i> لوجهات مختلفة. ❌</p>
+            <p><mark> <b>٣. اجعل "الروابط" <em>links</em> مميزة بصريًا باستخدام "التسطير" <em>underlining</em> و"غيره من الإشارات البصرية" <em>other visual cues</em> .</b> ✅</mark></p>
+			<p> ٤. ركز على الإجراء المطلوب بدلًا من "الوجهة" <i>the destination</i> ، مثل "انقر هنا لقراءة المزيد". ❌</p>
+
+
+
+			<h5></h5>
+
+			
+			
+				
+			
+
+		</div>
+
+
+
+
+
         </section>
 
 
+        <!-- ت -->
         <section id="3">
 
             <h3>ت. ما هي الطرق الفعالة لجعل المحتوى الصوتي والمرئي Audio and Video Content متاحاً Accessible للجميع؟</h3>
 
+            <p>أصبحت "الوسائط المتعددة" <em>Multimedia</em> ، ولا سيما "الفيديو" <em>video</em> ، الصيغة المفضلة لمشاركة المعلومات عبر الإنترنت.</p>
+
+            <p>مع هذا التزايد الكبير في المحتوى، تبرز حاجة متنامية لضمان تمكّن الجميع من الوصول إلى "المحتوى المرئي والمسموع" <em>video and audio content</em> عبر الإنترنت والاستمتاع به، بغض النظر عن قدراتهم أو بيئتهم.</p>
+
+            <p>لا يقتصر "الفيديو" <em>A video</em> على الجوانب البصرية فحسب، بل يشمل الجوانب الصوتية أيضاً، لذا فإن أول ما ينبغي عليك التفكير فيه هو إضافة "نصوص توضيحية" <em>captions</em> أو "ترجمة" <em>subtitles</em> مصاحبة لمحتوى الفيديو الخاص بك.</p>
+
+            <p>توفر "التسميات التوضيحية" <em>Captions</em> "نسخة نصية" <em>the text version</em> للكلمات المنطوقة والأصوات المهمة غير اللفظية — مثل الموسيقى أو الضحك —  "متزامنةً" <em>synchronized</em> مع الفيديو.</p>
+
+            <p>
+                من ناحية أخرى، تُعد "الترجمة" <em>Subtitles</em> المصاحبة أمراً ضرورياً للأشخاص الذين لا يفهمون اللغة التي تتحدث بها، 
+فهي لا تساعد فقط "الصم" <i>deaf</i> أو ضعاف السمع ، 
+بل تفيد أيضاً من يشاهدون مقاطع الفيديو في "بيئات صاخبة أو هادئة" <i>noisy or quiet environments</i> .
+            </p>
+
+            <p class="hinty">
+                لإضافة "تسميات توضيحية" <em>captions</em> أو "ترجمات" <em>subtitles</em> مصاحبة إلى محتوى الفيديو أو الصوت الخاص بك، يمكنك استخدام عنصر <code class="br-white2">track</code> داخل عنصر <code class="br-white2">video</code> أو <code class="br-white2">audio</code> :
+            </p>
+
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;video
+ <span class="attr">width=<span class="value">"400"</span>
+ height=<span class="value">"300"</span>
+ controls
+ src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"</span></span>    
+&gt;
+ &lt;track
+  <span class="attr">src=<span class="value">"captions.vtt"</span>
+  kind=<span class="value">"captions"</span>
+  srclang=<span class="value">"en"</span>
+  label=<span class="value">"English"</span></span>
+ /&gt;
+&lt;/video&gt;</span>
+
+<span class="tag">&lt;audio <span class="attr">controls src=<span class="value">"sample.mp3"</span></span>&gt;
+ &lt;track
+  <span class="attr">src=<span class="value">"captions.vtt"</span>
+  kind=<span class="value">"captions"</span>
+  srclang=<span class="value">"en"</span>
+  label=<span class="value">"English"</span></span>
+ /&gt;
+&lt;/audio&gt;</span>
+                </code></pre>
+            </div>
+
+            <p>
+                تُستخدم السمة <code class="br-white nw">kind</code> لتحديد كيفية استخدام عنصر <code class="br-white2">track</code> . 
+وتشمل "القيم الصالحة" <em>Valid values</em> لهذه السمة: 
+"التسميات التوضيحية" ( <code dir="ltr" class="br">"captions"</code> ) ، و"الترجمة" ( <code dir="ltr" class="br">"subtitles"</code> ) ، 
+و"الفصول" ( <code dir="ltr" class="br">"chapters"</code> ) ، و"البيانات الوصفية" ( <code dir="ltr" class="br">"metadata"</code> ) .
+            </p>
+
+            <p>
+                تمثّل السمة <code class="br-white">srclang</code> لغة محتوى المسار <code dir="ltr" class="br-white2">track</code> . 
+أما السمة <code class="br-white">label</code> فهي تمثّل "عنواناً وصفياً" <em>a descriptive title</em> لـ"مسار النص" <em>the text track</em> ، 
+تستخدمه المتصفحات للتعرف عليه وعرضه ضمن قائمة "مسارات النصوص المتاحة" <em>available text tracks</em> .
+            </p>
+
+            <p class="hinty">
+                من الأمور المهمة الأخرى التي يجب مراعاتها توفير "نص مكتوب" <em>a transcript</em> لمحتواك الصوتي والمرئي. 
+و"النص المكتوب" <em>a transcript</em> هو "نسخة نصية" <em>a text version</em> لجميع الكلمات المنطوقة في المقطع الصوتي أو الفيديو، 
+وعلى عكس "التسميات التوضيحية" <em>captions</em> ، 
+لا يتطلب هذا النص "مزامنة" <em>synchronized</em> زمنية مع "الوسائط" <em>the media</em> . 
+وتُعد هذه النصوص مفيدة للصم وضعاف السمع، وكذلك للأشخاص الذين يفضلون القراءة بدلاً من المشاهدة أو الاستماع. 
+كما أنها تجعل محتواك "قابلاً للبحث" <em>searchable</em> ، 
+مما يتيح للمستخدمين العثور بسرعة على أجزاء محددة من المقطع الصوتي أو الفيديو. 
+وإذا كان لديك مقطع فيديو أو صوتي على موقع إلكتروني، فيمكنك ببساطة إضافة "النص المكتوب" <em>the transcript</em> أسفل ذلك المقطع:
+            </p>
+
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;audio <span class="attr">controls</span>&gt;
+ &lt;source <span class="attr">src=<span class="value">"audio.mp3"</span></span> /&gt;
+ <span dir="rtl" class="txt">متصفحك لا يدعم عنصر الصوت.</span>
+&lt;/audio&gt;
+
+<span class="value">&lt;!-- Transcript نص مكتوب --&gt;</span>
+&lt;h3&gt;<span class="txt">نص مكتوب</span>&lt;/h3&gt;
+&lt;p&gt;
+ <span dir="rtl" class="txt">[المتحدث الأول]: مرحبًا بكم في هذا الدرس التعليمي حول إعداد محتوى متاح للجميع.</span>
+&lt;/p&gt;
+&lt;p&gt;
+ <span dir="rtl" class="txt">[المتحدث الثاني]: سنتناول اليوم موضوعات الترجمة النصية، والنصوص المكتوبة، والمزيد.</span>
+&lt;/p&gt;</span>
+
+<span class="value">&lt;!-- Rest of transcript بقية النص المكتوب  --&gt;</span>
+                </code></pre>
+            </div>  
+            
+            <p>
+                إذا كنت تنشر مقاطع "فيديو" <em>videos</em> على "منصة" <em>platform</em> لمشاركة الفيديوهات مثل YouTube أو Vimeo ، 
+فإن هذه المنصات توفر ميزات "التسميات التوضيحية" <em>captions</em> و"النصوص المكتوبة" <em>transcripts</em> بشكل تلقائي. 
+أما إذا لم تكن راضيًا عن تلك الخدمات، فيمكنك الاستعانة بخدمات أخرى مثل veed.io و Rev و Amara و Descript .
+            </p>
+
+            <p class="hinty">تشمل الطرق الأخرى لجعل محتواك المرئي والمسموع "متاحاً للجميع" <em>accessible</em> ما يلي:</p>
+
+            <ul>
+                <li><p class="hinty">إضافة "تراكب للغة الإشارة" <em>a sign language overlay</em> على مقاطع الفيديو المخصصة للصم وضعاف السمع.</p></li>
+                <li><p class="hinty">توفير "عناصر التحكم" <em>controls</em> في مستوى الصوت والسرعة.</p></li>
+                <li><p class="hinty">ضمان "تباين جيد" <em>good contrast</em> للنصوص التي تظهر على الشاشة.</p></li>
+                <li><p class="hinty">توفير "تنسيقات متعددة" <em>multiple formats</em> .</p></li>
+            </ul>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما الفرق بين التسميات التوضيحية (captions) والترجمة (subtitles) في محتوى الفيديو؟</h5>
+
+			
+			<p> ١. توفر التسميات التوضيحية (Captions) ترجمةً لغير الناطقين باللغة. ❌</p>
+            <p><mark> <b>٢. تتضمن التسميات التوضيحية (Captions) الكلمات المنطوقة والأصوات غير اللفظية، في حين أن الترجمة المصاحبة (Subtitles) مخصصة للمشاهدين الذين لا يفهمون اللغة.</b> ✅</mark></p>
+			<p> ٣. تتضمن الترجمة المصاحبة (Subtitles) كلاً من الكلمات المنطوقة والأصوات غير اللفظية، بينما تقتصر التسميات التوضيحية (Captions) على الترجمة فقط. ❌</p>
+			<p> ٤. تكون الترجمة المصاحبة (Subtitles) متزامنة مع الفيديو، أما التسميات التوضيحية (Captions) فلا تكون كذلك. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>كيف يمكنك إضافة تسميات توضيحية (captions) أو ترجمات (subtitles) مصاحبة مباشرةً إلى محتوى الفيديو أو الصوت الخاص بك باستخدام HTML ؟</h5>
+
+			
+			<p> ١. باستخدام وسم <code class="br-white">caption</code> داخل عنصر <code class="br-white2">video</code> أو <code class="br-white2">audio</code> . ❌</p>
+            <p><mark> <b>٢. باستخدام وسم <code class="br-white2">track</code> داخل عنصر <code class="br-white2">video</code> أو <code class="br-white2">audio</code> .</b> ✅</mark></p>
+			<p> ٣. بوضع وسم <code class="br-white">subtitle</code> داخل عنصر <code class="br-white2">video</code> أو <code class="br-white2">audio</code> . ❌</p>
+			<p> ٤. بإدراج وسم <code class="br-white">text</code> داخل عنصر <code class="br-white2">video</code> أو <code class="br-white2">audio</code> . ❌</p>
+			
+				
+			<br>
+
+			<h5>لماذا تُعد النصوص المكتوبة (transcripts) مهمة للمحتوى الصوتي والمرئي؟</h5>
+
+			<p> ١. تُعد النصوص المكتوبة (Transcripts) مفيدة فقط للأشخاص الذين يفضلون مشاهدة مقاطع الفيديو. ❌</p>
+            <p><mark> <b>٢. تساعد النصوص المكتوبة (Transcripts) في جعل المحتوى متاحاً <em>accessible</em> للأشخاص الصم أو ضعاف السمع، وتتيح سهولة البحث عن محتوى محدد.</b> ✅</mark></p>
+			<p> ٣. تقتصر وظيفة النصوص المكتوبة (Transcripts) على ترجمة اللغة المنطوقة إلى لغة أخرى. ❌</p>
+			<p> ٤. تُستخدم النصوص المكتوبة (Transcripts) لإضافة الأصوات غير اللفظية — مثل الموسيقى والضحك — إلى المحتوى. ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
         </section>
 
 
+        <!-- ث -->
         <section id="4">
 
             <h3>ث. ما هي بعض الطرق لجعل تطبيقات الويب قابلة للاستخدام عبر لوحة المفاتيح Web Applications Keyboard Accessible ؟</h3>
         
+            <p>
+                يعتمد العديد من المستخدمين على "لوحات المفاتيح" (keyboards) بدلاً من "الفأرة" (mice) بسبب "إعاقات جسدية" (physical disabilities) ، 
+أو إصابات ناتجة عن "الإجهاد المتكرر" (repetitive strain) ، أو لأسباب شخصية. 
+ويشمل ذلك مستخدمي "برامج قراءة الشاشة" (screen readers) ، ومن قد لا يمتلكون فأرة تعمل. 
+تضمن "إمكانية الوصول" (Accessibility) عبر "لوحة المفاتيح" (Keyboard) لهؤلاء المستخدمين تصفح تطبيقات الويب بـ"كفاءة" (effectively) ودون عوائق.
+            </p>
+
+            <p>
+                لنستعرض "بعض التقنيات العملية" (some practical techniques) التي يمكنك استخدامها "لجعل تطبيقات الويب قابلة للاستخدام عبر لوحة المفاتيح" (to make web applications keyboard accessible) .
+            </p>
+
+            <p>
+                يعتمد العديد من المستخدمين على مفتاح <code class="br-white">Tab</code> للتنقل بين "العناصر التفاعلية" (interactive elements) في صفحات الويب. 
+وتتيح المتصفحات — بشكل افتراضي— للمستخدمين التنقل عبر عناصر مثل "الروابط" (links) و"الأزرار" (buttons) و"حقول النماذج" (form fields) وفقاً لترتيب ظهورها في كود HTML ، 
+وهو ما يُعرف بـ "ترتيب التنقل الطبيعي" (natural tab order) .
+            </p>
+
+            <p class="hinty">
+                قد ترغب أحياناً في تعديل "العناصر القابلة لتلقي التركيز" (elements are focusable) أو تغيير ترتيب "التركيز الخاص بها" (their focus) ، وتتيح لك السمة <code class="br-white">tabindex</code> القيام بذلك.
+            </p>
+
+            <p class="hinty">إليك "الصيغة الأساسية" (The basic syntax) :</p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;element <span class="attr">tabindex=<span class="value">"number"</span></span>&gt;<span dir="rtl" class="txt">نص العنصر</span>&lt;/element&gt;</span>
+                </code></pre>
+            </div>  
+
+            <p class="hinty">تُحدد قيمة <code class="br-white">tabindex</code> كيفية تصرف العنصر عند "التنقل باستخدام لوحة المفاتيح" (keyboard navigation) :</p>
+
+            <p class="hinty"><code dir="ltr" class="br-white nw">tabindex="0"</code> يُضيف العنصر إلى ترتيب التنقل الطبيعي بمفتاح <code class="br-white">Tab</code> .</p>
+
+            <p class="hinty">
+                سيؤدي استخدام مفتاح <code class="br-white">Tab</code> إلى نقل "التركيز" (focus) من "الزر" <code class="br-white2">button</code> إلى عنصر <code class="br-white2">div</code> ، 
+ثم إلى "الرابط" (the link) ، وذلك وفقاً لترتيبها في كود HTML .
+            </p>
+
+            <p class="hinty">
+                انقر في أي مكان ضمن "المساحة الفارغة" (the whitespace) في نافذة المعاينة، ثم استخدم مفتاح <code class="br-white">Tab</code> لمشاهدة انتقال "التركيز" (the focus) بين العناصر المختلفة.
+            </p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;button&gt;<span class="txt">أولاً</span>&lt;/button&gt;
+&lt;div <span class="attr">tabindex=<span class="value">"0"</span></span>&gt;<span class="txt">ثانياً</span>&lt;/div&gt;
+&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">ثالثاً</span>&lt;/a&gt;</span>
+                </code></pre>
+            </div> 
+
+            <div class="preview" role="presentation">
+                <button>أولاً</button>
+                <div tabindex="0">ثانياً</div>
+                <a href="#">ثالثاً</a>
+            </div>
+
+            <p class="hinty">
+                السمة <code dir="ltr" class="br-white nw">tabindex="-1"</code> تجعل "العنصر قابلاً لتلقي التركيز برمجياً" (element focusable programmatically) . 
+ويُعد هذا مفيداً لإدارة "التركيز" (focus) في "العناصر التي لا تقبل التركيز عادةً" (elements that are not normally focusable) ، 
+مثل "العناوين" (headings) ، و"الحاويات" (containers) ، و"مربعات الحوار" (dialogs) ، أو "رسائل الخطأ" (error messages) :
+            </p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;p <span class="attr">tabindex=<span class="value">"-1"</span></span>&gt;<span dir="rtl" class="txt">عذراً، حدث خطأ أثناء إرسال طلبك.</span>&lt;/p&gt;</span>
+                </code></pre>
+            </div>
+            
+            <p>
+                في هذا المثال، لا تُعد "الفقرة" (the paragraph) جزءاً من "تسلسل التنقل الافتراضي عبر مفتاح طاب" (the normal tab order) ، 
+ولذلك لا يمكن للمستخدمين الوصول إليها بالضغط على هذا المفتاح <code dir="ltr" class="br-white nw">Tab</code> . 
+ومع ذلك، إذا قمت بتوجيه "التركيز" (focus) إلى هذا العنصر باستخدام "برنامج نصي" (a script) ، 
+فسيتم لفت انتباه المستخدم إلى الرسالة. 
+وسوف تتعرف على المزيد حول هذه التقنية في دروس JavaScript .
+            </p>
+
+            <p>
+                عندما تكون قيمة <code dir="ltr" class="br-white nw">tabindex</code> أكبر من 0، يتم تحديد ترتيب مخصص للتنقل باستخدام مفتاح <code dir="ltr" class="br-white nw">Tab</code> ، وبذلك، يتم التركيز أولاً على العناصر ذات "القيم الموجبة الأقل" (lower positive values) .
+            </p>
+
+            <p class="hinty">
+                في هذا المثال، سيؤدي التنقل باستخدام مفتاح <code dir="ltr" class="br-white nw">Tab</code> إلى نقل التركيز أولاً إلى عنصر "الإدخال" <code dir="ltr" class="br-white2">input</code> الذي يحمل السمة <code dir="ltr" class="br-white nw">tabindex="1"</code> ، 
+ثم إلى العنصر ذي القيمة <code dir="ltr" class="br">"2"</code> ، 
+ثم <code dir="ltr" class="br">"3"</code> ، وذلك بغض النظر عن ترتيبها في كود HTML .
+            </p>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;input <span class="attr">tabindex=<span class="value">"2"</span></span>&gt;
+&lt;input <span class="attr">tabindex=<span class="value">"1"</span></span>&gt;
+&lt;input <span class="attr">tabindex=<span class="value">"3"</span></span>&gt;</span>
+                </code></pre>
+            </div>
+
+            <p>
+                تُستخدم أحياناً "قيم موجبة مخصصة" (Custom positive values) في "عناصر الواجهة المعقدة" (complex widgets) — مثل "شريط الأدوات" (a toolbar) — عندما تكون هناك حاجة لـ"ترتيب تنقّل محدد" (a specific navigation order) . 
+ومع ذلك، لا يُنصح باتباع هذا الأسلوب، إذ قد يجعل "عملية التنقّل" (navigation) مربكة ويصعّب "عمليات الصيانة" (maintain) ، لا سيما مع توسّع الصفحة أو تغيّرها.
+            </p>
+
+            <p class="hinty">
+                تُعد <code dir="ltr" class="br-white nw">accesskey</code> سمةً أخرى يمكنك استخدامها لجعل مشروع الويب الخاص بك قابلاً للاستخدام عبر "لوحة المفاتيح" (keyboard) ، 
+فهي تتيح لك تحديد "مفتاحٍ" (a key) لنقل "التركيز" (focus) إلى عنصرٍ معين أو تفعيله.
+            </p>
+
+            <p class="hinty">إليك مثال تفاعلي يمكنك تجربته باتباع الاقتراحات الواردة أدناه :</p>
+
+            <ul>
+                <li><p class="hinty">
+                    تُخصص السمة <code dir="ltr" class="br-white nw">accesskey="s"</code> المفتاح <code class="br-white">S</code> لزر <code dir="rtl" class="br-white">حفظ</code> (Save) . 
+في معظم المتصفحات، يؤدي الضغط على المفاتيح <code dir="ltr" class="br-white nw">ALT + S</code> (في نظام Windows) و <code dir="ltr" class="br-white nw">CTRL + Option + S</code> (في نظام Mac) إلى "تفعيل هذا الزر" (activate this button) .
+                </p></li>
+                <li><p class="hinty">
+                    تُعيّن الخاصية <code dir="ltr" class="br-white nw">accesskey="c"</code> المفتاح <code class="br-white">C</code> لزر <code dir="rtl" class="br-white">إلغاء</code> (Cancel) ، 
+مما يتيح للمستخدمين تفعيله باستخدام التركيبة <code dir="ltr" class="br-white nw">ALT + C</code> (في نظام Windows) و <code dir="ltr" class="br-white nw">CTRL + Option + C</code> (في نظام Mac).
+                </p></li>
+                <li><p class="hinty">
+                    تُخصص السمة <code dir="ltr" class="br-white nw">accesskey="h"</code> المفتاح <code class="br-white">H</code> لرابط <code dir="rtl" class="br-white">الرئيسية</code> (Home) ، 
+مما يتيح للمستخدمين الانتقال إلى الصفحة الرئيسية باستخدام التركيبة <code dir="ltr" class="br-white nw">ALT + H</code> (في نظام Windows) و <code dir="ltr" class="br-white nw">CTRL + Option + H</code> (في نظام Mac).
+                </p></li>
+            </ul>
+
+            <p class="hinty">
+                يرجى ملاحظة أن مجموعة المفاتيح الدقيقة لتفعيل "مفتاح الوصول" <code dir="ltr" class="br-white nw">accesskey</code> قد تختلف باختلاف المتصفح ونظام التشغيل، فعادةً ما تكون المجموعة هي <code dir="ltr" class="br-white nw">ALT + Specified Key</code> في نظام Windows ، و <code dir="ltr" class="br-white nw">CTRL + Option + Specified Key</code> في نظام Mac .
+            </p>
+
+            <p>
+                قد تسبب سمة <code dir="ltr" class="br-white nw">accesskey</code> مشكلات، 
+إذ قد تتعارض مع "اختصارات" (shortcuts) موجودة بالفعل أو تختلف طريقة عملها باختلاف الأجهزة و"لوحات المفاتيح" (keyboards) ، 
+كما أنها غالبًا ما تكون "غير بديهية" (not intuitive) ، 
+مما يصعّب على المستخدمين اكتشافها أو تذكرها.
+            </p>
+
+            <p class="hinty">
+                إذا اخترت استخدام "مفاتيح الوصول" <code dir="ltr" class="br-white nw">accesskey</code> ، 
+فيجب أن يتم ذلك مع تقديم توجيهات واضحة للمستخدمين، ولكن في معظم الحالات يُفضل تجنب استخدامها في المواقع وتطبيقات الويب.
+            </p>
+
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;button <span class="attr">accesskey=<span class="value">"s"</span></span>&gt;<span class="txt">حفظ</span>&lt;/button&gt;
+&lt;button <span class="attr">accesskey=<span class="value">"c"</span></span>&gt;<span class="txt">إلغاء</span>&lt;/button&gt;
+&lt;a <span class="attr">href=<span class="value">"index.html"</span> accesskey=<span class="value">"h"</span></span>&gt;<span class="txt">الرئيسية</span>&lt;/a&gt;</span>
+                </code></pre>
+            </div> 
+
+
+            <div class="preview" role="presentation">
+                <button accesskey="s">حفظ</button>
+                <button accesskey="c">إلغاء</button>
+                <a href="#" accesskey="h">الرئيسية</a>
+            </div>
+
+            <p>
+                هناك طريقة أخرى لجعل "لوحة المفاتيح" (keyboard) "متاحة للاستخدام" (accessible) في تطبيقاتك، 
+وهي الحرص على توفير "مؤشرات واضحة للتركيز" (clear focus indicators) . 
+وإذا كنت ترى أن "مؤشر التركيز الافتراضي للمتصفح" (the default browser focus indicator) غير كافٍ، 
+فيمكنك استبداله من خلال استهداف "حالة التركيز" (the focus state) الخاصة بالعنصر.
+            </p>
+
+            <p class="hinty">
+                إليك مثال على تنسيق "حالة التركيز" (the focus state) لعنصر "زر" <code dir="ltr" class="br-white2">button</code> . 
+انقر في أي مكان ضمن "المساحة الفارغة" (the whitespace) في نافذة المعاينة، 
+ثم اضغط على مفتاح <code class="br-white">Tab</code> لنقل "التركيز" (focus) إلى "الزر" (the button) .
+            </p>
+            
+            <div class="codeFiles">
+            <h4>index.html</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">href=<span class="value">"styles.css"</span> rel=<span class="value">"stylesheet"</span></span>&gt;</span>
+
+<span class="tag">&lt;button&gt;<span dir="rtl" class="txt">زر نموذجي</span>&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <h4>styles.css</h4>
+            <div class="code-block"><pre><code>
+<span class="tag-b">button:focus {
+ <span class="attr">outline: <span class="value">2px solid #005fcc</span><span class="txt">;</span></span>
+}</span>
+            </code></pre></div>
+            </div>
+
+            
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <button class="btn-8-4">زر نموذجي</button>
+            </div>
+
+            <p>
+                تُستخدم الخاصية <code class="br-white">outline</code> لتحديد "الإطار الخارجي للعنصر" (the outline around the element). 
+يحدد هذا المثال الإطار ليكون خطاً أزرق متصلاً بسُمك "2 بكسل" (2 pixels) . 
+ينبغي تنسيق "مؤشر التركيز" (The focus indicator) بطريقة تجعل من الواضح أي عنصر هو الذي يمتلك التركيز حالياً، 
+ولضمان إتاحة الوصول (accessible) ، 
+يجب أن يحقق المؤشر نسبة "تباين لوني" (color contrast) لا تقل عن 3:1 مقارنةً بـ"لون الخلفية" (background color) الذي يغطيها.
+            </p>
+
+            <p class="hinty">
+                عليك أيضاً تجنب "فخاخ لوحة المفاتيح" (keyboard traps)، وهي الحالة التي يتعذر فيها على المستخدم نقل التركيز بعيداً عن عنصر معين في مكونات مثل "النوافذ المشروطة" (modals) و"النوافذ المنبثقة" (popups) .
+            </p>
+
+
+            <!-- QUESTIONS -->
+            <div class="questions">
+                <h4>أسئلة :</h4>
+
+
+                <h5>لماذا تُعد خاصية <code class="br-white">tabindex</code> مهمة عند "إدارة التنقل عبر لوحة المفاتيح" (managing keyboard navigation)  في صفحة الويب؟</h5>
+
+                
+                <p> ١. يُسرّع "تحميل الصفحة" (the page load) . ❌</p>
+                <p><mark> <b>٢. يُتيح لك التحكم في ترتيب التركيز على العناصر عند استخدام مفتاح <code class="br-white">Tab</code> .</b> ✅</mark></p>
+                <p> ٣. يُضيف "تأثيرات حركية" (animations) للعناصر "القابلة للتركيز"(focusable) . ❌</p>
+                <p> ٤. يُخفي العناصر غير الضرورية عن التنقل باستخدام "لوحة المفاتيح" (keyboard) . ❌</p>
+                
+                    
+                <br>
+
+                <h5>كيف تساهم سمة <code class="br-white">accesskey</code> في "إتاحة الوصول عبر لوحة المفاتيح" (keyboard accessibility) في صفحات الويب؟</h5>
+
+                <p> ١. يُحسّن "المظهر البصري" (the visual appearance) لصفحة الويب. ❌</p>
+                <p> ٢. يُسرّع "تحميل الموقع" (the loading time of the website) . ❌</p>
+                <p><mark> <b>٣. يتيح لك تحديد "مفتاح خاص" (a specific key) يُركّز على عنصر مُعيّن أو يُفعّله.</b> ✅</mark></p>
+                <p> ٤. يُنشئ تلقائيًا "اختصارات" (shortcut keys) لجميع العناصر. ❌</p>
+
+                <br>
+
+
+                <h5>لماذا يُعد تجنب "فخاخ لوحة المفاتيح" (keyboard traps) في تطبيقات الويب أمراً مهماً على وجه التحديد؟</h5>
+
+                <p> ١. يُحسّن "تحسين محركات البحث" (SEO). ❌</p>
+                <p> ٢. يُتيح لـ"المطور" (the developer) العمل بسرعة أكبر. ❌</p>
+                <p> ٣. يضمن احتواء الصفحة على عدد أقل من "العناصر التفاعلية" (interactive elements) . ❌</p>
+                <p><mark> <b>٤. يضمن قدرة المستخدمين على نقل التركيز بعيداً عن عناصر مثل "النوافذ المشروطة"  (modals) و "النوافذ المنبثقة"  (popups) .</b> ✅</mark></p>
+                
+                    
+                
+
+            </div>
+
+
+
+
+
         </section>
 
 

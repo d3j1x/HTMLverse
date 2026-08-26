@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Accessibility إمكانية الوصول | اختبار إمكانية الوصول اتش.تي.ام.ال HTML Accessibility Quiz"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/styles13.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | إمكانية الوصول</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,19 +25,532 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- HTML Accessibility Quiz اختبار إمكانية الوصول اتش.تي.ام.ال -->
     <section class="box">
         <div class="sub-title">
             <h2>١٣. اختبار إمكانية الوصول اتش.تي.ام.ال HTML Accessibility Quiz</h2>
             <span class="hint">اختبار</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
-        <section >
+        <section>
+		<!-- Q1 -->
+		<h3>١. ما هي "إمكانية الوصول" (Accessibility) ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q1" value="">إمكانية الوصول هي مجموعة من الممارسات المعيارية التي تضمن تغطية اختبار شاملة بنسبة 100% لبرنامجك.</label><br>
+				<label><input type="radio" name="q1" value="">إمكانية الوصول هي مجموعة من الممارسات المعيارية التي تُحسّن سرعة وأداء تطبيقات الويب.</label><br>
+				<label><input type="radio" name="q1" value="">إمكانية الوصول هي مجموعة من الممارسات المعيارية التي تضمن إمكانية استخدام تطبيقات الويب من قِبل الجميع، بمن فيهم ذوو الإعاقة.</label><br>
+				<label><input type="radio" name="q1" value="">إمكانية الوصول هي مجموعة من الممارسات المعيارية التي تضمن خلوّ برنامجك من جميع المخاطر الأمنية.</label>
+			</form>
+			<h4>إمكانية الوصول هي مجموعة من الممارسات المعيارية التي تضمن إمكانية استخدام تطبيقات الويب من قِبل الجميع، بمن فيهم ذوو الإعاقة.</h4>
+		</div>
 
-            <h3></h3>
 
-        </section>
+
+		<!-- Q2 -->
+        <h3> ٢. أي مما يلي يُعد مثالاً جيداً على "الهيكل السليم لمستويات العناوين" (Proper heading level structure) ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q2" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;h6&gt;<span dir="rtl" class="txt">العنوان 6</span>&lt;/h6&gt;
+&lt;h5&gt;<span dir="rtl" class="txt">العنوان 5</span>&lt;/h5&gt;
+&lt;h4&gt;<span dir="rtl" class="txt">العنوان 4</span>&lt;/h4&gt;
+&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;
+&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q2" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;
+&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;
+&lt;h4&gt;<span dir="rtl" class="txt">العنوان 4</span>&lt;/h4&gt;
+&lt;h5&gt;<span dir="rtl" class="txt">العنوان 5</span>&lt;/h5&gt;
+&lt;h6&gt;<span dir="rtl" class="txt">العنوان 6</span>&lt;/h6&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q2" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;
+&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;
+&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;
+&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;
+&lt;h4&gt;<span dir="rtl" class="txt">العنوان 4</span>&lt;/h4&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q2" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;h6&gt;<span dir="rtl" class="txt">العنوان 6</span>&lt;/h6&gt;
+&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;
+&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;
+&lt;h5&gt;<span dir="rtl" class="txt">العنوان 5</span>&lt;/h5&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;</span>
+                    </code></pre></div>
+                </label>
+			</form>
+			<h4>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;
+&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;
+&lt;h4&gt;<span dir="rtl" class="txt">العنوان 4</span>&lt;/h4&gt;
+&lt;h5&gt;<span dir="rtl" class="txt">العنوان 5</span>&lt;/h5&gt;
+&lt;h6&gt;<span dir="rtl" class="txt">العنوان 6</span>&lt;/h6&gt;</span>
+                </code></pre></div>
+            </h4>
+		</div>
+
+
+
+
+		<!-- Q3 -->
+		<h3> ٣. ما هي الفئات الست الرئيسية لأدوار ARIA ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q3" value=""><span dir="ltr">Document Structure, Landmark, Window, Explicit, Fidget, and Footer.</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr">Document Structure, Landmark, Window, Abstract, Widget, and Live Region.</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr">Window, Alert Dialog, Article, Cell, Banner, and Button.</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr">Landmark, House, Live Region, Application, Window, and Extension.</span></label>
+			</form>
+			<h4>Document Structure, Landmark, Window, Abstract, Widget, and Live Region</h4>
+		</div>
+
+
+
+
+		<!-- Q4 -->
+		<h3>٤. ما هي الطريقة الصحيحة لإضافة السمة <code class="br-white">alt</code> إلى عنصر <code class="br-white2">img</code> ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q4" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"cat.jpg"</span></span>&gt;</span> <span class="tag-g">alt="cat running"</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q4" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-g">alt=""</span><span class="tag">&lt;img <span class="attr">src=<span class="value">"cat.jpg"</span></span>&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q4" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-g">alt="cat running"</span><span class="tag">&lt;img <span class="attr">src=<span class="value">"cat.jpg"</span></span>&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q4" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"cat.jpg"</span> alt=<span class="value">"cat running"</span></span>&gt;</span>
+                    </code></pre></div>
+                </label>
+			</form>
+			<h4>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;img <span class="attr">src=<span class="value">"cat.jpg"</span> alt=<span class="value">"cat running"</span></span>&gt;</span>
+                </code></pre></div>
+            </h4>
+		</div>
+
+
+
+
+		<!-- Q5 -->
+		<h3>٥. ماذا تعني عبارة WAI-ARIA ؟</h3>
+		<div>
+			<form>
+				<label><input type="radio" name="q5" value="">مبادرة روابط الويب — تطبيقات إنترنت غنية بالروابط (Web Anchor Initiative - Anchor Rich Internet Applications) .</label><br>
+				<label><input type="radio" name="q5" value="">مبادرة إمكانية الوصول إلى الويب — تطبيقات إنترنت جاهزة للاستخدام (Web Accessibility Initial - Accessible Ready Internet Applications) .</label><br>
+				<label><input type="radio" name="q5" value="">مبادرة إمكانية الوصول إلى مواقع الويب — تطبيقات إنترنت سهلة الاستخدام مكتوبة بلغة Rust (Website Accessible Initiative - Accessible Rust Internet Applications) .</label><br>
+				<label><input type="radio" name="q5" value="">مبادرة إمكانية الوصول إلى الويب — تطبيقات إنترنت غنية وسهلة الاستخدام (Web Accessibility Initiative - Accessible Rich Internet Applications) .</label>
+			</form>
+			<h4>مبادرة إمكانية الوصول إلى الويب — تطبيقات إنترنت غنية وسهلة الاستخدام (Web Accessibility Initiative - Accessible Rich Internet Applications) .</h4>
+		</div>
+
+
+
+
+		<!-- Q6 -->
+		<h3>٦. ما هو دور السمة <code class="br-white nw">aria-hidden</code> ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q6" value="">تُستخدم هذه الخاصية لإخفاء عنصر وإضافة نص توضيحي له.</label><br>
+				<label><input type="radio" name="q6" value="">تُستخدم هذه الخاصية لإخفاء العناصر عن المستخدمين ذوي الإعاقة البصرية فقط.</label><br>
+				<label><input type="radio" name="q6" value="">تُستخدم هذه الخاصية لإخفاء عنصر عن التقنيات المساعدة.</label><br>
+				<label><input type="radio" name="q6" value="">تُستخدم هذه الخاصية لإخفاء عنصر عن مستخدمي لوحة المفاتيح فقط.</label>
+			</form>
+			<h4>تُستخدم هذه الخاصية لإخفاء عنصر عن التقنيات المساعدة.</h4>
+		</div>
+
+
+
+
+		<!-- Q7 -->
+		<h3>٧. ما هي السمة التي تجعل العناصر "قابلة للتركيز" (focusable) وتحدد "الترتيب النسبي" (the relative order) الذي يتم من خلاله التنقل بينها باستخدام لوحة المفاتيح؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q7" value=""><code class="br-white nw">keyboardindex</code></label><br>
+				<label><input type="radio" name="q7" value=""><code class="br-white nw">tabbingindex</code></label><br>
+				<label><input type="radio" name="q7" value=""><code class="br-white nw">indextab</code></label><br>
+				<label><input type="radio" name="q7" value=""><code class="br-white nw">tabindex</code></label>
+			</form>
+			<h4><code class="br-white nw">tabindex</code></h4>
+		</div>
+
+
+
+
+		<!-- Q8 -->
+		<h3>٨. لماذا يُعد تضمين عنصر "التسمية التوضيحية" <code class="br-white2">caption</code> داخل جدول HTML ممارسة جيدة؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q8" value="">يُتيح للمستخدمين فرز بيانات الجدول وتصفيتها بسهولة.</label><br>
+				<label><input type="radio" name="q8" value="">يُحسّن مظهر الجدول بإضافة رأسية زخرفية.</label><br>
+				<label><input type="radio" name="q8" value="">يُساعد على تحسين استجابة الجدول على الأجهزة المحمولة.</label><br>
+				<label><input type="radio" name="q8" value="">يُسهّل على المستخدمين فهم غرض الجدول ومحتواه بسرعة.</label>
+			</form>
+			<h4>يُسهّل على المستخدمين فهم غرض الجدول ومحتواه بسرعة.</h4>
+		</div>
+
+
+
+
+		<!-- Q9 -->
+		<h3>٩. ما الفرق بين السمتين <code class="br-white nw">aria-label</code> و <code class="br-white nw">aria-labelledby</code> ؟</h3>  
+		<div>
+			<form>
+				<label><input type="radio" name="q9" value="">تؤدي سمات <code class="br-white nw">aria-label</code> و <code class="br-white nw">aria-labelledby</code> نفس الغرض.</label><br>
+				<label><input type="radio" name="q9" value="">تُبقي سمات <code class="br-white nw">aria-label</code> و <code class="br-white nw">aria-labelledby</code> التسميات غير مُعرَّفة.</label><br>
+				<label><input type="radio" name="q9" value="">تُستخدم سمة <code class="br-white nw">aria-label</code> لتحديد لون التسمية، بينما تُستخدم سمة <code class="br-white nw">aria-labelledby</code> لتحديد ارتفاعها.</label><br>
+				<label><input type="radio" name="q9" value="">تتيح لك سمة <code class="br-white nw">aria-labelledby</code> إعطاء العنصر اسمًا يسهل الوصول إليه من خلال الإشارة إلى عنصر موجود في الصفحة، بينما تتيح لك سمة <code class="br-white nw">aria-label</code> تحديد الاسم مباشرةً في السمة نفسها.</label>
+			</form>
+			<h4>تتيح لك سمة <code class="br-white nw">aria-labelledby</code> إعطاء العنصر اسمًا يسهل الوصول إليه من خلال الإشارة إلى عنصر موجود في الصفحة، بينما تتيح لك سمة <code class="br-white nw">aria-label</code> تحديد الاسم مباشرةً في السمة نفسها.</h4>
+		</div>
+
+
+
+
+		<!-- Q10 -->
+		<h3>١٠. أي من السمات التالية توفر معلومات إضافية حول عنصر ما لمستخدمي قارئ الشاشة من خلال الإشارة إلى المحتوى الموجود على الصفحة؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q10" value=""><code class="br-white nw">aria-sets</code></label><br>
+				<label><input type="radio" name="q10" value=""><code class="br-white nw">aria-set</code></label><br>
+				<label><input type="radio" name="q10" value=""><code class="br-white nw">aria-described</code></label><br>
+				<label><input type="radio" name="q10" value=""><code class="br-white nw">aria-describedby</code></label>
+			</form>
+			<h4><code class="br-white nw">aria-describedby</code></h4>
+		</div>
+
+
+
+
+		<!-- Q11 -->
+		<h3>١١. أي من السمات التالية تُستخدم لتحديد "اختصار لوحة المفاتيح" (a keyboard shortcut) لعنصر ما؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q11" value=""><code class="br-white nw">provideaccesskey</code></label><br>
+				<label><input type="radio" name="q11" value=""><code class="br-white nw">tabindexkey</code></label><br>
+				<label><input type="radio" name="q11" value=""><code class="br-white nw">accesskey</code></label><br>
+				<label><input type="radio" name="q11" value=""><code class="br-white nw">accessingkey</code></label>
+			</form>
+			<h4><code class="br-white nw">accesskey</code></h4>
+		</div>
+
+
+
+
+		<!-- Q12 -->
+		<h3>١٢. أي من الأمثلة التالية هي الطريقة الصحيحة لربط "تسمية" <code class="br-white2">label</code> بـ"عنصر إدخال" <code class="br-white2">input</code> ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q12" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span class="txt">اسمك</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span></span> /&gt;
+&lt;/form&gt;</span>
+					</code></pre></div>
+				</label><br>
+
+
+				<label><input type="radio" name="q12" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">associate=<span class="value">"name"</span></span>&gt;<span class="txt">اسمك</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span></span> /&gt;
+&lt;/form&gt;</span>
+					</code></pre></div>
+				</label><br>
+
+
+				<label><input type="radio" name="q12" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">accessible=<span class="value">"name"</span></span>&gt;<span class="txt">اسمك</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"first-name"</span></span> /&gt;
+&lt;/form&gt;</span>
+					</code></pre></div>
+				</label><br>
+
+
+				<label><input type="radio" name="q12" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span class="txt">اسمك</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span></span> /&gt;
+&lt;/form&gt;</span>
+					</code></pre></div>
+				</label>
+			</form>
+
+
+			<h4>
+				<div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span class="txt">اسمك</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span></span> /&gt;
+&lt;/form&gt;</span>
+				</code></pre></div>
+			</h4>
+		</div>
+
+
+
+
+		<!-- Q13 -->
+		<h3>١٣. كيف تساعد "عدسة تكبير الشاشة" (a screen magnifier) المستخدمين ذوي الإعاقة البصرية على تصفح صفحات الويب؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q13" value="">يُحوّل مُكبّر الشاشة النص إلى لغة "برايل" (Braille) لتسهيل القراءة اللمسية.</label><br>
+				<label><input type="radio" name="q13" value="">يُعدّل مُكبّر الشاشة تباين الألوان في صفحات الويب تلقائيًا.</label><br>
+				<label><input type="radio" name="q13" value="">يُكبّر مُكبّر الشاشة الصور فقط إلى ضعف حجمها لتسهيل رؤيتها من قِبل المستخدمين ذوي الإعاقة البصرية.</label><br>
+				<label><input type="radio" name="q13" value="">يُساعد مُكبّر الشاشة المستخدمين ذوي الإعاقة البصرية على تصفح صفحات الويب من خلال تمكينهم من التكبير والتصغير.</label>
+			</form>
+			<h4>يُساعد مُكبّر الشاشة المستخدمين ذوي الإعاقة البصرية على تصفح صفحات الويب من خلال تمكينهم من التكبير والتصغير.</h4>
+		</div>
+
+
+
+
+		<!-- Q14 -->
+		<h3>١٤. أي من الخيارات التالية هو الاستخدام الصحيح لخاصية <code class="br-white">aria-describedby</code> لتوفير المزيد من السياق حول "وظيفة الزر" (a button's action) ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q14" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">aria-describedby=<span class="value">"delete-message"</span></span>&gt;<span class="txt">حذف</span>&lt;/button&gt;
+&lt;p <span class="attr">id=<span class="value">"delete-message"</span></span>&gt;<span dir="rtl" class="txt">تحذير! جميع عمليات الحذف نهائية.</span>&lt;/p&gt;</span>
+					</code></pre></div>
+				</label><br>
+
+
+
+				<label><input type="radio" name="q14" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">id=<span class="value">"delete-message"</span></span>&gt;<span class="txt">حذف</span>&lt;/button&gt;
+&lt;p <span class="attr">aria-describedby=<span class="value">"delete-message"</span></span>&gt;<span dir="rtl" class="txt">تحذير! جميع عمليات الحذف نهائية.</span>&lt;/p&gt;</span>
+					</code></pre></div>
+				</label><br>
+
+
+
+				<label><input type="radio" name="q14" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">id=<span class="value">"delete-btn"</span> aria-describedby=<span class="value">"delete-btn"</span></span>&gt;<span class="txt">حذف</span>&lt;/button&gt;
+&lt;p <span class="attr">aria-describedby=<span class="value">"delete-message"</span> id=<span class="value">"delete-message"</span></span>&gt;<span dir="rtl" class="txt">تحذير! جميع عمليات الحذف نهائية.</span>&lt;/p&gt;</span>
+					</code></pre></div>
+				</label><br>
+
+
+
+				<label><input type="radio" name="q14" value="">
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">id=<span class="value">"delete-message"</span> aria-describedby=<span class="value">"delete-message"</span></span>&gt;<span class="txt">حذف</span>&lt;/button&gt;
+&lt;p <span class="attr">aria-describedby=<span class="value">"delete-message"</span> id=<span class="value">"delete-message"</span></span>&gt;<span dir="rtl" class="txt">تحذير! جميع عمليات الحذف نهائية.</span>&lt;/p&gt;</span>
+					</code></pre></div>
+				</label>
+			</form>
+
+
+			<h4>
+					<div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">aria-describedby=<span class="value">"delete-message"</span></span>&gt;<span class="txt">حذف</span>&lt;/button&gt;
+&lt;p <span class="attr">id=<span class="value">"delete-message"</span></span>&gt;<span dir="rtl" class="txt">تحذير! جميع عمليات الحذف نهائية.</span>&lt;/p&gt;</span>
+					</code></pre></div>
+			</h4>
+		</div>
+
+
+
+
+		<!-- Q15 -->
+		<h3>١٥. ما الفرق بين معايير WCAG و WAI-ARIA ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q15" value="">
+					توفر WAI-ARIA إرشادات عامة لإمكانية الوصول إلى الويب، بينما تقدم WCAG قواعد محددة لجعل المحتوى الديناميكي والتفاعلي متاحًا لمستخدمي التقنيات المساعدة.
+				</label><br>
+
+				<label><input type="radio" name="q15" value="">
+					توفر WCAG إرشادات عامة لإمكانية الوصول عبر الأجهزة المحمولة فقط، بينما توفر WAI-ARIA قواعد محددة لجعل المحتوى الديناميكي والتفاعلي متاحًا لمستخدمي التقنيات المساعدة.
+				</label><br>
+
+				<label><input type="radio" name="q15" value="">
+					توفر WAI-ARIA إرشادات عامة لإمكانية الوصول عبر الأجهزة المحمولة فقط، بينما تقدم WCAG قواعد محددة لجعل المحتوى الديناميكي والتفاعلي متاحًا لمستخدمي التقنيات المساعدة.
+				</label><br>
+
+				<label><input type="radio" name="q15" value="">
+					توفر WCAG إرشادات عامة لإمكانية الوصول إلى الويب، بينما توفر WAI-ARIA قواعد محددة لجعل المحتوى الديناميكي والتفاعلي متاحًا لمستخدمي التقنيات المساعدة.
+				</label>
+			</form>
+			<h4>
+				توفر WCAG إرشادات عامة لإمكانية الوصول إلى الويب، بينما توفر WAI-ARIA قواعد محددة لجعل المحتوى الديناميكي والتفاعلي متاحًا لمستخدمي التقنيات المساعدة.
+			</h4>
+		</div>
+
+
+
+
+		<!-- Q16 -->
+		<h3>١٦. أي من الحالات التالية تُعد حالة استخدام شائعة لخاصية <code class="br-white nw">aria-hidden</code> ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q16" value="">النماذج والجداول التي لا تحتوي على معلومات مهمة.</label><br>
+				<label><input type="radio" name="q16" value="">الروابط والصور التي تُستخدم لأغراض تزيينية فقط.</label><br>
+				<label><input type="radio" name="q16" value="">الفقرات والعناوين التي لا تحتوي على معلومات مهمة.</label><br>
+				<label><input type="radio" name="q16" value="">الأيقونات والصور التي تُستخدم لأغراض تزيينية فقط.</label>
+			</form>
+			<h4>الأيقونات والصور التي تُستخدم لأغراض تزيينية فقط.</h4>
+		</div>
+
+
+
+
+		<!-- Q17 -->
+		<h3>١٧. ما الغرض من سمة "الدور" <code class="br-white nw">role</code> ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q17" value="">
+					لتنسيق العناصر باستخدام تأثيرات CSS المتحركة، مما يُتيح للتقنيات المساعدة فهم كيفية تفسير العنصر والتفاعل معه بشكل أفضل.
+				</label><br>
+
+				<label><input type="radio" name="q17" value="">
+					لإضافة تسميات إلى عناصر النماذج، مما يُتيح للتقنيات المساعدة فهم كيفية تفسير العنصر والتفاعل معه بشكل أفضل.
+				</label><br>
+
+				<label><input type="radio" name="q17" value="">
+					لتحديد المظهر المرئي لعناصر HTML، مما يُتيح للتقنيات المساعدة فهم كيفية تفسير العنصر والتفاعل معه بشكل أفضل.
+				</label><br>
+
+				<label><input type="radio" name="q17" value="">
+					لتحديد نوع العنصر ووظيفته، مما يُتيح للتقنيات المساعدة فهم كيفية تفسير العنصر والتفاعل معه بشكل أفضل.
+				</label>
+			</form>
+			
+			<h4>
+				لتحديد نوع العنصر ووظيفته، مما يُتيح للتقنيات المساعدة فهم كيفية تفسير العنصر والتفاعل معه بشكل أفضل.
+			</h4>
+		</div>
+
+
+
+
+		<!-- Q18 -->
+		<h3>١٨. لماذا من المهم استخدام نص وصفي للروابط؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q18" value="">
+					لضمان فهم الجميع، بمن فيهم مستخدمو التقنيات المساعدة، لغرض الرابط.
+				</label><br>
+
+				<label><input type="radio" name="q18" value="">
+					لجعل نص الرابط بارزًا بصريًا عن باقي محتوى الصفحة.
+				</label><br>
+
+				<label><input type="radio" name="q18" value="">
+					لضمان تحميل الرابط بسرعة عند النقر عليه.
+				</label><br>
+
+				<label><input type="radio" name="q18" value="">
+					لضمان ظهور موقعك دائمًا كأول نتيجة في نتائج محركات البحث.
+				</label>
+			</form>
+			<h4>
+				لضمان فهم الجميع، بمن فيهم مستخدمو التقنيات المساعدة، لغرض الرابط.
+			</h4>
+		</div>
+
+
+
+
+		<!-- Q19 -->
+		<h3>١٩. أي من الممارسات التالية هي الأفضل لجعل المحتوى الصوتي والمرئي متاحًا للجميع؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q19" value="">
+					توفير رسومات عالية الجودة مصاحبة للمحتوى الصوتي والمرئي لتسهيل الوصول إليه للأشخاص ذوي الإعاقة البصرية.
+				</label><br>
+
+				<label><input type="radio" name="q19" value="">
+					استخدام ألوان زاهية ونصوص كبيرة لجعل المحتوى أكثر جاذبية وسهولة في الوصول إليه للأشخاص ذوي الإعاقة البصرية.
+				</label><br>
+
+				<label><input type="radio" name="q19" value="">
+					تحديد مدة المحتوى الصوتي والمرئي لتسهيل الوصول إليه للأشخاص ذوي الإعاقة السمعية.
+				</label><br>
+
+				<label><input type="radio" name="q19" value="">
+					توفير ترجمة مكتوبة ونصوص مكتوبة للمحتوى الصوتي والمرئي لتسهيل الوصول إليه للأشخاص ذوي الإعاقة السمعية.
+				</label>
+			</form>
+			<h4>
+				توفير ترجمة مكتوبة ونصوص مكتوبة للمحتوى الصوتي والمرئي لتسهيل الوصول إليه للأشخاص ذوي الإعاقة السمعية.
+			</h4>
+		</div>
+
+
+
+
+		<!-- Q20 -->
+		<h3>٢٠. ما هي المبادئ الأربعة التي تقوم عليها "إرشادات إمكانية الوصول إلى محتوى الويب" (the Web Content Accessibility Guidelines) ؟</h3> 
+		<div>
+			<form>
+				<label><input type="radio" name="q20" value="">
+					<span dir="ltr">Perceivable, Operable, Units, and Robust.</span>
+				</label><br>
+
+				<label><input type="radio" name="q20" value="">
+					<span dir="ltr">Perceivable, Operable, Understandable, and Robust.</span>
+				</label><br>
+
+				<label><input type="radio" name="q20" value="">
+					<span dir="ltr">Perceivable, Operations, Understandable, and Robust.</span>
+				</label><br>
+
+				<label><input type="radio" name="q20" value="">
+					<span dir="ltr">Persistent, Operable, Understandable, and Robust.</span>
+				</label>
+			</form>
+			<h4><span dir="ltr">Perceivable, Operable, Understandable, and Robust.</span></h4>
+		</div>
+
+		<!-- Centered button -->
+		<div class="btn-container">
+		<button class="show-btn" onclick="showAllAnswers()">عرض جميع الإجابات الصحيحة</button>
+		</div>
+
+		
+		</section>
         
 
 
@@ -51,6 +565,14 @@
     </div>
 
 </main>
+
+
+<script>
+    function showAllAnswers() {
+    const allAnswers = document.querySelectorAll('h4');
+    allAnswers.forEach(ans => ans.style.display = 'block');
+    }
+</script>
 
 
 

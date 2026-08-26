@@ -24,24 +24,399 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- أ -->
     <section class="box">
         <div class="sub-title">
             <h2>٣. العمل مع الجداول والنماذج المتاحة Accessible Tables and Forms</h2>
             <span class="hint">نظري</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
+
+
+        <!-- أ -->
         <section id="1">
 
             <h3>أ. ما هي أفضل الممارسات المتعلقة بالجداول Tables وإمكانية الوصول Accessibility ؟</h3>
 
+            <p>عندما نرى "جدولاً" <em>a table</em> ، نبدأ على الفور في تكوين "روابط بصرية" <em>visual associations</em> بين "البيانات والعناوين" <em>the data and the headers</em> .</p>
+
+            <p>على سبيل المثال، لنفترض أن لدينا "جدولاً" <em>a table</em> يضم بيانات حيواناتنا الأليفة، حيث يحتوي على "كلبين وقطتين" <i>two dogs and two cats</i> ، ويعرض "أسماءها وأعمارها" <i>their names and ages</i> . وفي حين قد يتمكن "الشخص المبصر" <i>a sighted person</i> من فهم "العلاقات" <i>the relationships</i> الواردة في هذا "الجدول" <em>table</em> ، فإن الربط بين "القيم وعناوين" <em>the values and the headers</em> الأعمدة يُعد أمراً أكثر صعوبة بكثير بالنسبة للأشخاص الذين يستخدمون "برامج قراءة الشاشة" <em>screen readers</em> لتصفح "الجدول" <em>the table</em> .</p>
+
+            <p>بصفتك "مطور ويب" <em>web developer</em> ، تقع على عاتقك مسؤولية إنشاء هذه "الروابط" <em>associations</em> و"هيكلة ترميز اتش.تي.ام.ال" <em>structuring your HTML markup</em> بطريقة يسهل على مستخدمي "قارئات الشاشة" <em>screen reader</em> فهمها.</p>
+
+            <p>لنستعرض الآن كيفية إنشاء "جداول يسهل الوصول إليها" <em>accessible tables</em> وفهمها من قِبَل الجميع. تتمثل أولى "الممارسات المثلى" <i>best practice</i> التي سنتناولها في استخدام "تسمية توضيحية للجدول" <em>a table caption</em> ، إذ يتيح لك عنصر "التسمية التوضيحية" <code class="br-white2">caption</code> كتابة "وصف أو عنوان" <i>caption or title</i> للجدول، مما يساعد المستخدمين ء ولا سيما مستخدمي "التقنيات المساعدة" <em>assistive technologies</em> ، على استيعاب الغرض من الجدول ومحتواه بسرعة. وينبغي وضع عنصر "التسمية التوضيحية" <code class="br-white2">caption</code> مباشرةً بعد "وسم البداية" <em>the opening tag</em> لعنصر "الجدول" <code class="br-white2">table</code> ، فبهذه الطريقة، تتمكن "برامج قراءة الشاشة" <em>screen readers</em> وغيرها من "التقنيات المساعدة" <em>assistive technologies</em> من توفير "سياق أوضح" <em>more context</em> من خلال الإعلان عن التسمية التوضيحية قبل قراءة "محتوى الجدول" <em>table content</em> .</p>
+
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;caption&gt;<span class="txt">حيواناتنا الأليفة</span>&lt;/caption&gt;</span>
+ <span class="value">&lt;!-- Table Rows and Columns صفوف وأعمدة الجدول --&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+
+            <p>لننتقل الآن للحديث عن "رؤوس الصفوف والأعمدة" <em>row and column headers</em> . الرؤوس هي "خلايا خاصة" <em>special cells</em> ، توجد عادةً في بداية "الصف" <em>row</em> أو "العمود" <em>column</em> ، تصف "نوع البيانات المخزنة" <em>the type of data stored</em> في ذلك الصف أو العمود. ويمكنك تحديد "رأس الصف أو العمود" <em>a row or column header</em> باستخدام عنصر "رأس الجدول" <code class="br-white2">th</code> .</p>
+
+            <p>على سبيل المثال، يُنشئ "الكود أدناه" <i>the code below</i> "جدولاً" <em>a table</em> لحيوانين أليفين. يحتوي كل "صف" <em>row</em> على "عنوان للصف" (اسم الحيوان الأليف)، ويحتوي كل "عمود" <em>column</em> على "عنوان للعمود" يصف ما تمثله "البيانات" <em>the data</em> الموجودة في ذلك العمود (العمر والنوع).</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;caption&gt;<span class="txt">حيواناتنا الأليفة</span>&lt;/caption&gt;</span>
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="value">&lt;!-- Column Headers عناوين الأعمدة --&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">الإسم</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">العمر</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">النوع</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+ <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">جينو</span>&lt;/th&gt;</span> <span class="value">&lt;!-- Row Header رأس الصف  --&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">5</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">كلب</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+  <span class="tag">&lt;th&gt;<span class="txt">نورا</span>&lt;/th&gt;</span> <span class="value">&lt;!-- Row Header رأس الصف  --&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">2</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">قطة</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+            <br>
+
+            <div class="preview">
+                <table>
+                    <caption>حيواناتنا الأليفة</caption>
+                        <thead>
+                            <tr>
+                                <!-- Column Headers عناوين الأعمدة -->
+                                <th>الإسم</th>
+                                <th>العمر</th>
+                                <th>النوع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>جينو</th> <!-- Row Header رأس الصف  -->
+                                <td>5</td>
+                                <td>كلب</td>
+                            </tr>
+                            <tr>
+                                <th>نورا</th> <!-- Row Header رأس الصف  -->
+                                <td>2</td>
+                                <td>قطة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            
+            <br>
+            
+            <p>
+                لاحظ أن "الكود أعلاه" <em>the above code</em> يتضمن عنصراً "للعنوان" <code class="br-white2">caption</code> يقع مباشرةً بعد عنصر فتح "الجدول" <code class="br-white2">table</code> . 
+ثم، داخل عنصر "رأس الجدول" <code class="br-white2">thead</code> ، توجد عناوين الأعمدة ( <code class="br-white">الإسم</code> و <code class="br-white">العمر</code> و <code class="br-white">النوع</code> ). 
+وفي الصفين الثاني والثالث، داخل عنصر "جسم الجدول" <code class="br-white2">tbody</code> ، نجد "البيانات" <em>the data</em> الخاصة بكل حيوان أليف لدينا،  
+وتُعد أسماء الحيوانات الأليفة بمثابة "عناوين للصفوف" <em>the row headers</em> لأنها موضوعة داخل عناصر "رأس الخلية" <code class="br-white2">th</code> .
+            </p>
+
+            <p>يُعد ربط "خلايا البيانات" <em>the data cells</em> بالعناوين المقابلة لها أمراً بالغ الأهمية أيضاً بالنسبة لـ"قارئات الشاشة" <em>screen readers</em> ، إذ تحدد السمة <code class="br-white2">scope</code> ما إذا كان العنوان خاصاً بصفٍ أم بعمود. ورغم أن "قارئات الشاشة" <em>screen readers</em> قد تستنتج ذلك بشكل صحيح بناءً على "بنية الجدول" <em>the table's structure</em> ، إلا أنه يُنصح عادةً بتحديد النطاق <code class="br-white2">scoop</code> صراحةً لضمان "الوضوح" <em>clarity</em> .</p>
+
+            <p>توجد أربع "قيم" <em>values</em> محتملة للسمة <code class="br-white2">scope</code> ، والقيمتان اللتان ستستخدمهما بكثرة هما <code class="br-white">col</code> ( للعمود <em>column</em> ) و <code class="br-white">row</code> ( للصف <em>row</em> ). في الكود أدناه، نلاحظ إضافة السمة <code class="br-white2">scope</code> إلى ترويسات الأعمدة والصفوف، حيث تم تعيين القيمة <code class="br-white">col</code> لترويسات الأعمدة الثلاثة ( <code class="br-white">الاسم</code> و <code class="br-white">العمر</code> و <code class="br-white">النوع</code> ).</p>
+
+            <p>يتمتع عنوانا الصفين ( <code class="br-white">جينو</code> و <code class="br-white">نورا</code> ) بـ"النطاق" <code class="br-white2">scope</code> و"القيمة" <code class="br-white">col</code> .</p>
+
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;caption&gt;<span class="txt">حيواناتنا الأليفة</span>&lt;/caption&gt;</span>
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="value">&lt;!-- Now they have scope الآن أصبح لديهم نطاق --&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">الإسم</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">العمر</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">النوع</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+ <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">جينو</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">5</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">كلب</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+  <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">نورا</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">2</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">قطة</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+            <br>
+
+            <div class="preview">
+                <table>
+                    <caption>حيواناتنا الأليفة<caption>
+                    <thead>
+                        <tr>
+                            <!-- Now they have scope الآن أصبح لديهم نطاق -->
+                            <th scope="col">الإسم</th>
+                            <th scope="col">العمر</th>
+                            <th scope="col">النوع</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">جينو</th>
+                            <td>5</td>
+                            <td>كلب</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">نورا</th>
+                            <td>2</td>
+                            <td>قطة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>إذا كان "رأس العمود أو الصف" <em>a column or row header</em> "يمتد" <em>spans</em> ليشمل "خلايا متعددة" <em>multiple cells</em> ، فسيتم تطبيق "النطاق" <code class="br-white2">scope</code> على كل "خلية" <em>cell</em> منها على حدة. وإليك مثال على ذلك:</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;td&gt;&lt;/td&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">الإسم</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"col"</span>&gt;<span class="txt">العمر</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th <span class="attr">rowspan=</span><span class="value">"2"</span> <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">الكلاب</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">جينو</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">5</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">إليزابيث</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">10</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th <span class="attr">rowspan=</span><span class="value">"2"</span> <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">القطط</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">نورا</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">2</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th <span class="attr">scope=</span><span class="value">"row"</span>&gt;<span class="txt">لولو</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">6</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+            <br>
+
+            <div class="preview">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <th scope="col">الإسم</th>
+                            <th scope="col">العمر</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" scope="row">الكلاب</th>
+                            <th scope="row">جينو</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">إليزابيث</th>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" scope="row">القطط</th>
+                            <th scope="row">نورا</th>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">لولو</th>
+                            <td>6</td>
+                        </tr>
+                    <tbody>
+                    </table>
+            </div>
+
+            <br>
+
+            <p>
+                في هذا "الجدول" <em>table</em> ، سيكون لـ"الخلية" <em>the cell</em> التي تحتوي على عمر <code class="br-white">جينو</code> وهو <code class="br-white">5</code>  عنوان عمود واحد <code class="br-white">العمر</code> وعنوانا صف ( <code class="br-white">الكلاب</code> و <code class="br-white">جينو</code> ) .
+ وبالمثل، سيكون لعمر <code class="br-white">إليزابيث</code> وهو <code class="br-white">10</code> عنوان عمود واحد <code class="br-white">العمر</code> وعنوانا صف ( <code class="br-white">الكلاب</code> و <code class="br-white">إليزابيث</code> ) .
+            </p>
+
+            <p>
+                ومع ذلك، قد لا تتمكن بعض "برامج قراءة الشاشة" <em>Screen readers</em> من تفسير الجداول ذات "الهياكل المعقدة" <em>Complex structures</em> ، 
+لذا ينبغي عليك أيضاً محاولة تبسيط "بنية الجدول" <em>Table structure</em> قدر الإمكان لتجنب استخدام "رؤوس الصفوف والأعمدة" <em>row and column headers</em> التي تمتد عبر "خلايا متعددة" <i>multiple cells</i> .
+            </p>
+
+            <p>
+               يجب أن يكون هدفك دائمًا هو ضمان تمكّن المستخدمين من الوصول إلى هذه "المعلومات" <i>Information</i> ، حتى وإن كانت "برامج قراءة الشاشة" <em>Screen readers</em> لديهم قادرة على التعامل مع "هياكل الجداول المعقدة" <em>Complex table structures</em> . 
+            </p>
+
+            <p>
+                فيما يتعلق بـ"عرض الخلية" <em>Cell width</em> ، يُنصح بتجنب استخدام "قيم ثابتة" <em>Fixed values</em> ، إذ يُفضل استخدام "قيم نسبية" <em>Relative values</em> ، مثل "النسب المئوية" <em>Percentages</em> بدلاً منها. 
+كذلك، حاول تجنب تحديد "ارتفاع الخلية" <em>Cell height</em> ، فهذا يتيح للمستخدمين تعديل "حجم النص" <em>The text size</em> بما يتناسب مع احتياجاتهم.
+            </p>
+
+            <p>
+                وأخيراً، ينبغي عليك ترك "المتصفح" <em>The browser</em> يحدد "عرض الجدول" <em>Table width</em> كلما أمكن ذلك، لتقليل الحاجة إلى "التمرير الأفقي" <em>Horizontal scrolling</em> .
+            </p>
+
+            <p>
+                تُعد "جداول اتش.تي.ام.ال" <em>HTML tables</em> ضرورية لعرض "البيانات المنظمة" <em>Structured data</em> بـ"تنسيق يسهل الوصول إليه وفهمه" <em>in an Accessible and understandable format</em> . ومن خلال اتباع "إرشادات إمكانية الوصول " <em>Accessibility guidelines</em> هذه، يمكنك إنشاء جداول يسهل على الجميع فهمها.
+            </p>
+            
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو "عنصر اتش.تي.ام.ال" <em>HTML element</em> المستخدم لتحديد "عنوان الجدول" <em>The title of a table</em> ؟</h5>
+
+			
+			<p> ١. <code class="br-white2">thead</code> ❌</p>
+            <p><mark> <b>٢. <code class="br-white2">caption</code></b> ✅</mark></p>
+			<p> ٣. <code class="br-white2">tbody</code> ❌</p>
+			<p> ٤. <code class="br-white2">tr</code> ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو الغرض من السمة <code class="br-white2">scope</code> في خلية ترويسة الجدول <code class="br-white2">th</code> ؟</h5>
+
+			
+			<p> ١. لتحديد عدد الأعمدة <code class="br-white2">colspan</code> وعدد الصفوف <code class="br-white2">rowspan</code> التي تشغلها الخلية. ❌</p>
+            <p><mark> <b>٢. لتحديد ما إذا كان "العنوان" <em>The header</em> ينطبق على "صف" <em>a Row</em> أم "عمود" <em>a Column</em> .</b> ✅</mark></p>
+			<p> ٣. لتحديد "نمط خلية العنوان" <i>The style of the header cell</i> . ❌</p>
+			<p> ٤. لإضافة "تلميح" <i>a tooltip</i> إلى "خلية العنوان" <i>the header cell</i> . ❌</p>
+			
+				
+			<br>
+
+			<h5>أي مما يلي يُعد من "أفضل الممارسات" <em>Best practice</em> لإنشاء "جداول يسهل الوصول إليها" <em>Accessible tables</em> ؟</h5>
+
+			<p> ١. استخدام "رؤوس جداول معقدة وطويلة" <i>Complex and long table headers</i> . ❌</p>
+			<p> ٢. عدم توفير "نص بديل للصور" <i>Alternative text for images</i> الموجودة داخل "خلايا الجدول" <i>Table cells</i> . ❌</p>
+            <p><mark> <b>٣. استخدام "هياكل جداول بسيطة" <i>Simple table structures</i> تتضمن "رؤوساً للصفوف والأعمدة <i>Row and Column Headers</i> .</b> ✅</mark></p>
+			<p> ٤. تضمين جداول داخل جداول أخرى (تداخل الجداول) <i>Nesting tables within tables</i> . ❌</p>
+
+			
+
+		</div>
+
         </section>
         
 
+
+        <!-- ب -->
         <section id="2">
 
             <h3>ب. لماذا من المهم أن تكون لعناصر الإدخال Inputs تسمية مرتبطة بها Associated Label ؟</h3>
+
+            <p>قد تبدو "التسميات" <em>Labels</em> المصاحبة لـ"حقول الإدخال" <em>input fields</em> تفاصيلَ بسيطة، إلا أنها تؤدي "دوراً جوهرياً" <em>a crucial role</em> في جعل "النماذج" <em>forms</em> أسهل استخداماً للجميع.</p>
+
+            <p>تساعد "التسميات" <em>Labels</em> الأشخاص ذوي "الإعاقة" <i>disabilities</i> ، وتجعل "النماذج" <em>forms</em> أكثر سهولة في الاستخدام للجميع، وتُحسّن في النهاية "معدلات التحويل الخاصة بتلك النماذج" <em>form conversion rates</em> .</p>
+
+            <p>لنستعرض الأسباب التي تجعل إضافة "تسميات" <em>Labels</em> إلى "عناصر الإدخال" <em>Input elements</em> أمراً مهماً لضمان "سهولة الوصول وسهولة الاستخدام" <em>Accessibility and Usability</em> .</p>
+
+            <p>
+                غالباً ما تعتمد "قارئات الشاشة" <em>Screen readers</em> على "التسميات" <em>Labels</em> لوصف الغرض من "حقول الإدخال" <em>Input fields</em> . 
+ولكي تعمل هذه الآلية بشكل صحيح، يجب ربط "التسمية" <em>The label</em> بحقل "الإدخال" <code class="br-white2">input</code> برمجياً ، 
+ورغم وجود طرق متعددة لتحقيق ذلك، فإن الطريقة الأكثر شيوعاً هي استخدام عنصر <code class="br-white2">label</code> في لغة "اتش.تي.ام.ال" HTML .
+            </p>
+
+            <p class="hinty">إليك كيفية ربط "تسمية" <code class="br-white2">label</code> بعنصر "إدخال"<code class="br-white2">input</code> :</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"name"</span>&gt;<span class="txt">اسمك</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span></span> /&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <br>
+
+            <div class="preview">
+                <form>
+                    <label for="name">اسمك</label>
+                    <input type="text" id="name" />
+                </form>
+            </div>
+
+            <br>
+
+            <p>
+                في هذا المثال، ترتبط السمة <code class="br-white2">for</code> الخاصة بعنصر التسمية <code class="br-white2">label</code> بمعرّف <code class="br-white2">id</code> عنصر الإدخال <code class="br-white2">input</code> . 
+وتتيح هذه الرابطة لـ"برمجيات قراءة الشاشة" <em>Screen readers</em> الإعلان عن "التسمية" <code class="br-white2">label</code> عندما يكون عنصر "الإدخال" <code class="br-white2">input</code> في "حالة التركيز" <em>Focused state</em> ، 
+مما يمكّن مستخدمي هذه البرمجيات من فهم الغرض من عنصر "الإدخال" <code class="br-white2">input</code> .
+            </p>
+
+
+            <p>
+                يُسهم "ربط التسميات" <em>Associating labels</em> بجميع "حقول الإدخال" <em>Input fields</em> في تعزيز تحسين محركات البحث SEO أيضاً، 
+فـ"التسميات المناسبة" <em>Proper labels</em> تتيح لـ"محركات البحث" <em>Search engines</em> فهم محتوى الصفحة بشكل أفضل، 
+مما ينعكس إيجاباً على ترتيب الصفحة في نتائج البحث.
+            </p>
+
+            <p>
+                ولكن من المهم أن تدرك أنك تُنشئ محتوىً لـ"البشر <em>Humans</em> ، وليس لمحركات البحث،  لذا ينبغي عليك التأكد من أن "التسميات واضحة ومعبّرة" <em>The labels are as clear and descriptive</em> قدر الإمكان.
+            </p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>لماذا تُعد إضافة "التسميات" <em>labels</em> إلى "عناصر الإدخال" <em>input elements</em> أمراً مهماً لـ"إمكانية الوصول" <em>Accessibility</em> ؟</h5>
+
+			
+			<p> ١. إنها توفر "تنسيقاً مرئياً" <i>visual styling</i> لـ"حقول الإدخال" <i>input fields</i> . ❌</p>
+            <p><mark> <b>٢. إنها تساعد "برامج قراءة الشاشة" <em>Screen readers</em> على وصف "الغرض من حقول الإدخال" <i>The purpose of input fields</i> .</b> ✅</mark></p>
+			<p> ٣. إنها تزيد من "سرعة تحميل صفحات الويب" <i>The loading speed of web pages</i> . ❌</p>
+			<p> ٤. إنها تُمكّن "حقول الإدخال" <i>input fields</i> من قبول "أنواع متعددة من البيانات" <i>multiple types of data</i> . ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هي الطريقة الصحيحة لربط عنصر "التسمية" <em>label</em> بعنصر "الإدخال" <em>input</em> برمجياً في "اتش.تي.ام.ال" HTML ؟</h5>
+
+			
+			<p> ١. امنح كلا العنصرين نفس السمة <code class="br-white">name</code> . ❌</p>
+            <p><mark> <b>٢. اضبط السمة <code class="br-white2">for</code> الخاصة بالعنصر <em>label</em> لتطابق المعرّف <code class="br-white2">id</code> الخاص بالعنصر <em>input</em> .</b> ✅</mark></p>
+			<p> ٣. ضع العنصر <code dir="ltr" class="br-white">&lt;label&gt;</code> مباشرةً بعد العنصر <code dir="ltr" class="br-white">&lt;input&gt;</code> في شجرة DOM . ❌</p>
+			<p> ٤. استخدم "النص النائب" <code class="br-white2">placeholder</code> لحقل "الإدخال" <em>input</em> بدلاً من "التسمية" <em>label</em> . ❌</p>
+			
+				
+			<br>
+
+			<h5>إلى جانب "إتاحة الوصول" <em>Accessibility</em> ، ما هي الفائدة الأخرى لربط "التسميات" <em>labels</em> بحقول "الإدخال" <em>inputs</em> ؟</h5>
+
+			<p> ١. يؤدي ذلك إلى تسريع تحميل الصفحة بشكل ملحوظ. ❌</p>
+            <p><mark> <b>٢. يمكن أن يساعد "محركات البحث" <em>Search engines</em> على فهم "محتوى الصفحة" <em>Page content</em>  بشكل أفضل.</b> ✅</mark></p>
+			<p> ٣. يتيح لـ"حقول الإدخال" <em>inputs</em> قبول "أنواع متعددة من البيانات" <i>multiple data types</i> تلقائياً. ❌</p>
+			<p> ٤. يقوم بترجمة "التسميات" <em>labels</em> تلقائياً لـ"المستخدمين الدوليين" <i>international users</i> . ❌</p>
+
+			
+
+		</div>
+
+
+
+
 
         </section>
 

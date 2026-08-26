@@ -24,17 +24,159 @@
 
 <main>
 
-    <!-- Forms and Tables -->
+    <!-- Movie Review Page صفحة مراجعة الأفلام -->
     <section class="box">
         <div class="sub-title">
             <h2>١٠. صمّم صفحة لمراجعة الأفلام Movie Review Page</h2>
             <span class="hint">مختبر</span>
-            <p>قريبًا</p>
+            <p>الهدف: تنفيذ قصص المستخدم الموضحة أدناه.</p>
         </div>
 
+               <!-- HTML نموذج -->
         <section >
 
-            <h3></h3>
+            <h3>نموذج HTML</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">مراجعة الأفلام Movie Review</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+  
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <!-- User Stories قصص المستخدم -->
+        <section>
+
+            <h2>قصص المستخدم User Stories :</h2>
+
+            <ul>
+                <li><p class="userstory">١. يجب أن يكون لديك عنصر "رئيسي" <code dir="ltr" class="br-white2">main</code> .</p></li>
+                <li><p class="userstory">٢. داخل العنصر "الرئيسي" <code dir="ltr" class="br-white2">main</code> ، يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">h1</code> لعنوان الفيلم.</p></li>
+                <li><p class="userstory">
+                    ٣. أسفل عنصر <code dir="ltr" class="br-white2">h1</code> ، يجب أن تضع عنصر <code dir="ltr" class="br-white2">img</code> يعرض "غلاف الفيلم" (the movie cover) . 
+ينبغي أن يتضمن عنصر <code dir="ltr" class="br-white2">img</code> "نصاً بديلاً" <span dir="ltr" class="nw"><code class="br-white2">alt</code> text</span> يصف الصورة. 
+يمكنك استخدام الصورة التالية إذا أردت: <code dir="ltr" class="br-white nw">https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png</code>
+                </p></li>
+                <li><p class="userstory">٤. يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">p</code> يحتوي على وصف موجز للفيلم.</p></li>
+                <li>
+                    <p class="userstory">٥. يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">p</code> آخر لعرض "تقييم الفيلم" (the movie rating) . وعليك تضمين العناصر التالية بداخله وبالترتيب المذكور:</p>
+                    <ul>
+                        <li><p class="hinty">عنصر <code dir="ltr" class="br-white2">b</code> يحتوي على النص <code dir="rtl" class="br-white">تقييم الفيلم:</code> .</p></li>
+                        <li><p class="hinty">عنصر <code dir="ltr" class="br-white2">span</code> بخاصية <code dir="ltr" class="br-white nw">aria-hidden</code> مضبوطة على القيمة <code dir="ltr" class="br">"true"</code> ، ويحتوي على تمثيل مرئي للتقييم باستخدام النجوم <code dir="rtl" class="br-white">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</code> .</p></li>
+                        <li><p class="hinty">قيمة رقمية تمثل التقييم، موضوعة بين قوسين (مثل 10/9.2) بعد "النطاق" (the span) .</p></li>
+                    </ul>
+                </li>
+                <li><p class="userstory">٦. يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">h2</code> يحتوي على النص <code dir="rtl" class="br-white">طاقم التمثيل</code> </p></li>
+                <li><p class="userstory">٧. يجب أن يكون لديك عنصر <code dir="ltr" class="br-white2">ul</code> .</p></li>
+                <li><p class="userstory">
+                    ٨. داخل عنصر <code dir="ltr" class="br-white2">ul</code> ، يجب أن تتوفر لديك عناصر <code dir="ltr" class="br-white2">li</code> متعددة، 
+يحتوي كل منها على عنصر <code dir="ltr" class="br-white2">b</code> لإسم الممثل متبوعاً باسم الشخصية المقابلة، 
+ومسبوقاً بكلمة <code dir="rtl" class="br-white">في دور</code> (على سبيل المثال: <code dir="rtl" class="br-white">جيمس هولواي في دور إيثان كارتر</code>).
+                </p></li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- The Solution الحل -->
+        <section >
+
+            <h3>الحل The Solution</h3>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">مراجعة الأفلام Movie Review</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;main&gt;
+   &lt;h1&gt;<span dir="rtl" class="txt">مراجعة فيلم: الارتقاء نحو الآفاق</span>&lt;/h1&gt;
+   &lt;img <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png"</span> 
+        alt=<span dir="rtl" class="value">"عازف غيتار شاب يقف على خشبة المسرح عند شروق الشمس، مُطلّاً على أفق المدينة، وتعلوه عبارة 'الارتقاء نحو الآفاق'."</span></span> /&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">تتناول قصة "الارتقاء نحو الآفاق" رحلة إيثان كارتر، وهو موسيقي شاب يواجه الشكوك والتحديات أثناء سعيه لتحقيق حلمه بأن يصبح عازف غيتار ناجحاً. ومن خلال العزيمة والشجاعة وقوة الموسيقى، يتعلم إيثان كيف يتغلب على مخاوفه ويشق طريقه الخاص نحو مستقبل أكثر إشراقاً.</span>&lt;/p&gt;
+   &lt;p&gt;
+    &lt;b&gt;<span dir="rtl" class="txt">تقييم الفيلم:</span>&lt;/b&gt;
+    &lt;span <span class="attr">aria-hidden=<span class="value">"true"</span></span>&gt;<span dir="rtl" class="txt">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</span>&lt;/span&gt;
+    <span dir="rtl" class="txt">(10/9.2)</span>
+   &lt;/p&gt;
+   &lt;h2&gt;<span dir="rtl" class="txt">طاقم التمثيل</span>&lt;/h2&gt;
+   &lt;ul&gt;
+    &lt;li&gt;
+     &lt;b&gt;<span dir="rtl" class="txt">جيمس هولواي</span>&lt;/b&gt;
+     <span dir="rtl" class="txt"> في دور إيثان كارتر</span>
+    &lt;/li&gt;
+    &lt;li&gt;
+     &lt;b&gt;<span dir="rtl" class="txt">أوليفيا ستيرلينغ</span>&lt;/b&gt;
+     <span dir="rtl" class="txt"> في دور لينا ميتشل</span>
+    &lt;/li&gt;
+    &lt;li&gt;
+     &lt;b&gt;<span dir="rtl" class="txt">ويليام لانكستر</span>&lt;/b&gt;
+     <span dir="rtl" class="txt"> في دور البروفيسور آدامز</span>
+    &lt;/li&gt;
+    &lt;li&gt;
+     &lt;b&gt;<span dir="rtl" class="txt">ماريا كولينز</span>&lt;/b&gt;
+     <span dir="rtl" class="txt"> في دور إيفلين كارتر (والدة إيثان)</span>
+    &lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/main&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <!-- The Application التطبيق -->
+        <section >
+
+            <h3>التطبيق The Application</h3>
+
+            <div class="preview" role="presentation">
+                <h1>مراجعة فيلم: الارتقاء نحو الآفاق</h1>
+                <img src="./images/rise-beyond.webp" alt="عازف غيتار شاب يقف على خشبة المسرح عند شروق الشمس، مُطلّاً على أفق المدينة، وتعلوه عبارة 'الارتقاء نحو الآفاق'." />
+                <p>تتناول قصة "الارتقاء نحو الآفاق" رحلة إيثان كارتر، وهو موسيقي شاب يواجه الشكوك والتحديات أثناء سعيه لتحقيق حلمه بأن يصبح عازف غيتار ناجحاً. ومن خلال العزيمة والشجاعة وقوة الموسيقى، يتعلم إيثان كيف يتغلب على مخاوفه ويشق طريقه الخاص نحو مستقبل أكثر إشراقاً.</p>
+                <p>
+                    <b>تقييم الفيلم:</b>
+                    <span aria-hidden="true">⭐⭐⭐⭐⭐⭐⭐⭐⭐☆</span>
+                    (10/9.2)
+                </p>
+                <h2>طاقم التمثيل</h2>
+                <ul>
+                    <li>
+                        <b>جيمس هولواي</b>
+                        في دور إيثان كارتر
+                    </li>
+                    <li>
+                        <b>أوليفيا ستيرلينغ</b>
+                        في دور لينا ميتشل
+                    </li>
+                    <li>
+                        <b>ويليام لانكستر</b>
+                        في دور البروفيسور آدامز
+                    </li>
+                    <li>
+                        <b>ماريا كولينز</b>
+                        في دور إيفلين كارتر (والدة إيثان)
+                    </li>
+            </ul>
+            </div>
+
+
 
         </section>
         

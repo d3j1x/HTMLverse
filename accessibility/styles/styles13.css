@@ -1,0 +1,27 @@
+h4 {
+  display: none; /* hide answers */
+  margin-top: 5px;
+  background-color: white;
+  color: darkgreen;
+  border: green solid 2px;
+  padding: 2px;
+  font-weight: 600;
+}
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.show-btn {
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.show-btn:hover {
+  background: #357ab8;
+}
