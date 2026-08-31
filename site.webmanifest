@@ -1,6 +1,6 @@
 {
-  "name": "HTMLverse",
-  "short_name": "HTMLverse",
+  "name": "HTMLVerse",
+  "short_name": "HTMLVerse",
   "description": "A free and open-source Arabic learning platform for HTML.",
   "start_url": "/index.html",
   "display": "standalone",
