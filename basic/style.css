@@ -36,6 +36,10 @@ main {
   margin: 0 auto; /* centers horizontally */
 }
 
+.presentation-main {
+
+}
+
 .navbar {
   background-color:  #0b1220;
   margin-top: 5vh;
@@ -59,6 +63,7 @@ main {
   font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s;
+  
 }
 
 .navbar .nav-links .second-nav .second-links  {
@@ -94,6 +99,11 @@ main {
 footer {
   text-align: center;
   color: whitesmoke;
+}
+
+.presentation-footer {
+  text-align: right;
+  color: black;
 }
 
 .box {
@@ -256,6 +266,13 @@ section {
   overflow-x: auto;
 }
 
+.preview button {
+
+  font-size: 1rem;
+}
+  
+
+
 
 
 
@@ -290,6 +307,16 @@ section {
 }
 
 
+.br-spec {
+  border: green double 2px;
+  padding: 2px;
+  font-weight: 900;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+}
+
+
 
 .br {
   border: #1e1e1e dashed 1px;
@@ -298,9 +325,26 @@ section {
   background-color: rgb(198, 198, 198);
   font-size: 1rem;
   color: black;
+}
+
+.br-white {
+  border: #1e1e1e solid 1px;
+  padding: 2px;
+  font-weight: 900;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
   
- 
- 
+}
+
+.br-white2 {
+  border: #1e1e1e solid 1px;
+  padding: 2px;
+  font-weight: 900;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
 }
 
@@ -327,6 +371,10 @@ section {
   direction: ltr;
   overflow-x: auto;
   color: #071023;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: auto;
+  text-align: right;
 }
 
 .code-block {
@@ -341,6 +389,15 @@ section {
   min-width: 100%;
 }
 
+.code-block-2 {
+  direction: ltr;
+  overflow-x: auto;
+  font-size: 1rem;
+  min-width: 100%;
+  text-align: right;
+  
+}
+
 .code-block pre {
   overflow-x: auto;
  
@@ -353,12 +410,40 @@ section {
 .code-block code {
   color: #fff;
   line-height: 1.8;
+  font-size: 1.1rem;
+  
+}
+
+.code-block-2 pre {
+  overflow-x: auto;
+ 
+}
+
+.code-block-2 * {
+  display: inline;
+}
+
+.code-block-2 code {
+  color: black;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  
 }
 
 
 
 .code-block code .tag {
   color: #ff6b6b;
+}
+
+.code-block code .tag-b {
+  color: rgb(79, 164, 250);
+}
+
+.code-block code .tag-g {
+  color: rgb(179, 177, 177);
 }
 
 .code-block code .attr {
@@ -369,10 +454,27 @@ section {
   color: yellowgreen;
 }
 
+.code-block code .txt {
+  color: whitesmoke;
+}
+
+.code-block code .jsblue {
+  color: lightblue;
+}
+
+.code-block code .jsgreen {
+  color: lightgreen;
+}
+
+.code-block code .jsyellow {
+  color: yellow;
+}
+
 .help-code {
   display: block;
   direction: ltr;
   overflow-x: auto;
+  
 }
 
 
@@ -381,4 +483,50 @@ form {
   border: white solid 2px;
   border-radius: 2%;
   padding: 4px;
+}
+
+.preview-eng{
+  direction: ltr;
+  background-color: rgba(255,255,255,0.04);
+  border: white 4px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #9aa6b2;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+
+.br-help {
+  background-color: white;
+  border: black 1px dotted;
+}
+
+.english-txt  {
+  direction: ltr;
+  text-align: right;
+}
+
+.hinty {
+  font-weight: 500;
+}
+
+.userstory {
+  font-weight: bold;
+  font-size: large;
+}
+
+.codeFiles {
+  background-color: #2a2a72;
+  border-radius: 8px;
+  direction: ltr;
+  padding: 8px;
+}
+
+.codeFiles h4 {
+  color: #dcdcdc;
+}
+
+
+.nw {
+  white-space: nowrap;
 }

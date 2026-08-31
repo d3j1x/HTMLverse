@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | بناء مشغل فيديو باستخدام اتش.تي.ام.ال"/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <a class="red" href="./index.html#11b">X</a>
+        <h1>أساسيات اتش.تي.إم.إل</h1>
+    </header>
+
+
+<main>
+<!-- BASIC 11 -->
+<div class="box">
+	<div class="sub-title">
+		<h2>١٣. بناء مشغل فيديو باستخدام اتش.تي.ام.ال</h2>
+		<span class="hint">ورشة عمل</span>
+        <p>في هذه الورشة، ستقوم ببناء مشغل فيديو باستخدام HTML. وقد تم توفير الهيكل الأساسي (boilerplate) لملف اتش.تي.ام.ال لك.</p>
+	</div>
+
+
+    <!-- Boilerplate الهيكل الأساسي -->
+        <section >
+
+            <h3>الهيكل الأساسي Boilerplate</h3>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">العمل مع عنصر الفيديو في اتش.تي.ام.ال</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Steps الخطوات -->
+        <section >
+
+            <h3>الخطوات</h3>
+
+            <section>
+                <h4>الخطوة ١:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">أنشئ عنصراً من النوع <code class="br-white2">h1</code> واجعل النص بداخله <code class="br-white">التعامل مع عنصر الفيديو في اتش.تي.ام.ال</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٢:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">بعد ذلك، أنشئ عنصر فيديو <code class="br-white2">video</code> أسفل وسم <code class="br-white2">h1</code> . وفي الخطوات القليلة التالية، ستضيف السمات اللازمة لجعل مشغل الفيديو يعمل.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+            
+                <h4>الخطوة ٣:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">في درس سابق، تعرفت على الخصائص المختلفة المتاحة لعنصر الفيديو <code class="br-white2">video</code> . وتُحدِّد الخاصية <code class="br-white">width</code> عرض الفيديو بـ"البكسل" (pixels) .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white">width</code> إلى عنصر الفيديو <code class="br-white2">video</code> بقيمة <code class="br">"640"</code> .</p>
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٤:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">تؤدي السمة <code class="br-white">loop</code> إلى إعادة تشغيل الفيديو بمجرد اكتمال العرض، تخيّل مقطع "ميمي" (meme) على الإنترنت يتكرر تشغيله. أما عدم استخدام هذه السمة <code class="br-white">loop</code> ، فسيجعل الفيديو يُعرض مرة واحدة فقط.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">السمة <code class="br-white">loop</code> هي سمة منطقية (boolean) ولا تتطلب قيمة.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white">loop</code> إلى عنصر الفيديو <code class="br-white2">video</code> .</p>
+                    </li>
+                </ul>                
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٥:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">توفر السمة <code class="br-white nw">controls</code> عناصر تحكم في التشغيل لعنصر الفيديو <code class="br-white2">video</code> ، بما في ذلك إيقاف التشغيل مؤقتاً واستئنافه، والتنقل داخل المقطع (التقديم والتأخير)، والتحكم في مستوى الصوت.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">تُعد السمة <code class="br-white nw">controls</code> سمة منطقية (boolean) ولا تتطلب قيمة.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white nw">controls</code> إلى عنصر الفيديو <code class="br-white2">video</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">الآن، ينبغي أن ترى عنصر الفيديو <code class="br-white2">video</code> معروضاً على الصفحة.</p>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٦:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">تؤدي سمة <code class="br-white">muted</code> إلى كتم الصوت عند بدء التشغيل، فإذا كانت عناصر التحكم <code class="br-white">controls</code> مُفعَّلة، سيتمكن المستخدم من إلغاء كتم الصوت. أما في حال عدم استخدام هذه السمة <code class="br-white">muted</code> ، فسيتم تشغيل الصوت عند البدء.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">تُعد السمة <code class="br-white nw">muted</code> سمة منطقية (boolean) ولا تتطلب قيمة.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white nw">muted</code> إلى عنصر الفيديو <code class="br-white2">video</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٧:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">تُشير السمة <code class="br-white">poster</code> إلى صورة مصغرة للفيديو، فكّر في مقاطع الفيديو التي تشاهدها على "يوتيوب" (YouTube) . تظهر هذه الصورة أثناء تحميل الفيديو، أما في حال عدم تحديد هذه السمة <code class="br-white">poster</code> ، فيتم عرض الإطار الأول من الفيديو خلال مرحلة التحميل.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">الآن، أضف السمة <code class="br-white">poster</code> بالقيمة <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg</code> إلى عنصر الفيديو <code class="br-white2">video</code> الخاص بك.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٨ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">ربما لاحظت أنك لم تدرج "رابطاً" (link) للفيديو الفعلي، وستقوم بذلك في المرحلة التالية. وفيما يتعلق بأنواع ملفات الفيديو، هناك تفاوت في مستوى دعم المتصفحات لها. وللتعامل مع هذا الأمر، يمكنك استخدام عناصر المصدر <code class="br-white2">source</code> داخل عنصر الفيديو <code class="br-white2">video</code> ، حيث سيقوم المتصفح باختيار المصدر الأول المتوافق.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">إليك مثال على عنصر المصدر <code class="br-white2">source</code> :</p>
+                        <div class="code-block">
+                <pre><code>
+  <span class="tag">&lt;video <span class="attr">controls width=<span class="value">"250"</span></span>&gt;
+   &lt;source <span class="attr">src=<span dir="rtl" class="value">"ضع—رابط—المصدر—هنا"</span> type=<span dir="rtl" class="value">"ضع—نوع—الفيديو—هنا"</span></span> /&gt;
+  &lt;/video&gt;</span>
+                </code></pre>
+            </div>
+                    </li>
+                    <li>
+                        <p class="hinty">عنصر المصدر <code class="br-white2">source</code> هو "عنصر فارغ" (a void element) ، لذا فهو لا يحتوي على "وسم إغلاق" (a closing tag) .</p>
+                    </li>
+                    <li>
+                        <p class="hinty">أضف عنصر مصدر <code class="br-white2">source</code> داخل عنصر الفيديو <code class="br-white2">video</code> الخاص بك.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٩ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">لتحديد "مورد الوسائط" (the media resource) الخاص بالفيديو، ستحتاج إلى إضافة السمة <code class="br-white">src</code> إلى العنصر <code class="br-white2">source</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white">src</code> بالقيمة <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ١٠ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">لقد استخدمت ملف فيديو بامتداد MP4 ، وعليك إخبار المتصفح بذلك حتى يعرف كيفية قراءة الملف.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">ستستخدم السمة <code class="br-white">type</code> لتحديد نوع (MIME) الخاص بـ <code dir="ltr" class="br-spec">video/mp4</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">يُعد MIME "امتدادات بريد الإنترنت متعددة الأغراض" (Multipurpose Internet Mail Extensions) معياراً لوصف المستندات بأشكال أخرى بخلاف نصوص ASCII ، مثل الصوت والفيديو والصور.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">يُعد تنسيق MP4 — المعروف رسمياً باسم (MPEG-4 Part 14) تنسيق حاوية رقمياً للوسائط المتعددة. وهو يُستخدم على نطاق واسع لتخزين مقاطع الفيديو والصوت، ولكنه يمكن أن يتضمن أيضاً أنواعاً أخرى من البيانات مثل الترجمة والصور الثابتة. وقد صُممت ملفات MP4 لتلائم البث عبر الإنترنت، كما أنها تتوافق مع العديد من الأجهزة والمنصات.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">الآن، أضف السمة <code dir="ltr" class="br-white">type</code> والقيمة <code dir="ltr" class="br">"video/mp4"</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ١١ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">من أنواع MIME الشائعة الأخرى النوع <code dir="ltr" class="br-spec">video/webm</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">يُعد WebM تنسيقاً مفتوح المصدر لملفات الوسائط السمعية والبصرية طوّرته شركة Google، وصُمم في المقام الأول ليتناسب مع محتوى الوسائط المخصص للويب. وهو يدعم برمجيات ترميز الفيديو مثل VP8 وVP9 وAV1، وبرمجيات ترميز الصوت مثل Vorbis وOpus، مما يجعله خياراً شائعاً لعناصر الفيديو والصوت في تقنية HTML5.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أسفل عنصر المصدر الأول <code dir="ltr" class="br-white2">source</code> ، أضف عنصر مصدر <code dir="ltr" class="br-white2">source</code> آخر وامنحه السمة <code dir="ltr" class="br-white">src</code> بالقيمة <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/mapmethod.webm</code> والسمة <code dir="ltr" class="br-white">type</code> بالقيمة <code dir="ltr" class="br">"video/webm"</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ١٢ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">من أنواع MIME الشائعة الأخرى النوع <code dir="ltr" class="br-spec">video/ogg</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">يُعد Ogg تنسيق حاوية للوسائط المتعددة الرقمية، صُمم ليتيح البث والمعالجة الفعّالين للوسائط المتعددة الرقمية. وهو تنسيق مجاني ومفتوح وغير مقيد ببراءات اختراع برمجية، وتتولى مؤسسة Xiph.Org صيانته؛ أما اسمه فمُشتق من مصطلح "ogging" المستخدم في لعبة الحاسوب Netrek.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أسفل عنصر المصدر الثاني <code dir="ltr" class="br-white2">source</code> ، أضف عنصر مصدر ثالثاً <code dir="ltr" class="br-white2">source</code> وامنحه السمة <code dir="ltr" class="br-white">src</code> بالقيمة <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/mapmethod.ogg</code> والسمة <code dir="ltr" class="br-white">type</code> بالقيمة <code dir="ltr" class="br">"video/ogg"</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ١٣ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">سيكون عنصر المصدر الأخير <code dir="ltr" class="br-white2">source</code> الذي ستضيفه مخصصاً لنوع MIME الخاص بـ <code dir="ltr" class="br-spec">video/quicktime</code> .</p>
+                    </li>
+                    <li>
+                        <p class="hinty">يُعد QuickTime بنيةً برمجيةً قابلة للتوسع للوسائط المتعددة طورتها شركة Apple، وهي تدعم تشغيل وبث وترميز وإعادة ترميز مجموعة متنوعة من تنسيقات الوسائط الرقمية. ورغم أنه ليس بشيوع تنسيق MP4، فقد تحتاج إليه لدعم التطبيقات القديمة.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">أسفل عنصر المصدر الثالث <code dir="ltr" class="br-white2">source</code> ، أضف عنصر مصدر رابعاً <code dir="ltr" class="br-white2">source</code> وامنحه السمة <code dir="ltr" class="br-white">src</code> بالقيمة <code dir="ltr" class="br-white">https://cdn.freecodecamp.org/curriculum/labs/mapmethod.mov</code> والسمة <code dir="ltr" class="br-white">type</code> بالقيمة <code dir="ltr" class="br">"video/quicktime"</code> .</p>
+                    </li>
+                    
+                </ul>
+            </section>
+
+            <p class="userstory">تهانينا! لقد أتممت ورشة عمل مشغل الفيديو باستخدام اتش.تي.ام.ال .</p>
+            
+            
+            
+
+        </section>
+
+
+
+
+        <!-- Solution الحل -->
+        <section >
+
+            <h3>الحل</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">العمل مع عنصر الفيديو في اتش.تي.ام.ال</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span class="txt">التعامل مع عنصر الفيديو في اتش.تي.ام.ال</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;video
+  <span class="attr">width=<span class="value">"640"</span>
+  loop
+  controls
+  muted
+  poster=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"</span></span>
+  &gt;
+   &lt;source 
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"</span>
+   type=<span class="value">"video/mp4"</span></span> /&gt;
+   
+   &lt;source 
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/mapmethod.webm"</span>
+   type=<span class="value">"video/webm"</span></span> /&gt;
+
+   &lt;source 
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/mapmethod.ogg"</span>
+   type=<span class="value">"video/ogg"</span></span> /&gt;
+
+   &lt;source 
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/labs/mapmethod.mov"</span>
+   type=<span class="value">"video/quicktime"</span></span> /&gt;
+  &lt;/video&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- Application التطبيق -->
+        <section >
+
+            <h3>التطبيق</h3>
+
+             <div class="preview" role="presentation">
+                <h1>التعامل مع عنصر الفيديو في اتش.تي.ام.ال</h1>
+
+                <video
+                width="640"
+                loop
+                controls
+                muted
+                poster="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"
+                >
+                    <source 
+                    src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+                    type="video/mp4" />
+                
+                    <source 
+                    src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.webm"
+                    type="video/webm" />
+
+                    <source 
+                    src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.ogg"
+                    type="video/ogg" />
+
+                    <source 
+                    src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.mov"
+                    type="video/quicktime" />
+                </video>
+
+             </div>
+            
+
+        </section>
+
+	
+
+</div>
+
+<!-- Pages -->
+    <div class="page-nav">
+        <a class="prev" href="./basic11a.html">&#8594; السابق</a>
+        <a class="next" href="./basic12.html">التالي &#8592;</a>
+    </div>
+
+</main>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | بناء مشغل موسيقى باستخدام اتش.تي.ام.ال "/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <a class="red" href="./index.html#11a">X</a>
+        <h1>أساسيات اتش.تي.إم.إل</h1>
+    </header>
+
+
+<main>
+<!-- BASIC 11 -->
+<div class="box">
+	<div class="sub-title">
+		<h2>١٢. بناء مشغل موسيقى باستخدام اتش.تي.ام.ال</h2>
+		<span class="hint">ورشة عمل</span>
+        <p>في هذه الورشة، ستقوم ببناء مشغل موسيقى باستخدام HTML . وقد تم توفير الهيكل الأساسي (boilerplate) لملف اتش.تي.ام.ال لك.</p>
+	</div>
+
+
+        <!-- Boilerplate الهيكل الأساسي -->
+        <section >
+
+            <h3>الهيكل الأساسي Boilerplate</h3>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">العمل مع عنصر الصوت في HTML</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Steps الخطوات -->
+        <section >
+
+            <h3>الخطوات</h3>
+
+            <section>
+                <h4>الخطوة ١:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">أنشئ عنصراً من النوع <code class="br-white2">h1</code> واجعل النص بداخله <code class="br-white nw">مقطوعات التقنية العربية المفتوحة</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٢:</h4>
+                <ul>
+                    <li><p class="hinty">أسفل عنصر <code class="br-white2">h1</code> ، أضف عنصر <code class="br-white2">h2</code> يحتوي على النص <code class="br-white nw">لا يمكن البقاء في الأسفل</code> ، فهذا هو عنوان الأغنية الأولى.</p></li>
+
+                    <li><p class="hinty">أسفل عنصر <code class="br-white2">h2</code> ، أضف عنصر <code class="br-white2">p</code> يحتوي على النص: <code class="br-white nw">الفنان: كوينسي لارسون</code> .</p></li>
+                </ul>
+            </section>
+
+            <section>
+            
+                <h4>الخطوة ٣:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">بعد ذلك، أنشئ عنصراً صوتياً <code class="br-white2">audio</code> أسفل عنصر الفقرة <code class="br-white2">p</code> . وخلال الخطوات القليلة التالية، ستضيف السمات اللازمة لتمكين العنصر الصوتي من تشغيل الموسيقى.</p>
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٤:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">لتحديد مورد الوسائط الخاص بالصوت، ستحتاج إلى إضافة السمة <code class="br-white nw">src</code> إلى عنصر الصوت <code class="br-white2">audio</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white nw">src</code> مع القيمة <code class="br-white">https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3</code> .</p>
+                    </li>
+                </ul>                
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٥:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">تُعيد السمة <code class="br-white nw">loop</code> تشغيل المقطع الصوتي بمجرد انتهاء تشغيله، تخيّل مقطع "ميمي" (meme) على الإنترنت يتكرر تشغيله. أما عدم استخدام هذه السمة <code class="br-white nw">loop</code> ، فسيؤدي إلى تشغيل المقطع الصوتي مرة واحدة فقط.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">السمة <code class="br-white nw">loop</code> هي سمة منطقية (boolean) ولا تتطلب قيمة.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white nw">loop</code> إلى عنصر الصوت <code class="br-white2">audio</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٦:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">توفر السمة <code class="br-white nw">controls</code> عناصر تحكم في التشغيل لعنصر الصوت، بما في ذلك إيقاف التشغيل مؤقتاً واستئنافه، والتنقل داخل المقطع الصوتي (التقديم والتأخير)، والتحكم في مستوى الصوت.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">تُعد السمة <code class="br-white nw">controls</code> سمة منطقية (boolean) ولا تتطلب قيمة.</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف السمة <code class="br-white nw">controls</code> إلى عنصر الصوت <code class="br-white2">audio</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">الآن، ينبغي أن ترى عنصر الصوت <code class="br-white2">audio</code> معروضاً على الصفحة.</p>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>الخطوة ٧:</h4>
+                <ul>
+                    <li>
+                        <p class="hinty">أضف عنصر <code class="br-white2">h2</code> جديداً أسفل عنصر الصوت <code class="br-white2">audio</code> ، بحيث يحتوي على النص <code class="br-white nw">في رحلةٍ بحثاً عن إلهامٍ وتأمل</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أسفل عنصر <code class="br-white2">h2</code> ، أضف عنصر <code class="br-white2">p</code> يحتوي على النص: <code class="br-white nw">الفنان: كوينسي لارسون</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٨ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">أسفل عنصر <code class="br-white2">p</code> ، أضف عنصر <code class="br-white2">audio</code> ، وامنحه السمة <code class="br-white">src</code> بقيمة <code class="br-white">https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3</code> ، بالإضافة إلى السمتين <code class="br-white">loop</code> و <code class="br-white">controls</code> .</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>الخطوة ٩ :</h4>
+
+                <ul>
+                    <li>
+                        <p class="hinty">تحمل الأغنية الأخيرة عنوان <code class="br-white nw">ملامسة السطح</code> ، والفنان هو <code class="br-white nw">كوينسي لارسون</code> ، والملف المستخدم هو <code class="br-white">https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3</code> .</p>
+                    </li>
+
+                    <li>
+                        <p class="hinty">أضف الأغنية الأخيرة لإكمال مشغل الموسيقى، باتباع النمط نفسه الذي استخدمته للأغنيتين الأوليين.</p>
+                    </li>
+                </ul>
+            </section>
+            
+            
+            
+
+        </section>
+
+
+
+
+        <!-- Solution الحل -->
+        <section >
+
+            <h3>الحل</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span dir="rtl" class="txt">العمل مع عنصر الصوت في HTML</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span class="txt">مقطوعات التقنية العربية المفتوحة</span>&lt;/h1&gt;</span>
+
+  <span class="tag">&lt;h2&gt;<span class="txt">لا يمكن البقاء في الأسفل</span>&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفنان: كوينسي لارسون</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;audio
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"</span>
+   loop
+   controls</span>
+  &gt; 
+  &lt;/audio&gt;</span>
+
+  <span class="tag">&lt;h2&gt;<span class="txt">في رحلةٍ بحثاً عن إلهامٍ وتأمل</span>&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفنان: كوينسي لارسون</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;audio
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"</span>
+   loop
+   controls</span>
+  &gt; 
+  &lt;/audio&gt;</span>
+
+  <span class="tag">&lt;h2&gt;<span class="txt">ملامسة السطح</span>&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفنان: كوينسي لارسون</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;audio
+   <span class="attr">src=<span class="value">"https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3"</span>
+   loop
+   controls</span>
+  &gt; 
+  &lt;/audio&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- Application التطبيق -->
+        <section >
+
+            <h3>التطبيق</h3>
+
+             <div class="preview" role="presentation">
+                <h1>مقطوعات التقنية العربية المفتوحة</h1>
+
+                <h2>لا يمكن البقاء في الأسفل</h2>
+                <p>الفنان: كوينسي لارسون</p>
+                <audio
+                    src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+                    loop
+                    controls
+                > 
+                </audio>
+
+                <h2>في رحلةٍ بحثاً عن إلهامٍ وتأمل</h2>
+                <p>الفنان: كوينسي لارسون</p>
+                <audio
+                    src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"
+                    loop
+                    controls
+                > 
+                </audio>
+
+                <h2>ملامسة السطح</h2>
+                <p>الفنان: كوينسي لارسون</p>
+                <audio
+                    src="https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3"
+                    loop
+                    controls
+                > 
+                </audio>
+
+             </div>
+            
+
+        </section>
+
+	
+
+</div>
+
+<!-- Pages -->
+    <div class="page-nav">
+        <a class="prev" href="./basic11.html">&#8594; السابق</a>
+        <a class="next" href="./basic11b.html">التالي &#8592;</a>
+    </div>
+
+</main>
+
+    
+
+</body>
+</html>
