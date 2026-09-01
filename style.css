@@ -40,7 +40,7 @@ header {
 }
 
 #logo {
-  height: 100px;
+  height: 150px;
   width: auto;
 }
 
@@ -70,7 +70,7 @@ nav {
   color:#071023;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .nav-links a:hover {
