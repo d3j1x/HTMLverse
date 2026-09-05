@@ -23,13 +23,12 @@ header .red {
   color: black;
   text-decoration: none;
   font-weight: bolder;
-  font-size: large;
-  padding: 2px;
+  font-size: x-large;
 }
 
 header h1 {
   text-align: center;
-  color:#e6eef6;
+  color:white;
 }
 
 main {
