@@ -23,13 +23,12 @@ header .red {
   color: black;
   text-decoration: none;
   font-weight: bolder;
-  font-size: large;
-  padding: 2px;
+  font-size: x-large;
 }
 
 header h1 {
   text-align: center;
-  color:#e6eef6;
+  color:white;
 }
 
 main {
@@ -306,6 +305,16 @@ section {
 .translate {
   text-align: center;
   background-color: yellow;
+}
+
+
+.br-spec {
+  border: green double 2px;
+  padding: 2px;
+  font-weight: 900;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
 }
 
 
